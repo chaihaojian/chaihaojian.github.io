@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='计算机组成原理'>
+<title>计算机系统概述</title>
+
+<link rel='canonical' href='https://chaihaojian.github.io/post/computer_composition_principles/chapter_1/'>
+
+<link rel="stylesheet" href="/scss/style.min.204e19d090bcf7eb4b6af34647e2f3a2bc61109c896fec7a1d013120e079e8ca.css"><meta property='og:title' content='计算机系统概述'>
+<meta property='og:description' content='计算机组成原理'>
+<meta property='og:url' content='https://chaihaojian.github.io/post/computer_composition_principles/chapter_1/'>
+<meta property='og:site_name' content='Eachann blog'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2024-02-27T10:13:54&#43;08:00'/><meta property='article:modified_time' content='2024-02-27T10:13:54&#43;08:00'/><meta property='og:image' content='https://chaihaojian.github.io/post/computer_composition_principles/chapter_1/cover.JPG' />
+<meta name="twitter:title" content="计算机系统概述">
+<meta name="twitter:description" content="计算机组成原理"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://chaihaojian.github.io/post/computer_composition_principles/chapter_1/cover.JPG' />
+    <link rel="shortcut icon" href="/icons/favicon.ico" />
+<style>
+     
+    :root {
+        --article-font-family: "Merriweather", var(--base-font-family);
+    }
+</style>
+
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap";
+    
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+    
+        document.head.appendChild(customFont);
+    }());
+</script>
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hue4f07e790eed2791acf38272f719476f_100513_300x0_resize_box_3.png" width="300"
+                            height="254" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">Eachann blog</a></h1>
+            <h2 class="site-description"></h2>
+        </div>
+    </header><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+
+        <div class="menu-bottom-section">
+            
+            
+                <li id="dark-mode-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <span>Dark Mode</span>
+                </li>
+            
+        </div>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">Table of contents</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ul>
+    <li><a href="#计算机通过电信号传递数据">计算机通过电信号传递数据</a></li>
+    <li><a href="#计算机系统">计算机系统</a></li>
+    <li><a href="#计算机硬件的发展">计算机硬件的发展</a></li>
+    <li><a href="#计算机软件的发展">计算机软件的发展</a></li>
+    <li><a href="#计算机的发展趋势两极分化">计算机的发展趋势（两极分化）</a></li>
+    <li><a href="#计算机硬件的基本组成">计算机硬件的基本组成</a>
+      <ul>
+        <li><a href="#早期冯诺依曼机的结构">早期冯诺依曼机的结构</a></li>
+        <li><a href="#现代计算机的结构">现代计算机的结构</a></li>
+      </ul>
+    </li>
+    <li><a href="#计算机内各个硬件的工作原理">计算机内各个硬件的工作原理</a>
+      <ul>
+        <li><a href="#主存储器的基本组成">主存储器的基本组成</a></li>
+        <li><a href="#运算器的基本组成">运算器的基本组成</a></li>
+        <li><a href="#控制器的基本组成">控制器的基本组成</a></li>
+      </ul>
+    </li>
+    <li><a href="#计算机系统的层次结构">计算机系统的层次结构</a></li>
+    <li><a href="#计算机的性能指标">计算机的性能指标</a>
+      <ul>
+        <li><a href="#存储器的性能指标">存储器的性能指标</a></li>
+        <li><a href="#cpu的性能指标">CPU的性能指标</a></li>
+        <li><a href="#系统整体性能指标">系统整体性能指标</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/post/computer_composition_principles/chapter_1/">
+                <img src="/post/computer_composition_principles/chapter_1/cover_huf070decc27d1c42dbee75c2bdff912a4_225263_800x0_resize_q75_box.JPG"
+                        srcset="/post/computer_composition_principles/chapter_1/cover_huf070decc27d1c42dbee75c2bdff912a4_225263_800x0_resize_q75_box.JPG 800w, /post/computer_composition_principles/chapter_1/cover_huf070decc27d1c42dbee75c2bdff912a4_225263_1600x0_resize_q75_box.JPG 1600w"
+                        width="800" 
+                        height="563" 
+                        loading="lazy"
+                        alt="Featured image of post 计算机系统概述" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/post/computer_composition_principles/chapter_1/">计算机系统概述</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            计算机组成原理
+        </h3>
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Feb 27, 2024</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    1 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h1 id="第一章-计算机系统概述">第一章 计算机系统概述</h1>
+<h2 id="计算机通过电信号传递数据">计算机通过电信号传递数据</h2>
+<p>低电平表示二进制0</p>
+<p>高电平表示二进制1</p>
+<h2 id="计算机系统">计算机系统</h2>
+<p>包括硬件和软件两大方面。</p>
+<h2 id="计算机硬件的发展">计算机硬件的发展</h2>
+<p>第一代：第一台电子数字计算机：ENIAC（1946） 逻辑元件：电子管；</p>
+<p>第二代：晶体管 体积、功耗降低 出现面向过程的程序设计语言：FORTRAN 有了操作系统雏形；</p>
+<p>第三代： 中小规模集成电路 计算机主要用于科学计算等专业用途 高级语言迅速发展 开始有了分时操作系统；</p>
+<p>第四代：大规模、超大规模集成电路 开始出现微处理器、微型计算机 个人计算机（PC）萌芽 ；</p>
+<p>微型计算机的发展以微处理器技术为标志；</p>
+<p>机器字长：计算机一次整数运算所能处理的二进制位数；</p>
+<p>摩尔定律：集成电路上可容纳的晶体管数目，约每隔18个月便会增加一倍，整体性能也将提升一倍；该定律揭示了信息技术进步的速度。</p>
+<h2 id="计算机软件的发展">计算机软件的发展</h2>
+<p>机器语言 &ndash;&gt; 汇编语言 &ndash;&gt; 高级语言</p>
+<h2 id="计算机的发展趋势两极分化">计算机的发展趋势（两极分化）</h2>
+<p>1.微型计算机向更微型化、网络化、高性能、多用途方向发展；</p>
+<p>2.巨型机向更巨型化、超高速、并行处理、智能化方向发展。</p>
+<h2 id="计算机硬件的基本组成">计算机硬件的基本组成</h2>
+<p><img src="/post/computer_composition_principles/chapter_1/chap1_3.png"
+	width="1179"
+	height="591"
+	srcset="/post/computer_composition_principles/chapter_1/chap1_3_huc8930e9ed2bf1b92f45845989119399f_273245_480x0_resize_box_3.png 480w, /post/computer_composition_principles/chapter_1/chap1_3_huc8930e9ed2bf1b92f45845989119399f_273245_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="Image 4"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="199"
+		data-flex-basis="478px"
+	
+></p>
+<h3 id="早期冯诺依曼机的结构">早期冯诺依曼机的结构</h3>
+<p>ENIAC：需要手动接线来控制计算，需要人工干预，影响计算速度</p>
+<p>冯诺依曼提出“存储程序”的概念：</p>
+<p>将指令以二进制代码的形式事先输入计算机的主存储器（内存），然后按其在存储器中的首地址执行程序的第一条指令，以后就按该程序规定的顺序执行其他指令，直至程序结束。</p>
+<p>第一台采用冯诺依曼结构的计算机：EDVAC（Electronic Discrete Variable Automatic Computer）。</p>
+<p><img src="/post/computer_composition_principles/chapter_1/chap1_.png"
+	width="1171"
+	height="589"
+	srcset="/post/computer_composition_principles/chapter_1/chap1__hu4723fdecbcbcafa1b0eb01b655f62ecd_131073_480x0_resize_box_3.png 480w, /post/computer_composition_principles/chapter_1/chap1__hu4723fdecbcbcafa1b0eb01b655f62ecd_131073_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="Image 1"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="198"
+		data-flex-basis="477px"
+	
+></p>
+<p>输入设备：将信息转换成机器能识别的形式；</p>
+<p>存储器：存放数据和程序；</p>
+<p>运算器：进行算术运算和逻辑运算；</p>
+<p>控制器：指挥程序运行；</p>
+<p>输出设备：将结果转换成人们熟悉的形式；</p>
+<p>在计算机系统中，软件和硬件在逻辑上是等效的；</p>
+<p>冯诺依曼计算机的特点：</p>
+<p>1.计算机由五大部件组成；</p>
+<p>2.指令和数据以同等地位存于存储器，可按地址寻访；</p>
+<p>3.指令和数据用二进制表示；</p>
+<p>4.指令有操作码和地址码组成；</p>
+<p>5.存储程序；</p>
+<p>6.以运算器为中心：输入/输出设备与存储器之间的数据传送通过运算器完成；</p>
+<h3 id="现代计算机的结构">现代计算机的结构</h3>
+<p>以存储器为中心</p>
+<p>CPU = 运算器 + 控制器</p>
+<p><img src="/post/computer_composition_principles/chapter_1/chap1_1.png"
+	width="1150"
+	height="575"
+	srcset="/post/computer_composition_principles/chapter_1/chap1_1_hue4234cf55fd7a88e16da9c255eff0dc8_112777_480x0_resize_box_3.png 480w, /post/computer_composition_principles/chapter_1/chap1_1_hue4234cf55fd7a88e16da9c255eff0dc8_112777_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="Image 2"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="200"
+		data-flex-basis="480px"
+	
+></p>
+<p><img src="/post/computer_composition_principles/chapter_1/chap1_2.png"
+	width="1291"
+	height="435"
+	srcset="/post/computer_composition_principles/chapter_1/chap1_2_hu4b95543c81dd2d0a15b8724477fef860_180055_480x0_resize_box_3.png 480w, /post/computer_composition_principles/chapter_1/chap1_2_hu4b95543c81dd2d0a15b8724477fef860_180055_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="Image 3"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="296"
+		data-flex-basis="712px"
+	
+></p>
+<h2 id="计算机内各个硬件的工作原理">计算机内各个硬件的工作原理</h2>
+<p><img src="/post/computer_composition_principles/chapter_1/chap1_9.png"
+	width="1130"
+	height="574"
+	srcset="/post/computer_composition_principles/chapter_1/chap1_9_huc0bcc9e69500143da4e38f889ed56d87_228884_480x0_resize_box_3.png 480w, /post/computer_composition_principles/chapter_1/chap1_9_huc0bcc9e69500143da4e38f889ed56d87_228884_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="Image 10"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="196"
+		data-flex-basis="472px"
+	
+></p>
+<h3 id="主存储器的基本组成">主存储器的基本组成</h3>
+<p><img src="/post/computer_composition_principles/chapter_1/chap1_4.png"
+	width="363"
+	height="500"
+	srcset="/post/computer_composition_principles/chapter_1/chap1_4_huaa0ef70a11fc573ea07ed2abef0dca9a_62733_480x0_resize_box_3.png 480w, /post/computer_composition_principles/chapter_1/chap1_4_huaa0ef70a11fc573ea07ed2abef0dca9a_62733_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="Image 5"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="72"
+		data-flex-basis="174px"
+	
+></p>
+<p>存储体：数据在存储体内按地址存储，存储体里有一个一个的存储单元，每个存储单元存放一串二进制代码；每个存储单元对应一个地址；</p>
+<p>存储字：存储单元中二进制代码的组合叫做存储字(word)；</p>
+<p>存储字长：存储单元中能够存放的二进制代码位数叫做存储字长，通常为8bit的整数倍；</p>
+<p>存储元：存储二进制的电子元件，每个存储元可存1bit；</p>
+<p>MAR：指明要访问的数据的地址，MAR位数反映存储单元的个数；</p>
+<p>MDR：存放存储单元中取出的数据/需要保存进存储单元的数据，因此MDR字长=存储字长；</p>
+<p>注：MAR，MDR在逻辑上属于主存的一部分，但现代计算机通常把MAR，MDR集成在CPU内。</p>
+<h3 id="运算器的基本组成">运算器的基本组成</h3>
+<p>运算器：用于实现算术运算（如：加减乘除）、逻辑运算（如：与或非）</p>
+<p><img src="/post/computer_composition_principles/chapter_1/chap1_5.png"
+	width="310"
+	height="422"
+	srcset="/post/computer_composition_principles/chapter_1/chap1_5_hu1e6026174c91aef84153168c0908e1a0_31892_480x0_resize_box_3.png 480w, /post/computer_composition_principles/chapter_1/chap1_5_hu1e6026174c91aef84153168c0908e1a0_31892_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="Image 6"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="73"
+		data-flex-basis="176px"
+	
+></p>
+<p>ACC：累加器，用于存放操作数，或运算结果；</p>
+<p>MQ：乘商寄存器，在乘、除运算时，用于存放操作数或运算结果；</p>
+<p>X：通用的操作数寄存器，用于存放操作数；</p>
+<p>ALU：算术逻辑单元，通过内部复杂的电路实现算术运算、逻辑运算；</p>
+<p><img src="/post/computer_composition_principles/chapter_1/chap1_6.png"
+	width="1188"
+	height="182"
+	srcset="/post/computer_composition_principles/chapter_1/chap1_6_huabac652cc3ca8a78ad514374fded5273_120451_480x0_resize_box_3.png 480w, /post/computer_composition_principles/chapter_1/chap1_6_huabac652cc3ca8a78ad514374fded5273_120451_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="Image 7"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="652"
+		data-flex-basis="1566px"
+	
+></p>
+<h3 id="控制器的基本组成">控制器的基本组成</h3>
+<p><img src="/post/computer_composition_principles/chapter_1/chap1_7.png"
+	width="245"
+	height="281"
+	srcset="/post/computer_composition_principles/chapter_1/chap1_7_hu0d9404defbcec03be4b5423b91673a8d_18342_480x0_resize_box_3.png 480w, /post/computer_composition_principles/chapter_1/chap1_7_hu0d9404defbcec03be4b5423b91673a8d_18342_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="Image 8"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="87"
+		data-flex-basis="209px"
+	
+></p>
+<p>CU：控制单元，分析指令，给出控制信号；</p>
+<p>IR：指令寄存器，存放当前执行的指令；</p>
+<p>PC：程序计数器，存放下一条指令的地址，有自动加1功能；</p>
+<p><img src="/post/computer_composition_principles/chapter_1/chap1_8.png"
+	width="659"
+	height="232"
+	srcset="/post/computer_composition_principles/chapter_1/chap1_8_huc55bf51739c308ae5cd382689f45b031_108862_480x0_resize_box_3.png 480w, /post/computer_composition_principles/chapter_1/chap1_8_huc55bf51739c308ae5cd382689f45b031_108862_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="Image 9"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="284"
+		data-flex-basis="681px"
+	
+></p>
+<h2 id="计算机系统的层次结构">计算机系统的层次结构</h2>
+<p><img src="/post/computer_composition_principles/chapter_1/chap1_12.png"
+	width="1490"
+	height="650"
+	srcset="/post/computer_composition_principles/chapter_1/chap1_12_huf59130488ca3b88789901913bead72d4_255539_480x0_resize_box_3.png 480w, /post/computer_composition_principles/chapter_1/chap1_12_huf59130488ca3b88789901913bead72d4_255539_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="Image 13"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="229"
+		data-flex-basis="550px"
+	
+></p>
+<p><img src="/post/computer_composition_principles/chapter_1/chap1_10.png"
+	width="1446"
+	height="892"
+	srcset="/post/computer_composition_principles/chapter_1/chap1_10_hu4d5875788f57736c2c51898c9c60dbd9_450792_480x0_resize_box_3.png 480w, /post/computer_composition_principles/chapter_1/chap1_10_hu4d5875788f57736c2c51898c9c60dbd9_450792_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="Image 11"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="162"
+		data-flex-basis="389px"
+	
+></p>
+<p><img src="/post/computer_composition_principles/chapter_1/chap1_11.png"
+	width="1580"
+	height="894"
+	srcset="/post/computer_composition_principles/chapter_1/chap1_11_hu123a62699ef0bfaec14dd61ea0d40c5b_745713_480x0_resize_box_3.png 480w, /post/computer_composition_principles/chapter_1/chap1_11_hu123a62699ef0bfaec14dd61ea0d40c5b_745713_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="Image 12"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="176"
+		data-flex-basis="424px"
+	
+></p>
+<h2 id="计算机的性能指标">计算机的性能指标</h2>
+<h3 id="存储器的性能指标">存储器的性能指标</h3>
+<p>MAR位数反映存储单元的个数（最多支持多少个）；</p>
+<p>MDR位数 = 存储字长 = 每个存储单元的大小；</p>
+<p>总容量 = 存储单元个数 * 存储字长 	bit</p>
+<p>​			 = 存储单元个数 * 存储字长 / 8 	Byte</p>
+<p>1 GB = 1024 MB = 1024 * 1024 KB = 1024 * 1024 * 1024 Byte</p>
+<p>1 Byte = 8 bit</p>
+<h3 id="cpu的性能指标">CPU的性能指标</h3>
+<p>CPU时钟周期：每个脉冲信号的时间，单位：微秒、纳秒；</p>
+<p>CPU主频（时钟频率）= 1 / CPU时钟周期：CPU内数字脉冲信号振荡的频率，单位：Hz；</p>
+<p>CPI(Clock cycle Per Instruction)：执行一条指令所需的时钟周期数；不同的指令，CPI不同；相同的指令，CPI也可能有变化；</p>
+<p>执行一条指令的耗时 = CPI * CPU时钟周期；</p>
+<p>CPU执行时间（整个程序的耗时）= CPU时钟周期数 / 主频 = （指令条数 * CPI）/  主频；</p>
+<p>IPS(Instruction Per Second) = 主频 / 平均CPI：每秒执行多少条指令；</p>
+<p>FLOPS(Floating-point Operations Per Seconds)：每秒执行所少次浮点运算；</p>
+<h3 id="系统整体性能指标">系统整体性能指标</h3>
+<p><img src="/post/computer_composition_principles/chapter_1/chap1_13.png"
+	width="1353"
+	height="745"
+	srcset="/post/computer_composition_principles/chapter_1/chap1_13_hud6643a20c7d3df87c347d79aa97d6c8f_342685_480x0_resize_box_3.png 480w, /post/computer_composition_principles/chapter_1/chap1_13_hud6643a20c7d3df87c347d79aa97d6c8f_342685_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="Image 14"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="181"
+		data-flex-basis="435px"
+	
+></p>
+<p>数据通路带宽：数据总线一次所能并行传送信息的位数（各硬件部件通过数据总线传输数据）；</p>
+<p>吞吐量：系统在单位时间内处理请求的数量；</p>
+<p>响应时间：从用户向计算机发送一个请求，到系统对该请求作出响应并获得它所需要的结果的等待时间；</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2024 Eachann blog
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.21.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+<style>
+     
+    :root {
+        --article-font-family: "Merriweather", var(--base-font-family);
+    }
+</style>
+
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap";
+    
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+    
+        document.head.appendChild(customFont);
+    }());
+</script>
+    </body>
+</html>

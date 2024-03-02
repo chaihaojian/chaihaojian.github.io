@@ -1,0 +1,1052 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='JavaScript'>
+<title>走进JavaScript</title>
+
+<link rel='canonical' href='https://chaihaojian.github.io/post/javascript_note/%E8%B5%B0%E8%BF%9Bjavascript/'>
+
+<link rel="stylesheet" href="/scss/style.min.204e19d090bcf7eb4b6af34647e2f3a2bc61109c896fec7a1d013120e079e8ca.css"><meta property='og:title' content='走进JavaScript'>
+<meta property='og:description' content='JavaScript'>
+<meta property='og:url' content='https://chaihaojian.github.io/post/javascript_note/%E8%B5%B0%E8%BF%9Bjavascript/'>
+<meta property='og:site_name' content='Eachann blog'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2024-02-27T13:42:01&#43;08:00'/><meta property='article:modified_time' content='2024-02-27T13:42:01&#43;08:00'/><meta property='og:image' content='https://chaihaojian.github.io/post/javascript_note/%E8%B5%B0%E8%BF%9Bjavascript/cover.JPG' />
+<meta name="twitter:title" content="走进JavaScript">
+<meta name="twitter:description" content="JavaScript"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://chaihaojian.github.io/post/javascript_note/%E8%B5%B0%E8%BF%9Bjavascript/cover.JPG' />
+    <link rel="shortcut icon" href="/icons/favicon.ico" />
+<style>
+     
+    :root {
+        --article-font-family: "Merriweather", var(--base-font-family);
+    }
+</style>
+
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap";
+    
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+    
+        document.head.appendChild(customFont);
+    }());
+</script>
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hue4f07e790eed2791acf38272f719476f_100513_300x0_resize_box_3.png" width="300"
+                            height="254" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">Eachann blog</a></h1>
+            <h2 class="site-description"></h2>
+        </div>
+    </header><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+
+        <div class="menu-bottom-section">
+            
+            
+                <li id="dark-mode-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <span>Dark Mode</span>
+                </li>
+            
+        </div>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">Table of contents</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ul>
+    <li><a href="#js从上到下顺序执行">JS从上到下顺序执行</a></li>
+    <li><a href="#注释">注释</a></li>
+    <li><a href="#执行符">执行符</a></li>
+    <li><a href="#变量声明">变量声明</a></li>
+    <li><a href="#变量提升">变量提升</a></li>
+    <li><a href="#使用-let-或-const-声明变量">使用 let 或 const 声明变量</a></li>
+    <li><a href="#块作用域与全局污染">块作用域与全局污染</a>
+      <ul>
+        <li><a href="#全局污染">全局污染</a></li>
+        <li><a href="#使用严格模式">使用严格模式</a></li>
+        <li><a href="#块作用域">块作用域</a></li>
+      </ul>
+    </li>
+    <li><a href="#对于var拥有函数作用域的进一步解释">对于var拥有函数作用域的进一步解释</a></li>
+    <li><a href="#const常量声明">const常量声明</a></li>
+    <li><a href="#对var与let的进一步说明">对var与let的进一步说明</a></li>
+    <li><a href="#变量冻结">变量冻结</a></li>
+    <li><a href="#传值与传址">传值与传址</a></li>
+    <li><a href="#null与undefined">null与undefined</a></li>
+    <li><a href="#use-strict-严格模式">use strict 严格模式</a></li>
+  </ul>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/post/javascript_note/%E8%B5%B0%E8%BF%9Bjavascript/">
+                <img src="/post/javascript_note/%E8%B5%B0%E8%BF%9Bjavascript/cover_huf070decc27d1c42dbee75c2bdff912a4_225263_800x0_resize_q75_box.JPG"
+                        srcset="/post/javascript_note/%E8%B5%B0%E8%BF%9Bjavascript/cover_huf070decc27d1c42dbee75c2bdff912a4_225263_800x0_resize_q75_box.JPG 800w, /post/javascript_note/%E8%B5%B0%E8%BF%9Bjavascript/cover_huf070decc27d1c42dbee75c2bdff912a4_225263_1600x0_resize_q75_box.JPG 1600w"
+                        width="800" 
+                        height="563" 
+                        loading="lazy"
+                        alt="Featured image of post 走进JavaScript" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/post/javascript_note/%E8%B5%B0%E8%BF%9Bjavascript/">走进JavaScript</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            JavaScript
+        </h3>
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Feb 27, 2024</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    3 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h1 id="走进javascript">走进JavaScript</h1>
+<h2 id="js从上到下顺序执行">JS从上到下顺序执行</h2>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 1</span><span><span style="color:#99d1db;font-weight:bold">&lt;!</span>DOCTYPE html<span style="color:#99d1db;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 2</span><span><span style="color:#99d1db;font-weight:bold">&lt;</span>html lang<span style="color:#99d1db;font-weight:bold">=</span><span style="color:#a6d189">&#34;en&#34;</span><span style="color:#99d1db;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 3</span><span><span style="color:#99d1db;font-weight:bold">&lt;</span>head<span style="color:#99d1db;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 4</span><span>    <span style="color:#99d1db;font-weight:bold">&lt;</span>meta charset<span style="color:#99d1db;font-weight:bold">=</span><span style="color:#a6d189">&#34;UTF-8&#34;</span><span style="color:#99d1db;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 5</span><span>    <span style="color:#99d1db;font-weight:bold">&lt;</span>meta name<span style="color:#99d1db;font-weight:bold">=</span><span style="color:#a6d189">&#34;viewport&#34;</span> content<span style="color:#99d1db;font-weight:bold">=</span><span style="color:#a6d189">&#34;width=device-width, initial-scale=1.0&#34;</span><span style="color:#99d1db;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 6</span><span>    <span style="color:#99d1db;font-weight:bold">&lt;</span>title<span style="color:#99d1db;font-weight:bold">&gt;</span>Document<span style="color:#99d1db;font-weight:bold">&lt;</span><span style="color:#e78284">/title&gt;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 7</span><span>    <span style="color:#99d1db;font-weight:bold">&lt;</span>script<span style="color:#99d1db;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 8</span><span>        alert(<span style="color:#ef9f76">3</span>);
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 9</span><span>    <span style="color:#99d1db;font-weight:bold">&lt;</span><span style="color:#e78284">/script&gt;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">10</span><span><span style="color:#99d1db;font-weight:bold">&lt;</span><span style="color:#e78284">/head&gt;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">11</span><span><span style="color:#99d1db;font-weight:bold">&lt;</span>body<span style="color:#99d1db;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">12</span><span>    <span style="color:#99d1db;font-weight:bold">&lt;</span>h1<span style="color:#99d1db;font-weight:bold">&gt;</span>aaaaaaa<span style="color:#99d1db;font-weight:bold">&lt;</span><span style="color:#e78284">/h1&gt;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">13</span><span><span style="color:#99d1db;font-weight:bold">&lt;</span><span style="color:#e78284">/body&gt;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">14</span><span><span style="color:#99d1db;font-weight:bold">&lt;</span><span style="color:#e78284">/html&gt;</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 1</span><span><span style="color:#99d1db;font-weight:bold">&lt;!</span>DOCTYPE html<span style="color:#99d1db;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 2</span><span><span style="color:#99d1db;font-weight:bold">&lt;</span>html lang<span style="color:#99d1db;font-weight:bold">=</span><span style="color:#a6d189">&#34;en&#34;</span><span style="color:#99d1db;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 3</span><span><span style="color:#99d1db;font-weight:bold">&lt;</span>head<span style="color:#99d1db;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 4</span><span>    <span style="color:#99d1db;font-weight:bold">&lt;</span>meta charset<span style="color:#99d1db;font-weight:bold">=</span><span style="color:#a6d189">&#34;UTF-8&#34;</span><span style="color:#99d1db;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 5</span><span>    <span style="color:#99d1db;font-weight:bold">&lt;</span>meta name<span style="color:#99d1db;font-weight:bold">=</span><span style="color:#a6d189">&#34;viewport&#34;</span> content<span style="color:#99d1db;font-weight:bold">=</span><span style="color:#a6d189">&#34;width=device-width, initial-scale=1.0&#34;</span><span style="color:#99d1db;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 6</span><span>    <span style="color:#99d1db;font-weight:bold">&lt;</span>title<span style="color:#99d1db;font-weight:bold">&gt;</span>Document<span style="color:#99d1db;font-weight:bold">&lt;</span><span style="color:#e78284">/title&gt;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 7</span><span><span style="color:#99d1db;font-weight:bold">&lt;</span><span style="color:#e78284">/head&gt;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 8</span><span><span style="color:#99d1db;font-weight:bold">&lt;</span>body<span style="color:#99d1db;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 9</span><span>    <span style="color:#99d1db;font-weight:bold">&lt;</span>h1<span style="color:#99d1db;font-weight:bold">&gt;</span>aaaaaaa<span style="color:#99d1db;font-weight:bold">&lt;</span><span style="color:#e78284">/h1&gt;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">10</span><span>    <span style="color:#99d1db;font-weight:bold">&lt;</span>script<span style="color:#99d1db;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">11</span><span>        alert(<span style="color:#ef9f76">3</span>);
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">12</span><span>    <span style="color:#99d1db;font-weight:bold">&lt;</span><span style="color:#e78284">/script&gt;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">13</span><span><span style="color:#99d1db;font-weight:bold">&lt;</span><span style="color:#e78284">/body&gt;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">14</span><span><span style="color:#99d1db;font-weight:bold">&lt;</span><span style="color:#e78284">/html&gt;</span>
+</span></span></code></pre></div><p>两种写法的页面效果不同 将js放在前面时，后续内容需要等当前js执行结束再加载，因此一般将js放在页面的最后</p>
+<h2 id="注释">注释</h2>
+<p>单行注释：//</p>
+<p>多行注释：/*&hellip;&hellip;&hellip;&hellip;*/</p>
+<h2 id="执行符">执行符</h2>
+<p>js每行结束后必须加分号 ；</p>
+<h2 id="变量声明">变量声明</h2>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">1</span><span><span style="color:#e78284">var</span> a <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#a6d189">&#34;abcdef&#34;</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">2</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">3</span><span><span style="color:#e78284">var</span> a
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">4</span><span>a <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#a6d189">&#34;abcdef&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">5</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">6</span><span><span style="color:#e78284">var</span> a <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#a6d189">&#34;hello&#34;</span>, age <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#ef9f76">18</span>, url <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#a6d189">&#34;chai.com&#34;</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">7</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">8</span><span><span style="color:#e78284">var</span> a <span style="color:#99d1db;font-weight:bold">=</span> b <span style="color:#99d1db;font-weight:bold">=</span> c <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#a6d189">&#34;hello&#34;</span>;
+</span></span></code></pre></div><h2 id="变量提升">变量提升</h2>
+<p>在浏览器执行代码前，解析器会先分析代码：</p>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">1</span><span><span style="color:#e78284">var</span> web <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#a6d189">&#34;hello&#34;</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">2</span><span>console.log(web);
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">3</span><span><span style="color:#e78284">var</span> <span style="color:#ca9ee6">class</span> <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#a6d189">&#34;world&#34;</span>
+</span></span></code></pre></div><p><img src="/post/javascript_note/%E8%B5%B0%E8%BF%9Bjavascript/day1_0.png"
+	width="969"
+	height="172"
+	srcset="/post/javascript_note/%E8%B5%B0%E8%BF%9Bjavascript/day1_0_hu6504c5fe90733ddd459955d1b7bbcd8f_22822_480x0_resize_box_3.png 480w, /post/javascript_note/%E8%B5%B0%E8%BF%9Bjavascript/day1_0_hu6504c5fe90733ddd459955d1b7bbcd8f_22822_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="Image 0"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="563"
+		data-flex-basis="1352px"
+	
+></p>
+<p>上述代码在执行时会直接报错，因为解析器在执行代码前分析时发现了问题；</p>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 1</span><span>console.log(web);
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 2</span><span><span style="color:#e78284">var</span> web <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#a6d189">&#34;hello.com&#34;</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 3</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 4</span><span><span style="color:#737994;font-style:italic">//上述代码相当于
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 5</span><span><span style="color:#737994;font-style:italic"></span>console.log(web);
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 6</span><span><span style="color:#e78284">var</span> web ;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 7</span><span>web <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#a6d189">&#34;hello.com&#34;</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 8</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 9</span><span><span style="color:#737994;font-style:italic">//变量提升
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">10</span><span><span style="color:#737994;font-style:italic"></span><span style="color:#e78284">var</span> web ;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">11</span><span>console.log(web);
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">12</span><span>web <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#a6d189">&#34;hello.com&#34;</span>;
+</span></span></code></pre></div><p><img src="/post/javascript_note/%E8%B5%B0%E8%BF%9Bjavascript/day1_1.png"
+	width="969"
+	height="172"
+	srcset="/post/javascript_note/%E8%B5%B0%E8%BF%9Bjavascript/day1_1_hua1b4ebdd11127295b74146bd290a0707_11698_480x0_resize_box_3.png 480w, /post/javascript_note/%E8%B5%B0%E8%BF%9Bjavascript/day1_1_hua1b4ebdd11127295b74146bd290a0707_11698_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="Image 1"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="563"
+		data-flex-basis="1352px"
+	
+></p>
+<p>解析器在分析时，会将变量声明的语句提升，因此执行时会输出undefined；</p>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 1</span><span><span style="color:#e78284">function</span> hd() {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 2</span><span>  <span style="color:#ca9ee6">if</span>(<span style="color:#ef9f76">false</span>) {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 3</span><span>    <span style="color:#e78284">var</span> web <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#a6d189">&#34;hello.com&#34;</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 4</span><span>  }
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 5</span><span>  console.log(web);
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 6</span><span>}
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 7</span><span>hd();
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 8</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 9</span><span><span style="color:#737994;font-style:italic">//变量提升
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">10</span><span><span style="color:#737994;font-style:italic"></span><span style="color:#e78284">function</span> hd() {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">11</span><span>  <span style="color:#e78284">var</span> web;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">12</span><span>  <span style="color:#ca9ee6">if</span>(<span style="color:#ef9f76">false</span>) {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">13</span><span>    web <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#a6d189">&#34;hello.com&#34;</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">14</span><span>  }
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">15</span><span>  console.log(web);
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">16</span><span>}
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">17</span><span>hd();
+</span></span></code></pre></div><p><img src="/post/javascript_note/%E8%B5%B0%E8%BF%9Bjavascript/day1_2.png"
+	width="969"
+	height="172"
+	srcset="/post/javascript_note/%E8%B5%B0%E8%BF%9Bjavascript/day1_2_hua1b4ebdd11127295b74146bd290a0707_11698_480x0_resize_box_3.png 480w, /post/javascript_note/%E8%B5%B0%E8%BF%9Bjavascript/day1_2_hua1b4ebdd11127295b74146bd290a0707_11698_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="Image 2"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="563"
+		data-flex-basis="1352px"
+	
+></p>
+<h2 id="使用-let-或-const-声明变量">使用 let 或 const 声明变量</h2>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">1</span><span>console.log(web);
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">2</span><span><span style="color:#e78284">let</span> web <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#a6d189">&#34;hello.com&#34;</span>;
+</span></span></code></pre></div><p><img src="/post/javascript_note/%E8%B5%B0%E8%BF%9Bjavascript/day1_3.png"
+	width="969"
+	height="172"
+	srcset="/post/javascript_note/%E8%B5%B0%E8%BF%9Bjavascript/day1_3_hua925edf3458093cf672e7afce237b988_24539_480x0_resize_box_3.png 480w, /post/javascript_note/%E8%B5%B0%E8%BF%9Bjavascript/day1_3_hua925edf3458093cf672e7afce237b988_24539_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="Image 3"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="563"
+		data-flex-basis="1352px"
+	
+></p>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">1</span><span><span style="color:#e78284">let</span> web <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#a6d189">&#34;hello.com&#34;</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">2</span><span>console.log(web);
+</span></span></code></pre></div><p><img src="/post/javascript_note/%E8%B5%B0%E8%BF%9Bjavascript/day1_4.png"
+	width="969"
+	height="172"
+	srcset="/post/javascript_note/%E8%B5%B0%E8%BF%9Bjavascript/day1_4_hu8780f34747105edf769701449ebef35e_12328_480x0_resize_box_3.png 480w, /post/javascript_note/%E8%B5%B0%E8%BF%9Bjavascript/day1_4_hu8780f34747105edf769701449ebef35e_12328_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="Image 4"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="563"
+		data-flex-basis="1352px"
+	
+></p>
+<p>使用let声明的变量，必须要先声明，在使用；上述代码的第一种情况会产生临时性死区TDZ；</p>
+<h2 id="块作用域与全局污染">块作用域与全局污染</h2>
+<h3 id="全局污染">全局污染</h3>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">1</span><span><span style="color:#e78284">function</span> show() {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">2</span><span>  web <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#a6d189">&#34;hello.com&#34;</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">3</span><span>  console.log(web);
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">4</span><span>};
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">5</span><span>show();
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">6</span><span>console.log(web);
+</span></span></code></pre></div><p><img src="/post/javascript_note/%E8%B5%B0%E8%BF%9Bjavascript/day1_5.png"
+	width="969"
+	height="172"
+	srcset="/post/javascript_note/%E8%B5%B0%E8%BF%9Bjavascript/day1_5_hu1b2d4279026600af8bdf84a6ec1fb27f_14545_480x0_resize_box_3.png 480w, /post/javascript_note/%E8%B5%B0%E8%BF%9Bjavascript/day1_5_hu1b2d4279026600af8bdf84a6ec1fb27f_14545_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="Image 5"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="563"
+		data-flex-basis="1352px"
+	
+>
+上述代码中web并没有通过var，let，const声明，但仍可以使用；然而web应该只在show()函数中被使用，但此时在函数外也能使用该变量，这就造成了全局污染。</p>
+<h3 id="使用严格模式">使用严格模式</h3>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">1</span><span><span style="color:#a6d189">&#34;use strict&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">2</span><span><span style="color:#e78284">function</span> show() {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">3</span><span>  web <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#a6d189">&#34;hello.com&#34;</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">4</span><span>  console.log(web);
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">5</span><span>};
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">6</span><span>show();
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">7</span><span>console.log(web);
+</span></span></code></pre></div><p><img src="/post/javascript_note/%E8%B5%B0%E8%BF%9Bjavascript/day1_6.png"
+	width="963"
+	height="184"
+	srcset="/post/javascript_note/%E8%B5%B0%E8%BF%9Bjavascript/day1_6_hu1ff86b2412f87c81e98e5177883e0a83_27096_480x0_resize_box_3.png 480w, /post/javascript_note/%E8%B5%B0%E8%BF%9Bjavascript/day1_6_hu1ff86b2412f87c81e98e5177883e0a83_27096_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="Image 6"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="523"
+		data-flex-basis="1256px"
+	
+></p>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">1</span><span><span style="color:#a6d189">&#34;use strict&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">2</span><span><span style="color:#e78284">function</span> show() {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">3</span><span>  <span style="color:#e78284">let</span> web <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#a6d189">&#34;hello.com&#34;</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">4</span><span>  console.log(web);
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">5</span><span>};
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">6</span><span>show();
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">7</span><span>console.log(web);
+</span></span></code></pre></div><p><img src="/post/javascript_note/%E8%B5%B0%E8%BF%9Bjavascript/day1_7.png"
+	width="963"
+	height="184"
+	srcset="/post/javascript_note/%E8%B5%B0%E8%BF%9Bjavascript/day1_7_hu976202da577b851f71a17169b97a7b8e_24131_480x0_resize_box_3.png 480w, /post/javascript_note/%E8%B5%B0%E8%BF%9Bjavascript/day1_7_hu976202da577b851f71a17169b97a7b8e_24131_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="Image 7"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="523"
+		data-flex-basis="1256px"
+	
+></p>
+<p>在js代码中添加&quot;use strict&quot;语句表明使用严格模式，要求变量必须先声明再使用。</p>
+<h3 id="块作用域">块作用域</h3>
+<p>var声明的变量只有函数作用域和全局作用域：</p>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">1</span><span><span style="color:#e78284">var</span> i <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#ef9f76">99</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">2</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">3</span><span><span style="color:#ca9ee6">for</span> (<span style="color:#e78284">var</span> i <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#ef9f76">0</span>; i <span style="color:#99d1db;font-weight:bold">&lt;</span> <span style="color:#ef9f76">5</span>; i<span style="color:#99d1db;font-weight:bold">++</span>) {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">4</span><span>  console.log(<span style="color:#a6d189">&#34;循环内的i：&#34;</span>,i);
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">5</span><span>};
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">6</span><span>console.log(<span style="color:#a6d189">&#34;循环外的i：&#34;</span>, i);
+</span></span></code></pre></div><p><img src="/post/javascript_note/%E8%B5%B0%E8%BF%9Bjavascript/day1_8.png"
+	width="972"
+	height="343"
+	srcset="/post/javascript_note/%E8%B5%B0%E8%BF%9Bjavascript/day1_8_huee1040d0ec5f663b69208c47de38703f_35715_480x0_resize_box_3.png 480w, /post/javascript_note/%E8%B5%B0%E8%BF%9Bjavascript/day1_8_huee1040d0ec5f663b69208c47de38703f_35715_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="Image 8"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="283"
+		data-flex-basis="680px"
+	
+></p>
+<p>for循环内声明的i影响到了for循环外的i，造成了污染；</p>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 1</span><span><span style="color:#e78284">var</span> i <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#ef9f76">99</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 2</span><span><span style="color:#ca9ee6">for</span> (<span style="color:#e78284">let</span> i <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#ef9f76">0</span>; i <span style="color:#99d1db;font-weight:bold">&lt;</span> <span style="color:#ef9f76">5</span>; i<span style="color:#99d1db;font-weight:bold">++</span>) {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 3</span><span>  console.log(<span style="color:#a6d189">&#34;循环内的i：&#34;</span>,i);
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 4</span><span>};
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 5</span><span>console.log(<span style="color:#a6d189">&#34;循环外的i：&#34;</span>, i);
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 6</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 7</span><span><span style="color:#e78284">let</span> i <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#ef9f76">99</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 8</span><span><span style="color:#ca9ee6">for</span> (<span style="color:#e78284">let</span> i <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#ef9f76">0</span>; i <span style="color:#99d1db;font-weight:bold">&lt;</span> <span style="color:#ef9f76">5</span>; i<span style="color:#99d1db;font-weight:bold">++</span>) {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 9</span><span>  console.log(<span style="color:#a6d189">&#34;循环内的i：&#34;</span>,i);
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">10</span><span>};
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">11</span><span>console.log(<span style="color:#a6d189">&#34;循环外的i：&#34;</span>, i);
+</span></span></code></pre></div><p><img src="/post/javascript_note/%E8%B5%B0%E8%BF%9Bjavascript/day1_9.png"
+	width="972"
+	height="343"
+	srcset="/post/javascript_note/%E8%B5%B0%E8%BF%9Bjavascript/day1_9_huee1040d0ec5f663b69208c47de38703f_36347_480x0_resize_box_3.png 480w, /post/javascript_note/%E8%B5%B0%E8%BF%9Bjavascript/day1_9_huee1040d0ec5f663b69208c47de38703f_36347_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="Image 9"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="283"
+		data-flex-basis="680px"
+	
+></p>
+<p>let声明的变量拥有块作用域，因此for循环内的i不会影响到for循环外的i。</p>
+<h2 id="对于var拥有函数作用域的进一步解释">对于var拥有函数作用域的进一步解释</h2>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">1</span><span>(<span style="color:#e78284">function</span>(){
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">2</span><span>  <span style="color:#e78284">var</span> $ <span style="color:#99d1db;font-weight:bold">=</span> (<span style="color:#99d1db">window</span>.$ <span style="color:#99d1db;font-weight:bold">=</span> {});
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">3</span><span>  $.web <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#a6d189">&#34;hello.com&#34;</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">4</span><span>  <span style="color:#e78284">var</span> url <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#a6d189">&#34;nihao.com&#34;</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">5</span><span>}.bind(<span style="color:#99d1db">window</span>)());<span style="color:#737994;font-style:italic">//这是一个立即执行函数
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">6</span><span><span style="color:#737994;font-style:italic"></span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">7</span><span>console.log(url);
+</span></span></code></pre></div><p><img src="/post/javascript_note/%E8%B5%B0%E8%BF%9Bjavascript/day1_10.png"
+	width="972"
+	height="151"
+	srcset="/post/javascript_note/%E8%B5%B0%E8%BF%9Bjavascript/day1_10_hu7314acddd488779cb9222b4a4946936e_20994_480x0_resize_box_3.png 480w, /post/javascript_note/%E8%B5%B0%E8%BF%9Bjavascript/day1_10_hu7314acddd488779cb9222b4a4946936e_20994_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="Image 10"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="643"
+		data-flex-basis="1544px"
+	
+></p>
+<p>在上述代码中，用var声明的变量$被定义在一个立即执行函数中，由于var拥有函数作用域，因此在这个立即执行函数外无法访问到$；通过在该立即执行函数内声明getUrl()和get$()子函数，可以将在该立即执行函数中的声明的变量暴露给外界使用。</p>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 1</span><span>(<span style="color:#e78284">function</span>(){
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 2</span><span>  <span style="color:#e78284">var</span> $ <span style="color:#99d1db;font-weight:bold">=</span> (<span style="color:#99d1db">window</span>.$ <span style="color:#99d1db;font-weight:bold">=</span> {});
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 3</span><span>  $.web <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#a6d189">&#34;hello.com&#34;</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 4</span><span>  <span style="color:#e78284">var</span> url <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#a6d189">&#34;nihao.com&#34;</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 5</span><span>  $.getUrl <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#e78284">function</span>() {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 6</span><span>    <span style="color:#ca9ee6">return</span> url;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 7</span><span>  };
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 8</span><span>  $.get$ <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#e78284">function</span>() {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 9</span><span>    <span style="color:#ca9ee6">return</span> $;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">10</span><span>  };
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">11</span><span>}.bind(<span style="color:#99d1db">window</span>)());
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">12</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">13</span><span>console.log($.getUrl());
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">14</span><span>console.log($.get$());
+</span></span></code></pre></div><p><img src="/post/javascript_note/%E8%B5%B0%E8%BF%9Bjavascript/day1_11.png"
+	width="972"
+	height="177"
+	srcset="/post/javascript_note/%E8%B5%B0%E8%BF%9Bjavascript/day1_11_hua65991393d80dcb85a1cb7eb8850306a_22260_480x0_resize_box_3.png 480w, /post/javascript_note/%E8%B5%B0%E8%BF%9Bjavascript/day1_11_hua65991393d80dcb85a1cb7eb8850306a_22260_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="Image 11"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="549"
+		data-flex-basis="1317px"
+	
+></p>
+<p>由于let拥有块作用域，因此上述代码又可以改写为：</p>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">1</span><span>{
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">2</span><span>  <span style="color:#e78284">let</span> $ <span style="color:#99d1db;font-weight:bold">=</span> (<span style="color:#99d1db">window</span>.$ <span style="color:#99d1db;font-weight:bold">=</span> {});
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">3</span><span>  $.web <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#a6d189">&#34;hello.com&#34;</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">4</span><span>  <span style="color:#e78284">let</span> url <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#a6d189">&#34;nihao.com&#34;</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">5</span><span>  };
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">6</span><span>}<span style="color:#737994;font-style:italic">//变量$, url都在一个用{}包起来的代码块中
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">7</span><span><span style="color:#737994;font-style:italic"></span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">8</span><span>console.log(url);
+</span></span></code></pre></div><p><img src="/post/javascript_note/%E8%B5%B0%E8%BF%9Bjavascript/day1_12.png"
+	width="972"
+	height="177"
+	srcset="/post/javascript_note/%E8%B5%B0%E8%BF%9Bjavascript/day1_12_hu049cb25700c751c0411ef2cb36da865e_21704_480x0_resize_box_3.png 480w, /post/javascript_note/%E8%B5%B0%E8%BF%9Bjavascript/day1_12_hu049cb25700c751c0411ef2cb36da865e_21704_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="Image 12"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="549"
+		data-flex-basis="1317px"
+	
+></p>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 1</span><span>{
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 2</span><span>  <span style="color:#e78284">let</span> $ <span style="color:#99d1db;font-weight:bold">=</span> (<span style="color:#99d1db">window</span>.$ <span style="color:#99d1db;font-weight:bold">=</span> {});
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 3</span><span>  $.web <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#a6d189">&#34;hello.com&#34;</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 4</span><span>  <span style="color:#e78284">let</span> url <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#a6d189">&#34;nihao.com&#34;</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 5</span><span>  $.getUrl <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#e78284">function</span>() {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 6</span><span>    <span style="color:#ca9ee6">return</span> url;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 7</span><span>  };
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 8</span><span>  $.get$ <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#e78284">function</span>() {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 9</span><span>    <span style="color:#ca9ee6">return</span> $;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">10</span><span>  };
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">11</span><span>}
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">12</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">13</span><span>console.log($.getUrl());
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">14</span><span>console.log($.get$());
+</span></span></code></pre></div><p><img src="/post/javascript_note/%E8%B5%B0%E8%BF%9Bjavascript/day1_13.png"
+	width="972"
+	height="177"
+	srcset="/post/javascript_note/%E8%B5%B0%E8%BF%9Bjavascript/day1_13_hua65991393d80dcb85a1cb7eb8850306a_22260_480x0_resize_box_3.png 480w, /post/javascript_note/%E8%B5%B0%E8%BF%9Bjavascript/day1_13_hua65991393d80dcb85a1cb7eb8850306a_22260_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="Image 13"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="549"
+		data-flex-basis="1317px"
+	
+></p>
+<h2 id="const常量声明">const常量声明</h2>
+<p>const也拥有块作用域，在同一作用域里，const声明的常量无法更改:</p>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">1</span><span><span style="color:#ca9ee6">const</span> URL <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#a6d189">&#34;hello.com&#34;</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">2</span><span>{
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">3</span><span>  <span style="color:#ca9ee6">const</span> URL <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#a6d189">&#34;world.com&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">4</span><span>  console.log(URL);
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">5</span><span>}
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">6</span><span>console.log(URL);
+</span></span></code></pre></div><p><img src="/post/javascript_note/%E8%B5%B0%E8%BF%9Bjavascript/day2_4.png"
+	width="972"
+	height="98"
+	srcset="/post/javascript_note/%E8%B5%B0%E8%BF%9Bjavascript/day2_4_hu91e591bc6da8da3cc7cb5f1a55a8077c_5660_480x0_resize_box_3.png 480w, /post/javascript_note/%E8%B5%B0%E8%BF%9Bjavascript/day2_4_hu91e591bc6da8da3cc7cb5f1a55a8077c_5660_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="Image 17"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="991"
+		data-flex-basis="2380px"
+	
+></p>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">1</span><span><span style="color:#ca9ee6">const</span> URL <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#a6d189">&#34;hello.com&#34;</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">2</span><span>URL <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#a6d189">&#34;world.com&#34;</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">3</span><span>console.log(URL);
+</span></span></code></pre></div><p><img src="/post/javascript_note/%E8%B5%B0%E8%BF%9Bjavascript/day2_2.png"
+	width="972"
+	height="59"
+	srcset="/post/javascript_note/%E8%B5%B0%E8%BF%9Bjavascript/day2_2_hu2718fca8d842fc24620a01a4deaca3e2_15043_480x0_resize_box_3.png 480w, /post/javascript_note/%E8%B5%B0%E8%BF%9Bjavascript/day2_2_hu2718fca8d842fc24620a01a4deaca3e2_15043_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="Image 14"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="1647"
+		data-flex-basis="3953px"
+	
+></p>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">1</span><span><span style="color:#ca9ee6">const</span> URL <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#a6d189">&#34;hello.com&#34;</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">2</span><span><span style="color:#e78284">function</span> show() {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">3</span><span>  <span style="color:#ca9ee6">const</span> URL <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#a6d189">&#34;world.com&#34;</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">4</span><span>  console.log(URL);
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">5</span><span>}
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">6</span><span>show();
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">7</span><span>console.log(URL);
+</span></span></code></pre></div><p><img src="/post/javascript_note/%E8%B5%B0%E8%BF%9Bjavascript/day2_1.png"
+	width="972"
+	height="59"
+	srcset="/post/javascript_note/%E8%B5%B0%E8%BF%9Bjavascript/day2_1_hu33dfb25ff91de60bec28c05237076e69_4666_480x0_resize_box_3.png 480w, /post/javascript_note/%E8%B5%B0%E8%BF%9Bjavascript/day2_1_hu33dfb25ff91de60bec28c05237076e69_4666_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="Image 15"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="1647"
+		data-flex-basis="3953px"
+	
+></p>
+<p>当const声明的常量是引用类型时，可以进行更改：</p>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">1</span><span><span style="color:#ca9ee6">const</span> CONFIG <span style="color:#99d1db;font-weight:bold">=</span> {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">2</span><span>  URL<span style="color:#99d1db;font-weight:bold">:</span> <span style="color:#a6d189">&#34;hello.com&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">3</span><span>};
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">4</span><span>console.log(CONFIG);
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">5</span><span>CONFIG.URL <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#a6d189">&#34;world.com&#34;</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">6</span><span>console.log(CONFIG);
+</span></span></code></pre></div><p><img src="/post/javascript_note/%E8%B5%B0%E8%BF%9Bjavascript/day2_3.png"
+	width="972"
+	height="98"
+	srcset="/post/javascript_note/%E8%B5%B0%E8%BF%9Bjavascript/day2_3_huc7636b97cab176bd1095e4c8ce65033b_9048_480x0_resize_box_3.png 480w, /post/javascript_note/%E8%B5%B0%E8%BF%9Bjavascript/day2_3_huc7636b97cab176bd1095e4c8ce65033b_9048_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="Image 16"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="991"
+		data-flex-basis="2380px"
+	
+></p>
+<p>对造成上述结果的分析：</p>
+<p>使用const声明一个基本类型的常量时，当改变该常量的值时，会造成该常量引用的地址发生改变，在上述代码中，&ldquo;hello.com&quot;和&quot;world.com&quot;在计算机中存储的地址不同，因此再次赋值会导致URL所引用的地址发生改变，因此报错；但是声明的是一个引用类型的常量时，由于更改CONFIG.URL并不会导致CONFIG所引用的地址发生改变，因此不会报错。</p>
+<h2 id="对var与let的进一步说明">对var与let的进一步说明</h2>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">1</span><span><span style="color:#e78284">var</span> web0 <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#a6d189">&#34;hello.com&#34;</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">2</span><span>console.log(<span style="color:#99d1db">window</span>.web0);
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">3</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">4</span><span><span style="color:#e78284">let</span> web1 <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#a6d189">&#34;world.com&#34;</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">5</span><span>console.log(<span style="color:#99d1db">window</span>.web1);
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">6</span><span>console.log(web1);
+</span></span></code></pre></div><p><img src="/post/javascript_note/%E8%B5%B0%E8%BF%9Bjavascript/day2_5.png"
+	width="972"
+	height="114"
+	srcset="/post/javascript_note/%E8%B5%B0%E8%BF%9Bjavascript/day2_5_hu82470010f17954a6277ab369b3fe7033_7334_480x0_resize_box_3.png 480w, /post/javascript_note/%E8%B5%B0%E8%BF%9Bjavascript/day2_5_hu82470010f17954a6277ab369b3fe7033_7334_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="Image 18"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="852"
+		data-flex-basis="2046px"
+	
+></p>
+<p>由var声明的变量会保存到全局对象window中，而let不会；且在同一作用域下，var出现重复声明不会报错，但let和const会报错。</p>
+<h2 id="变量冻结">变量冻结</h2>
+<p>使用Object.freeze()可以使由const声明的引用类型的常量不发生改变，在严格模式下，对被Object.freeze()冻结的变量进行修改会报错。</p>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">1</span><span> <span style="color:#a6d189">&#34;use strict&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">2</span><span><span style="color:#ca9ee6">const</span> CONFIG <span style="color:#99d1db;font-weight:bold">=</span> {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">3</span><span>  URL<span style="color:#99d1db;font-weight:bold">:</span> <span style="color:#a6d189">&#34;hello.com&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">4</span><span>};
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">5</span><span>console.log(CONFIG);
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">6</span><span><span style="color:#99d1db">Object</span>.freeze(CONFIG);
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">7</span><span>CONFIG.URL <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#a6d189">&#34;world.com&#34;</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">8</span><span>console.log(CONFIG);
+</span></span></code></pre></div><p><img src="/post/javascript_note/%E8%B5%B0%E8%BF%9Bjavascript/day2_6.png"
+	width="972"
+	height="75"
+	srcset="/post/javascript_note/%E8%B5%B0%E8%BF%9Bjavascript/day2_6_hua499edb8cd6061ea947ce56e247b897e_8212_480x0_resize_box_3.png 480w, /post/javascript_note/%E8%B5%B0%E8%BF%9Bjavascript/day2_6_hua499edb8cd6061ea947ce56e247b897e_8212_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="Image 19"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="1296"
+		data-flex-basis="3110px"
+	
+></p>
+<p>&ldquo;use strict&rdquo;</p>
+<p><img src="/post/javascript_note/%E8%B5%B0%E8%BF%9Bjavascript/day2_7.png"
+	width="972"
+	height="97"
+	srcset="/post/javascript_note/%E8%B5%B0%E8%BF%9Bjavascript/day2_7_hu2bbc07d54880df0a76247b585babdd09_16680_480x0_resize_box_3.png 480w, /post/javascript_note/%E8%B5%B0%E8%BF%9Bjavascript/day2_7_hu2bbc07d54880df0a76247b585babdd09_16680_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="Image 20"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="1002"
+		data-flex-basis="2404px"
+	
+></p>
+<h2 id="传值与传址">传值与传址</h2>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 1</span><span><span style="color:#737994;font-style:italic">//传值
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 2</span><span><span style="color:#737994;font-style:italic"></span><span style="color:#e78284">let</span> a <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#ef9f76">1</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 3</span><span><span style="color:#e78284">let</span> b <span style="color:#99d1db;font-weight:bold">=</span> a;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 4</span><span>console.log(a, b);
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 5</span><span>b <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#ef9f76">2</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 6</span><span>console.log(a, b);
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 7</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 8</span><span><span style="color:#737994;font-style:italic">//传址
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 9</span><span><span style="color:#737994;font-style:italic"></span><span style="color:#e78284">let</span> c <span style="color:#99d1db;font-weight:bold">=</span> {url<span style="color:#99d1db;font-weight:bold">:</span> <span style="color:#a6d189">&#34;hello.com&#34;</span>};
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">10</span><span><span style="color:#e78284">let</span> d <span style="color:#99d1db;font-weight:bold">=</span> c;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">11</span><span>console.log(c, d);
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">12</span><span>d.url <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#a6d189">&#34;world.com&#34;</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">13</span><span>console.log(c, d);
+</span></span></code></pre></div><p><img src="/post/javascript_note/%E8%B5%B0%E8%BF%9Bjavascript/day2_8.png"
+	width="972"
+	height="140"
+	srcset="/post/javascript_note/%E8%B5%B0%E8%BF%9Bjavascript/day2_8_hu8be0abf7e3ad842768032b28a9e5a450_15221_480x0_resize_box_3.png 480w, /post/javascript_note/%E8%B5%B0%E8%BF%9Bjavascript/day2_8_hu8be0abf7e3ad842768032b28a9e5a450_15221_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="Image 21"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="694"
+		data-flex-basis="1666px"
+	
+></p>
+<h2 id="null与undefined">null与undefined</h2>
+<p>两者都表示没有值</p>
+<p>null：当声明了一个引用类型变量，但没有赋值时，此时该引用类型变量为null</p>
+<p>undefin：当声明了一个基本类型变量，但没有赋值时，此时该基本类型变量为null</p>
+<p>在js函数中，当传递的参数，或着返回值没有值时，默认都是undefined</p>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">1</span><span><span style="color:#e78284">function</span> show(name){
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">2</span><span>  console.log(name);
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">3</span><span>};
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">4</span><span>console.log(show());
+</span></span></code></pre></div><p><img src="/post/javascript_note/%E8%B5%B0%E8%BF%9Bjavascript/day2_9.png"
+	width="972"
+	height="82"
+	srcset="/post/javascript_note/%E8%B5%B0%E8%BF%9Bjavascript/day2_9_huc8006d08def586b1b71095c0f62d3f29_5208_480x0_resize_box_3.png 480w, /post/javascript_note/%E8%B5%B0%E8%BF%9Bjavascript/day2_9_huc8006d08def586b1b71095c0f62d3f29_5208_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="Image 22"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="1185"
+		data-flex-basis="2844px"
+	
+></p>
+<h2 id="use-strict-严格模式">use strict 严格模式</h2>
+<p>严格模式的作用域包含当前作用域及其子作用域：</p>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 1</span><span><span style="color:#e78284">function</span> show(){
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 2</span><span>  <span style="color:#a6d189">&#34;use strict&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 3</span><span>  web <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#a6d189">&#34;hello.com&#34;</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 4</span><span>  console.log(web);
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 5</span><span>};
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 6</span><span><span style="color:#e78284">function</span> hd(){
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 7</span><span>  site <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#a6d189">&#34;world.com&#34;</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 8</span><span>  console.log(site);
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 9</span><span>};
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">10</span><span>hd();
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">11</span><span>show();
+</span></span></code></pre></div><p><img src="/post/javascript_note/%E8%B5%B0%E8%BF%9Bjavascript/day2_10.png"
+	width="972"
+	height="112"
+	srcset="/post/javascript_note/%E8%B5%B0%E8%BF%9Bjavascript/day2_10_hu1e16b32aebdef1c4a43d37309890682f_14941_480x0_resize_box_3.png 480w, /post/javascript_note/%E8%B5%B0%E8%BF%9Bjavascript/day2_10_hu1e16b32aebdef1c4a43d37309890682f_14941_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="Image 23"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="867"
+		data-flex-basis="2082px"
+	
+></p>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 1</span><span><span style="color:#e78284">function</span> show(){
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 2</span><span>  web <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#a6d189">&#34;hello.com&#34;</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 3</span><span>  console.log(web);
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 4</span><span>  <span style="color:#e78284">function</span> handle(){
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 5</span><span>    <span style="color:#a6d189">&#34;use strict&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 6</span><span>    url <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#a6d189">&#34;nihao.com&#34;</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 7</span><span>    console.log(url);
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 8</span><span>  };
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 9</span><span>  handle();
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">10</span><span>};
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">11</span><span><span style="color:#e78284">function</span> hd(){
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">12</span><span>  site <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#a6d189">&#34;world.com&#34;</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">13</span><span>  console.log(site);
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">14</span><span>};
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">15</span><span>hd();
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">16</span><span>show();
+</span></span></code></pre></div><p><img src="/post/javascript_note/%E8%B5%B0%E8%BF%9Bjavascript/day2_11.png"
+	width="972"
+	height="155"
+	srcset="/post/javascript_note/%E8%B5%B0%E8%BF%9Bjavascript/day2_11_hu39e4e112448aa2d560b0be1681b63a26_20043_480x0_resize_box_3.png 480w, /post/javascript_note/%E8%B5%B0%E8%BF%9Bjavascript/day2_11_hu39e4e112448aa2d560b0be1681b63a26_20043_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="Image 24"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="627"
+		data-flex-basis="1505px"
+	
+></p>
+<p>推荐在编写js代码时添加严格模式，使代码在更多的环境中运行。</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2024 Eachann blog
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.21.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+<style>
+     
+    :root {
+        --article-font-family: "Merriweather", var(--base-font-family);
+    }
+</style>
+
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap";
+    
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+    
+        document.head.appendChild(customFont);
+    }());
+</script>
+    </body>
+</html>
