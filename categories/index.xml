@@ -5,6 +5,39 @@
         <link>https://chaihaojian.github.io/categories/</link>
         <description>Recent content in Categories on Eachann blog</description>
         <generator>Hugo -- gohugo.io</generator>
-        <language>en-us</language><atom:link href="https://chaihaojian.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+        <language>en-us</language>
+        <lastBuildDate>Wed, 06 Mar 2024 11:44:29 +0800</lastBuildDate><atom:link href="https://chaihaojian.github.io/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>JavaScript</title>
+        <link>https://chaihaojian.github.io/categories/javascript/</link>
+        <pubDate>Wed, 06 Mar 2024 11:44:29 +0800</pubDate>
+        
+        <guid>https://chaihaojian.github.io/categories/javascript/</guid>
+        <description>&lt;img src="https://chaihaojian.github.io/categories/javascript/cover.JPG" alt="Featured image of post JavaScript" /&gt;</description>
+        </item>
+        <item>
+        <title>计算机组成原理</title>
+        <link>https://chaihaojian.github.io/categories/computer_composition_principles/</link>
+        <pubDate>Tue, 27 Feb 2024 10:13:54 +0800</pubDate>
+        
+        <guid>https://chaihaojian.github.io/categories/computer_composition_principles/</guid>
+        <description>&lt;img src="https://chaihaojian.github.io/categories/computer_composition_principles/cover.JPG" alt="Featured image of post 计算机组成原理" /&gt;</description>
+        </item>
+        <item>
+        <title>数据结构</title>
+        <link>https://chaihaojian.github.io/categories/data_struct/</link>
+        <pubDate>Sun, 25 Feb 2024 22:01:10 +0800</pubDate>
+        
+        <guid>https://chaihaojian.github.io/categories/data_struct/</guid>
+        <description>&lt;img src="https://chaihaojian.github.io/categories/data_struct/cover.JPG" alt="Featured image of post 数据结构" /&gt;</description>
+        </item>
+        <item>
+        <title>C&#43;&#43;</title>
+        <link>https://chaihaojian.github.io/categories/c_plus_note/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://chaihaojian.github.io/categories/c_plus_note/</guid>
+        <description>&lt;img src="https://chaihaojian.github.io/categories/c_plus_note/cover.JPG" alt="Featured image of post C&#43;&#43;" /&gt;</description>
+        </item>
+        
     </channel>
 </rss>

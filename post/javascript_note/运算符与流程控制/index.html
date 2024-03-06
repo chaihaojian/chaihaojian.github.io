@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='JavaScript'>
+<title>运算符与流程控制</title>
+
+<link rel='canonical' href='https://chaihaojian.github.io/post/javascript_note/%E8%BF%90%E7%AE%97%E7%AC%A6%E4%B8%8E%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6/'>
+
+<link rel="stylesheet" href="/scss/style.min.204e19d090bcf7eb4b6af34647e2f3a2bc61109c896fec7a1d013120e079e8ca.css"><meta property='og:title' content='运算符与流程控制'>
+<meta property='og:description' content='JavaScript'>
+<meta property='og:url' content='https://chaihaojian.github.io/post/javascript_note/%E8%BF%90%E7%AE%97%E7%AC%A6%E4%B8%8E%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6/'>
+<meta property='og:site_name' content='Eachann blog'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2024-03-06T11:44:29&#43;08:00'/><meta property='article:modified_time' content='2024-03-06T11:44:29&#43;08:00'/>
+<meta name="twitter:title" content="运算符与流程控制">
+<meta name="twitter:description" content="JavaScript">
+    <link rel="shortcut icon" href="/icons/favicon.ico" />
+<style>
+     
+    :root {
+        --article-font-family: "Merriweather", var(--base-font-family);
+    }
+</style>
+
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap";
+    
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+    
+        document.head.appendChild(customFont);
+    }());
+</script>
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hue4f07e790eed2791acf38272f719476f_100513_300x0_resize_box_3.png" width="300"
+                            height="254" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">Eachann blog</a></h1>
+            <h2 class="site-description"></h2>
+        </div>
+    </header><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/page/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/page/about/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>About</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/page/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+
+        <div class="menu-bottom-section">
+            
+            
+                <li id="dark-mode-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <span>Dark Mode</span>
+                </li>
+            
+        </div>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">Table of contents</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ul>
+    <li><a href="#一元运算符的前置与后置操作n与n的区别">一元运算符的前置与后置操作(++n与n++的区别)</a></li>
+    <li><a href="#比较运算符">比较运算符</a>
+      <ul>
+        <li><a href="#-与-">== 与 ===</a></li>
+      </ul>
+    </li>
+    <li><a href="#逻辑运算符">逻辑运算符</a></li>
+    <li><a href="#短路运算">短路运算</a>
+      <ul>
+        <li><a href="#短路运算在赋值中的妙用">短路运算在赋值中的妙用</a></li>
+      </ul>
+    </li>
+    <li><a href="#流程控制">流程控制</a>
+      <ul>
+        <li><a href="#if-else">if else</a></li>
+        <li><a href="#三元表达式">三元表达式</a></li>
+        <li><a href="#switch">switch</a></li>
+        <li><a href="#while-循环控制">while 循环控制</a></li>
+        <li><a href="#do-while-循环控制">do while 循环控制</a></li>
+        <li><a href="#for-循环">for 循环</a></li>
+        <li><a href="#continue-与-break">continue 与 break</a></li>
+        <li><a href="#for-in-与-for-of">for-in 与 for-of</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/javascript/" style="background-color: ; color: #fff;">
+                JavaScript
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/post/javascript_note/%E8%BF%90%E7%AE%97%E7%AC%A6%E4%B8%8E%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6/">运算符与流程控制</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            JavaScript
+        </h3>
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Mar 06, 2024</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    2 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h1 id="运算符与流程控制">运算符与流程控制</h1>
+<h2 id="一元运算符的前置与后置操作n与n的区别">一元运算符的前置与后置操作(++n与n++的区别)</h2>
+<p>两者在不参与其他运算时结果相同，都是n自增；</p>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">1</span><span><span style="color:#e78284">let</span> a <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#ef9f76">1</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">2</span><span><span style="color:#e78284">let</span> b <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#ef9f76">1</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">3</span><span><span style="color:#99d1db;font-weight:bold">++</span>a;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">4</span><span>console.log(a);
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">5</span><span>b<span style="color:#99d1db;font-weight:bold">++</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">6</span><span>console.log(b);
+</span></span></code></pre></div><p><img src="/post/javascript_note/%E8%BF%90%E7%AE%97%E7%AC%A6%E4%B8%8E%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6/chap2_.png"
+	width="954"
+	height="59"
+	srcset="/post/javascript_note/%E8%BF%90%E7%AE%97%E7%AC%A6%E4%B8%8E%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6/chap2__hud18caec36ebc211e8e2737a739aa1279_2431_480x0_resize_box_3.png 480w, /post/javascript_note/%E8%BF%90%E7%AE%97%E7%AC%A6%E4%B8%8E%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6/chap2__hud18caec36ebc211e8e2737a739aa1279_2431_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="Image 0"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="1616"
+		data-flex-basis="3880px"
+	
+></p>
+<p>在参与其他运算时，++n先自增，再进行运算；n++先进行运算，再自增。</p>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">1</span><span><span style="color:#e78284">let</span> n <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#ef9f76">1</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">2</span><span><span style="color:#e78284">let</span> m <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#ef9f76">1</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">3</span><span><span style="color:#e78284">let</span> f <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#ef9f76">2</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">4</span><span><span style="color:#e78284">let</span> d <span style="color:#99d1db;font-weight:bold">=</span> f <span style="color:#99d1db;font-weight:bold">+</span> <span style="color:#99d1db;font-weight:bold">++</span>n;<span style="color:#737994;font-style:italic">//n先自增，然后运算f + n
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">5</span><span><span style="color:#737994;font-style:italic"></span>console.log(d);
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">6</span><span>console.log(n);
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">7</span><span><span style="color:#e78284">let</span> e <span style="color:#99d1db;font-weight:bold">=</span> f <span style="color:#99d1db;font-weight:bold">+</span> m<span style="color:#99d1db;font-weight:bold">++</span>;<span style="color:#737994;font-style:italic">//先运算f + n, 然后n自增
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">8</span><span><span style="color:#737994;font-style:italic"></span>console.log(e);
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">9</span><span>console.log(m);
+</span></span></code></pre></div><p><img src="/post/javascript_note/%E8%BF%90%E7%AE%97%E7%AC%A6%E4%B8%8E%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6/chap2_1.png"
+	width="954"
+	height="105"
+	srcset="/post/javascript_note/%E8%BF%90%E7%AE%97%E7%AC%A6%E4%B8%8E%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6/chap2_1_hu477808fd082705ee971839166fc179e3_4002_480x0_resize_box_3.png 480w, /post/javascript_note/%E8%BF%90%E7%AE%97%E7%AC%A6%E4%B8%8E%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6/chap2_1_hu477808fd082705ee971839166fc179e3_4002_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="Image 1"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="908"
+		data-flex-basis="2180px"
+	
+></p>
+<h2 id="比较运算符">比较运算符</h2>
+<h3 id="-与-">== 与 ===</h3>
+<p>a == b，如果a, b不是相同类型的变量，js会自动将两个变量转换成相同类型再进行比较；a === b 则会直接进行比较。</p>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">1</span><span><span style="color:#e78284">let</span> a <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#ef9f76">1</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">2</span><span><span style="color:#e78284">let</span> b <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#a6d189">&#34;1&#34;</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">3</span><span>console.log(a <span style="color:#99d1db;font-weight:bold">==</span> b);
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">4</span><span>console.log(a <span style="color:#99d1db;font-weight:bold">&gt;=</span> b);
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">5</span><span>console.log(a <span style="color:#99d1db;font-weight:bold">===</span> b);
+</span></span></code></pre></div><p><img src="/post/javascript_note/%E8%BF%90%E7%AE%97%E7%AC%A6%E4%B8%8E%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6/chap2_2.png"
+	width="954"
+	height="116"
+	srcset="/post/javascript_note/%E8%BF%90%E7%AE%97%E7%AC%A6%E4%B8%8E%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6/chap2_2_hu1433e3e8a5f64942e8e1692cf15f990a_6326_480x0_resize_box_3.png 480w, /post/javascript_note/%E8%BF%90%E7%AE%97%E7%AC%A6%E4%B8%8E%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6/chap2_2_hu1433e3e8a5f64942e8e1692cf15f990a_6326_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="Image 2"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="822"
+		data-flex-basis="1973px"
+	
+></p>
+<h2 id="逻辑运算符">逻辑运算符</h2>
+<p>逻辑与： &amp;&amp;</p>
+<p>逻辑或： ||</p>
+<p>逻辑非： !</p>
+<h2 id="短路运算">短路运算</h2>
+<p>1可以表示true；0可以表示false；</p>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">1</span><span><span style="color:#e78284">let</span> a <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#ef9f76">1</span>, b <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#ef9f76">0</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">2</span><span>console.log(a <span style="color:#99d1db;font-weight:bold">==</span> <span style="color:#ef9f76">true</span>)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">3</span><span>console.log(a <span style="color:#99d1db;font-weight:bold">==</span> <span style="color:#ef9f76">false</span>)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">4</span><span>console.log(b <span style="color:#99d1db;font-weight:bold">==</span> <span style="color:#ef9f76">true</span>)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">5</span><span>console.log(b <span style="color:#99d1db;font-weight:bold">==</span> <span style="color:#ef9f76">false</span>)
+</span></span></code></pre></div><p><img src="/post/javascript_note/%E8%BF%90%E7%AE%97%E7%AC%A6%E4%B8%8E%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6/chap2_3.png"
+	width="970"
+	height="147"
+	srcset="/post/javascript_note/%E8%BF%90%E7%AE%97%E7%AC%A6%E4%B8%8E%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6/chap2_3_hu6fd89a0814821164aa142fb3dee2bdf4_8360_480x0_resize_box_3.png 480w, /post/javascript_note/%E8%BF%90%E7%AE%97%E7%AC%A6%E4%B8%8E%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6/chap2_3_hu6fd89a0814821164aa142fb3dee2bdf4_8360_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="Image 3"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="659"
+		data-flex-basis="1583px"
+	
+></p>
+<p>在逻辑或进行判断时，如 （a || b）：若a为真，则不再判断b，直接返回真；若a为假，则继续判断b的真假；</p>
+<h3 id="短路运算在赋值中的妙用">短路运算在赋值中的妙用</h3>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">1</span><span><span style="color:#e78284">let</span> a <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#ef9f76">3</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">2</span><span><span style="color:#e78284">let</span> b;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">3</span><span><span style="color:#e78284">let</span> c <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#ef9f76">4</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">4</span><span><span style="color:#e78284">let</span> f <span style="color:#99d1db;font-weight:bold">=</span> b <span style="color:#99d1db;font-weight:bold">||</span> a;<span style="color:#737994;font-style:italic">//b为空，因此将a的值赋给f
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">5</span><span><span style="color:#737994;font-style:italic"></span>console.log(f);
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">6</span><span><span style="color:#e78284">let</span> p <span style="color:#99d1db;font-weight:bold">=</span> c <span style="color:#99d1db;font-weight:bold">||</span> a;<span style="color:#737994;font-style:italic">//c不为空，因此不需要判断a，直接将c的值赋给p
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">7</span><span><span style="color:#737994;font-style:italic"></span>console.log(p);
+</span></span></code></pre></div><p><img src="/post/javascript_note/%E8%BF%90%E7%AE%97%E7%AC%A6%E4%B8%8E%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6/chap2_4.png"
+	width="970"
+	height="79"
+	srcset="/post/javascript_note/%E8%BF%90%E7%AE%97%E7%AC%A6%E4%B8%8E%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6/chap2_4_hubbf598d20c2cde476b8b4933b40a3692_3119_480x0_resize_box_3.png 480w, /post/javascript_note/%E8%BF%90%E7%AE%97%E7%AC%A6%E4%B8%8E%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6/chap2_4_hubbf598d20c2cde476b8b4933b40a3692_3119_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="Image 4"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="1227"
+		data-flex-basis="2946px"
+	
+></p>
+<h2 id="流程控制">流程控制</h2>
+<h3 id="if-else">if else</h3>
+<h3 id="三元表达式">三元表达式</h3>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">1</span><span><span style="color:#e78284">let</span> h <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#ef9f76">true</span><span style="color:#99d1db;font-weight:bold">?</span><span style="color:#ef9f76">2</span><span style="color:#99d1db;font-weight:bold">:</span><span style="color:#ef9f76">5</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">2</span><span>console.log(h);
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">3</span><span><span style="color:#e78284">let</span> l <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#ef9f76">false</span><span style="color:#99d1db;font-weight:bold">?</span><span style="color:#ef9f76">2</span><span style="color:#99d1db;font-weight:bold">:</span><span style="color:#ef9f76">5</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">4</span><span>console.log(l);
+</span></span></code></pre></div><p><img src="/post/javascript_note/%E8%BF%90%E7%AE%97%E7%AC%A6%E4%B8%8E%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6/chap2_5.png"
+	width="970"
+	height="79"
+	srcset="/post/javascript_note/%E8%BF%90%E7%AE%97%E7%AC%A6%E4%B8%8E%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6/chap2_5_hu3228a8150e043b945ff69196f1d15e3e_3154_480x0_resize_box_3.png 480w, /post/javascript_note/%E8%BF%90%E7%AE%97%E7%AC%A6%E4%B8%8E%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6/chap2_5_hu3228a8150e043b945ff69196f1d15e3e_3154_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="Image 5"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="1227"
+		data-flex-basis="2946px"
+	
+></p>
+<h3 id="switch">switch</h3>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 1</span><span><span style="color:#e78284">let</span> name <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#a6d189">&#34;hi&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 2</span><span><span style="color:#ca9ee6">switch</span>(name){
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 3</span><span>  <span style="color:#ca9ee6">case</span> <span style="color:#a6d189">&#34;hello&#34;</span><span style="color:#99d1db;font-weight:bold">:</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 4</span><span>    console.log(<span style="color:#a6d189">&#34;hello&#34;</span>);
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 5</span><span>    <span style="color:#ca9ee6">break</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 6</span><span>  <span style="color:#ca9ee6">case</span> <span style="color:#a6d189">&#34;hi&#34;</span><span style="color:#99d1db;font-weight:bold">:</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 7</span><span>    console.log(<span style="color:#a6d189">&#34;hi&#34;</span>);
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 8</span><span>    <span style="color:#ca9ee6">break</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 9</span><span>  <span style="color:#ca9ee6">default</span><span style="color:#99d1db;font-weight:bold">:</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">10</span><span>    console.log(<span style="color:#a6d189">&#34;default&#34;</span>);
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">11</span><span>};
+</span></span></code></pre></div><p><img src="/post/javascript_note/%E8%BF%90%E7%AE%97%E7%AC%A6%E4%B8%8E%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6/chap2_6.png"
+	width="970"
+	height="79"
+	srcset="/post/javascript_note/%E8%BF%90%E7%AE%97%E7%AC%A6%E4%B8%8E%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6/chap2_6_hucb7662c561e89af35b58256c8d20d8bc_2850_480x0_resize_box_3.png 480w, /post/javascript_note/%E8%BF%90%E7%AE%97%E7%AC%A6%E4%B8%8E%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6/chap2_6_hucb7662c561e89af35b58256c8d20d8bc_2850_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="Image 6"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="1227"
+		data-flex-basis="2946px"
+	
+></p>
+<h3 id="while-循环控制">while 循环控制</h3>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 1</span><span><span style="color:#e78284">function</span> genTable(options <span style="color:#99d1db;font-weight:bold">=</span> {tr<span style="color:#99d1db;font-weight:bold">:</span> <span style="color:#ef9f76">5</span>, td<span style="color:#99d1db;font-weight:bold">:</span> <span style="color:#ef9f76">3</span>}){
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 2</span><span>  <span style="color:#99d1db">document</span>.write(<span style="color:#a6d189">`&lt;table border = &#34;1&#34; width=&#34;100%&#34;`</span>);
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 3</span><span>  <span style="color:#ca9ee6">while</span>(options.tr<span style="color:#99d1db;font-weight:bold">--</span> <span style="color:#99d1db;font-weight:bold">!=</span> <span style="color:#ef9f76">0</span>){
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 4</span><span>    <span style="color:#e78284">let</span> td <span style="color:#99d1db;font-weight:bold">=</span> options.td;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 5</span><span>    <span style="color:#99d1db">document</span>.write(<span style="color:#a6d189">`&lt;tr&gt;`</span>);
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 6</span><span>    <span style="color:#ca9ee6">while</span>(td<span style="color:#99d1db;font-weight:bold">--</span> <span style="color:#99d1db;font-weight:bold">!=</span> <span style="color:#ef9f76">0</span>){
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 7</span><span>      <span style="color:#99d1db">document</span>.write(<span style="color:#a6d189">`&lt;td&gt;</span><span style="color:#a6d189">${</span>td<span style="color:#a6d189">}</span><span style="color:#a6d189">&lt;/td&gt;`</span>);
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 8</span><span>    }
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 9</span><span>    <span style="color:#99d1db">document</span>.write(<span style="color:#a6d189">`&lt;/tr&gt;`</span>);
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">10</span><span>  }
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">11</span><span>  <span style="color:#99d1db">document</span>.write(<span style="color:#a6d189">`&lt;/table&gt;`</span>);
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">12</span><span>}
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">13</span><span>genTable();
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">14</span><span><span style="color:#99d1db">document</span>.write(<span style="color:#a6d189">`&lt;br/&gt;`</span>);
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">15</span><span>genTable({tr<span style="color:#99d1db;font-weight:bold">:</span> <span style="color:#ef9f76">3</span>, td<span style="color:#99d1db;font-weight:bold">:</span> <span style="color:#ef9f76">5</span>});
+</span></span></code></pre></div><p><img src="/post/javascript_note/%E8%BF%90%E7%AE%97%E7%AC%A6%E4%B8%8E%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6/chap2_7.png"
+	width="1404"
+	height="261"
+	srcset="/post/javascript_note/%E8%BF%90%E7%AE%97%E7%AC%A6%E4%B8%8E%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6/chap2_7_hu871d3d5e2fc9f39fb671350f3fd1875f_26449_480x0_resize_box_3.png 480w, /post/javascript_note/%E8%BF%90%E7%AE%97%E7%AC%A6%E4%B8%8E%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6/chap2_7_hu871d3d5e2fc9f39fb671350f3fd1875f_26449_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="Image 7"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="537"
+		data-flex-basis="1291px"
+	
+></p>
+<h3 id="do-while-循环控制">do while 循环控制</h3>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 1</span><span><span style="color:#e78284">function</span> genStars(row <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#ef9f76">5</span>){
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 2</span><span>  <span style="color:#e78284">let</span> l <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#ef9f76">0</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 3</span><span>  <span style="color:#ca9ee6">do</span> {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 4</span><span>    <span style="color:#e78284">let</span> n <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#ef9f76">0</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 5</span><span>    <span style="color:#ca9ee6">do</span> {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 6</span><span>      <span style="color:#99d1db">document</span>.write(<span style="color:#a6d189">&#34;*&#34;</span>);
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 7</span><span>    } <span style="color:#ca9ee6">while</span> (<span style="color:#99d1db;font-weight:bold">++</span>n <span style="color:#99d1db;font-weight:bold">&lt;=</span> l);
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 8</span><span>    <span style="color:#99d1db">document</span>.write(<span style="color:#a6d189">`&lt;br/&gt;`</span>);
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 9</span><span>  } <span style="color:#ca9ee6">while</span>(<span style="color:#99d1db;font-weight:bold">++</span>l <span style="color:#99d1db;font-weight:bold">&lt;</span> row);
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">10</span><span>};
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">11</span><span>genStars();
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">12</span><span><span style="color:#99d1db">document</span>.write(<span style="color:#a6d189">`&lt;br/&gt;`</span>);
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">13</span><span>genStars(<span style="color:#ef9f76">8</span>);
+</span></span></code></pre></div><p><img src="/post/javascript_note/%E8%BF%90%E7%AE%97%E7%AC%A6%E4%B8%8E%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6/chap2_8.png"
+	width="818"
+	height="313"
+	srcset="/post/javascript_note/%E8%BF%90%E7%AE%97%E7%AC%A6%E4%B8%8E%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6/chap2_8_hu446966fa192ca5b7e6490191903c5cef_11834_480x0_resize_box_3.png 480w, /post/javascript_note/%E8%BF%90%E7%AE%97%E7%AC%A6%E4%B8%8E%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6/chap2_8_hu446966fa192ca5b7e6490191903c5cef_11834_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="Image 8"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="261"
+		data-flex-basis="627px"
+	
+></p>
+<h3 id="for-循环">for 循环</h3>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 1</span><span><span style="color:#e78284">function</span> genStars(row <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#ef9f76">5</span>){
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 2</span><span>  <span style="color:#ca9ee6">for</span> (<span style="color:#e78284">let</span> i <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#ef9f76">1</span>; i <span style="color:#99d1db;font-weight:bold">&lt;=</span> row; i<span style="color:#99d1db;font-weight:bold">++</span>){
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 3</span><span>    <span style="color:#ca9ee6">for</span> (<span style="color:#e78284">let</span> n <span style="color:#99d1db;font-weight:bold">=</span> row <span style="color:#99d1db;font-weight:bold">-</span> i; n <span style="color:#99d1db;font-weight:bold">&gt;</span> <span style="color:#ef9f76">0</span>; n<span style="color:#99d1db;font-weight:bold">--</span>){
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 4</span><span>      <span style="color:#99d1db">document</span>.write(<span style="color:#a6d189">`&lt;span style=&#34;color: white&#34;&gt;^&lt;/span&gt;`</span>);
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 5</span><span>    }
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 6</span><span>    <span style="color:#ca9ee6">for</span> (<span style="color:#e78284">let</span> m <span style="color:#99d1db;font-weight:bold">=</span> i <span style="color:#99d1db;font-weight:bold">*</span> <span style="color:#ef9f76">2</span> <span style="color:#99d1db;font-weight:bold">-</span> <span style="color:#ef9f76">1</span>; m <span style="color:#99d1db;font-weight:bold">&gt;</span> <span style="color:#ef9f76">0</span>; m<span style="color:#99d1db;font-weight:bold">--</span>){
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 7</span><span>      <span style="color:#99d1db">document</span>.write(<span style="color:#a6d189">`*`</span>);
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 8</span><span>    }
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 9</span><span>    <span style="color:#99d1db">document</span>.write(<span style="color:#a6d189">`&lt;br/&gt;`</span>);
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">10</span><span>  }
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">11</span><span>}
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">12</span><span>genStars();
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">13</span><span><span style="color:#99d1db">document</span>.write(<span style="color:#a6d189">`&lt;br/&gt;`</span>);
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">14</span><span>genStars(<span style="color:#ef9f76">8</span>);
+</span></span></code></pre></div><p><img src="/post/javascript_note/%E8%BF%90%E7%AE%97%E7%AC%A6%E4%B8%8E%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6/chap2_9.png"
+	width="818"
+	height="313"
+	srcset="/post/javascript_note/%E8%BF%90%E7%AE%97%E7%AC%A6%E4%B8%8E%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6/chap2_9_hu8c2a371ac8099b6123ffb126b73127a0_13477_480x0_resize_box_3.png 480w, /post/javascript_note/%E8%BF%90%E7%AE%97%E7%AC%A6%E4%B8%8E%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6/chap2_9_hu8c2a371ac8099b6123ffb126b73127a0_13477_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="Image 9"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="261"
+		data-flex-basis="627px"
+	
+></p>
+<h3 id="continue-与-break">continue 与 break</h3>
+<p>continue：停止当前循环，进行下一次循环；</p>
+<p>break：终止当前循环；</p>
+<p>如果需要从子循环直接终止更上一级的循环，需要通过标签：</p>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 1</span><span>pa<span style="color:#99d1db;font-weight:bold">:</span> <span style="color:#ca9ee6">for</span> (<span style="color:#e78284">let</span> i <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#ef9f76">1</span>; i <span style="color:#99d1db;font-weight:bold">&lt;=</span> <span style="color:#ef9f76">10</span>; i<span style="color:#99d1db;font-weight:bold">++</span>){
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 2</span><span>  ch<span style="color:#99d1db;font-weight:bold">:</span> <span style="color:#ca9ee6">for</span> (<span style="color:#e78284">let</span> j <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#ef9f76">1</span>; j <span style="color:#99d1db;font-weight:bold">&lt;=</span> <span style="color:#ef9f76">10</span>; j<span style="color:#99d1db;font-weight:bold">++</span>){
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 3</span><span>    <span style="color:#ca9ee6">if</span> (j <span style="color:#99d1db;font-weight:bold">%</span> <span style="color:#ef9f76">2</span> <span style="color:#99d1db;font-weight:bold">==</span> <span style="color:#ef9f76">0</span>){
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 4</span><span>      console.log(i, j);
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 5</span><span>    }
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 6</span><span>    <span style="color:#ca9ee6">if</span> (i <span style="color:#99d1db;font-weight:bold">+</span> j <span style="color:#99d1db;font-weight:bold">&gt;</span> <span style="color:#ef9f76">10</span>){
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 7</span><span>      <span style="color:#ca9ee6">break</span> pa;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 8</span><span>    };
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 9</span><span>  };
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">10</span><span>};
+</span></span></code></pre></div><p><img src="/post/javascript_note/%E8%BF%90%E7%AE%97%E7%AC%A6%E4%B8%8E%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6/chap2_10.png"
+	width="818"
+	height="186"
+	srcset="/post/javascript_note/%E8%BF%90%E7%AE%97%E7%AC%A6%E4%B8%8E%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6/chap2_10_huace48fa81ae7b39830849a223cc7e427_7512_480x0_resize_box_3.png 480w, /post/javascript_note/%E8%BF%90%E7%AE%97%E7%AC%A6%E4%B8%8E%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6/chap2_10_huace48fa81ae7b39830849a223cc7e427_7512_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="Image 10"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="439"
+		data-flex-basis="1055px"
+	
+></p>
+<h3 id="for-in-与-for-of">for-in 与 for-of</h3>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">1</span><span><span style="color:#e78284">let</span> array <span style="color:#99d1db;font-weight:bold">=</span> [<span style="color:#ef9f76">1</span>, <span style="color:#ef9f76">2</span>, <span style="color:#ef9f76">3</span>, <span style="color:#ef9f76">4</span>];
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">2</span><span><span style="color:#ca9ee6">for</span> (<span style="color:#e78284">let</span> key <span style="color:#ca9ee6">in</span> array){
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">3</span><span>  console.log(key, array[key]);
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">4</span><span>};
+</span></span></code></pre></div><p><img src="/post/javascript_note/%E8%BF%90%E7%AE%97%E7%AC%A6%E4%B8%8E%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6/chap2_11.png"
+	width="818"
+	height="150"
+	srcset="/post/javascript_note/%E8%BF%90%E7%AE%97%E7%AC%A6%E4%B8%8E%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6/chap2_11_hu3fc7e2b358985db233a143405263e727_6308_480x0_resize_box_3.png 480w, /post/javascript_note/%E8%BF%90%E7%AE%97%E7%AC%A6%E4%B8%8E%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6/chap2_11_hu3fc7e2b358985db233a143405263e727_6308_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="Image 11"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="545"
+		data-flex-basis="1308px"
+	
+></p>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">1</span><span><span style="color:#e78284">let</span> array <span style="color:#99d1db;font-weight:bold">=</span> [<span style="color:#ef9f76">1</span>, <span style="color:#ef9f76">2</span>, <span style="color:#ef9f76">3</span>, <span style="color:#ef9f76">4</span>];
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">2</span><span><span style="color:#ca9ee6">for</span> (<span style="color:#ca9ee6">const</span> value <span style="color:#ca9ee6">of</span> array) {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">3</span><span>  console.log(value);
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">4</span><span>};
+</span></span></code></pre></div><p><img src="/post/javascript_note/%E8%BF%90%E7%AE%97%E7%AC%A6%E4%B8%8E%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6/chap2_12.png"
+	width="818"
+	height="150"
+	srcset="/post/javascript_note/%E8%BF%90%E7%AE%97%E7%AC%A6%E4%B8%8E%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6/chap2_12_hu326f4e260a0c7bc4f6d84cac66d969b3_4852_480x0_resize_box_3.png 480w, /post/javascript_note/%E8%BF%90%E7%AE%97%E7%AC%A6%E4%B8%8E%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6/chap2_12_hu326f4e260a0c7bc4f6d84cac66d969b3_4852_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="Image 12"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="545"
+		data-flex-basis="1308px"
+	
+></p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2024 Eachann blog
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.21.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+<style>
+     
+    :root {
+        --article-font-family: "Merriweather", var(--base-font-family);
+    }
+</style>
+
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap";
+    
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+    
+        document.head.appendChild(customFont);
+    }());
+</script>
+    </body>
+</html>
