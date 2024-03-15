@@ -290,7 +290,16 @@ C&#43;&#43;定义常量的两种方式 1.#define 宏常量 1#include &amp;lt;ios
         <li><a href="#指针和函数">指针和函数</a></li>
       </ul>
     </li>
-    <li><a href="#结构体">结构体</a></li>
+    <li><a href="#结构体">结构体</a>
+      <ul>
+        <li><a href="#结构体的定义和使用">结构体的定义和使用</a></li>
+        <li><a href="#结构体数组">结构体数组</a></li>
+        <li><a href="#结构体指针">结构体指针</a></li>
+        <li><a href="#结构体嵌套">结构体嵌套</a></li>
+        <li><a href="#结构体做函数参数">结构体做函数参数</a></li>
+        <li><a href="#结构体中使用const防止误操作">结构体中使用const防止误操作</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
         </div>
@@ -367,7 +376,7 @@ C&#43;&#43;定义常量的两种方式 1.#define 宏常量 1#include &amp;lt;ios
 
 
                 <time class="article-time--reading">
-                    7 minute read
+                    11 minute read
                 </time>
             </div>
         
@@ -1378,6 +1387,306 @@ C&#43;&#43;定义常量的两种方式 1.#define 宏常量 1#include &amp;lt;ios
 	
 ></p>
 <h2 id="结构体">结构体</h2>
+<ul>
+<li>结构体术语用户自定义的数据类型，允许用户存储不同的数据类型</li>
+</ul>
+<h3 id="结构体的定义和使用">结构体的定义和使用</h3>
+<p>通过结构体创建变量的方式：</p>
+<ul>
+<li>struct 结构体名 变量名</li>
+<li>struct 结构体名 变量名 = {成员1值，成员2值&hellip;}</li>
+<li>定义结构体时顺便创建变量</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c++" data-lang="c++"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 1</span><span><span style="color:#ca9ee6">struct</span> <span style="color:#e5c890">Student</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 2</span><span>{
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 3</span><span>  string Name;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 4</span><span>  <span style="color:#e78284">int</span> age;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 5</span><span>  <span style="color:#e78284">float</span> score;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 6</span><span>}s3;<span style="color:#737994;font-style:italic">//在定义结构体时顺便声明了一个Student类型的结构体s3
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 7</span><span><span style="color:#737994;font-style:italic"></span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 8</span><span><span style="color:#e78284">int</span> <span style="color:#8caaee">main</span>()
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 9</span><span>{
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">10</span><span>  <span style="color:#ca9ee6">struct</span> <span style="color:#e5c890">Student</span> s1;<span style="color:#737994;font-style:italic">//声明一个Student类型的结构体s1，并给s1赋值
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">11</span><span><span style="color:#737994;font-style:italic"></span>  s1.Name <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#a6d189">&#34;mike&#34;</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">12</span><span>  s1.age <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#ef9f76">22</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">13</span><span>  s1.score <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#ef9f76">88.88</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">14</span><span>  cout <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#a6d189">&#34;姓名：&#34;</span> <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> s1.Name<span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#a6d189">&#34;; &#34;</span> 
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">15</span><span>    <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span><span style="color:#a6d189">&#34;年龄：&#34;</span> <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> s1.age <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#a6d189">&#34;; &#34;</span>  
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">16</span><span>    <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#a6d189">&#34;分数：&#34;</span> <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> s1.score <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">17</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">18</span><span>  <span style="color:#ca9ee6">struct</span> <span style="color:#e5c890">Student</span> s2 <span style="color:#99d1db;font-weight:bold">=</span> {<span style="color:#a6d189">&#34;tom&#34;</span>, <span style="color:#ef9f76">21</span>, <span style="color:#ef9f76">89</span>};<span style="color:#737994;font-style:italic">//声明s2的同时给s2赋值
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">19</span><span><span style="color:#737994;font-style:italic"></span>  cout <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#a6d189">&#34;姓名：&#34;</span> <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> s2.Name<span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#a6d189">&#34;; &#34;</span> 
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">20</span><span>    <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span><span style="color:#a6d189">&#34;年龄：&#34;</span> <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> s2.age <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#a6d189">&#34;; &#34;</span>  
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">21</span><span>    <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#a6d189">&#34;分数：&#34;</span> <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> s2.score <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">22</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">23</span><span>  s3.Name <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#a6d189">&#34;bob&#34;</span>;<span style="color:#737994;font-style:italic">//在定义结构体时已经声明了s3
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">24</span><span><span style="color:#737994;font-style:italic"></span>  s3.age <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#ef9f76">19</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">25</span><span>  s3.score <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#ef9f76">87</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">26</span><span>  cout <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#a6d189">&#34;姓名：&#34;</span> <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> s3.Name<span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#a6d189">&#34;;&#34;</span> 
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">27</span><span>    <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span><span style="color:#a6d189">&#34;年龄：&#34;</span> <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> s3.age <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#a6d189">&#34;; &#34;</span>  
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">28</span><span>    <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#a6d189">&#34;分数：&#34;</span> <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> s3.score <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">29</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">30</span><span>  <span style="color:#ca9ee6">return</span> <span style="color:#ef9f76">0</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">31</span><span>}
+</span></span></code></pre></div><p><img src="/post/c_plus_note/chapter1_%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/chap1_17.png"
+	width="1002"
+	height="93"
+	srcset="/post/c_plus_note/chapter1_%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/chap1_17_hub6a8a67b743db6a541338555bb5373ff_17475_480x0_resize_box_3.png 480w, /post/c_plus_note/chapter1_%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/chap1_17_hub6a8a67b743db6a541338555bb5373ff_17475_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="Image 17"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="1077"
+		data-flex-basis="2585px"
+	
+></p>
+<h3 id="结构体数组">结构体数组</h3>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c++" data-lang="c++"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 1</span><span><span style="color:#ca9ee6">struct</span> <span style="color:#e5c890">Student</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 2</span><span>{
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 3</span><span>  string Name;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 4</span><span>  <span style="color:#e78284">int</span> age;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 5</span><span>  <span style="color:#e78284">float</span> score;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 6</span><span>};
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 7</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 8</span><span><span style="color:#e78284">int</span> <span style="color:#8caaee">main</span>()
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 9</span><span>{
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">10</span><span>  <span style="color:#ca9ee6">struct</span> <span style="color:#e5c890">Student</span> stuArr[<span style="color:#ef9f76">3</span>] <span style="color:#99d1db;font-weight:bold">=</span> 
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">11</span><span>  {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">12</span><span>    {<span style="color:#a6d189">&#34;tom&#34;</span>, <span style="color:#ef9f76">15</span>, <span style="color:#ef9f76">88</span>},
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">13</span><span>    {<span style="color:#a6d189">&#34;bob&#34;</span>, <span style="color:#ef9f76">16</span>, <span style="color:#ef9f76">89</span>},
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">14</span><span>    {<span style="color:#a6d189">&#34;mike&#34;</span>, <span style="color:#ef9f76">18</span>, <span style="color:#ef9f76">78</span>}
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">15</span><span>  };
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">16</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">17</span><span>  stuArr[<span style="color:#ef9f76">1</span>].score <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#ef9f76">92</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">18</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">19</span><span>  <span style="color:#ca9ee6">for</span> (<span style="color:#e78284">int</span> i <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#ef9f76">0</span>; i <span style="color:#99d1db;font-weight:bold">&lt;</span> <span style="color:#ca9ee6">sizeof</span>(stuArr) <span style="color:#99d1db;font-weight:bold">/</span> <span style="color:#ca9ee6">sizeof</span>(stuArr[<span style="color:#ef9f76">0</span>]); i<span style="color:#99d1db;font-weight:bold">++</span>)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">20</span><span>  {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">21</span><span>    cout <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#a6d189">&#34;姓名：&#34;</span> <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> stuArr[i].Name<span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#a6d189">&#34;;&#34;</span> 
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">22</span><span>      <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span><span style="color:#a6d189">&#34;年龄：&#34;</span> <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> stuArr[i].age <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#a6d189">&#34;; &#34;</span>  
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">23</span><span>      <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#a6d189">&#34;分数：&#34;</span> <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> stuArr[i].score <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">24</span><span>  }
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">25</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">26</span><span>  <span style="color:#ca9ee6">return</span> <span style="color:#ef9f76">0</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">27</span><span>}
+</span></span></code></pre></div><p><img src="/post/c_plus_note/chapter1_%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/chap1_18.png"
+	width="1002"
+	height="93"
+	srcset="/post/c_plus_note/chapter1_%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/chap1_18_hu923973cb95eac901e2fce816dee1cfe4_17232_480x0_resize_box_3.png 480w, /post/c_plus_note/chapter1_%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/chap1_18_hu923973cb95eac901e2fce816dee1cfe4_17232_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="Image 18"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="1077"
+		data-flex-basis="2585px"
+	
+></p>
+<h3 id="结构体指针">结构体指针</h3>
+<ul>
+<li>利用操作符 -&gt; 可以通过结构体指针访问结构体属性</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c++" data-lang="c++"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 1</span><span><span style="color:#ca9ee6">struct</span> <span style="color:#e5c890">Student</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 2</span><span>{
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 3</span><span>  string Name;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 4</span><span>  <span style="color:#e78284">int</span> age;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 5</span><span>  <span style="color:#e78284">float</span> score;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 6</span><span>};
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 7</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 8</span><span><span style="color:#e78284">int</span> <span style="color:#8caaee">main</span>()
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 9</span><span>{
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">10</span><span>  <span style="color:#ca9ee6">struct</span> <span style="color:#e5c890">Student</span> s1 <span style="color:#99d1db;font-weight:bold">=</span> {<span style="color:#a6d189">&#34;tom&#34;</span>, <span style="color:#ef9f76">21</span>, <span style="color:#ef9f76">89</span>};
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">11</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">12</span><span>  <span style="color:#ca9ee6">struct</span> <span style="color:#e5c890">Student</span> <span style="color:#99d1db;font-weight:bold">*</span> p <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#99d1db;font-weight:bold">&amp;</span>s1;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">13</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">14</span><span>  cout <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#a6d189">&#34;姓名：&#34;</span> <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> p<span style="color:#99d1db;font-weight:bold">-&gt;</span>Name<span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#a6d189">&#34;; &#34;</span> 
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">15</span><span>    <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span><span style="color:#a6d189">&#34;年龄：&#34;</span> <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> p<span style="color:#99d1db;font-weight:bold">-&gt;</span>age <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#a6d189">&#34;; &#34;</span>  
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">16</span><span>    <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#a6d189">&#34;分数：&#34;</span> <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> p<span style="color:#99d1db;font-weight:bold">-&gt;</span>score <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">17</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">18</span><span>  <span style="color:#ca9ee6">return</span> <span style="color:#ef9f76">0</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">19</span><span>}
+</span></span></code></pre></div><p><img src="/post/c_plus_note/chapter1_%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/chap1_19.png"
+	width="1002"
+	height="31"
+	srcset="/post/c_plus_note/chapter1_%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/chap1_19_hu6bc08830bb4e65e8e8955b60f7d9cd03_6331_480x0_resize_box_3.png 480w, /post/c_plus_note/chapter1_%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/chap1_19_hu6bc08830bb4e65e8e8955b60f7d9cd03_6331_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="Image 19"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="3232"
+		data-flex-basis="7757px"
+	
+></p>
+<h3 id="结构体嵌套">结构体嵌套</h3>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c++" data-lang="c++"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 1</span><span><span style="color:#ca9ee6">struct</span> <span style="color:#e5c890">Student</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 2</span><span>{
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 3</span><span>  string Name;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 4</span><span>  <span style="color:#e78284">int</span> age;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 5</span><span>  <span style="color:#e78284">float</span> score;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 6</span><span>};
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 7</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 8</span><span><span style="color:#ca9ee6">struct</span> <span style="color:#e5c890">teacher</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 9</span><span>{
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">10</span><span>  string Name;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">11</span><span>  <span style="color:#e78284">int</span> age;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">12</span><span>  <span style="color:#ca9ee6">struct</span> <span style="color:#e5c890">Student</span> stuArr[<span style="color:#ef9f76">3</span>];
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">13</span><span>};
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">14</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">15</span><span><span style="color:#e78284">int</span> <span style="color:#8caaee">main</span>()
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">16</span><span>{
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">17</span><span>  <span style="color:#ca9ee6">struct</span> <span style="color:#e5c890">teacher</span> t1 <span style="color:#99d1db;font-weight:bold">=</span> 
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">18</span><span>  {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">19</span><span>    <span style="color:#a6d189">&#34;tim&#34;</span>, 
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">20</span><span>    <span style="color:#ef9f76">26</span>, 
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">21</span><span>    {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">22</span><span>      {<span style="color:#a6d189">&#34;tom&#34;</span>, <span style="color:#ef9f76">15</span>, <span style="color:#ef9f76">88</span>},
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">23</span><span>      {<span style="color:#a6d189">&#34;bob&#34;</span>, <span style="color:#ef9f76">16</span>, <span style="color:#ef9f76">89</span>},
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">24</span><span>      {<span style="color:#a6d189">&#34;mike&#34;</span>, <span style="color:#ef9f76">18</span>, <span style="color:#ef9f76">78</span>}
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">25</span><span>    }
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">26</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">27</span><span>  };
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">28</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">29</span><span>  cout <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#a6d189">&#34;教师姓名：&#34;</span> <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> t1.Name <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#a6d189">&#34;; &#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">30</span><span>    <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#a6d189">&#34;教师年龄：&#34;</span> <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> t1.age <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#a6d189">&#34;; &#34;</span> <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">31</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">32</span><span>  cout <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#a6d189">&#34;教的学生：&#34;</span> <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">33</span><span>  <span style="color:#ca9ee6">for</span> (<span style="color:#e78284">int</span> i <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#ef9f76">0</span>; i <span style="color:#99d1db;font-weight:bold">&lt;</span> <span style="color:#ca9ee6">sizeof</span>(t1.stuArr) <span style="color:#99d1db;font-weight:bold">/</span> <span style="color:#ca9ee6">sizeof</span>(t1.stuArr[<span style="color:#ef9f76">0</span>]); i<span style="color:#99d1db;font-weight:bold">++</span>)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">34</span><span>  {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">35</span><span>    cout <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#a6d189">&#34;姓名：&#34;</span> <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> t1.stuArr[i].Name<span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#a6d189">&#34;; &#34;</span> 
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">36</span><span>      <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span><span style="color:#a6d189">&#34;年龄：&#34;</span> <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> t1.stuArr[i].age <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#a6d189">&#34;; &#34;</span>  
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">37</span><span>      <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#a6d189">&#34;分数：&#34;</span> <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> t1.stuArr[i].score <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">38</span><span>  }
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">39</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">40</span><span>  <span style="color:#ca9ee6">return</span> <span style="color:#ef9f76">0</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">41</span><span>}
+</span></span></code></pre></div><p><img src="/post/c_plus_note/chapter1_%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/chap1_20.png"
+	width="1002"
+	height="150"
+	srcset="/post/c_plus_note/chapter1_%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/chap1_20_hue7b302f4a97d6244eca2b2dc92434eb9_25391_480x0_resize_box_3.png 480w, /post/c_plus_note/chapter1_%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/chap1_20_hue7b302f4a97d6244eca2b2dc92434eb9_25391_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="Image 20"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="668"
+		data-flex-basis="1603px"
+	
+></p>
+<h3 id="结构体做函数参数">结构体做函数参数</h3>
+<p>传递方式有两种：</p>
+<ul>
+<li>值传递</li>
+<li>地址传递</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c++" data-lang="c++"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 1</span><span><span style="color:#ca9ee6">struct</span> <span style="color:#e5c890">Student</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 2</span><span>{
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 3</span><span>  string Name;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 4</span><span>  <span style="color:#e78284">int</span> age;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 5</span><span>  <span style="color:#e78284">float</span> score;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 6</span><span>};
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 7</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 8</span><span><span style="color:#737994;font-style:italic">//值传递
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 9</span><span><span style="color:#737994;font-style:italic"></span><span style="color:#e78284">void</span> <span style="color:#8caaee">prtStu01</span>(Student s)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">10</span><span>{
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">11</span><span>  s.age <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#ef9f76">22</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">12</span><span>  cout <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#a6d189">&#34;通过值传递prtStu01()中的s：&#34;</span> <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">13</span><span>  cout <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#a6d189">&#34;姓名：&#34;</span> <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> s.Name<span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#a6d189">&#34;; &#34;</span> 
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">14</span><span>    <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span><span style="color:#a6d189">&#34;年龄：&#34;</span> <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> s.age <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#a6d189">&#34;; &#34;</span>  
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">15</span><span>    <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#a6d189">&#34;分数：&#34;</span> <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> s.score <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">16</span><span>}
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">17</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">18</span><span><span style="color:#737994;font-style:italic">//地址传递
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">19</span><span><span style="color:#737994;font-style:italic"></span><span style="color:#e78284">void</span> <span style="color:#8caaee">prtStu02</span>(Student <span style="color:#99d1db;font-weight:bold">*</span> s)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">20</span><span>{
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">21</span><span>  s<span style="color:#99d1db;font-weight:bold">-&gt;</span>age <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#ef9f76">22</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">22</span><span>  cout <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#a6d189">&#34;通过地址传递prtStu02()中的s：&#34;</span> <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">23</span><span>  cout <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#a6d189">&#34;姓名：&#34;</span> <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> s<span style="color:#99d1db;font-weight:bold">-&gt;</span>Name<span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#a6d189">&#34;; &#34;</span> 
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">24</span><span>    <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span><span style="color:#a6d189">&#34;年龄：&#34;</span> <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> s<span style="color:#99d1db;font-weight:bold">-&gt;</span>age <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#a6d189">&#34;; &#34;</span>  
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">25</span><span>    <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#a6d189">&#34;分数：&#34;</span> <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> s<span style="color:#99d1db;font-weight:bold">-&gt;</span>score <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">26</span><span>}
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">27</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">28</span><span><span style="color:#e78284">int</span> <span style="color:#8caaee">main</span>()
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">29</span><span>{
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">30</span><span>  <span style="color:#ca9ee6">struct</span> <span style="color:#e5c890">Student</span> s <span style="color:#99d1db;font-weight:bold">=</span> {<span style="color:#a6d189">&#34;tom&#34;</span>, <span style="color:#ef9f76">21</span>, <span style="color:#ef9f76">89</span>};
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">31</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">32</span><span>  prtStu01(s);
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">33</span><span>  cout <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#a6d189">&#34;main中的s：&#34;</span> <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">34</span><span>  cout <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#a6d189">&#34;姓名：&#34;</span> <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> s.Name<span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#a6d189">&#34;; &#34;</span> 
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">35</span><span>    <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span><span style="color:#a6d189">&#34;年龄：&#34;</span> <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> s.age <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#a6d189">&#34;; &#34;</span>  
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">36</span><span>    <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#a6d189">&#34;分数：&#34;</span> <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> s.score <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">37</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">38</span><span>  prtStu02(<span style="color:#99d1db;font-weight:bold">&amp;</span>s);
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">39</span><span>  cout <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#a6d189">&#34;main中的s：&#34;</span> <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">40</span><span>  cout <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#a6d189">&#34;姓名：&#34;</span> <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> s.Name<span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#a6d189">&#34;; &#34;</span> 
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">41</span><span>    <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span><span style="color:#a6d189">&#34;年龄：&#34;</span> <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> s.age <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#a6d189">&#34;; &#34;</span>  
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">42</span><span>    <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#a6d189">&#34;分数：&#34;</span> <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> s.score <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">43</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">44</span><span>  <span style="color:#ca9ee6">return</span> <span style="color:#ef9f76">0</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">45</span><span>}
+</span></span></code></pre></div><p><img src="/post/c_plus_note/chapter1_%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/chap1_21.png"
+	width="1002"
+	height="248"
+	srcset="/post/c_plus_note/chapter1_%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/chap1_21_hu0b04d34d24ae40dbaf39bd274d4831ee_40798_480x0_resize_box_3.png 480w, /post/c_plus_note/chapter1_%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/chap1_21_hu0b04d34d24ae40dbaf39bd274d4831ee_40798_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="Image 21"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="404"
+		data-flex-basis="969px"
+	
+></p>
+<h3 id="结构体中使用const防止误操作">结构体中使用const防止误操作</h3>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c++" data-lang="c++"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 1</span><span><span style="color:#ca9ee6">struct</span> <span style="color:#e5c890">Student</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 2</span><span>{
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 3</span><span>  string Name;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 4</span><span>  <span style="color:#e78284">int</span> age;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 5</span><span>  <span style="color:#e78284">float</span> score;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 6</span><span>};
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 7</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 8</span><span><span style="color:#737994;font-style:italic">//在参数类型前加const修饰表明该函数只对参数有读权限，不能修改参数的值
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 9</span><span><span style="color:#737994;font-style:italic"></span><span style="color:#e78284">void</span> <span style="color:#8caaee">prtStu</span>(<span style="color:#ca9ee6">const</span> Student <span style="color:#99d1db;font-weight:bold">*</span> s)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">10</span><span>{
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">11</span><span>  s<span style="color:#99d1db;font-weight:bold">-&gt;</span>age <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#ef9f76">22</span>;<span style="color:#737994;font-style:italic">//该操作会报错
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">12</span><span><span style="color:#737994;font-style:italic"></span>  cout <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#a6d189">&#34;通过地址传递prtStu()中的s：&#34;</span> <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">13</span><span>  cout <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#a6d189">&#34;姓名：&#34;</span> <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> s<span style="color:#99d1db;font-weight:bold">-&gt;</span>Name<span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#a6d189">&#34;; &#34;</span> 
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">14</span><span>    <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span><span style="color:#a6d189">&#34;年龄：&#34;</span> <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> s<span style="color:#99d1db;font-weight:bold">-&gt;</span>age <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#a6d189">&#34;; &#34;</span>  
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">15</span><span>    <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#a6d189">&#34;分数：&#34;</span> <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> s<span style="color:#99d1db;font-weight:bold">-&gt;</span>score <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">16</span><span>}
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">17</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">18</span><span><span style="color:#e78284">int</span> <span style="color:#8caaee">main</span>()
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">19</span><span>{
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">20</span><span>  <span style="color:#ca9ee6">struct</span> <span style="color:#e5c890">Student</span> s <span style="color:#99d1db;font-weight:bold">=</span> {<span style="color:#a6d189">&#34;tom&#34;</span>, <span style="color:#ef9f76">21</span>, <span style="color:#ef9f76">89</span>};
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">21</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">22</span><span>  prtStu(<span style="color:#99d1db;font-weight:bold">&amp;</span>s);
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">23</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">24</span><span>  cout <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#a6d189">&#34;main中的s：&#34;</span> <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">25</span><span>  cout <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#a6d189">&#34;姓名：&#34;</span> <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> s.Name<span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#a6d189">&#34;; &#34;</span> 
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">26</span><span>    <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span><span style="color:#a6d189">&#34;年龄：&#34;</span> <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> s.age <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#a6d189">&#34;; &#34;</span>  
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">27</span><span>    <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#a6d189">&#34;分数：&#34;</span> <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> s.score <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">28</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">29</span><span>  <span style="color:#ca9ee6">return</span> <span style="color:#ef9f76">0</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">30</span><span>}
+</span></span></code></pre></div><p><img src="/post/c_plus_note/chapter1_%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/chap1_22.png"
+	width="1002"
+	height="248"
+	srcset="/post/c_plus_note/chapter1_%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/chap1_22_hu6600ad69aacf7321da741e6a44835107_32788_480x0_resize_box_3.png 480w, /post/c_plus_note/chapter1_%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/chap1_22_hu6600ad69aacf7321da741e6a44835107_32788_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="Image 22"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="404"
+		data-flex-basis="969px"
+	
+></p>
 
 </section>
 
