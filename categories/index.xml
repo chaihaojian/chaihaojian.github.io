@@ -6,21 +6,21 @@
         <description>Recent content in Categories on EachannJ&#39;s blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sat, 09 Mar 2024 13:31:05 +0800</lastBuildDate><atom:link href="https://chaihaojian.github.io/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 16 Mar 2024 14:18:58 +0800</lastBuildDate><atom:link href="https://chaihaojian.github.io/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>C&#43;&#43;</title>
+        <link>https://chaihaojian.github.io/categories/c_plus_note/</link>
+        <pubDate>Sat, 16 Mar 2024 14:18:58 +0800</pubDate>
+        
+        <guid>https://chaihaojian.github.io/categories/c_plus_note/</guid>
+        <description>&lt;img src="https://chaihaojian.github.io/categories/c_plus_note/cover.JPG" alt="Featured image of post C&#43;&#43;" /&gt;</description>
+        </item>
+        <item>
         <title>JavaScript</title>
         <link>https://chaihaojian.github.io/categories/javascript/</link>
         <pubDate>Sat, 09 Mar 2024 13:31:05 +0800</pubDate>
         
         <guid>https://chaihaojian.github.io/categories/javascript/</guid>
         <description>&lt;img src="https://chaihaojian.github.io/categories/javascript/cover.JPG" alt="Featured image of post JavaScript" /&gt;</description>
-        </item>
-        <item>
-        <title>C&#43;&#43;</title>
-        <link>https://chaihaojian.github.io/categories/c_plus_note/</link>
-        <pubDate>Tue, 05 Mar 2024 22:29:24 +0800</pubDate>
-        
-        <guid>https://chaihaojian.github.io/categories/c_plus_note/</guid>
-        <description>&lt;img src="https://chaihaojian.github.io/categories/c_plus_note/cover.JPG" alt="Featured image of post C&#43;&#43;" /&gt;</description>
         </item>
         <item>
         <title>计算机组成原理</title>
