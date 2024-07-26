@@ -6,7 +6,70 @@
         <description>Recent content in 计算机组成原理 on EachannJ&#39;s blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Tue, 27 Feb 2024 10:13:54 +0800</lastBuildDate><atom:link href="https://chaihaojian.github.io/categories/computer_composition_principles/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 18 Jul 2024 10:08:09 +0800</lastBuildDate><atom:link href="https://chaihaojian.github.io/categories/computer_composition_principles/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>数据的表示和运算</title>
+        <link>https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/</link>
+        <pubDate>Thu, 18 Jul 2024 10:08:09 +0800</pubDate>
+        
+        <guid>https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/</guid>
+        <description>&lt;img src="https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/cover.JPG" alt="Featured image of post 数据的表示和运算" /&gt;&lt;h1 id=&#34;数据的表示和运算&#34;&gt;数据的表示和运算&lt;/h1&gt;
+&lt;h2 id=&#34;数制与编码&#34;&gt;数制与编码&lt;/h2&gt;
+&lt;h3 id=&#34;进位计数制&#34;&gt;进位计数制&lt;/h3&gt;
+&lt;p&gt;![Image 7](chap2_ 7.png)&lt;/p&gt;
+&lt;h4 id=&#34;r进制计数法&#34;&gt;r进制计数法&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&#34;https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_.png&#34;
+	width=&#34;599&#34;
+	height=&#34;187&#34;
+	srcset=&#34;https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2__hu6ee04ddba7e498bef13726d1be6b5b16_55910_480x0_resize_box_3.png 480w, https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2__hu6ee04ddba7e498bef13726d1be6b5b16_55910_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Image 0&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;320&#34;
+		data-flex-basis=&#34;768px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h4 id=&#34;二进制----八进制&#34;&gt;二进制 &amp;lt;&amp;ndash;&amp;gt; 八进制&lt;/h4&gt;
+&lt;p&gt;二进制中的三位数正好可以表示八进制中的一位数&lt;/p&gt;
+&lt;p&gt;3位一组，每组转换成对应的8进制符号；首尾如果不足3位，则用0补全&lt;/p&gt;
+&lt;p&gt;![Image 1](chap2_ 1.png)&lt;/p&gt;
+&lt;p&gt;同理，八进制中的一位数对应二进制中的3位数&lt;/p&gt;
+&lt;p&gt;![Image 3](chap2_ 3.png)&lt;/p&gt;
+&lt;h4 id=&#34;二进制----十六进制&#34;&gt;二进制 &amp;lt;&amp;ndash;&amp;gt; 十六进制&lt;/h4&gt;
+&lt;p&gt;二进制中的四位数正好可以表示十六进制中的一位数&lt;/p&gt;
+&lt;p&gt;4位一组，每组转换成对应的十六进制符号，首尾如果不足3位，则用0补全&lt;/p&gt;
+&lt;p&gt;![Image 2](chap2_ 2.png)&lt;/p&gt;
+&lt;p&gt;同理，十六进制中的一位数对应二进制中的4位数&lt;/p&gt;
+&lt;p&gt;![Image 4](chap2_ 4.png)&lt;/p&gt;
+&lt;h4 id=&#34;十进制----任意进制&#34;&gt;十进制 &amp;ndash;&amp;gt; 任意进制&lt;/h4&gt;
+&lt;p&gt;![Image 5](chap2_ 5.png)&lt;/p&gt;
+&lt;p&gt;![Image 6](chap2_ 6.png)&lt;/p&gt;
+&lt;p&gt;上述小数部分的0.3在转换成二进制时会无限循环下去，表明十进制中的0.3无法在二进制中精确表示&lt;/p&gt;
+&lt;h4 id=&#34;真值和机器数&#34;&gt;真值和机器数&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;真值&lt;/strong&gt;：符合人类习惯的数字，如：2，5，-3，-11&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;机器数&lt;/strong&gt;：数字实际存储到机器里的形式，正负号需要被数字化，在数字开头加 ‘0‘ 或 ’1’ 来表示正负&lt;/p&gt;
+&lt;h3 id=&#34;bcd码&#34;&gt;BCD码&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;BCD&lt;/strong&gt;：Binary-Coded Decimal，用二进制编码的十进制&lt;/p&gt;
+&lt;p&gt;![Image 12](chap2_ 12.png)&lt;/p&gt;
+&lt;h4 id=&#34;8421码&#34;&gt;8421码&lt;/h4&gt;
+&lt;p&gt;考虑用四个二进制位表示十进制中的0～9&lt;/p&gt;
+&lt;p&gt;四个二进制位一共能表示16种状态，十进制0～9表示10种状态，因此这种表示会产生6种冗余状态，需要舍弃&lt;/p&gt;
+&lt;p&gt;![Image 8](chap2_ 8.png)&lt;/p&gt;
+&lt;p&gt;![Image 9](chap2_ 9.png)&lt;/p&gt;
+&lt;p&gt;上述计算结果 13 (1101) 恰好处在8421码需要舍弃的6种状态中，因此通过加 6 (0110) 来剔除这六种冗余，从而得到十进制数13的正确8421码表示&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;由于四个二进制码可以表示16种不同的状态，因此在表示十进制中的0～9时，可以产生不同的映射方案&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&#34;余3码8421码--0011sub2sub&#34;&gt;余3码：8421码 + (0011)&lt;!-- raw HTML omitted --&gt;2&lt;!-- raw HTML omitted --&gt;&lt;/h4&gt;
+&lt;p&gt;![Image 10](chap2_ 10.png)&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;特点&lt;/strong&gt;：8421码中，四个二进制位都有其固定的权值，分别为 8 - 4 - 2 - 1，但在余3码中，四个二进制位没有其固定的权值&lt;/p&gt;
+&lt;h4 id=&#34;2421码将四个二进制位的权值变为-2---4---2---1&#34;&gt;2421码：将四个二进制位的权值变为 2 - 4 - 2 - 1&lt;/h4&gt;
+&lt;p&gt;![Image 11](chap2_ 11.png)&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;特点&lt;/strong&gt;：十进制中的4～9在2421码中会有多种编码方式，因此规定在表示5～9时，第一个二进制位即最高位必须是1&lt;/p&gt;
+&lt;h3 id=&#34;无符号整数的表示和运算&#34;&gt;无符号整数的表示和运算&lt;/h3&gt;
+</description>
+        </item>
+        <item>
         <title>计算机系统概述</title>
         <link>https://chaihaojian.github.io/post/computer_composition_principles/chapter_1/</link>
         <pubDate>Tue, 27 Feb 2024 10:13:54 +0800</pubDate>

@@ -7,12 +7,12 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <lastBuildDate>Thu, 18 Jul 2024 10:08:09 +0800</lastBuildDate><atom:link href="https://chaihaojian.github.io/post/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>Chapter_2</title>
+        <title>数据的表示和运算</title>
         <link>https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/</link>
         <pubDate>Thu, 18 Jul 2024 10:08:09 +0800</pubDate>
         
         <guid>https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/</guid>
-        <description>&lt;img src="https://chaihaojian.github.io/cover.JPG" alt="Featured image of post Chapter_2" /&gt;&lt;h1 id=&#34;数据的表示和运算&#34;&gt;数据的表示和运算&lt;/h1&gt;
+        <description>&lt;img src="https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/cover.JPG" alt="Featured image of post 数据的表示和运算" /&gt;&lt;h1 id=&#34;数据的表示和运算&#34;&gt;数据的表示和运算&lt;/h1&gt;
 &lt;h2 id=&#34;数制与编码&#34;&gt;数制与编码&lt;/h2&gt;
 &lt;h3 id=&#34;进位计数制&#34;&gt;进位计数制&lt;/h3&gt;
 &lt;p&gt;![Image 7](chap2_ 7.png)&lt;/p&gt;
@@ -75,7 +75,7 @@
         <pubDate>Sun, 14 Apr 2024 21:37:25 +0800</pubDate>
         
         <guid>https://chaihaojian.github.io/post/javascript_note/%E6%95%B0%E7%BB%84/</guid>
-        <description>&lt;img src="https://chaihaojian.github.io/cover.JPG" alt="Featured image of post 数组" /&gt;&lt;h1 id=&#34;数组&#34;&gt;数组&lt;/h1&gt;
+        <description>&lt;img src="https://chaihaojian.github.io/post/javascript_note/%E6%95%B0%E7%BB%84/cover.JPG" alt="Featured image of post 数组" /&gt;&lt;h1 id=&#34;数组&#34;&gt;数组&lt;/h1&gt;
 &lt;p&gt;数组是多个变量值的集合，数组是Array对象的实例，因此数组可以调用方法&lt;/p&gt;
 &lt;p&gt;数组是一个引用类型&lt;/p&gt;
 &lt;h2 id=&#34;数组的声明&#34;&gt;数组的声明&lt;/h2&gt;
