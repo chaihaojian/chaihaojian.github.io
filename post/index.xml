@@ -461,7 +461,20 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;12&lt;/span&gt;&lt;span&gt;&lt;span style=&#34;color:#737994;font-style:italic&#34;&gt;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;13&lt;/span&gt;&lt;span&gt;  &lt;span style=&#34;color:#ca9ee6&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#ef9f76&#34;&gt;0&lt;/span&gt;;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;14&lt;/span&gt;&lt;span&gt;}
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;![Image 1](chap2_ 1.png)&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://chaihaojian.github.io/post/c_plus_note/chapter2_%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/chap2_1.png&#34;
+	width=&#34;1002&#34;
+	height=&#34;217&#34;
+	srcset=&#34;https://chaihaojian.github.io/post/c_plus_note/chapter2_%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/chap2_1_hua7253bd1c3144f120a34fb02ec40913a_22629_480x0_resize_box_3.png 480w, https://chaihaojian.github.io/post/c_plus_note/chapter2_%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/chap2_1_hua7253bd1c3144f120a34fb02ec40913a_22629_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Image 1&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;461&#34;
+		data-flex-basis=&#34;1108px&#34;
+	
+&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;堆区&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;由程序员分配释放，若程序员不释放，程序结束时由操作系统回收&lt;/li&gt;
@@ -482,7 +495,20 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;13&lt;/span&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;14&lt;/span&gt;&lt;span&gt;  &lt;span style=&#34;color:#ca9ee6&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#ef9f76&#34;&gt;0&lt;/span&gt;;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;15&lt;/span&gt;&lt;span&gt;}
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;![Image 2](chap2_ 2.png)&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://chaihaojian.github.io/post/c_plus_note/chapter2_%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/chap2_2.png&#34;
+	width=&#34;1002&#34;
+	height=&#34;57&#34;
+	srcset=&#34;https://chaihaojian.github.io/post/c_plus_note/chapter2_%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/chap2_2_hu6aababad98c4ed9f472f9639b4c3b060_3120_480x0_resize_box_3.png 480w, https://chaihaojian.github.io/post/c_plus_note/chapter2_%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/chap2_2_hu6aababad98c4ed9f472f9639b4c3b060_3120_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Image 2&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;1757&#34;
+		data-flex-basis=&#34;4218px&#34;
+	
+&gt;&lt;/p&gt;
 &lt;h3 id=&#34;new-操作符&#34;&gt;new 操作符&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;C++中使用new操作符在堆区开辟数据&lt;/li&gt;
@@ -515,7 +541,20 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;22&lt;/span&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;23&lt;/span&gt;&lt;span&gt;  &lt;span style=&#34;color:#ca9ee6&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#ef9f76&#34;&gt;0&lt;/span&gt;;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;24&lt;/span&gt;&lt;span&gt;}
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;![Image 3](chap2_ 3.png)&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://chaihaojian.github.io/post/c_plus_note/chapter2_%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/chap2_3.png&#34;
+	width=&#34;1002&#34;
+	height=&#34;186&#34;
+	srcset=&#34;https://chaihaojian.github.io/post/c_plus_note/chapter2_%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/chap2_3_hu841bd57fc20ccd970278dd51fb4d28a6_7421_480x0_resize_box_3.png 480w, https://chaihaojian.github.io/post/c_plus_note/chapter2_%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/chap2_3_hu841bd57fc20ccd970278dd51fb4d28a6_7421_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Image 3&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;538&#34;
+		data-flex-basis=&#34;1292px&#34;
+	
+&gt;&lt;/p&gt;
 &lt;h2 id=&#34;引用&#34;&gt;引用&lt;/h2&gt;
 &lt;h3 id=&#34;引用的基本使用&#34;&gt;引用的基本使用&lt;/h3&gt;
 &lt;p&gt;**作用：**给变量起别名&lt;/p&gt;
@@ -533,7 +572,20 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;11&lt;/span&gt;&lt;span&gt;  cout &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#a6d189&#34;&gt;&amp;#34;b: &amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; b &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; endl;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;12&lt;/span&gt;&lt;span&gt;  &lt;span style=&#34;color:#ca9ee6&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#ef9f76&#34;&gt;0&lt;/span&gt;;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;13&lt;/span&gt;&lt;span&gt;}
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;![Image 4](chap2_ 4.png)&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://chaihaojian.github.io/post/c_plus_note/chapter2_%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/chap2_4.png&#34;
+	width=&#34;1002&#34;
+	height=&#34;121&#34;
+	srcset=&#34;https://chaihaojian.github.io/post/c_plus_note/chapter2_%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/chap2_4_hu72885464c1a6451cbe383329b041cd5b_7467_480x0_resize_box_3.png 480w, https://chaihaojian.github.io/post/c_plus_note/chapter2_%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/chap2_4_hu72885464c1a6451cbe383329b041cd5b_7467_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Image 4&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;828&#34;
+		data-flex-basis=&#34;1987px&#34;
+	
+&gt;&lt;/p&gt;
 &lt;h3 id=&#34;引用的注意事项&#34;&gt;引用的注意事项&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;引用必须初始化&lt;/li&gt;
@@ -551,7 +603,20 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;10&lt;/span&gt;&lt;span&gt;&lt;span style=&#34;color:#737994;font-style:italic&#34;&gt;&lt;/span&gt;  cout &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#a6d189&#34;&gt;&amp;#34;a:&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; a &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#a6d189&#34;&gt;&amp;#34; b:&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; b &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#a6d189&#34;&gt;&amp;#34; c:&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; c &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; endl;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;11&lt;/span&gt;&lt;span&gt;  &lt;span style=&#34;color:#ca9ee6&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#ef9f76&#34;&gt;0&lt;/span&gt;;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;12&lt;/span&gt;&lt;span&gt;}
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;![Image 5](chap2_ 5.png)&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://chaihaojian.github.io/post/c_plus_note/chapter2_%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/chap2_5.png&#34;
+	width=&#34;1002&#34;
+	height=&#34;57&#34;
+	srcset=&#34;https://chaihaojian.github.io/post/c_plus_note/chapter2_%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/chap2_5_hudd5928c07276debb11dd939a82fde3d4_5756_480x0_resize_box_3.png 480w, https://chaihaojian.github.io/post/c_plus_note/chapter2_%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/chap2_5_hudd5928c07276debb11dd939a82fde3d4_5756_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Image 5&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;1757&#34;
+		data-flex-basis=&#34;4218px&#34;
+	
+&gt;&lt;/p&gt;
 &lt;h3 id=&#34;引用做函数参数&#34;&gt;引用做函数参数&lt;/h3&gt;
 &lt;p&gt;&lt;strong&gt;作用&lt;/strong&gt;：函数传参时，可以利用引用的技术让形参修饰实参&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;优点&lt;/strong&gt;：可以简化指针修改实参&lt;/p&gt;
@@ -570,7 +635,20 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;13&lt;/span&gt;&lt;span&gt;&lt;span style=&#34;color:#737994;font-style:italic&#34;&gt;&lt;/span&gt;  cout &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#a6d189&#34;&gt;&amp;#34;a = &amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; a &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#a6d189&#34;&gt;&amp;#34; b = &amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; b &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; endl;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;14&lt;/span&gt;&lt;span&gt;  &lt;span style=&#34;color:#ca9ee6&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#ef9f76&#34;&gt;0&lt;/span&gt;;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;15&lt;/span&gt;&lt;span&gt;}
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;![Image 6](chap2_ 6.png)&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://chaihaojian.github.io/post/c_plus_note/chapter2_%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/chap2_6.png&#34;
+	width=&#34;1002&#34;
+	height=&#34;29&#34;
+	srcset=&#34;https://chaihaojian.github.io/post/c_plus_note/chapter2_%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/chap2_6_hu283dffdb60795887374d36c3dbbd2aeb_3066_480x0_resize_box_3.png 480w, https://chaihaojian.github.io/post/c_plus_note/chapter2_%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/chap2_6_hu283dffdb60795887374d36c3dbbd2aeb_3066_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Image 6&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;3455&#34;
+		data-flex-basis=&#34;8292px&#34;
+	
+&gt;&lt;/p&gt;
 &lt;h3 id=&#34;引用做函数返回值&#34;&gt;引用做函数返回值&lt;/h3&gt;
 &lt;p&gt;&lt;strong&gt;注意：&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
@@ -590,7 +668,20 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;12&lt;/span&gt;&lt;span&gt;&lt;span style=&#34;color:#737994;font-style:italic&#34;&gt;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;13&lt;/span&gt;&lt;span&gt;  &lt;span style=&#34;color:#ca9ee6&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#ef9f76&#34;&gt;0&lt;/span&gt;;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;14&lt;/span&gt;&lt;span&gt;}
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;![Image 7](chap2_ 7.png)&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://chaihaojian.github.io/post/c_plus_note/chapter2_%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/chap2_7.png&#34;
+	width=&#34;1002&#34;
+	height=&#34;212&#34;
+	srcset=&#34;https://chaihaojian.github.io/post/c_plus_note/chapter2_%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/chap2_7_huda101072c7410f710cf8b4dc286048d7_22062_480x0_resize_box_3.png 480w, https://chaihaojian.github.io/post/c_plus_note/chapter2_%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/chap2_7_huda101072c7410f710cf8b4dc286048d7_22062_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Image 7&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;472&#34;
+		data-flex-basis=&#34;1134px&#34;
+	
+&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;函数的调用可以作为左值&lt;/li&gt;
 &lt;/ul&gt;
@@ -612,7 +703,20 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;16&lt;/span&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;17&lt;/span&gt;&lt;span&gt;  &lt;span style=&#34;color:#ca9ee6&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#ef9f76&#34;&gt;0&lt;/span&gt;;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;18&lt;/span&gt;&lt;span&gt;}
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;![Image 8](chap2_ 8.png)&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://chaihaojian.github.io/post/c_plus_note/chapter2_%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/chap2_8.png&#34;
+	width=&#34;1002&#34;
+	height=&#34;122&#34;
+	srcset=&#34;https://chaihaojian.github.io/post/c_plus_note/chapter2_%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/chap2_8_hub61b38b5ba58dd786c3220fa3818e803_5956_480x0_resize_box_3.png 480w, https://chaihaojian.github.io/post/c_plus_note/chapter2_%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/chap2_8_hub61b38b5ba58dd786c3220fa3818e803_5956_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Image 8&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;821&#34;
+		data-flex-basis=&#34;1971px&#34;
+	
+&gt;&lt;/p&gt;
 &lt;h3 id=&#34;引用的本质&#34;&gt;引用的本质&lt;/h3&gt;
 &lt;p&gt;&lt;strong&gt;引用的本质在C++内部实现是一个指针常量&lt;/strong&gt;&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-c++&#34; data-lang=&#34;c++&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt; 1&lt;/span&gt;&lt;span&gt;&lt;span style=&#34;color:#e78284&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#8caaee&#34;&gt;func&lt;/span&gt;(&lt;span style=&#34;color:#e78284&#34;&gt;int&lt;/span&gt;&lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;amp;&lt;/span&gt; ref)
@@ -637,7 +741,20 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;20&lt;/span&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;21&lt;/span&gt;&lt;span&gt;  &lt;span style=&#34;color:#ca9ee6&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#ef9f76&#34;&gt;0&lt;/span&gt;;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;22&lt;/span&gt;&lt;span&gt;}
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;![Image 9](chap2_ 9.png)&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://chaihaojian.github.io/post/c_plus_note/chapter2_%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/chap2_9.png&#34;
+	width=&#34;1002&#34;
+	height=&#34;122&#34;
+	srcset=&#34;https://chaihaojian.github.io/post/c_plus_note/chapter2_%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/chap2_9_hu905173fcfe80d1f8e2b95dc226afa5a9_8738_480x0_resize_box_3.png 480w, https://chaihaojian.github.io/post/c_plus_note/chapter2_%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/chap2_9_hu905173fcfe80d1f8e2b95dc226afa5a9_8738_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Image 9&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;821&#34;
+		data-flex-basis=&#34;1971px&#34;
+	
+&gt;&lt;/p&gt;
 &lt;h3 id=&#34;常量引用&#34;&gt;常量引用&lt;/h3&gt;
 &lt;p&gt;**作用：**常量引用主要用来修饰形参，防止误操作&lt;/p&gt;
 &lt;p&gt;在函数的形参列表中，可以加const修饰形参，防止形参改变实参&lt;/p&gt;
@@ -668,7 +785,20 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;25&lt;/span&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;26&lt;/span&gt;&lt;span&gt;  &lt;span style=&#34;color:#ca9ee6&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#ef9f76&#34;&gt;0&lt;/span&gt;;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;27&lt;/span&gt;&lt;span&gt;}
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;![Image 10](chap2_ 10.png)&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://chaihaojian.github.io/post/c_plus_note/chapter2_%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/chap2_10.png&#34;
+	width=&#34;938&#34;
+	height=&#34;88&#34;
+	srcset=&#34;https://chaihaojian.github.io/post/c_plus_note/chapter2_%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/chap2_10_huf90968287e882283374e644f63f6d71b_7717_480x0_resize_box_3.png 480w, https://chaihaojian.github.io/post/c_plus_note/chapter2_%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/chap2_10_huf90968287e882283374e644f63f6d71b_7717_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Image 10&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;1065&#34;
+		data-flex-basis=&#34;2558px&#34;
+	
+&gt;&lt;/p&gt;
 &lt;h2 id=&#34;函数提高&#34;&gt;函数提高&lt;/h2&gt;
 &lt;h3 id=&#34;函数默认参数&#34;&gt;函数默认参数&lt;/h3&gt;
 &lt;p&gt;在C++中，函数的形参列表中的形参是可以有默认值的&lt;/p&gt;
@@ -708,7 +838,20 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;28&lt;/span&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;29&lt;/span&gt;&lt;span&gt;  &lt;span style=&#34;color:#ca9ee6&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#ef9f76&#34;&gt;0&lt;/span&gt;;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;30&lt;/span&gt;&lt;span&gt;}
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;![Image 11](chap2_ 11.png)&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://chaihaojian.github.io/post/c_plus_note/chapter2_%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/chap2_11.png&#34;
+	width=&#34;938&#34;
+	height=&#34;152&#34;
+	srcset=&#34;https://chaihaojian.github.io/post/c_plus_note/chapter2_%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/chap2_11_hu2177d4a1dbdfdd31943c28f9201c58c0_8842_480x0_resize_box_3.png 480w, https://chaihaojian.github.io/post/c_plus_note/chapter2_%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/chap2_11_hu2177d4a1dbdfdd31943c28f9201c58c0_8842_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Image 11&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;617&#34;
+		data-flex-basis=&#34;1481px&#34;
+	
+&gt;&lt;/p&gt;
 &lt;h3 id=&#34;函数占位参数&#34;&gt;函数占位参数&lt;/h3&gt;
 &lt;p&gt;C++中函数的形参列表里可以有占位参数，用来做占位，调用函数时必须填补该位置&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;语法：&lt;/strong&gt;&lt;em&gt;返回值类型 函数名(数据类型){ }&lt;/em&gt;&lt;/p&gt;
@@ -772,7 +915,20 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;39&lt;/span&gt;&lt;span&gt;  func(&lt;span style=&#34;color:#ef9f76&#34;&gt;3.14&lt;/span&gt;, &lt;span style=&#34;color:#ef9f76&#34;&gt;10&lt;/span&gt;);
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;40&lt;/span&gt;&lt;span&gt;  &lt;span style=&#34;color:#ca9ee6&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#ef9f76&#34;&gt;0&lt;/span&gt;;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;41&lt;/span&gt;&lt;span&gt;}
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;![Image 12](chap2_ 12.png)&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://chaihaojian.github.io/post/c_plus_note/chapter2_%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/chap2_12.png&#34;
+	width=&#34;938&#34;
+	height=&#34;152&#34;
+	srcset=&#34;https://chaihaojian.github.io/post/c_plus_note/chapter2_%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/chap2_12_hu1dd5c2927b9fed234f843fa63e8a0249_22952_480x0_resize_box_3.png 480w, https://chaihaojian.github.io/post/c_plus_note/chapter2_%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/chap2_12_hu1dd5c2927b9fed234f843fa63e8a0249_22952_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Image 12&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;617&#34;
+		data-flex-basis=&#34;1481px&#34;
+	
+&gt;&lt;/p&gt;
 &lt;h4 id=&#34;引用作为重载条件&#34;&gt;引用作为重载条件&lt;/h4&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-c++&#34; data-lang=&#34;c++&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt; 1&lt;/span&gt;&lt;span&gt;&lt;span style=&#34;color:#737994;font-style:italic&#34;&gt;//func(int &amp;amp;a)接受 int&amp;amp; 类型的变量
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt; 2&lt;/span&gt;&lt;span&gt;&lt;span style=&#34;color:#737994;font-style:italic&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e78284&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#8caaee&#34;&gt;func&lt;/span&gt;(&lt;span style=&#34;color:#e78284&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;amp;&lt;/span&gt;a)
@@ -795,7 +951,20 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;19&lt;/span&gt;&lt;span&gt;&lt;span style=&#34;color:#737994;font-style:italic&#34;&gt;&lt;/span&gt;  func(&lt;span style=&#34;color:#ef9f76&#34;&gt;10&lt;/span&gt;);
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;20&lt;/span&gt;&lt;span&gt;  &lt;span style=&#34;color:#ca9ee6&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#ef9f76&#34;&gt;0&lt;/span&gt;;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;21&lt;/span&gt;&lt;span&gt;}
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;![Image 13](chap2_ 13.png)&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://chaihaojian.github.io/post/c_plus_note/chapter2_%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/chap2_13.png&#34;
+	width=&#34;938&#34;
+	height=&#34;57&#34;
+	srcset=&#34;https://chaihaojian.github.io/post/c_plus_note/chapter2_%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/chap2_13_hu8e1f89e9454e8ef1a76ead92fac69614_9329_480x0_resize_box_3.png 480w, https://chaihaojian.github.io/post/c_plus_note/chapter2_%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/chap2_13_hu8e1f89e9454e8ef1a76ead92fac69614_9329_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Image 13&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;1645&#34;
+		data-flex-basis=&#34;3949px&#34;
+	
+&gt;&lt;/p&gt;
 &lt;h4 id=&#34;函数重载碰到函数默认参数&#34;&gt;函数重载碰到函数默认参数&lt;/h4&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-c++&#34; data-lang=&#34;c++&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt; 1&lt;/span&gt;&lt;span&gt;&lt;span style=&#34;color:#e78284&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#8caaee&#34;&gt;func&lt;/span&gt;(&lt;span style=&#34;color:#e78284&#34;&gt;int&lt;/span&gt; a, &lt;span style=&#34;color:#e78284&#34;&gt;int&lt;/span&gt; b &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ef9f76&#34;&gt;20&lt;/span&gt;)
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt; 2&lt;/span&gt;&lt;span&gt;{
@@ -812,7 +981,20 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;13&lt;/span&gt;&lt;span&gt;  func(&lt;span style=&#34;color:#ef9f76&#34;&gt;10&lt;/span&gt;);&lt;span style=&#34;color:#737994;font-style:italic&#34;&gt;//func(10)调用func(int a, int b = 20)和func(int a)都会成功 出现歧义 因此会报错
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;14&lt;/span&gt;&lt;span&gt;&lt;span style=&#34;color:#737994;font-style:italic&#34;&gt;&lt;/span&gt;  &lt;span style=&#34;color:#ca9ee6&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#ef9f76&#34;&gt;0&lt;/span&gt;;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;15&lt;/span&gt;&lt;span&gt;}
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;![Image 14](chap2_ 14.png)&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://chaihaojian.github.io/post/c_plus_note/chapter2_%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/chap2_14.png&#34;
+	width=&#34;938&#34;
+	height=&#34;57&#34;
+	srcset=&#34;https://chaihaojian.github.io/post/c_plus_note/chapter2_%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/chap2_14_hu65c98c4d18f86c02f1da2060f477a9ce_9281_480x0_resize_box_3.png 480w, https://chaihaojian.github.io/post/c_plus_note/chapter2_%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/chap2_14_hu65c98c4d18f86c02f1da2060f477a9ce_9281_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Image 14&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;1645&#34;
+		data-flex-basis=&#34;3949px&#34;
+	
+&gt;&lt;/p&gt;
 &lt;h2 id=&#34;类和对象&#34;&gt;类和对象&lt;/h2&gt;
 &lt;p&gt;C++面向对象的三大特性为：封装、继承、多态&lt;/p&gt;
 &lt;p&gt;C++认为万事万物皆为对象，对象上有其属性和行为&lt;/p&gt;
@@ -899,7 +1081,20 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;44&lt;/span&gt;&lt;span&gt;&lt;span style=&#34;color:#737994;font-style:italic&#34;&gt;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;45&lt;/span&gt;&lt;span&gt;  &lt;span style=&#34;color:#ca9ee6&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#ef9f76&#34;&gt;0&lt;/span&gt;;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;46&lt;/span&gt;&lt;span&gt;}
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;![Image 15](chap2_ 15.png)&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://chaihaojian.github.io/post/c_plus_note/chapter2_%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/chap2_15.png&#34;
+	width=&#34;938&#34;
+	height=&#34;274&#34;
+	srcset=&#34;https://chaihaojian.github.io/post/c_plus_note/chapter2_%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/chap2_15_huf28965b310a14d28c10d512bf72248a0_25344_480x0_resize_box_3.png 480w, https://chaihaojian.github.io/post/c_plus_note/chapter2_%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/chap2_15_huf28965b310a14d28c10d512bf72248a0_25344_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Image 15&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;342&#34;
+		data-flex-basis=&#34;821px&#34;
+	
+&gt;&lt;/p&gt;
 &lt;h3 id=&#34;struct-和-class-的区别&#34;&gt;struct 和 class 的区别&lt;/h3&gt;
 &lt;p&gt;在C++中，struct和class唯一的区别就在于&lt;strong&gt;默认的访问权限不同&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;区别：&lt;/p&gt;
@@ -928,7 +1123,20 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;19&lt;/span&gt;&lt;span&gt;&lt;span style=&#34;color:#737994;font-style:italic&#34;&gt;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;20&lt;/span&gt;&lt;span&gt;  &lt;span style=&#34;color:#ca9ee6&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#ef9f76&#34;&gt;0&lt;/span&gt;;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;21&lt;/span&gt;&lt;span&gt;}
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;![Image 16](chap2_ 16.png)&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://chaihaojian.github.io/post/c_plus_note/chapter2_%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/chap2_16.png&#34;
+	width=&#34;938&#34;
+	height=&#34;217&#34;
+	srcset=&#34;https://chaihaojian.github.io/post/c_plus_note/chapter2_%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/chap2_16_hu7132143142208903b3a87b68494fe2e0_23280_480x0_resize_box_3.png 480w, https://chaihaojian.github.io/post/c_plus_note/chapter2_%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/chap2_16_hu7132143142208903b3a87b68494fe2e0_23280_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Image 16&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;432&#34;
+		data-flex-basis=&#34;1037px&#34;
+	
+&gt;&lt;/p&gt;
 &lt;h3 id=&#34;成员属性设置为私有&#34;&gt;成员属性设置为私有&lt;/h3&gt;
 &lt;p&gt;&lt;strong&gt;优点1&lt;/strong&gt;：将所有成员属性设置为私有，可以自己控制读写权限&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;优点2&lt;/strong&gt;：对于写权限，可以检测数据的有效性&lt;/p&gt;
@@ -975,7 +1183,20 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;41&lt;/span&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;42&lt;/span&gt;&lt;span&gt;  &lt;span style=&#34;color:#ca9ee6&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#ef9f76&#34;&gt;0&lt;/span&gt;;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;43&lt;/span&gt;&lt;span&gt;}
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;![Image 17](chap2_ 17.png)&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://chaihaojian.github.io/post/c_plus_note/chapter2_%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/chap2_17.png&#34;
+	width=&#34;938&#34;
+	height=&#34;98&#34;
+	srcset=&#34;https://chaihaojian.github.io/post/c_plus_note/chapter2_%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/chap2_17_hu70f6b1c77308e3627eb24ae7b62dbf6f_12165_480x0_resize_box_3.png 480w, https://chaihaojian.github.io/post/c_plus_note/chapter2_%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/chap2_17_hu70f6b1c77308e3627eb24ae7b62dbf6f_12165_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Image 17&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;957&#34;
+		data-flex-basis=&#34;2297px&#34;
+	
+&gt;&lt;/p&gt;
 &lt;h3 id=&#34;对象的初始化和清理&#34;&gt;对象的初始化和清理&lt;/h3&gt;
 &lt;h4 id=&#34;构造函数和析构函数&#34;&gt;构造函数和析构函数&lt;/h4&gt;
 &lt;p&gt;对象的初始化和清理也是两个非常重要的安全问题&lt;/p&gt;
@@ -1035,7 +1256,20 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;29&lt;/span&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;30&lt;/span&gt;&lt;span&gt;  &lt;span style=&#34;color:#ca9ee6&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#ef9f76&#34;&gt;0&lt;/span&gt;;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;31&lt;/span&gt;&lt;span&gt;}
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;![Image 18](chap2_ 18.png)&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://chaihaojian.github.io/post/c_plus_note/chapter2_%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/chap2_18.png&#34;
+	width=&#34;938&#34;
+	height=&#34;98&#34;
+	srcset=&#34;https://chaihaojian.github.io/post/c_plus_note/chapter2_%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/chap2_18_hu1fc3163353553192b071f2e6e0bf4449_11519_480x0_resize_box_3.png 480w, https://chaihaojian.github.io/post/c_plus_note/chapter2_%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/chap2_18_hu1fc3163353553192b071f2e6e0bf4449_11519_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Image 18&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;957&#34;
+		data-flex-basis=&#34;2297px&#34;
+	
+&gt;&lt;/p&gt;
 &lt;h4 id=&#34;构造函数的分类及调用&#34;&gt;构造函数的分类及调用&lt;/h4&gt;
 &lt;p&gt;两种分类方式：&lt;/p&gt;
 &lt;ol&gt;
@@ -1125,7 +1359,20 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;75&lt;/span&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;76&lt;/span&gt;&lt;span&gt;  &lt;span style=&#34;color:#ca9ee6&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#ef9f76&#34;&gt;0&lt;/span&gt;;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;77&lt;/span&gt;&lt;span&gt;}
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;![Image 19](chap2_ 19.png)&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://chaihaojian.github.io/post/c_plus_note/chapter2_%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/chap2_19.png&#34;
+	width=&#34;958&#34;
+	height=&#34;928&#34;
+	srcset=&#34;https://chaihaojian.github.io/post/c_plus_note/chapter2_%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/chap2_19_huc266633e2c07a0e17889f50b1df6e52d_96842_480x0_resize_box_3.png 480w, https://chaihaojian.github.io/post/c_plus_note/chapter2_%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/chap2_19_huc266633e2c07a0e17889f50b1df6e52d_96842_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Image 19&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;103&#34;
+		data-flex-basis=&#34;247px&#34;
+	
+&gt;&lt;/p&gt;
 &lt;h4 id=&#34;拷贝构造函数的调用时机&#34;&gt;拷贝构造函数的调用时机&lt;/h4&gt;
 &lt;p&gt;C++中拷贝构造函数的调用时机通常有三种情况：&lt;/p&gt;
 &lt;ul&gt;
@@ -1213,10 +1460,216 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;78&lt;/span&gt;&lt;span&gt;  test_3();
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;79&lt;/span&gt;&lt;span&gt;  &lt;span style=&#34;color:#ca9ee6&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#ef9f76&#34;&gt;0&lt;/span&gt;;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;80&lt;/span&gt;&lt;span&gt;}
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;![Image 20](chap2_ 20.png)&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://chaihaojian.github.io/post/c_plus_note/chapter2_%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/chap2_20.png&#34;
+	width=&#34;846&#34;
+	height=&#34;589&#34;
+	srcset=&#34;https://chaihaojian.github.io/post/c_plus_note/chapter2_%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/chap2_20_hu439997d974a68297cf8af1fdad47e054_88304_480x0_resize_box_3.png 480w, https://chaihaojian.github.io/post/c_plus_note/chapter2_%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/chap2_20_hu439997d974a68297cf8af1fdad47e054_88304_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Image 20&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;143&#34;
+		data-flex-basis=&#34;344px&#34;
+	
+&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;注意&lt;/strong&gt;：在函数 test_3() 中实际需要调用3次构造函数，但在实际编译运行中只调用了一次默认构造函数，且对象p与对象p1的地址相同，这是因为g++编译器默认开启了返回值优化RVO(return value optimization)，通过命令 -fno-elide-constructors  关闭RVO则会输出以下结果：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;1&lt;/span&gt;&lt;span&gt;g++ main.cpp -fno-elide-constructors -o ../../target/main &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; ../../target/main
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;![Image 21](chap2_ 21.png)&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://chaihaojian.github.io/post/c_plus_note/chapter2_%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/chap2_21.png&#34;
+	width=&#34;846&#34;
+	height=&#34;712&#34;
+	srcset=&#34;https://chaihaojian.github.io/post/c_plus_note/chapter2_%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/chap2_21_hu60d6bf8b7ea53ea7905fee205db18832_107170_480x0_resize_box_3.png 480w, https://chaihaojian.github.io/post/c_plus_note/chapter2_%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/chap2_21_hu60d6bf8b7ea53ea7905fee205db18832_107170_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Image 21&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;118&#34;
+		data-flex-basis=&#34;285px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h4 id=&#34;构造函数的调用规则&#34;&gt;构造函数的调用规则&lt;/h4&gt;
+&lt;p&gt;默认情况下，C++编译器至少给一个类添加3个函数：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;默认构造函数（无参，函数体为空）&lt;/li&gt;
+&lt;li&gt;默认析构函数（无参，函数体为空）&lt;/li&gt;
+&lt;li&gt;默认拷贝构造函数，对属性进行值拷贝&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;构造函数的调用规则如下：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;如果用户定义有参构造函数，C++不再提供默认无参构造函数，但是会提供默认拷贝构造&lt;/li&gt;
+&lt;li&gt;如果用户定义拷贝构造函数，C++不再提供其他构造函数&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-c++&#34; data-lang=&#34;c++&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt; 1&lt;/span&gt;&lt;span&gt;&lt;span style=&#34;color:#737994;font-style:italic&#34;&gt;//构造函数的调用规则
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt; 2&lt;/span&gt;&lt;span&gt;&lt;span style=&#34;color:#737994;font-style:italic&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#ca9ee6&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#e5c890&#34;&gt;Person&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt; 3&lt;/span&gt;&lt;span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt; 4&lt;/span&gt;&lt;span&gt;  &lt;span style=&#34;color:#ca9ee6&#34;&gt;public&lt;/span&gt;&lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt; 5&lt;/span&gt;&lt;span&gt;  &lt;span style=&#34;color:#e78284&#34;&gt;int&lt;/span&gt; age;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt; 6&lt;/span&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt; 7&lt;/span&gt;&lt;span&gt;  &lt;span style=&#34;color:#737994;font-style:italic&#34;&gt;// Person()
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt; 8&lt;/span&gt;&lt;span&gt;&lt;span style=&#34;color:#737994;font-style:italic&#34;&gt;&lt;/span&gt;  &lt;span style=&#34;color:#737994;font-style:italic&#34;&gt;// {
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt; 9&lt;/span&gt;&lt;span&gt;&lt;span style=&#34;color:#737994;font-style:italic&#34;&gt;&lt;/span&gt;  &lt;span style=&#34;color:#737994;font-style:italic&#34;&gt;//     cout &amp;lt;&amp;lt; &amp;#34;Person的默认构造&amp;#34; &amp;lt;&amp;lt; endl;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;10&lt;/span&gt;&lt;span&gt;&lt;span style=&#34;color:#737994;font-style:italic&#34;&gt;&lt;/span&gt;  &lt;span style=&#34;color:#737994;font-style:italic&#34;&gt;// };
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;11&lt;/span&gt;&lt;span&gt;&lt;span style=&#34;color:#737994;font-style:italic&#34;&gt;&lt;/span&gt;  Person(&lt;span style=&#34;color:#e78284&#34;&gt;int&lt;/span&gt; a)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;12&lt;/span&gt;&lt;span&gt;  {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;13&lt;/span&gt;&lt;span&gt;    cout &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#a6d189&#34;&gt;&amp;#34;Person的有参构造&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; endl;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;14&lt;/span&gt;&lt;span&gt;    age &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;=&lt;/span&gt; a;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;15&lt;/span&gt;&lt;span&gt;  }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;16&lt;/span&gt;&lt;span&gt;  &lt;span style=&#34;color:#737994;font-style:italic&#34;&gt;// Person(const Person &amp;amp;p)
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;17&lt;/span&gt;&lt;span&gt;&lt;span style=&#34;color:#737994;font-style:italic&#34;&gt;&lt;/span&gt;  &lt;span style=&#34;color:#737994;font-style:italic&#34;&gt;// {
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;18&lt;/span&gt;&lt;span&gt;&lt;span style=&#34;color:#737994;font-style:italic&#34;&gt;&lt;/span&gt;  &lt;span style=&#34;color:#737994;font-style:italic&#34;&gt;//     cout &amp;lt;&amp;lt; &amp;#34;Person的拷贝构造&amp;#34; &amp;lt;&amp;lt; endl;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;19&lt;/span&gt;&lt;span&gt;&lt;span style=&#34;color:#737994;font-style:italic&#34;&gt;&lt;/span&gt;  &lt;span style=&#34;color:#737994;font-style:italic&#34;&gt;//     age = p.age;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;20&lt;/span&gt;&lt;span&gt;&lt;span style=&#34;color:#737994;font-style:italic&#34;&gt;&lt;/span&gt;  &lt;span style=&#34;color:#737994;font-style:italic&#34;&gt;// }
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;21&lt;/span&gt;&lt;span&gt;&lt;span style=&#34;color:#737994;font-style:italic&#34;&gt;&lt;/span&gt;  &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;~&lt;/span&gt;Person()
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;22&lt;/span&gt;&lt;span&gt;  {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;23&lt;/span&gt;&lt;span&gt;    cout &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#a6d189&#34;&gt;&amp;#34;Person的析构函数&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; endl;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;24&lt;/span&gt;&lt;span&gt;  }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;25&lt;/span&gt;&lt;span&gt;};
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;26&lt;/span&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;27&lt;/span&gt;&lt;span&gt;&lt;span style=&#34;color:#e78284&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#8caaee&#34;&gt;test_1&lt;/span&gt;()
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;28&lt;/span&gt;&lt;span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;29&lt;/span&gt;&lt;span&gt;  &lt;span style=&#34;color:#737994;font-style:italic&#34;&gt;// Person p;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;30&lt;/span&gt;&lt;span&gt;&lt;span style=&#34;color:#737994;font-style:italic&#34;&gt;&lt;/span&gt;  &lt;span style=&#34;color:#737994;font-style:italic&#34;&gt;// p.age = 18;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;31&lt;/span&gt;&lt;span&gt;&lt;span style=&#34;color:#737994;font-style:italic&#34;&gt;&lt;/span&gt;  &lt;span style=&#34;color:#737994;font-style:italic&#34;&gt;// cout &amp;lt;&amp;lt; &amp;#34;p.age: &amp;#34; &amp;lt;&amp;lt; p.age &amp;lt;&amp;lt; endl;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;32&lt;/span&gt;&lt;span&gt;&lt;span style=&#34;color:#737994;font-style:italic&#34;&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;33&lt;/span&gt;&lt;span&gt;  Person p1(&lt;span style=&#34;color:#ef9f76&#34;&gt;22&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;34&lt;/span&gt;&lt;span&gt;  cout &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#a6d189&#34;&gt;&amp;#34;p1.age: &amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; p1.age &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; endl;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;35&lt;/span&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;36&lt;/span&gt;&lt;span&gt;  Person p2(p1);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;37&lt;/span&gt;&lt;span&gt;  cout &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#a6d189&#34;&gt;&amp;#34;p2.age: &amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; p2.age &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; endl;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;38&lt;/span&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;39&lt;/span&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;40&lt;/span&gt;&lt;span&gt;&lt;span style=&#34;color:#e78284&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color:#8caaee&#34;&gt;main&lt;/span&gt;()
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;41&lt;/span&gt;&lt;span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;42&lt;/span&gt;&lt;span&gt;  test_1();
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;43&lt;/span&gt;&lt;span&gt;  &lt;span style=&#34;color:#ca9ee6&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#ef9f76&#34;&gt;0&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;44&lt;/span&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://chaihaojian.github.io/post/c_plus_note/chapter2_%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/chap2_22.png&#34;
+	width=&#34;846&#34;
+	height=&#34;155&#34;
+	srcset=&#34;https://chaihaojian.github.io/post/c_plus_note/chapter2_%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/chap2_22_hu803dd8284438356271d5c6b6da3dfe18_19106_480x0_resize_box_3.png 480w, https://chaihaojian.github.io/post/c_plus_note/chapter2_%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/chap2_22_hu803dd8284438356271d5c6b6da3dfe18_19106_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Image 22&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;545&#34;
+		data-flex-basis=&#34;1309px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;上述程序中，声明了Person类的有参构造函数，但未声明拷贝构造，程序运行结果显示，C++编译器自动为Person添加了一个拷贝构造函数，函数体为空；&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-c++&#34; data-lang=&#34;c++&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;1&lt;/span&gt;&lt;span&gt;&lt;span style=&#34;color:#e78284&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#8caaee&#34;&gt;test_1&lt;/span&gt;()
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;2&lt;/span&gt;&lt;span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;3&lt;/span&gt;&lt;span&gt;  Person p;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;4&lt;/span&gt;&lt;span&gt;  p.age &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ef9f76&#34;&gt;18&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;5&lt;/span&gt;&lt;span&gt;  cout &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#a6d189&#34;&gt;&amp;#34;p.age: &amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; p.age &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; endl;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;6&lt;/span&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;如果在程序中进行上述定义，则会报错，提示Person类没有默认的构造函数：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://chaihaojian.github.io/post/c_plus_note/chapter2_%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/chap2_23.png&#34;
+	width=&#34;1227&#34;
+	height=&#34;369&#34;
+	srcset=&#34;https://chaihaojian.github.io/post/c_plus_note/chapter2_%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/chap2_23_hue72a7e66ece2969e6de1d172a8c76f12_51171_480x0_resize_box_3.png 480w, https://chaihaojian.github.io/post/c_plus_note/chapter2_%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/chap2_23_hue72a7e66ece2969e6de1d172a8c76f12_51171_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Image 23&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;332&#34;
+		data-flex-basis=&#34;798px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h4 id=&#34;深拷贝与浅拷贝&#34;&gt;深拷贝与浅拷贝&lt;/h4&gt;
+&lt;p&gt;浅拷贝：简单的赋值拷贝操作&lt;/p&gt;
+&lt;p&gt;深拷贝：在堆区重新申请空间，进行拷贝操作&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-c++&#34; data-lang=&#34;c++&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt; 1&lt;/span&gt;&lt;span&gt;&lt;span style=&#34;color:#737994;font-style:italic&#34;&gt;//深拷贝与浅拷贝
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt; 2&lt;/span&gt;&lt;span&gt;&lt;span style=&#34;color:#737994;font-style:italic&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#ca9ee6&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#e5c890&#34;&gt;Person&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt; 3&lt;/span&gt;&lt;span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt; 4&lt;/span&gt;&lt;span&gt;  &lt;span style=&#34;color:#ca9ee6&#34;&gt;public&lt;/span&gt;&lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt; 5&lt;/span&gt;&lt;span&gt;  &lt;span style=&#34;color:#e78284&#34;&gt;int&lt;/span&gt; age;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt; 6&lt;/span&gt;&lt;span&gt;  &lt;span style=&#34;color:#e78284&#34;&gt;int&lt;/span&gt;&lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;*&lt;/span&gt; height;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt; 7&lt;/span&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt; 8&lt;/span&gt;&lt;span&gt;  Person()
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt; 9&lt;/span&gt;&lt;span&gt;  {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;10&lt;/span&gt;&lt;span&gt;    cout &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#a6d189&#34;&gt;&amp;#34;Person的默认构造&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; endl;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;11&lt;/span&gt;&lt;span&gt;  };
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;12&lt;/span&gt;&lt;span&gt;  Person(&lt;span style=&#34;color:#e78284&#34;&gt;int&lt;/span&gt; a, &lt;span style=&#34;color:#e78284&#34;&gt;int&lt;/span&gt; h)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;13&lt;/span&gt;&lt;span&gt;  {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;14&lt;/span&gt;&lt;span&gt;    cout &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#a6d189&#34;&gt;&amp;#34;Person的有参构造&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; endl;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;15&lt;/span&gt;&lt;span&gt;    age &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;=&lt;/span&gt; a;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;16&lt;/span&gt;&lt;span&gt;    height &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ca9ee6&#34;&gt;new&lt;/span&gt; &lt;span style=&#34;color:#e78284&#34;&gt;int&lt;/span&gt;(h);&lt;span style=&#34;color:#737994;font-style:italic&#34;&gt;//返回一个堆区的指针
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;17&lt;/span&gt;&lt;span&gt;&lt;span style=&#34;color:#737994;font-style:italic&#34;&gt;&lt;/span&gt;  };
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;18&lt;/span&gt;&lt;span&gt;  &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;~&lt;/span&gt;Person()
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;19&lt;/span&gt;&lt;span&gt;  {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;20&lt;/span&gt;&lt;span&gt;    cout &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#a6d189&#34;&gt;&amp;#34;Person的析构函数&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; endl;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;21&lt;/span&gt;&lt;span&gt;    &lt;span style=&#34;color:#ca9ee6&#34;&gt;if&lt;/span&gt; (height &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;!=&lt;/span&gt; &lt;span style=&#34;color:#99d1db&#34;&gt;NULL&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;22&lt;/span&gt;&lt;span&gt;    {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;23&lt;/span&gt;&lt;span&gt;      &lt;span style=&#34;color:#ca9ee6&#34;&gt;delete&lt;/span&gt; height;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;24&lt;/span&gt;&lt;span&gt;      height &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#99d1db&#34;&gt;NULL&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;25&lt;/span&gt;&lt;span&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;26&lt;/span&gt;&lt;span&gt;  }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;27&lt;/span&gt;&lt;span&gt;};
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;28&lt;/span&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;29&lt;/span&gt;&lt;span&gt;&lt;span style=&#34;color:#e78284&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#8caaee&#34;&gt;test_1&lt;/span&gt;()
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;30&lt;/span&gt;&lt;span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;31&lt;/span&gt;&lt;span&gt;  Person p(&lt;span style=&#34;color:#ef9f76&#34;&gt;18&lt;/span&gt;, &lt;span style=&#34;color:#ef9f76&#34;&gt;180&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;32&lt;/span&gt;&lt;span&gt;  cout &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#a6d189&#34;&gt;&amp;#34;p.age: &amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; p.age &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; endl;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;33&lt;/span&gt;&lt;span&gt;  cout &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#a6d189&#34;&gt;&amp;#34;p.height: &amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;*&lt;/span&gt;p.height &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; endl;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;34&lt;/span&gt;&lt;span&gt;  cout &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#a6d189&#34;&gt;&amp;#34;adderss of p: &amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;amp;&lt;/span&gt;p &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; endl;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;35&lt;/span&gt;&lt;span&gt;  cout &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#a6d189&#34;&gt;&amp;#34;adderss of p.height: &amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; p.height &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; endl;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;36&lt;/span&gt;&lt;span&gt;  Person p1(p);&lt;span style=&#34;color:#737994;font-style:italic&#34;&gt;//p1后入栈，先被析构
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;37&lt;/span&gt;&lt;span&gt;&lt;span style=&#34;color:#737994;font-style:italic&#34;&gt;&lt;/span&gt;  cout &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#a6d189&#34;&gt;&amp;#34;p1.age: &amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; p1.age &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; endl;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;38&lt;/span&gt;&lt;span&gt;  cout &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#a6d189&#34;&gt;&amp;#34;p1.height: &amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;*&lt;/span&gt;p1.height &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; endl;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;39&lt;/span&gt;&lt;span&gt;  cout &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#a6d189&#34;&gt;&amp;#34;adderss of p1: &amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;amp;&lt;/span&gt;p1 &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; endl;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;40&lt;/span&gt;&lt;span&gt;  cout &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#a6d189&#34;&gt;&amp;#34;adderss of p1.height: &amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; p1.height &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; endl;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;41&lt;/span&gt;&lt;span&gt;};
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;42&lt;/span&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;43&lt;/span&gt;&lt;span&gt;&lt;span style=&#34;color:#e78284&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color:#8caaee&#34;&gt;main&lt;/span&gt;()
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;44&lt;/span&gt;&lt;span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;45&lt;/span&gt;&lt;span&gt;  test_1();
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;46&lt;/span&gt;&lt;span&gt;  &lt;span style=&#34;color:#ca9ee6&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#ef9f76&#34;&gt;0&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;47&lt;/span&gt;&lt;span&gt;};
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;上述程序中，由于没有声明拷贝构造函数，因此编译器会调用默认的拷贝构造来生成p1，&lt;strong&gt;但由于编译器默认的拷贝构造只执行简单的值拷贝，因此对于声明在堆区的属性 p.height ，默认的拷贝构造只是将p.height的值（一个堆区的地址）复制给了 p1.height ，这就导致 p.height 与 p1.height 都指向了同一个堆区地址，从而导致在执行析构的时候，优先被释放的 p1 会先将 p1.height 所指向的堆区地址释放一次，之后被释放的 p 又会将该地址释放一次，造成重复释放&lt;/strong&gt;：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://chaihaojian.github.io/post/c_plus_note/chapter2_%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/chap2_24.png&#34;
+	width=&#34;1240&#34;
+	height=&#34;466&#34;
+	srcset=&#34;https://chaihaojian.github.io/post/c_plus_note/chapter2_%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/chap2_24_hu3cfe050ed45c06bab49daa08718a6cc5_79493_480x0_resize_box_3.png 480w, https://chaihaojian.github.io/post/c_plus_note/chapter2_%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/chap2_24_hu3cfe050ed45c06bab49daa08718a6cc5_79493_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Image 24&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;266&#34;
+		data-flex-basis=&#34;638px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;因此需要重新定义Person类的拷贝构造函数，为新构造的Person实例的height在堆区分配新的地址：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-c++&#34; data-lang=&#34;c++&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;1&lt;/span&gt;&lt;span&gt;Person(&lt;span style=&#34;color:#ca9ee6&#34;&gt;const&lt;/span&gt; Person &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;amp;&lt;/span&gt;p)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;2&lt;/span&gt;&lt;span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;3&lt;/span&gt;&lt;span&gt;  cout &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#a6d189&#34;&gt;&amp;#34;Person的拷贝构造&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; endl;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;4&lt;/span&gt;&lt;span&gt;  age &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;=&lt;/span&gt; p.age;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;5&lt;/span&gt;&lt;span&gt;  height &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ca9ee6&#34;&gt;new&lt;/span&gt; &lt;span style=&#34;color:#e78284&#34;&gt;int&lt;/span&gt;(&lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;*&lt;/span&gt;p.height);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;6&lt;/span&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://chaihaojian.github.io/post/c_plus_note/chapter2_%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/chap2_25.png&#34;
+	width=&#34;1240&#34;
+	height=&#34;403&#34;
+	srcset=&#34;https://chaihaojian.github.io/post/c_plus_note/chapter2_%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/chap2_25_hub4eae9885b1976a8171a0f47842e1d2d_63413_480x0_resize_box_3.png 480w, https://chaihaojian.github.io/post/c_plus_note/chapter2_%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/chap2_25_hub4eae9885b1976a8171a0f47842e1d2d_63413_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Image 25&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;307&#34;
+		data-flex-basis=&#34;738px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;总结&lt;/strong&gt;：如果对象的属性有在堆区开辟的，一定要自己定义拷贝构造函数，防止浅拷贝带来的问题；同时要注意，在堆区开辟的内存，需要在析构函数中手动释放。&lt;/p&gt;
+&lt;h4 id=&#34;初始化列表&#34;&gt;初始化列表&lt;/h4&gt;
 </description>
         </item>
         <item>
