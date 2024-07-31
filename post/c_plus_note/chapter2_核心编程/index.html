@@ -278,6 +278,7 @@
         <li><a href="#struct-和-class-的区别">struct 和 class 的区别</a></li>
         <li><a href="#成员属性设置为私有">成员属性设置为私有</a></li>
         <li><a href="#对象的初始化和清理">对象的初始化和清理</a></li>
+        <li><a href="#c对象模型和this指针">C++对象模型和this指针</a></li>
       </ul>
     </li>
   </ul>
@@ -356,7 +357,7 @@
 
 
                 <time class="article-time--reading">
-                    13 minute read
+                    16 minute read
                 </time>
             </div>
         
@@ -1669,6 +1670,222 @@
 ></p>
 <p><strong>总结</strong>：如果对象的属性有在堆区开辟的，一定要自己定义拷贝构造函数，防止浅拷贝带来的问题；同时要注意，在堆区开辟的内存，需要在析构函数中手动释放。</p>
 <h4 id="初始化列表">初始化列表</h4>
+<p><strong>作用</strong>：C++提供了初始化列表语法，用来初始化类的属性</p>
+<p><strong>语法</strong>：构造函数( ): 属性1(值1), 属性2(值2) &hellip; { }</p>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c++" data-lang="c++"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 1</span><span><span style="color:#ca9ee6">class</span> <span style="color:#e5c890">Person</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 2</span><span>{
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 3</span><span>  <span style="color:#ca9ee6">public</span><span style="color:#99d1db;font-weight:bold">:</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 4</span><span>  <span style="color:#e78284">int</span> age;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 5</span><span>  string name;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 6</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 7</span><span>  <span style="color:#737994;font-style:italic">// Person():age(18), name(&#34;tom&#34;)
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 8</span><span><span style="color:#737994;font-style:italic"></span>  <span style="color:#737994;font-style:italic">// {
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 9</span><span><span style="color:#737994;font-style:italic"></span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">10</span><span>  <span style="color:#737994;font-style:italic">// };
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">11</span><span><span style="color:#737994;font-style:italic"></span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">12</span><span>  Person(<span style="color:#e78284">int</span> a, string n)<span style="color:#99d1db;font-weight:bold">:</span>age(a), name(n)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">13</span><span>  {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">14</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">15</span><span>  };
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">16</span><span>};
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">17</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">18</span><span><span style="color:#e78284">int</span> <span style="color:#8caaee">main</span>()
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">19</span><span>{
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">20</span><span>  Person p1(<span style="color:#ef9f76">20</span>, <span style="color:#a6d189">&#34;jim&#34;</span>);
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">21</span><span>  cout <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#a6d189">&#34;p1.age: &#34;</span> <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> p1.age <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">22</span><span>  cout <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#a6d189">&#34;p1.name: &#34;</span> <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> p1.name <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">23</span><span>  <span style="color:#ca9ee6">return</span> <span style="color:#ef9f76">0</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">24</span><span>}
+</span></span></code></pre></div><p><img src="/post/c_plus_note/chapter2_%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/chap2_26.png"
+	width="1240"
+	height="59"
+	srcset="/post/c_plus_note/chapter2_%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/chap2_26_hu3a130d2b40f26d1a439f1ba7931c5771_6550_480x0_resize_box_3.png 480w, /post/c_plus_note/chapter2_%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/chap2_26_hu3a130d2b40f26d1a439f1ba7931c5771_6550_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="Image 26"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="2101"
+		data-flex-basis="5044px"
+	
+></p>
+<h4 id="类对象作为类成员">类对象作为类成员</h4>
+<p>C++类中的成员可以是另一个类的对象，称该成员为对象成员</p>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c++" data-lang="c++"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 1</span><span><span style="color:#737994;font-style:italic">//类对象作为类的成员
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 2</span><span><span style="color:#737994;font-style:italic"></span><span style="color:#ca9ee6">class</span> <span style="color:#e5c890">Person</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 3</span><span>{
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 4</span><span>  <span style="color:#ca9ee6">public</span><span style="color:#99d1db;font-weight:bold">:</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 5</span><span>  <span style="color:#e78284">int</span> Age;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 6</span><span>  string Name;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 7</span><span>  Person(<span style="color:#e78284">int</span> age, string name)<span style="color:#99d1db;font-weight:bold">:</span>Age(age), Name(name)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 8</span><span>  {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 9</span><span>    cout <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#a6d189">&#34;Person类的构造函数&#34;</span> <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">10</span><span>  };
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">11</span><span>  <span style="color:#99d1db;font-weight:bold">~</span>Person()
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">12</span><span>  {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">13</span><span>    cout <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#a6d189">&#34;Person类的析构函数&#34;</span> <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">14</span><span>  };
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">15</span><span>};
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">16</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">17</span><span><span style="color:#ca9ee6">class</span> <span style="color:#e5c890">Student</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">18</span><span>{
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">19</span><span>  <span style="color:#ca9ee6">public</span><span style="color:#99d1db;font-weight:bold">:</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">20</span><span>  Person P;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">21</span><span>  <span style="color:#e78284">int</span> Score;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">22</span><span>  Student(<span style="color:#e78284">int</span> age, string name, <span style="color:#e78284">int</span> score)<span style="color:#99d1db;font-weight:bold">:</span>P(age, name), Score(score)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">23</span><span>  {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">24</span><span>    cout <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#a6d189">&#34;Student类的构造函数&#34;</span> <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">25</span><span>  };
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">26</span><span>  <span style="color:#99d1db;font-weight:bold">~</span>Student()
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">27</span><span>  {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">28</span><span>    cout <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#a6d189">&#34;Student类的析构函数&#34;</span> <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">29</span><span>  };
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">30</span><span>};
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">31</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">32</span><span><span style="color:#e78284">int</span> <span style="color:#8caaee">main</span>()
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">33</span><span>{
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">34</span><span>  Student s(<span style="color:#ef9f76">18</span>, <span style="color:#a6d189">&#34;Tom&#34;</span>, <span style="color:#ef9f76">88</span>);
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">35</span><span>  cout <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#a6d189">&#34;s.age: &#34;</span> <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> s.P.Age <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">36</span><span>  cout <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#a6d189">&#34;s.name: &#34;</span> <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> s.P.Name <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">37</span><span>  cout <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#a6d189">&#34;s.score: &#34;</span> <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> s.Score <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">38</span><span>  <span style="color:#ca9ee6">return</span> <span style="color:#ef9f76">0</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">39</span><span>}
+</span></span></code></pre></div><p><img src="/post/c_plus_note/chapter2_%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/chap2_27.png"
+	width="1240"
+	height="213"
+	srcset="/post/c_plus_note/chapter2_%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/chap2_27_hu8baf040610c397409a01e6a5192b7ed6_30793_480x0_resize_box_3.png 480w, /post/c_plus_note/chapter2_%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/chap2_27_hu8baf040610c397409a01e6a5192b7ed6_30793_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="Image 27"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="582"
+		data-flex-basis="1397px"
+	
+></p>
+<p><strong>总结</strong>：当构造的类中包含另一个类对象时，先调用被包含的类的构造函数，在调用需要构造的类的构造函数，析构时相反。</p>
+<h4 id="静态成员">静态成员</h4>
+<p>在成员变量和成员函数前加上关键词 static，称为静态成员</p>
+<p>静态成员分为：</p>
+<ul>
+<li>静态成员变量
+<ul>
+<li>所有对象共享同一份数据</li>
+<li>在编译阶段分配内存（全局区）</li>
+<li>需要类内声明，类外初始化</li>
+</ul>
+</li>
+<li>静态成员函数
+<ul>
+<li>所有对象共享同一个函数</li>
+<li>静态成员函数只能访问静态成员变量</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-C++" data-lang="C++"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 1</span><span><span style="color:#737994;font-style:italic">//静态成员变量
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 2</span><span><span style="color:#737994;font-style:italic"></span><span style="color:#ca9ee6">class</span> <span style="color:#e5c890">Person</span> 
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 3</span><span>{
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 4</span><span>  <span style="color:#ca9ee6">public</span><span style="color:#99d1db;font-weight:bold">:</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 5</span><span>  <span style="color:#e78284">int</span> Age;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 6</span><span>  string Name;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 7</span><span>  <span style="color:#ca9ee6">static</span> <span style="color:#e78284">int</span> SSS;<span style="color:#737994;font-style:italic">//类内声明
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 8</span><span><span style="color:#737994;font-style:italic"></span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 9</span><span>  <span style="color:#e78284">int</span> <span style="color:#8caaee">getPersonRRR</span>()<span style="color:#737994;font-style:italic">//通过类内的函数将私有属性暴露出去
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">10</span><span><span style="color:#737994;font-style:italic"></span>  {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">11</span><span>    <span style="color:#ca9ee6">return</span> RRR;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">12</span><span>  };
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">13</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">14</span><span>  <span style="color:#ca9ee6">private</span><span style="color:#99d1db;font-weight:bold">:</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">15</span><span>  <span style="color:#ca9ee6">static</span> <span style="color:#e78284">int</span> RRR;<span style="color:#737994;font-style:italic">//可以声明私有的静态成员变量
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">16</span><span><span style="color:#737994;font-style:italic"></span>};
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">17</span><span><span style="color:#e78284">int</span> Person<span style="color:#99d1db;font-weight:bold">::</span>SSS <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#ef9f76">100</span>;<span style="color:#737994;font-style:italic">//类外初始化 通过Person::SSS访问到类内的静态成员变量
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">18</span><span><span style="color:#737994;font-style:italic"></span><span style="color:#e78284">int</span> Person<span style="color:#99d1db;font-weight:bold">::</span>RRR <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#ef9f76">999</span>;<span style="color:#737994;font-style:italic">//私有的静态成员变量也需要在类外初始化
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">19</span><span><span style="color:#737994;font-style:italic"></span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">20</span><span><span style="color:#e78284">int</span> <span style="color:#8caaee">main</span>()
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">21</span><span>{
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">22</span><span>  Person p1;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">23</span><span>  cout <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#a6d189">&#34;adress of p1.SSS: &#34;</span> <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#99d1db;font-weight:bold">&amp;</span>p1.SSS <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">24</span><span>  cout <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#a6d189">&#34;p1.SSS: &#34;</span> <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> p1.SSS <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">25</span><span>  <span style="color:#737994;font-style:italic">//cout &lt;&lt; &#34;p1.RRR: &#34; &lt;&lt; p1.RRR &lt;&lt; endl;//无法在类外访问私有的静态成员变量
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">26</span><span><span style="color:#737994;font-style:italic"></span>  cout <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#a6d189">&#34;p1.RRR: &#34;</span> <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> p1.getPersonRRR() <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">27</span><span>  Person p2;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">28</span><span>  p2.SSS <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#ef9f76">200</span>;<span style="color:#737994;font-style:italic">//对p2.SSS的修改会影响所有的Person类
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">29</span><span><span style="color:#737994;font-style:italic"></span>  cout <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#a6d189">&#34;adress of p2.SSS: &#34;</span> <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#99d1db;font-weight:bold">&amp;</span>p2.SSS <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">30</span><span>  cout <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#a6d189">&#34;p1.SSS: &#34;</span> <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> p1.SSS <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">31</span><span>  
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">32</span><span>  <span style="color:#737994;font-style:italic">//对于静态成员变量的访问
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">33</span><span><span style="color:#737994;font-style:italic"></span>  <span style="color:#737994;font-style:italic">//通过实例化一个类访问
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">34</span><span><span style="color:#737994;font-style:italic"></span>  Person p3;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">35</span><span>  cout <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#a6d189">&#34;p3.SSS: &#34;</span> <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> p3.SSS <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">36</span><span>  <span style="color:#737994;font-style:italic">//通过Person::SSS访问
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">37</span><span><span style="color:#737994;font-style:italic"></span>  cout <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#a6d189">&#34;Person::SSS: &#34;</span> <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> Person<span style="color:#99d1db;font-weight:bold">::</span>SSS <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">38</span><span>  <span style="color:#ca9ee6">return</span> <span style="color:#ef9f76">0</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">39</span><span>}
+</span></span></code></pre></div><p><img src="/post/c_plus_note/chapter2_%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/chap2_28.png"
+	width="1240"
+	height="214"
+	srcset="/post/c_plus_note/chapter2_%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/chap2_28_hu7d5f889a3dc42a2de5479139f8bbd5f3_23868_480x0_resize_box_3.png 480w, /post/c_plus_note/chapter2_%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/chap2_28_hu7d5f889a3dc42a2de5479139f8bbd5f3_23868_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="Image 28"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="579"
+		data-flex-basis="1390px"
+	
+></p>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c++" data-lang="c++"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 1</span><span><span style="color:#737994;font-style:italic">//静态成员函数
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 2</span><span><span style="color:#737994;font-style:italic"></span><span style="color:#ca9ee6">class</span> <span style="color:#e5c890">Person</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 3</span><span>{
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 4</span><span>  <span style="color:#ca9ee6">public</span><span style="color:#99d1db;font-weight:bold">:</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 5</span><span>  <span style="color:#e78284">int</span> Age;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 6</span><span>  <span style="color:#ca9ee6">static</span> <span style="color:#e78284">int</span> SSS;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 7</span><span>  <span style="color:#ca9ee6">static</span> <span style="color:#e78284">void</span> <span style="color:#8caaee">func1</span>(){
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 8</span><span>    cout <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#a6d189">&#34;func1的调用&#34;</span> <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 9</span><span>    SSS <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#ef9f76">999</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">10</span><span>    <span style="color:#737994;font-style:italic">//静态成员函数无法访问非静态成员变量 该行会报错
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">11</span><span><span style="color:#737994;font-style:italic"></span>    <span style="color:#737994;font-style:italic">//error: invalid use of member &#39;Age&#39; in static member function
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">12</span><span><span style="color:#737994;font-style:italic"></span>    <span style="color:#737994;font-style:italic">//Age = 22;
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">13</span><span><span style="color:#737994;font-style:italic"></span>  };
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">14</span><span>  <span style="color:#ca9ee6">private</span><span style="color:#99d1db;font-weight:bold">:</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">15</span><span>  <span style="color:#737994;font-style:italic">//也可以声明私有的静态成员函数
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">16</span><span><span style="color:#737994;font-style:italic"></span>  <span style="color:#ca9ee6">static</span> <span style="color:#e78284">void</span> func2(){
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">17</span><span>    cout <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#a6d189">&#34;func1的调用&#34;</span> <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">18</span><span>  };
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">19</span><span>};
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">20</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">21</span><span><span style="color:#e78284">int</span> Person<span style="color:#99d1db;font-weight:bold">::</span>SSS <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#ef9f76">100</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">22</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">23</span><span><span style="color:#e78284">int</span> <span style="color:#8caaee">main</span>()
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">24</span><span>{
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">25</span><span>  <span style="color:#737994;font-style:italic">//通过实例化一个对象调用静态成员函数
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">26</span><span><span style="color:#737994;font-style:italic"></span>  Person p;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">27</span><span>  cout <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#a6d189">&#34;Person::SSS: &#34;</span> <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> Person<span style="color:#99d1db;font-weight:bold">::</span>SSS <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">28</span><span>  p.func1();
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">29</span><span>  cout <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#a6d189">&#34;Person::SSS: &#34;</span> <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> Person<span style="color:#99d1db;font-weight:bold">::</span>SSS <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">30</span><span>  <span style="color:#737994;font-style:italic">//通过Person::func1()调用静态成员函数
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">31</span><span><span style="color:#737994;font-style:italic"></span>  p.func1();
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">32</span><span>  cout <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#a6d189">&#34;Person::SSS: &#34;</span> <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> Person<span style="color:#99d1db;font-weight:bold">::</span>SSS <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">33</span><span>  <span style="color:#ca9ee6">return</span> <span style="color:#ef9f76">0</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">34</span><span>}
+</span></span></code></pre></div><p><img src="/post/c_plus_note/chapter2_%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/chap2_29.png"
+	width="1240"
+	height="152"
+	srcset="/post/c_plus_note/chapter2_%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/chap2_29_hu1c4a4119c9c4ebbcd03a73e1271717ee_17132_480x0_resize_box_3.png 480w, /post/c_plus_note/chapter2_%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/chap2_29_hu1c4a4119c9c4ebbcd03a73e1271717ee_17132_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="Image 29"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="815"
+		data-flex-basis="1957px"
+	
+></p>
+<h3 id="c对象模型和this指针">C++对象模型和this指针</h3>
 
 </section>
 
