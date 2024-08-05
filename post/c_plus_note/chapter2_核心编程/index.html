@@ -279,6 +279,7 @@
         <li><a href="#成员属性设置为私有">成员属性设置为私有</a></li>
         <li><a href="#对象的初始化和清理">对象的初始化和清理</a></li>
         <li><a href="#c对象模型和this指针">C++对象模型和this指针</a></li>
+        <li><a href="#友元">友元</a></li>
       </ul>
     </li>
   </ul>
@@ -357,7 +358,7 @@
 
 
                 <time class="article-time--reading">
-                    16 minute read
+                    18 minute read
                 </time>
             </div>
         
@@ -1886,6 +1887,246 @@
 	
 ></p>
 <h3 id="c对象模型和this指针">C++对象模型和this指针</h3>
+<h4 id="成员变量和成员函数分开存储">成员变量和成员函数分开存储</h4>
+<p>在C++中，类内的成员变量和成员函数分开存储</p>
+<p>只有非静态成员变量才属于类的对象上</p>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c++" data-lang="c++"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 1</span><span><span style="color:#737994;font-style:italic">//成员变量和成员函数分开存储
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 2</span><span><span style="color:#737994;font-style:italic">//空对象会占用1字节的内存 是为了区分对象在内存中的位置
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 3</span><span><span style="color:#737994;font-style:italic"></span><span style="color:#ca9ee6">class</span> <span style="color:#e5c890">Person</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 4</span><span>{
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 5</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 6</span><span>};
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 7</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 8</span><span><span style="color:#ca9ee6">class</span> <span style="color:#e5c890">Student</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 9</span><span>{
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">10</span><span>  <span style="color:#ca9ee6">public</span><span style="color:#99d1db;font-weight:bold">:</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">11</span><span>  <span style="color:#e78284">int</span> Age;<span style="color:#737994;font-style:italic">//非静态成员变量保存在对象内 
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">12</span><span><span style="color:#737994;font-style:italic"></span>  <span style="color:#737994;font-style:italic">//int Score;
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">13</span><span><span style="color:#737994;font-style:italic"></span>  <span style="color:#ca9ee6">static</span> <span style="color:#e78284">int</span> RRR;<span style="color:#737994;font-style:italic">//静态成员变量不在对象内 因此不会影响对象在内存中的大小
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">14</span><span><span style="color:#737994;font-style:italic"></span>  <span style="color:#e78284">void</span> <span style="color:#8caaee">func1</span>(){};<span style="color:#737994;font-style:italic">//成员函数不在对象内
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">15</span><span><span style="color:#737994;font-style:italic"></span>  <span style="color:#ca9ee6">static</span> <span style="color:#e78284">void</span> <span style="color:#8caaee">func2</span>(){};<span style="color:#737994;font-style:italic">//静态成员函数也不在对象内
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">16</span><span><span style="color:#737994;font-style:italic"></span>};
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">17</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">18</span><span><span style="color:#e78284">int</span> Student<span style="color:#99d1db;font-weight:bold">::</span>RRR <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#ef9f76">999</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">19</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">20</span><span><span style="color:#e78284">int</span> <span style="color:#8caaee">main</span>()
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">21</span><span>{
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">22</span><span>  Person p;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">23</span><span>  cout <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#a6d189">&#34;size of p: &#34;</span> <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#ca9ee6">sizeof</span>(p) <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">24</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">25</span><span>  Student s;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">26</span><span>  cout <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#a6d189">&#34;size of s: &#34;</span> <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#ca9ee6">sizeof</span>(s) <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">27</span><span>  <span style="color:#ca9ee6">return</span> <span style="color:#ef9f76">0</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">28</span><span>}
+</span></span></code></pre></div><p><img src="/post/c_plus_note/chapter2_%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/chap2_30.png"
+	width="1240"
+	height="61"
+	srcset="/post/c_plus_note/chapter2_%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/chap2_30_hu859570ab3a9fad0354b4086e176acea6_6479_480x0_resize_box_3.png 480w, /post/c_plus_note/chapter2_%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/chap2_30_hu859570ab3a9fad0354b4086e176acea6_6479_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="Image 30"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="2032"
+		data-flex-basis="4878px"
+	
+></p>
+<h4 id="this-指针">this 指针</h4>
+<p>由于C++中成员变量与成员函数分开存储，每一个非静态成员函数只会诞生一份函数实例，这表明多个同类型的对象实例会共用一块代码，这会产生一个问题：这块代码如何区分是哪个对象实例调用了它？</p>
+<p>C++通过提供特殊的对象指针，this 指针，来解决上述问题；</p>
+<p><strong>this 指针指向被调用的成员函数所属的对象</strong></p>
+<p><strong>this 指针是隐含在每一个非静态成员函数内的一种指针</strong></p>
+<p><strong>this 指针不需要定义，直接使用即可</strong></p>
+<p>this 指针的用途：</p>
+<ul>
+<li>当形参和成员变量同名时，可以使用 this 指针来区分</li>
+<li>在类的非静态成员函数中返回对象自身，可以使用 return *this</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-C++" data-lang="C++"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 1</span><span><span style="color:#737994;font-style:italic">//this指针的用法
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 2</span><span><span style="color:#737994;font-style:italic"></span><span style="color:#ca9ee6">class</span> <span style="color:#e5c890">Person</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 3</span><span>{
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 4</span><span>  <span style="color:#ca9ee6">public</span><span style="color:#99d1db;font-weight:bold">:</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 5</span><span>  <span style="color:#e78284">int</span> age;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 6</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 7</span><span>  Person(<span style="color:#e78284">int</span> age)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 8</span><span>  {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 9</span><span>    <span style="color:#737994;font-style:italic">//age = age; 形参与成员变量名称冲突 赋值失败
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">10</span><span><span style="color:#737994;font-style:italic"></span>    <span style="color:#ca9ee6">this</span><span style="color:#99d1db;font-weight:bold">-&gt;</span>age <span style="color:#99d1db;font-weight:bold">=</span> age;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">11</span><span>  };
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">12</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">13</span><span>  Person<span style="color:#99d1db;font-weight:bold">&amp;</span> Add(<span style="color:#e78284">int</span> num)<span style="color:#737994;font-style:italic">//通过返回对象自身实现链式调用
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">14</span><span><span style="color:#737994;font-style:italic"></span>  {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">15</span><span>    <span style="color:#ca9ee6">this</span><span style="color:#99d1db;font-weight:bold">-&gt;</span>age <span style="color:#99d1db;font-weight:bold">+=</span> num;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">16</span><span>    <span style="color:#ca9ee6">return</span> <span style="color:#99d1db;font-weight:bold">*</span><span style="color:#ca9ee6">this</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">17</span><span>  };
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">18</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">19</span><span>  Person <span style="color:#8caaee">Add000</span>(<span style="color:#e78284">int</span> num)<span style="color:#737994;font-style:italic">//如果返回值类型 则无法进行链式调用 因为值类型返回会拷贝一份该对象作为返回
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">20</span><span><span style="color:#737994;font-style:italic"></span>  {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">21</span><span>    <span style="color:#ca9ee6">this</span><span style="color:#99d1db;font-weight:bold">-&gt;</span>age <span style="color:#99d1db;font-weight:bold">+=</span> num;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">22</span><span>    <span style="color:#ca9ee6">return</span> <span style="color:#99d1db;font-weight:bold">*</span><span style="color:#ca9ee6">this</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">23</span><span>  };    
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">24</span><span>};
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">25</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">26</span><span><span style="color:#e78284">int</span> <span style="color:#8caaee">main</span>()
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">27</span><span>{
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">28</span><span>  Person p(<span style="color:#ef9f76">18</span>);
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">29</span><span>  cout <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#a6d189">&#34;p.age: &#34;</span> <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> p.age <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">30</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">31</span><span>  p.Add(<span style="color:#ef9f76">10</span>).Add(<span style="color:#ef9f76">10</span>);<span style="color:#737994;font-style:italic">//链式调用
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">32</span><span><span style="color:#737994;font-style:italic"></span>  cout <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#a6d189">&#34;p.age: &#34;</span> <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> p.age <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">33</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">34</span><span>  p.Add000(<span style="color:#ef9f76">10</span>).Add000(<span style="color:#ef9f76">10</span>).Add000(<span style="color:#ef9f76">10</span>);<span style="color:#737994;font-style:italic">//返回值类型的函数无法进行链式调用
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">35</span><span><span style="color:#737994;font-style:italic"></span>  cout <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#a6d189">&#34;p.age: &#34;</span> <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> p.age <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">36</span><span>  <span style="color:#ca9ee6">return</span> <span style="color:#ef9f76">0</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">37</span><span>}
+</span></span></code></pre></div><p><img src="/post/c_plus_note/chapter2_%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/chap2_31.png"
+	width="1240"
+	height="88"
+	srcset="/post/c_plus_note/chapter2_%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/chap2_31_hud7b4cbddade7ee46fdc676f3242901c9_9702_480x0_resize_box_3.png 480w, /post/c_plus_note/chapter2_%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/chap2_31_hud7b4cbddade7ee46fdc676f3242901c9_9702_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="Image 31"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="1409"
+		data-flex-basis="3381px"
+	
+></p>
+<h4 id="空指针访问成员函数">空指针访问成员函数</h4>
+<p>C++中空指针也是可以调用成员函数的，但要注意有没有用到this指针</p>
+<p>如果用到了this指针，需要加以判断保证代码的健壮性</p>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c++" data-lang="c++"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 1</span><span><span style="color:#737994;font-style:italic">//空指针访问成员函数
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 2</span><span><span style="color:#737994;font-style:italic"></span><span style="color:#ca9ee6">class</span> <span style="color:#e5c890">Person</span> 
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 3</span><span>{
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 4</span><span>  <span style="color:#ca9ee6">public</span><span style="color:#99d1db;font-weight:bold">:</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 5</span><span>  <span style="color:#e78284">int</span> Age;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 6</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 7</span><span>  string <span style="color:#8caaee">GetClassName</span>()
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 8</span><span>  {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 9</span><span>    <span style="color:#ca9ee6">return</span> <span style="color:#a6d189">&#34;Person&#34;</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">10</span><span>  };
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">11</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">12</span><span>  <span style="color:#e78284">int</span> <span style="color:#8caaee">GetPersonAge</span>()
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">13</span><span>  {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">14</span><span>    <span style="color:#737994;font-style:italic">//解决空指针调用导致的错误
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">15</span><span><span style="color:#737994;font-style:italic"></span>    <span style="color:#ca9ee6">if</span> (<span style="color:#ca9ee6">this</span> <span style="color:#99d1db;font-weight:bold">==</span> <span style="color:#99d1db">NULL</span>) {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">16</span><span>      cout <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#a6d189">&#34;error: this指针为空&#34;</span> <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">17</span><span>      <span style="color:#ca9ee6">return</span> <span style="color:#99d1db;font-weight:bold">-</span><span style="color:#ef9f76">1</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">18</span><span>    };
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">19</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">20</span><span>    <span style="color:#ca9ee6">return</span> Age;<span style="color:#737994;font-style:italic">//这里相当于 return this-&gt;Age
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">21</span><span><span style="color:#737994;font-style:italic"></span>  };
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">22</span><span>};
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">23</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">24</span><span><span style="color:#e78284">int</span> <span style="color:#8caaee">main</span>()
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">25</span><span>{
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">26</span><span>  Person p1;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">27</span><span>  p1.Age <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#ef9f76">18</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">28</span><span>  cout <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#a6d189">&#34;class name of p1: &#34;</span> <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> p1.GetClassName() <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">29</span><span>  cout <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#a6d189">&#34;age of p1: &#34;</span> <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> p1.GetPersonAge() <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">30</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">31</span><span>  Person <span style="color:#99d1db;font-weight:bold">*</span> p2 <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#99d1db">NULL</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">32</span><span>  cout <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#a6d189">&#34;class name of p2: &#34;</span> <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> p2<span style="color:#99d1db;font-weight:bold">-&gt;</span>GetClassName() <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">33</span><span>  cout <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#a6d189">&#34;age of p2: &#34;</span> <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> p2<span style="color:#99d1db;font-weight:bold">-&gt;</span>GetPersonAge() <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> endl;<span style="color:#737994;font-style:italic">//由于p2是空指针，也就是当前的this指针为空，因此会出错
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">34</span><span><span style="color:#737994;font-style:italic"></span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">35</span><span>  <span style="color:#ca9ee6">return</span> <span style="color:#ef9f76">0</span>;    
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">36</span><span>}
+</span></span></code></pre></div><p><img src="/post/c_plus_note/chapter2_%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/chap2_32.png"
+	width="1240"
+	height="308"
+	srcset="/post/c_plus_note/chapter2_%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/chap2_32_hu263a450f90efb8f61291560e3287a9e9_44656_480x0_resize_box_3.png 480w, /post/c_plus_note/chapter2_%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/chap2_32_hu263a450f90efb8f61291560e3287a9e9_44656_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="Image 32"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="402"
+		data-flex-basis="966px"
+	
+></p>
+<h4 id="const-修饰成员函数">const 修饰成员函数</h4>
+<p><strong>常函数</strong></p>
+<ul>
+<li>成员函数后加 const 修饰，称这个函数为常函数</li>
+<li>常函数内不可以修改成员属性</li>
+<li>成员属性声明时加关键字 mutable 后，在常函数中依然可以修改</li>
+</ul>
+<p><strong>常对象</strong></p>
+<ul>
+<li>声明对象前加 const 修饰，称这个对象为常对象</li>
+<li>常对象只能调用常函数</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c++" data-lang="c++"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 1</span><span><span style="color:#737994;font-style:italic">//常函数与常对象
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 2</span><span><span style="color:#737994;font-style:italic"></span><span style="color:#ca9ee6">class</span> <span style="color:#e5c890">Person</span> 
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 3</span><span>{
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 4</span><span>  <span style="color:#ca9ee6">public</span><span style="color:#99d1db;font-weight:bold">:</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 5</span><span>  <span style="color:#e78284">int</span> Age;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 6</span><span>  <span style="color:#ca9ee6">mutable</span> <span style="color:#e78284">int</span> Score;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 7</span><span>  Person(<span style="color:#e78284">int</span> age)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 8</span><span>  {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 9</span><span>    Age <span style="color:#99d1db;font-weight:bold">=</span> age;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">10</span><span>  };
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">11</span><span>  <span style="color:#737994;font-style:italic">//在成员函数后加const修饰 表明这是一个常函数
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">12</span><span><span style="color:#737994;font-style:italic"></span>  <span style="color:#737994;font-style:italic">//常函数内不可以修改一般的成员变量 但可以修改有 mutable 修饰的成员变量
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">13</span><span><span style="color:#737994;font-style:italic"></span>  <span style="color:#737994;font-style:italic">//对于 this 指针的进一步解释：
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">14</span><span><span style="color:#737994;font-style:italic"></span>  <span style="color:#737994;font-style:italic">//this 指针本质上是一个指针常量 即：Person * const this
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">15</span><span><span style="color:#737994;font-style:italic"></span>  <span style="color:#737994;font-style:italic">//因此对于一般的 this 指针 该指针指向的地址不可修改 但是指向的地址保存的值可以修改
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">16</span><span><span style="color:#737994;font-style:italic"></span>  <span style="color:#737994;font-style:italic">//常函数后的 const 即对 this 指针再加 const 修饰   
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">17</span><span><span style="color:#737994;font-style:italic"></span>  <span style="color:#737994;font-style:italic">//表明 this 指针指向的地址保存的值也不可以修改
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">18</span><span><span style="color:#737994;font-style:italic"></span>  <span style="color:#e78284">void</span> <span style="color:#8caaee">RevisePerson01</span>(<span style="color:#e78284">int</span> num) <span style="color:#ca9ee6">const</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">19</span><span>  {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">20</span><span>    <span style="color:#737994;font-style:italic">//Age = age;一般的成员变量无法再常函数内进行修改 会报错
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">21</span><span><span style="color:#737994;font-style:italic"></span>    Score <span style="color:#99d1db;font-weight:bold">=</span> num;<span style="color:#737994;font-style:italic">//mutable 修饰的成员变量可以在常函数内修改
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">22</span><span><span style="color:#737994;font-style:italic"></span>  };
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">23</span><span>  <span style="color:#e78284">void</span> <span style="color:#8caaee">RevisePerson02</span>(<span style="color:#e78284">int</span> num)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">24</span><span>  {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">25</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">26</span><span>  };
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">27</span><span>};
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">28</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">29</span><span><span style="color:#e78284">void</span> <span style="color:#8caaee">test01</span>()
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">30</span><span>{
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">31</span><span>  Person p1(<span style="color:#ef9f76">18</span>);
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">32</span><span>  p1.RevisePerson01(<span style="color:#ef9f76">20</span>);
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">33</span><span>  cout <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#a6d189">&#34;p1.Age: &#34;</span> <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> p1.Age <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">34</span><span>  cout <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#a6d189">&#34;p1.Score: &#34;</span> <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> p1.Score <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">35</span><span>}
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">36</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">37</span><span><span style="color:#e78284">void</span> <span style="color:#8caaee">test02</span>()
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">38</span><span>{
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">39</span><span>  <span style="color:#ca9ee6">const</span> Person p2(<span style="color:#ef9f76">20</span>);
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">40</span><span>  p2.Score <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#ef9f76">70</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">41</span><span>  p2.RevisePerson01(<span style="color:#ef9f76">80</span>);
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">42</span><span>  cout <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#a6d189">&#34;p2.Score: &#34;</span> <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> p2.Score <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">43</span><span>  <span style="color:#737994;font-style:italic">//常对象调用一般成员函数会报错 
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">44</span><span><span style="color:#737994;font-style:italic"></span>  <span style="color:#737994;font-style:italic">//如果常函数可以调用一般成员函数 若该函数内有对一般成员变量的修改操作 则还是会造成该变量的修改
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">45</span><span><span style="color:#737994;font-style:italic"></span>  <span style="color:#737994;font-style:italic">//p2.RevisePerson02();
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">46</span><span><span style="color:#737994;font-style:italic"></span>};
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">47</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">48</span><span><span style="color:#e78284">int</span> <span style="color:#8caaee">main</span>()
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">49</span><span>{
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">50</span><span>  test01();
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">51</span><span>  test02();
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">52</span><span>  <span style="color:#ca9ee6">return</span> <span style="color:#ef9f76">0</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">53</span><span>}
+</span></span></code></pre></div><p><img src="/post/c_plus_note/chapter2_%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/chap2_33.png"
+	width="1240"
+	height="91"
+	srcset="/post/c_plus_note/chapter2_%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/chap2_33_hu57c588480554405a30734ab3ae114369_10833_480x0_resize_box_3.png 480w, /post/c_plus_note/chapter2_%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/chap2_33_hu57c588480554405a30734ab3ae114369_10833_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="Image 33"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="1362"
+		data-flex-basis="3270px"
+	
+></p>
+<h3 id="友元">友元</h3>
 
 </section>
 
