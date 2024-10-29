@@ -8,7 +8,7 @@
 代码区
 存放CPU执行的机器指令
 代码区是共享的，共享的目的是对于频繁被执行的程序，只需要在内存中有一份代码即可
-代码区是只读的，使其只读的原因是防止程序意外的修改了它的指令
+代码区是只读 的，使其只读的原因是防止程序意外的修改了它的指令
 全局区
 全局变量和静态变量存放在此 全局区还包含了常量区，字符串常量和其他常量也存放在此 该区域的数据在程序结束后由操作系统释放 1//全局变量 2int g_a = 10; 3//全局常量 4const int g_c_a = 10; 5 6int main() 7{ 8 //普通局部变量 9 int a = 10; 10 //const 修饰的局部变量 11 const int l_c_a = 10; 12 cout &amp;lt;&amp;lt; &amp;#34;address of l_c_a: &amp;#34; &amp;lt;&amp;lt; &amp;amp;l_c_a &amp;lt;&amp;lt;endl; 13 //静态变量 14 static int s_a = 10; 15 cout &amp;lt;&amp;lt; &amp;#34;address of a: &amp;#34; &amp;lt;&amp;lt; &amp;amp;a &amp;lt;&amp;lt;endl; 16 cout &amp;lt;&amp;lt; &amp;#34;address of g_a: &amp;#34; &amp;lt;&amp;lt; &amp;amp;g_a &amp;lt;&amp;lt;endl; 17 cout &amp;lt;&amp;lt; &amp;#34;address of s_a: &amp;#34; &amp;lt;&amp;lt; &amp;amp;s_a &amp;lt;&amp;lt;endl; 18 cout &amp;lt;&amp;lt; &amp;#34;address of g_c_a: &amp;#34; &amp;lt;&amp;lt; &amp;amp;g_c_a &amp;lt;&amp;lt;endl; 19 //常量 20 //字符串常量 21 cout &amp;lt;&amp;lt; &amp;#34;address of str: &amp;#34; &amp;lt;&amp;lt; &amp;amp;&amp;#34;world&amp;#34; &amp;lt;&amp;lt;endl; 22 23 return 0; 24} 程序运行后 栈区'>
 <title>C&#43;&#43;核心编程</title>
@@ -23,7 +23,7 @@
 代码区
 存放CPU执行的机器指令
 代码区是共享的，共享的目的是对于频繁被执行的程序，只需要在内存中有一份代码即可
-代码区是只读的，使其只读的原因是防止程序意外的修改了它的指令
+代码区是只读 的，使其只读的原因是防止程序意外的修改了它的指令
 全局区
 全局变量和静态变量存放在此 全局区还包含了常量区，字符串常量和其他常量也存放在此 该区域的数据在程序结束后由操作系统释放 1//全局变量 2int g_a = 10; 3//全局常量 4const int g_c_a = 10; 5 6int main() 7{ 8 //普通局部变量 9 int a = 10; 10 //const 修饰的局部变量 11 const int l_c_a = 10; 12 cout &amp;lt;&amp;lt; &amp;#34;address of l_c_a: &amp;#34; &amp;lt;&amp;lt; &amp;amp;l_c_a &amp;lt;&amp;lt;endl; 13 //静态变量 14 static int s_a = 10; 15 cout &amp;lt;&amp;lt; &amp;#34;address of a: &amp;#34; &amp;lt;&amp;lt; &amp;amp;a &amp;lt;&amp;lt;endl; 16 cout &amp;lt;&amp;lt; &amp;#34;address of g_a: &amp;#34; &amp;lt;&amp;lt; &amp;amp;g_a &amp;lt;&amp;lt;endl; 17 cout &amp;lt;&amp;lt; &amp;#34;address of s_a: &amp;#34; &amp;lt;&amp;lt; &amp;amp;s_a &amp;lt;&amp;lt;endl; 18 cout &amp;lt;&amp;lt; &amp;#34;address of g_c_a: &amp;#34; &amp;lt;&amp;lt; &amp;amp;g_c_a &amp;lt;&amp;lt;endl; 19 //常量 20 //字符串常量 21 cout &amp;lt;&amp;lt; &amp;#34;address of str: &amp;#34; &amp;lt;&amp;lt; &amp;amp;&amp;#34;world&amp;#34; &amp;lt;&amp;lt;endl; 22 23 return 0; 24} 程序运行后 栈区'>
 <meta property='og:url' content='https://chaihaojian.github.io/post/c_plus_note/chapter2_%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/'>
@@ -37,7 +37,7 @@
 代码区
 存放CPU执行的机器指令
 代码区是共享的，共享的目的是对于频繁被执行的程序，只需要在内存中有一份代码即可
-代码区是只读的，使其只读的原因是防止程序意外的修改了它的指令
+代码区是只读 的，使其只读的原因是防止程序意外的修改了它的指令
 全局区
 全局变量和静态变量存放在此 全局区还包含了常量区，字符串常量和其他常量也存放在此 该区域的数据在程序结束后由操作系统释放 1//全局变量 2int g_a = 10; 3//全局常量 4const int g_c_a = 10; 5 6int main() 7{ 8 //普通局部变量 9 int a = 10; 10 //const 修饰的局部变量 11 const int l_c_a = 10; 12 cout &amp;lt;&amp;lt; &amp;#34;address of l_c_a: &amp;#34; &amp;lt;&amp;lt; &amp;amp;l_c_a &amp;lt;&amp;lt;endl; 13 //静态变量 14 static int s_a = 10; 15 cout &amp;lt;&amp;lt; &amp;#34;address of a: &amp;#34; &amp;lt;&amp;lt; &amp;amp;a &amp;lt;&amp;lt;endl; 16 cout &amp;lt;&amp;lt; &amp;#34;address of g_a: &amp;#34; &amp;lt;&amp;lt; &amp;amp;g_a &amp;lt;&amp;lt;endl; 17 cout &amp;lt;&amp;lt; &amp;#34;address of s_a: &amp;#34; &amp;lt;&amp;lt; &amp;amp;s_a &amp;lt;&amp;lt;endl; 18 cout &amp;lt;&amp;lt; &amp;#34;address of g_c_a: &amp;#34; &amp;lt;&amp;lt; &amp;amp;g_c_a &amp;lt;&amp;lt;endl; 19 //常量 20 //字符串常量 21 cout &amp;lt;&amp;lt; &amp;#34;address of str: &amp;#34; &amp;lt;&amp;lt; &amp;amp;&amp;#34;world&amp;#34; &amp;lt;&amp;lt;endl; 22 23 return 0; 24} 程序运行后 栈区"><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://chaihaojian.github.io/post/c_plus_note/chapter2_%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/cover.JPG' />
@@ -280,6 +280,7 @@
         <li><a href="#对象的初始化和清理">对象的初始化和清理</a></li>
         <li><a href="#c对象模型和this指针">C++对象模型和this指针</a></li>
         <li><a href="#友元">友元</a></li>
+        <li><a href="#运算符重载">运算符重载</a></li>
       </ul>
     </li>
   </ul>
@@ -358,7 +359,7 @@
 
 
                 <time class="article-time--reading">
-                    18 minute read
+                    23 minute read
                 </time>
             </div>
         
@@ -395,7 +396,7 @@
 <p>代码区是共享的，共享的目的是对于频繁被执行的程序，只需要在内存中有一份代码即可</p>
 </li>
 <li>
-<p>代码区是只读的，使其只读的原因是防止程序意外的修改了它的指令</p>
+<p>代码区是只读 的，使其只读的原因是防止程序意外的修改了它的指令</p>
 </li>
 </ul>
 <p><strong>全局区</strong></p>
@@ -2127,6 +2128,479 @@
 	
 ></p>
 <h3 id="友元">友元</h3>
+<p>在程序里，有些私有属性需要能够让类外一些特定函数或者类进行访问</p>
+<p>关键字：friend</p>
+<h4 id="全局函数做友元">全局函数做友元</h4>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c++" data-lang="c++"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 1</span><span><span style="color:#ca9ee6">class</span> <span style="color:#e5c890">Student</span> 
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 2</span><span>{   <span style="color:#737994;font-style:italic">//通过friend关键字 声明全局函数getScore是Student类的一个友元
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 3</span><span><span style="color:#737994;font-style:italic"></span>  <span style="color:#ca9ee6">friend</span> <span style="color:#e78284">void</span> <span style="color:#8caaee">getScore</span>(Student <span style="color:#99d1db;font-weight:bold">*</span>student);
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 4</span><span>  <span style="color:#ca9ee6">public</span><span style="color:#99d1db;font-weight:bold">:</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 5</span><span>  string Name;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 6</span><span>  <span style="color:#e78284">int</span> Age;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 7</span><span>  Student(string n, <span style="color:#e78284">int</span> a)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 8</span><span>  {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 9</span><span>    Name <span style="color:#99d1db;font-weight:bold">=</span> n;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">10</span><span>    Age <span style="color:#99d1db;font-weight:bold">=</span> a;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">11</span><span>    Score <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#ef9f76">99</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">12</span><span>  };
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">13</span><span>  <span style="color:#ca9ee6">private</span><span style="color:#99d1db;font-weight:bold">:</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">14</span><span>  <span style="color:#e78284">int</span> Score;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">15</span><span>};
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">16</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">17</span><span><span style="color:#e78284">void</span> <span style="color:#8caaee">getScore</span>(Student <span style="color:#99d1db;font-weight:bold">*</span>student)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">18</span><span>{
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">19</span><span>  cout <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> student<span style="color:#99d1db;font-weight:bold">-&gt;</span>Score <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">20</span><span>};
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">21</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">22</span><span><span style="color:#e78284">void</span> <span style="color:#8caaee">test01</span>()
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">23</span><span>{
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">24</span><span>  Student p0(<span style="color:#a6d189">&#34;tom&#34;</span>, <span style="color:#ef9f76">18</span>);
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">25</span><span>  getScore(<span style="color:#99d1db;font-weight:bold">&amp;</span>p0);
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">26</span><span>};
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">27</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">28</span><span><span style="color:#e78284">int</span> <span style="color:#8caaee">main</span>()
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">29</span><span>{
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">30</span><span>  test01();
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">31</span><span>  <span style="color:#ca9ee6">return</span> <span style="color:#ef9f76">0</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">32</span><span>};
+</span></span></code></pre></div><p><img src="/post/c_plus_note/chapter2_%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/chap2_34.png"
+	width="796"
+	height="31"
+	srcset="/post/c_plus_note/chapter2_%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/chap2_34_hu1fbbdb3961c964db635def55b98235d5_1807_480x0_resize_box_3.png 480w, /post/c_plus_note/chapter2_%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/chap2_34_hu1fbbdb3961c964db635def55b98235d5_1807_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="Image 34"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="2567"
+		data-flex-basis="6162px"
+	
+></p>
+<h4 id="类做友元">类做友元</h4>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c++" data-lang="c++"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 1</span><span><span style="color:#ca9ee6">class</span> <span style="color:#e5c890">Student</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 2</span><span>{
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 3</span><span>  <span style="color:#737994;font-style:italic">//通过friend关键字 声明Teacher类是Student类的一个友元
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 4</span><span><span style="color:#737994;font-style:italic"></span>  <span style="color:#ca9ee6">friend</span> <span style="color:#ca9ee6">class</span> <span style="color:#e5c890">Teacher</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 5</span><span>  <span style="color:#ca9ee6">public</span><span style="color:#99d1db;font-weight:bold">:</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 6</span><span>  Student(string name, <span style="color:#e78284">int</span> age, <span style="color:#e78284">int</span> score)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 7</span><span>  {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 8</span><span>    Name <span style="color:#99d1db;font-weight:bold">=</span> name;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 9</span><span>    Age <span style="color:#99d1db;font-weight:bold">=</span> age;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">10</span><span>    Score <span style="color:#99d1db;font-weight:bold">=</span> score;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">11</span><span>  };
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">12</span><span>  string Name;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">13</span><span>  <span style="color:#e78284">int</span> Age;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">14</span><span>  <span style="color:#ca9ee6">private</span><span style="color:#99d1db;font-weight:bold">:</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">15</span><span>  <span style="color:#e78284">int</span> Score;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">16</span><span>};
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">17</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">18</span><span><span style="color:#ca9ee6">class</span> <span style="color:#e5c890">Teacher</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">19</span><span>{
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">20</span><span>  <span style="color:#ca9ee6">public</span><span style="color:#99d1db;font-weight:bold">:</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">21</span><span>  Teacher(string name, <span style="color:#e78284">int</span> age)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">22</span><span>  {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">23</span><span>    Name <span style="color:#99d1db;font-weight:bold">=</span> name;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">24</span><span>    Age <span style="color:#99d1db;font-weight:bold">=</span> age;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">25</span><span>  };
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">26</span><span>  string Name;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">27</span><span>  <span style="color:#e78284">int</span> Age;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">28</span><span>  <span style="color:#e78284">int</span> <span style="color:#8caaee">getScore</span>(Student <span style="color:#99d1db;font-weight:bold">*</span> student)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">29</span><span>  {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">30</span><span>    <span style="color:#ca9ee6">return</span> student<span style="color:#99d1db;font-weight:bold">-&gt;</span>Score;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">31</span><span>  };
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">32</span><span>};
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">33</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">34</span><span><span style="color:#e78284">int</span> <span style="color:#8caaee">main</span>()
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">35</span><span>{
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">36</span><span>  Student s1(<span style="color:#a6d189">&#34;tom&#34;</span>, <span style="color:#ef9f76">19</span>, <span style="color:#ef9f76">80</span>);
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">37</span><span>  Teacher t1(<span style="color:#a6d189">&#34;jim&#34;</span>, <span style="color:#ef9f76">33</span>);
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">38</span><span>  cout <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> t1.getScore(<span style="color:#99d1db;font-weight:bold">&amp;</span>s1) <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">39</span><span>  <span style="color:#ca9ee6">return</span> <span style="color:#ef9f76">0</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">40</span><span>}
+</span></span></code></pre></div><p><img src="/post/c_plus_note/chapter2_%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/chap2_35.png"
+	width="796"
+	height="31"
+	srcset="/post/c_plus_note/chapter2_%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/chap2_35_hue21dd26c077e3051646d698cb2ffdf13_2157_480x0_resize_box_3.png 480w, /post/c_plus_note/chapter2_%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/chap2_35_hue21dd26c077e3051646d698cb2ffdf13_2157_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="Image 35"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="2567"
+		data-flex-basis="6162px"
+	
+></p>
+<h4 id="成员函数做友元">成员函数做友元</h4>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c++" data-lang="c++"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 1</span><span><span style="color:#ca9ee6">class</span> <span style="color:#e5c890">Student</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 2</span><span><span style="color:#ca9ee6">class</span> <span style="color:#e5c890">Teacher</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 3</span><span>{
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 4</span><span>  <span style="color:#ca9ee6">public</span><span style="color:#99d1db;font-weight:bold">:</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 5</span><span>  string Name;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 6</span><span>  <span style="color:#e78284">int</span> Age;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 7</span><span>  Teacher(string name, <span style="color:#e78284">int</span> age)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 8</span><span>  {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 9</span><span>    Name <span style="color:#99d1db;font-weight:bold">=</span> name;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">10</span><span>    Age <span style="color:#99d1db;font-weight:bold">=</span> age;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">11</span><span>  };
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">12</span><span>  <span style="color:#737994;font-style:italic">//！！！！！需要在Teacher类之前先声明Student类
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">13</span><span><span style="color:#737994;font-style:italic"></span>  <span style="color:#e78284">int</span> <span style="color:#8caaee">getScore</span>(Student <span style="color:#99d1db;font-weight:bold">*</span> stu);
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">14</span><span>  <span style="color:#737994;font-style:italic">//！！！！！如果现在直接定义getScore函数会报错 因为当前声明的Student类中没有Score这个属性
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">15</span><span><span style="color:#737994;font-style:italic"></span>  <span style="color:#737994;font-style:italic">//！！！！！需要在Student定义之后再定义getScore函数
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">16</span><span><span style="color:#737994;font-style:italic"></span>  <span style="color:#737994;font-style:italic">// int getScore(Student * stu)
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">17</span><span><span style="color:#737994;font-style:italic"></span>  <span style="color:#737994;font-style:italic">// {
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">18</span><span><span style="color:#737994;font-style:italic"></span>  <span style="color:#737994;font-style:italic">//     return stu-&gt;Score;
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">19</span><span><span style="color:#737994;font-style:italic"></span>  <span style="color:#737994;font-style:italic">// };
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">20</span><span><span style="color:#737994;font-style:italic"></span>};
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">21</span><span><span style="color:#ca9ee6">class</span> <span style="color:#e5c890">Student</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">22</span><span>{
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">23</span><span>  <span style="color:#737994;font-style:italic">//通过friend关键字 声明Teacher类下的getScore函数是Student类的一个友元
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">24</span><span><span style="color:#737994;font-style:italic"></span>  <span style="color:#ca9ee6">friend</span> <span style="color:#e78284">int</span> Teacher<span style="color:#99d1db;font-weight:bold">::</span>getScore(Student <span style="color:#99d1db;font-weight:bold">*</span> stu);
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">25</span><span>  <span style="color:#ca9ee6">public</span><span style="color:#99d1db;font-weight:bold">:</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">26</span><span>  Student(string name, <span style="color:#e78284">int</span> age, <span style="color:#e78284">int</span> score)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">27</span><span>  {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">28</span><span>    Name <span style="color:#99d1db;font-weight:bold">=</span> name;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">29</span><span>    Age <span style="color:#99d1db;font-weight:bold">=</span> age;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">30</span><span>    Score<span style="color:#99d1db;font-weight:bold">=</span> score;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">31</span><span>  };
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">32</span><span>  string Name;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">33</span><span>  <span style="color:#e78284">int</span> Age;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">34</span><span>  <span style="color:#ca9ee6">private</span><span style="color:#99d1db;font-weight:bold">:</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">35</span><span>  <span style="color:#e78284">int</span> Score;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">36</span><span>};
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">37</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">38</span><span><span style="color:#e78284">int</span> Teacher<span style="color:#99d1db;font-weight:bold">::</span>getScore(Student <span style="color:#99d1db;font-weight:bold">*</span> stu)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">39</span><span>{
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">40</span><span>  <span style="color:#ca9ee6">return</span> stu<span style="color:#99d1db;font-weight:bold">-&gt;</span>Score;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">41</span><span>};
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">42</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">43</span><span><span style="color:#e78284">int</span> <span style="color:#8caaee">main</span>()
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">44</span><span>{
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">45</span><span>  Student s1(<span style="color:#a6d189">&#34;tom&#34;</span>, <span style="color:#ef9f76">21</span>, <span style="color:#ef9f76">87</span>);
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">46</span><span>  Teacher t1(<span style="color:#a6d189">&#34;jim&#34;</span>, <span style="color:#ef9f76">33</span>);
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">47</span><span>  cout <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> t1.getScore(<span style="color:#99d1db;font-weight:bold">&amp;</span>s1) <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">48</span><span>  <span style="color:#ca9ee6">return</span> <span style="color:#ef9f76">0</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">49</span><span>}
+</span></span></code></pre></div><p><img src="/post/c_plus_note/chapter2_%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/chap2_36.png"
+	width="796"
+	height="31"
+	srcset="/post/c_plus_note/chapter2_%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/chap2_36_hu1fbbdb3961c964db635def55b98235d5_1987_480x0_resize_box_3.png 480w, /post/c_plus_note/chapter2_%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/chap2_36_hu1fbbdb3961c964db635def55b98235d5_1987_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="Image 36"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="2567"
+		data-flex-basis="6162px"
+	
+></p>
+<p><strong>！！！！！特别注意类和成员函数的声明与定义的时机</strong></p>
+<h3 id="运算符重载">运算符重载</h3>
+<p>概念：对已有的运算符进行重新定义，赋予其另一种功能，以适应不同的数据类型</p>
+<h4 id="加号运算符重载">加号运算符重载（+）</h4>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-C++" data-lang="C++"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 1</span><span><span style="color:#737994;font-style:italic">//运算符重载
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 2</span><span><span style="color:#737994;font-style:italic">//加法运算符重载
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 3</span><span><span style="color:#737994;font-style:italic"></span><span style="color:#ca9ee6">class</span> <span style="color:#e5c890">CountNum</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 4</span><span>{
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 5</span><span>    <span style="color:#ca9ee6">public</span><span style="color:#99d1db;font-weight:bold">:</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 6</span><span>    <span style="color:#e78284">int</span> Cnt1;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 7</span><span>    <span style="color:#e78284">int</span> Cnt2;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 8</span><span>    <span style="color:#737994;font-style:italic">//通过成员函数的方式定义CountNum的加法运算
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 9</span><span><span style="color:#737994;font-style:italic"></span>    <span style="color:#737994;font-style:italic">// CountNum AddCountNum(CountNum &amp;c)
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">10</span><span><span style="color:#737994;font-style:italic"></span>    CountNum <span style="color:#ca9ee6">operator</span><span style="color:#99d1db;font-weight:bold">+</span>(CountNum <span style="color:#99d1db;font-weight:bold">&amp;</span>c)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">11</span><span>    {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">12</span><span>        CountNum res;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">13</span><span>        res.Cnt1 <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#ca9ee6">this</span><span style="color:#99d1db;font-weight:bold">-&gt;</span>Cnt1 <span style="color:#99d1db;font-weight:bold">+</span> c.Cnt1;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">14</span><span>        res.Cnt2 <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#ca9ee6">this</span><span style="color:#99d1db;font-weight:bold">-&gt;</span>Cnt2 <span style="color:#99d1db;font-weight:bold">+</span> c.Cnt2;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">15</span><span>        <span style="color:#ca9ee6">return</span> res;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">16</span><span>    };
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">17</span><span>    <span style="color:#737994;font-style:italic">//运算符重载 可以发生函数重载
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">18</span><span><span style="color:#737994;font-style:italic"></span>    CountNum <span style="color:#ca9ee6">operator</span><span style="color:#99d1db;font-weight:bold">+</span>(<span style="color:#e78284">int</span> num)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">19</span><span>    {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">20</span><span>        CountNum res;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">21</span><span>        res.Cnt1 <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#ca9ee6">this</span><span style="color:#99d1db;font-weight:bold">-&gt;</span>Cnt1 <span style="color:#99d1db;font-weight:bold">+</span> num;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">22</span><span>        res.Cnt2 <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#ca9ee6">this</span><span style="color:#99d1db;font-weight:bold">-&gt;</span>Cnt2;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">23</span><span>        <span style="color:#ca9ee6">return</span> res;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">24</span><span>    }
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">25</span><span>};
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">26</span><span><span style="color:#737994;font-style:italic">//通过全局函数定义CountNum的加法运算
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">27</span><span><span style="color:#737994;font-style:italic">//CountNum AddCountNum(CountNum &amp;c1, CountNum &amp;c2)
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">28</span><span><span style="color:#737994;font-style:italic">// CountNum operator+(CountNum &amp;c1, CountNum &amp;c2)
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">29</span><span><span style="color:#737994;font-style:italic">// {
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">30</span><span><span style="color:#737994;font-style:italic">//     CountNum res;
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">31</span><span><span style="color:#737994;font-style:italic">//     res.Cnt1 = c1.Cnt1 + c2.Cnt1;
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">32</span><span><span style="color:#737994;font-style:italic">//     res.Cnt2 = c1.Cnt2 + c2.Cnt2;
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">33</span><span><span style="color:#737994;font-style:italic">//     return res;
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">34</span><span><span style="color:#737994;font-style:italic">// };
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">35</span><span><span style="color:#737994;font-style:italic"></span><span style="color:#e78284">void</span> <span style="color:#8caaee">test</span>()
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">36</span><span>{
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">37</span><span>    CountNum c1;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">38</span><span>    c1.Cnt1 <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#ef9f76">10</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">39</span><span>    c1.Cnt2 <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#ef9f76">20</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">40</span><span>    CountNum c2;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">41</span><span>    c2.Cnt1 <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#ef9f76">20</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">42</span><span>    c2.Cnt2 <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#ef9f76">10</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">43</span><span>    <span style="color:#737994;font-style:italic">//CountNum c3 = c1.operator(c2);
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">44</span><span><span style="color:#737994;font-style:italic"></span>    CountNum c3 <span style="color:#99d1db;font-weight:bold">=</span> c1 <span style="color:#99d1db;font-weight:bold">+</span> c2;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">45</span><span>    cout <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> c3.Cnt1 <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">46</span><span>    cout <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> c3.Cnt2 <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">47</span><span>    <span style="color:#737994;font-style:italic">//CountNum c3 = operator(c1, c2);
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">48</span><span><span style="color:#737994;font-style:italic"></span>    <span style="color:#737994;font-style:italic">// CountNum c4 = c1 + c2;
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">49</span><span><span style="color:#737994;font-style:italic"></span>    <span style="color:#737994;font-style:italic">// cout &lt;&lt; c4.Cnt1 &lt;&lt; endl;
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">50</span><span><span style="color:#737994;font-style:italic"></span>    <span style="color:#737994;font-style:italic">// cout &lt;&lt; c4.Cnt2 &lt;&lt; endl;
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">51</span><span><span style="color:#737994;font-style:italic"></span>    CountNum c5 <span style="color:#99d1db;font-weight:bold">=</span> c1 <span style="color:#99d1db;font-weight:bold">+</span> <span style="color:#ef9f76">30</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">52</span><span>    cout <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> c5.Cnt1 <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">53</span><span>    cout <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> c5.Cnt2 <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">54</span><span>};
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">55</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">56</span><span><span style="color:#e78284">int</span> <span style="color:#8caaee">main</span>()
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">57</span><span>{
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">58</span><span>    test();
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">59</span><span>    <span style="color:#ca9ee6">return</span> <span style="color:#ef9f76">0</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">60</span><span>};
+</span></span></code></pre></div><p><img src="/post/c_plus_note/chapter2_%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/chap2_37.png"
+	width="783"
+	height="119"
+	srcset="/post/c_plus_note/chapter2_%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/chap2_37_hu0de3ebc866d595586f8c45bb2c630de5_5998_480x0_resize_box_3.png 480w, /post/c_plus_note/chapter2_%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/chap2_37_hu0de3ebc866d595586f8c45bb2c630de5_5998_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="Image 37"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="657"
+		data-flex-basis="1579px"
+	
+></p>
+<p><strong>注意</strong>：对于内置的数据类型，不能进行运算符重载</p>
+<h4 id="左移运算符重载">左移运算符重载（&laquo;）</h4>
+<p>作用：可以输出自定义数据类型</p>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-C++" data-lang="C++"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 1</span><span><span style="color:#737994;font-style:italic">//左移运算符重载
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 2</span><span><span style="color:#737994;font-style:italic"></span><span style="color:#ca9ee6">class</span> <span style="color:#e5c890">CountNum</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 3</span><span>{
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 4</span><span>    <span style="color:#737994;font-style:italic">//可以通过友元加左移运算符重载的方式输出类中的私有属性
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 5</span><span><span style="color:#737994;font-style:italic"></span>    <span style="color:#ca9ee6">friend</span> ostream <span style="color:#99d1db;font-weight:bold">&amp;</span> <span style="color:#ca9ee6">operator</span><span style="color:#99d1db;font-weight:bold">&lt;&lt;</span>(ostream <span style="color:#99d1db;font-weight:bold">&amp;</span>cout, CountNum <span style="color:#99d1db;font-weight:bold">&amp;</span>c);
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 6</span><span><span style="color:#ca9ee6">private</span><span style="color:#99d1db;font-weight:bold">:</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 7</span><span>    <span style="color:#e78284">int</span> Cnt <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#ef9f76">100</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 8</span><span><span style="color:#ca9ee6">public</span><span style="color:#99d1db;font-weight:bold">:</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 9</span><span>    <span style="color:#e78284">int</span> Cnt1;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">10</span><span>    <span style="color:#e78284">int</span> Cnt2;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">11</span><span>    <span style="color:#737994;font-style:italic">//通过成员函数的方式定义CountNum的左移运算
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">12</span><span><span style="color:#737994;font-style:italic"></span>    <span style="color:#737994;font-style:italic">//期望达成的效果 cout &lt;&lt; p
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">13</span><span><span style="color:#737994;font-style:italic"></span>    <span style="color:#737994;font-style:italic">//通过成员函数可实现的效果 p.operator&lt;&lt;(cout) 即 p &lt;&lt; cout
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">14</span><span><span style="color:#737994;font-style:italic"></span>    <span style="color:#737994;font-style:italic">//因此左移运算符不可以通过成员函数重载
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">15</span><span><span style="color:#737994;font-style:italic"></span>    <span style="color:#737994;font-style:italic">//    void operator&lt;&lt;(cout)
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">16</span><span><span style="color:#737994;font-style:italic"></span>    <span style="color:#737994;font-style:italic">//    {
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">17</span><span><span style="color:#737994;font-style:italic"></span>    <span style="color:#737994;font-style:italic">//    };
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">18</span><span><span style="color:#737994;font-style:italic"></span>};
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">19</span><span><span style="color:#737994;font-style:italic">//通过全局函数重载左移运算符
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">20</span><span><span style="color:#737994;font-style:italic"></span>ostream <span style="color:#99d1db;font-weight:bold">&amp;</span> <span style="color:#ca9ee6">operator</span><span style="color:#99d1db;font-weight:bold">&lt;&lt;</span>(ostream <span style="color:#99d1db;font-weight:bold">&amp;</span>cout, CountNum <span style="color:#99d1db;font-weight:bold">&amp;</span>c)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">21</span><span>{
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">22</span><span>    cout <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#ca9ee6">typeid</span>(c).name() <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#a6d189">&#34;{&#34;</span> <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">23</span><span>    cout <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#a6d189">&#34;   Cnt = &#34;</span> <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> c.Cnt <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">24</span><span>    cout <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#a6d189">&#34;   Cnt1 = &#34;</span> <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> c.Cnt1 <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">25</span><span>    cout <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#a6d189">&#34;   Cnt2 = &#34;</span> <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> c.Cnt2 <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">26</span><span>    cout <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#a6d189">&#34;};&#34;</span> <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">27</span><span>    <span style="color:#ca9ee6">return</span> cout;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">28</span><span>}
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">29</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">30</span><span><span style="color:#e78284">int</span> <span style="color:#8caaee">main</span>()
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">31</span><span>{
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">32</span><span>    CountNum c1;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">33</span><span>    c1.Cnt1 <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#ef9f76">10</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">34</span><span>    c1.Cnt2 <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#ef9f76">20</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">35</span><span>    cout <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> c1 <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">36</span><span>    <span style="color:#ca9ee6">return</span> <span style="color:#ef9f76">0</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">37</span><span>}
+</span></span></code></pre></div><p><img src="/post/c_plus_note/chapter2_%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/chap2_38.png"
+	width="783"
+	height="150"
+	srcset="/post/c_plus_note/chapter2_%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/chap2_38_hufdf0b44ab616c5d8dae3890dadb7291d_10495_480x0_resize_box_3.png 480w, /post/c_plus_note/chapter2_%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/chap2_38_hufdf0b44ab616c5d8dae3890dadb7291d_10495_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="Image 38"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="522"
+		data-flex-basis="1252px"
+	
+></p>
+<h4 id="递增运算符重载">递增运算符重载（++）</h4>
+<p>作用：通过重载递增运算符，实现自己的整型数据</p>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-C++" data-lang="C++"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 1</span><span><span style="color:#737994;font-style:italic">//递增运算符重载
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 2</span><span><span style="color:#737994;font-style:italic"></span><span style="color:#ca9ee6">class</span> <span style="color:#e5c890">MyInteger</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 3</span><span>{
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 4</span><span>    <span style="color:#ca9ee6">friend</span> ostream<span style="color:#99d1db;font-weight:bold">&amp;</span> <span style="color:#ca9ee6">operator</span><span style="color:#99d1db;font-weight:bold">&lt;&lt;</span>(ostream<span style="color:#99d1db;font-weight:bold">&amp;</span> cout, MyInteger myInt);
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 5</span><span>    <span style="color:#ca9ee6">public</span><span style="color:#99d1db;font-weight:bold">:</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 6</span><span>    MyInteger()
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 7</span><span>    {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 8</span><span>        m_Num <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#ef9f76">0</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 9</span><span>    };
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">10</span><span>    <span style="color:#737994;font-style:italic">//在这个自定义的整型中重载前置递增
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">11</span><span><span style="color:#737994;font-style:italic"></span>    <span style="color:#737994;font-style:italic">//注意这里要返回该类型的引用 以保证连续的递增 ++(++myInt) 能够得到预期的结果
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">12</span><span><span style="color:#737994;font-style:italic"></span>    MyInteger<span style="color:#99d1db;font-weight:bold">&amp;</span> <span style="color:#ca9ee6">operator</span><span style="color:#99d1db;font-weight:bold">++</span>()
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">13</span><span>    {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">14</span><span>        m_Num<span style="color:#99d1db;font-weight:bold">++</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">15</span><span>        <span style="color:#ca9ee6">return</span> <span style="color:#99d1db;font-weight:bold">*</span><span style="color:#ca9ee6">this</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">16</span><span>    };
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">17</span><span>    <span style="color:#737994;font-style:italic">//在这个自定义的整型中重载后置递增
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">18</span><span><span style="color:#737994;font-style:italic"></span>    <span style="color:#737994;font-style:italic">//通过添加一个int类型的占位参数 使编译器能够区分前置与后置递增
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">19</span><span><span style="color:#737994;font-style:italic"></span>    <span style="color:#737994;font-style:italic">//注意后置递增时返回值类型
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">20</span><span><span style="color:#737994;font-style:italic"></span>    MyInteger <span style="color:#ca9ee6">operator</span><span style="color:#99d1db;font-weight:bold">++</span>(<span style="color:#e78284">int</span>)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">21</span><span>    {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">22</span><span>        MyInteger temp <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#99d1db;font-weight:bold">*</span><span style="color:#ca9ee6">this</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">23</span><span>        m_Num<span style="color:#99d1db;font-weight:bold">++</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">24</span><span>        <span style="color:#ca9ee6">return</span> temp;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">25</span><span>    }
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">26</span><span>    <span style="color:#ca9ee6">private</span><span style="color:#99d1db;font-weight:bold">:</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">27</span><span>    <span style="color:#e78284">int</span> m_Num;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">28</span><span>};
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">29</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">30</span><span>ostream<span style="color:#99d1db;font-weight:bold">&amp;</span> <span style="color:#ca9ee6">operator</span><span style="color:#99d1db;font-weight:bold">&lt;&lt;</span>(ostream<span style="color:#99d1db;font-weight:bold">&amp;</span> cout, MyInteger myInt)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">31</span><span>{
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">32</span><span>    cout <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> myInt.m_Num;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">33</span><span>    <span style="color:#ca9ee6">return</span> cout;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">34</span><span>};
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">35</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">36</span><span><span style="color:#e78284">int</span> <span style="color:#8caaee">main</span>()
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">37</span><span>{
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">38</span><span>    MyInteger myInt;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">39</span><span>    cout <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> myInt <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">40</span><span>    cout <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#99d1db;font-weight:bold">++</span>(<span style="color:#99d1db;font-weight:bold">++</span>myInt) <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">41</span><span>    cout <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> myInt <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">42</span><span>    cout <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> myInt<span style="color:#99d1db;font-weight:bold">++&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">43</span><span>    cout <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> myInt<span style="color:#99d1db;font-weight:bold">++&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">44</span><span>    cout <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> myInt <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">45</span><span>}
+</span></span></code></pre></div><p><img src="/post/c_plus_note/chapter2_%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/chap2_39.png"
+	width="783"
+	height="185"
+	srcset="/post/c_plus_note/chapter2_%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/chap2_39_hu820acf67fe45926ba7c906ae183c0e16_6333_480x0_resize_box_3.png 480w, /post/c_plus_note/chapter2_%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/chap2_39_hu820acf67fe45926ba7c906ae183c0e16_6333_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="Image 39"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="423"
+		data-flex-basis="1015px"
+	
+></p>
+<h4 id="赋值运算符重载">赋值运算符重载（=）</h4>
+<p>C++编译器至少给一个类添加4个函数：</p>
+<ol>
+<li>默认构造函数</li>
+<li>默认析构函数</li>
+<li>默认拷贝构造函数</li>
+<li>赋值运算符</li>
+</ol>
+<p>由于编译器提供的赋值运算只进行浅拷贝，因此当类中存在存储在堆区的属性时，在执行析构函数时，会产生堆区内存重复释放的错误</p>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-C++" data-lang="C++"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 1</span><span><span style="color:#737994;font-style:italic">//使用默认赋值运算时 如果有存储在堆区的属性 在执行析构函数时 会产生堆区内存重复释放的错误
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 2</span><span><span style="color:#737994;font-style:italic"></span><span style="color:#ca9ee6">class</span> <span style="color:#e5c890">Person</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 3</span><span>{
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 4</span><span>    <span style="color:#ca9ee6">public</span><span style="color:#99d1db;font-weight:bold">:</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 5</span><span>    <span style="color:#e78284">int</span> <span style="color:#99d1db;font-weight:bold">*</span>age;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 6</span><span>    Person(<span style="color:#e78284">int</span> a)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 7</span><span>    {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 8</span><span>        age <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#ca9ee6">new</span> <span style="color:#e78284">int</span>(a);
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 9</span><span>    };
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">10</span><span>    <span style="color:#99d1db;font-weight:bold">~</span>Person()
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">11</span><span>    {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">12</span><span>        <span style="color:#ca9ee6">if</span> (age <span style="color:#99d1db;font-weight:bold">!=</span> <span style="color:#99d1db">NULL</span>) {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">13</span><span>            <span style="color:#ca9ee6">delete</span> age;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">14</span><span>            age <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#99d1db">NULL</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">15</span><span>        };
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">16</span><span>    };
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">17</span><span>};
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">18</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">19</span><span><span style="color:#e78284">int</span> <span style="color:#8caaee">main</span>()
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">20</span><span>{
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">21</span><span>    Person p1(<span style="color:#ef9f76">18</span>);
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">22</span><span>    cout <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#a6d189">&#34;p1.age = &#34;</span> <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> p1.age <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#a6d189">&#34;; *p1.age = &#34;</span> <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#99d1db;font-weight:bold">*</span>p1.age <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span>endl;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">23</span><span>    Person p2(<span style="color:#ef9f76">20</span>);
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">24</span><span>    cout <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#a6d189">&#34;p2.age = &#34;</span> <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> p2.age <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#a6d189">&#34;; *p2.age = &#34;</span> <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#99d1db;font-weight:bold">*</span>p2.age <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span>endl;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">25</span><span>    p2 <span style="color:#99d1db;font-weight:bold">=</span> p1;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">26</span><span>    cout <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#a6d189">&#34;p2.age = &#34;</span> <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> p2.age <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#a6d189">&#34;; *p2.age = &#34;</span> <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#99d1db;font-weight:bold">*</span>p2.age <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span>endl;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">27</span><span>    <span style="color:#ca9ee6">return</span> <span style="color:#ef9f76">0</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">28</span><span>}
+</span></span></code></pre></div><p><img src="/post/c_plus_note/chapter2_%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/chap2_40.png"
+	width="1027"
+	height="185"
+	srcset="/post/c_plus_note/chapter2_%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/chap2_40_hufb2f6a01399fdf6529bfb3febdd28118_34983_480x0_resize_box_3.png 480w, /post/c_plus_note/chapter2_%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/chap2_40_hufb2f6a01399fdf6529bfb3febdd28118_34983_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="Image 40"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="555"
+		data-flex-basis="1332px"
+	
+></p>
+<p>在上面的代码中，p2 = p1 只发生了浅拷贝，即将 p1.age 的值（堆区的一个地址）赋值给了 p2.age，这导致 p1.age 与 p2.age 指向了同一块堆区地址，因此在执行析构的时候，会发生堆区内存重复释放</p>
+<p>解决上述问题，需要对赋值运算符进行重载，进行深拷贝</p>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c++" data-lang="c++"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 1</span><span><span style="color:#737994;font-style:italic">//赋值运算符重载
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 2</span><span><span style="color:#737994;font-style:italic">//使用默认赋值运算时 如果有存储在堆区的属性 在执行析构函数时 会产生堆区内存重复释放的错误
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 3</span><span><span style="color:#737994;font-style:italic"></span><span style="color:#ca9ee6">class</span> <span style="color:#e5c890">Person</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 4</span><span>{
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 5</span><span>    <span style="color:#ca9ee6">public</span><span style="color:#99d1db;font-weight:bold">:</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 6</span><span>    <span style="color:#e78284">int</span> <span style="color:#99d1db;font-weight:bold">*</span>age;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 7</span><span>    Person(<span style="color:#e78284">int</span> a)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 8</span><span>    {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 9</span><span>        age <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#ca9ee6">new</span> <span style="color:#e78284">int</span>(a);
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">10</span><span>    };
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">11</span><span>    <span style="color:#99d1db;font-weight:bold">~</span>Person()
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">12</span><span>    {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">13</span><span>        <span style="color:#ca9ee6">if</span> (age <span style="color:#99d1db;font-weight:bold">!=</span> <span style="color:#99d1db">NULL</span>) {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">14</span><span>            <span style="color:#ca9ee6">delete</span> age;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">15</span><span>            age <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#99d1db">NULL</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">16</span><span>        };
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">17</span><span>    };
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">18</span><span>    <span style="color:#737994;font-style:italic">//返回引用类型 以保证能够进行连续赋值
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">19</span><span><span style="color:#737994;font-style:italic"></span>    Person<span style="color:#99d1db;font-weight:bold">&amp;</span> <span style="color:#ca9ee6">operator</span><span style="color:#99d1db;font-weight:bold">=</span>(Person <span style="color:#99d1db;font-weight:bold">&amp;</span>p)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">20</span><span>    {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">21</span><span>        <span style="color:#737994;font-style:italic">//注意 如果赋值前已有堆区数据，要先释放堆区的数据
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">22</span><span><span style="color:#737994;font-style:italic"></span>        <span style="color:#ca9ee6">if</span> (age <span style="color:#99d1db;font-weight:bold">!=</span> <span style="color:#99d1db">NULL</span>)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">23</span><span>        {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">24</span><span>            <span style="color:#ca9ee6">delete</span> age;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">25</span><span>            age <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#99d1db">NULL</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">26</span><span>        };
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">27</span><span>        age <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#ca9ee6">new</span> <span style="color:#e78284">int</span>(<span style="color:#99d1db;font-weight:bold">*</span>p.age);
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">28</span><span>        <span style="color:#ca9ee6">return</span> <span style="color:#99d1db;font-weight:bold">*</span><span style="color:#ca9ee6">this</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">29</span><span>    }
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">30</span><span>};
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">31</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">32</span><span><span style="color:#e78284">int</span> <span style="color:#8caaee">main</span>()
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">33</span><span>{
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">34</span><span>    Person p1(<span style="color:#ef9f76">18</span>);
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">35</span><span>    cout <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#a6d189">&#34;p1.age = &#34;</span> <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> p1.age <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#a6d189">&#34;; *p1.age = &#34;</span> <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#99d1db;font-weight:bold">*</span>p1.age <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span>endl;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">36</span><span>    Person p2(<span style="color:#ef9f76">20</span>);
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">37</span><span>    cout <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#a6d189">&#34;p2.age = &#34;</span> <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> p2.age <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#a6d189">&#34;; *p2.age = &#34;</span> <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#99d1db;font-weight:bold">*</span>p2.age <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span>endl;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">38</span><span>    Person p3(<span style="color:#ef9f76">22</span>);
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">39</span><span>    cout <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#a6d189">&#34;p3.age = &#34;</span> <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> p3.age <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#a6d189">&#34;; *p3.age = &#34;</span> <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#99d1db;font-weight:bold">*</span>p3.age <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span>endl;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">40</span><span>    p3 <span style="color:#99d1db;font-weight:bold">=</span> p2 <span style="color:#99d1db;font-weight:bold">=</span> p1;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">41</span><span>    cout <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#a6d189">&#34;p1.age = &#34;</span> <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> p1.age <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#a6d189">&#34;; *p1.age = &#34;</span> <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#99d1db;font-weight:bold">*</span>p1.age <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span>endl;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">42</span><span>    cout <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#a6d189">&#34;p2.age = &#34;</span> <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> p2.age <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#a6d189">&#34;; *p2.age = &#34;</span> <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#99d1db;font-weight:bold">*</span>p2.age <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span>endl;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">43</span><span>    cout <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#a6d189">&#34;p3.age = &#34;</span> <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> p3.age <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#a6d189">&#34;; *p3.age = &#34;</span> <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#99d1db;font-weight:bold">*</span>p3.age <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span>endl;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">44</span><span>    <span style="color:#ca9ee6">return</span> <span style="color:#ef9f76">0</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">45</span><span>}
+</span></span></code></pre></div><p><img src="/post/c_plus_note/chapter2_%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/chap2_41.png"
+	width="1027"
+	height="185"
+	srcset="/post/c_plus_note/chapter2_%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/chap2_41_hu8a5fe4a3d63733bedded8289e28c7ad0_29721_480x0_resize_box_3.png 480w, /post/c_plus_note/chapter2_%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/chap2_41_hu8a5fe4a3d63733bedded8289e28c7ad0_29721_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="Image 41"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="555"
+		data-flex-basis="1332px"
+	
+></p>
 
 </section>
 

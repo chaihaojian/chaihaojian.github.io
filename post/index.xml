@@ -15,7 +15,20 @@
         <description>&lt;img src="https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/cover.JPG" alt="Featured image of post 数据的表示和运算" /&gt;&lt;h1 id=&#34;数据的表示和运算&#34;&gt;数据的表示和运算&lt;/h1&gt;
 &lt;h2 id=&#34;数制与编码&#34;&gt;数制与编码&lt;/h2&gt;
 &lt;h3 id=&#34;进位计数制&#34;&gt;进位计数制&lt;/h3&gt;
-&lt;p&gt;![Image 7](chap2_ 7.png)&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_7.png&#34;
+	width=&#34;934&#34;
+	height=&#34;413&#34;
+	srcset=&#34;https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_7_huea7057a76ca43e0249f49d34bc0ef5dc_147560_480x0_resize_box_3.png 480w, https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_7_huea7057a76ca43e0249f49d34bc0ef5dc_147560_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Image 7&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;226&#34;
+		data-flex-basis=&#34;542px&#34;
+	
+&gt;&lt;/p&gt;
 &lt;h4 id=&#34;r进制计数法&#34;&gt;r进制计数法&lt;/h4&gt;
 &lt;p&gt;&lt;img src=&#34;https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_.png&#34;
 	width=&#34;599&#34;
@@ -34,39 +47,442 @@
 &lt;h4 id=&#34;二进制----八进制&#34;&gt;二进制 &amp;lt;&amp;ndash;&amp;gt; 八进制&lt;/h4&gt;
 &lt;p&gt;二进制中的三位数正好可以表示八进制中的一位数&lt;/p&gt;
 &lt;p&gt;3位一组，每组转换成对应的8进制符号；首尾如果不足3位，则用0补全&lt;/p&gt;
-&lt;p&gt;![Image 1](chap2_ 1.png)&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_1.png&#34;
+	width=&#34;599&#34;
+	height=&#34;73&#34;
+	srcset=&#34;https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_1_hufd7e2be4af988ac4ced16cf2dd85ba8b_13108_480x0_resize_box_3.png 480w, https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_1_hufd7e2be4af988ac4ced16cf2dd85ba8b_13108_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Image 1&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;820&#34;
+		data-flex-basis=&#34;1969px&#34;
+	
+&gt;&lt;/p&gt;
 &lt;p&gt;同理，八进制中的一位数对应二进制中的3位数&lt;/p&gt;
-&lt;p&gt;![Image 3](chap2_ 3.png)&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_3.png&#34;
+	width=&#34;365&#34;
+	height=&#34;73&#34;
+	srcset=&#34;https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_3_hu259b1614c78f159a6adfd3fdcab8d1ac_6494_480x0_resize_box_3.png 480w, https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_3_hu259b1614c78f159a6adfd3fdcab8d1ac_6494_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Image 3&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;500&#34;
+		data-flex-basis=&#34;1200px&#34;
+	
+&gt;&lt;/p&gt;
 &lt;h4 id=&#34;二进制----十六进制&#34;&gt;二进制 &amp;lt;&amp;ndash;&amp;gt; 十六进制&lt;/h4&gt;
 &lt;p&gt;二进制中的四位数正好可以表示十六进制中的一位数&lt;/p&gt;
 &lt;p&gt;4位一组，每组转换成对应的十六进制符号，首尾如果不足3位，则用0补全&lt;/p&gt;
-&lt;p&gt;![Image 2](chap2_ 2.png)&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_2.png&#34;
+	width=&#34;599&#34;
+	height=&#34;73&#34;
+	srcset=&#34;https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_2_hu36f0f2e0a4c55ce1004ca9b38dab3973_12122_480x0_resize_box_3.png 480w, https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_2_hu36f0f2e0a4c55ce1004ca9b38dab3973_12122_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Image 2&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;820&#34;
+		data-flex-basis=&#34;1969px&#34;
+	
+&gt;&lt;/p&gt;
 &lt;p&gt;同理，十六进制中的一位数对应二进制中的4位数&lt;/p&gt;
-&lt;p&gt;![Image 4](chap2_ 4.png)&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_4.png&#34;
+	width=&#34;365&#34;
+	height=&#34;62&#34;
+	srcset=&#34;https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_4_hu77da6551f2879d8c49c72e0dd435d10a_8016_480x0_resize_box_3.png 480w, https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_4_hu77da6551f2879d8c49c72e0dd435d10a_8016_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Image 4&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;588&#34;
+		data-flex-basis=&#34;1412px&#34;
+	
+&gt;&lt;/p&gt;
 &lt;h4 id=&#34;十进制----任意进制&#34;&gt;十进制 &amp;ndash;&amp;gt; 任意进制&lt;/h4&gt;
-&lt;p&gt;![Image 5](chap2_ 5.png)&lt;/p&gt;
-&lt;p&gt;![Image 6](chap2_ 6.png)&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_5.png&#34;
+	width=&#34;1005&#34;
+	height=&#34;257&#34;
+	srcset=&#34;https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_5_hu28668f8e553d4a4682d92dec18010aa6_72207_480x0_resize_box_3.png 480w, https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_5_hu28668f8e553d4a4682d92dec18010aa6_72207_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Image 5&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;391&#34;
+		data-flex-basis=&#34;938px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_6.png&#34;
+	width=&#34;901&#34;
+	height=&#34;342&#34;
+	srcset=&#34;https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_6_hud8627d2f25b1a17659d8525555930826_101301_480x0_resize_box_3.png 480w, https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_6_hud8627d2f25b1a17659d8525555930826_101301_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Image 6&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;263&#34;
+		data-flex-basis=&#34;632px&#34;
+	
+&gt;&lt;/p&gt;
 &lt;p&gt;上述小数部分的0.3在转换成二进制时会无限循环下去，表明十进制中的0.3无法在二进制中精确表示&lt;/p&gt;
 &lt;h4 id=&#34;真值和机器数&#34;&gt;真值和机器数&lt;/h4&gt;
 &lt;p&gt;&lt;strong&gt;真值&lt;/strong&gt;：符合人类习惯的数字，如：2，5，-3，-11&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;机器数&lt;/strong&gt;：数字实际存储到机器里的形式，正负号需要被数字化，在数字开头加 ‘0‘ 或 ’1’ 来表示正负&lt;/p&gt;
 &lt;h3 id=&#34;bcd码&#34;&gt;BCD码&lt;/h3&gt;
 &lt;p&gt;&lt;strong&gt;BCD&lt;/strong&gt;：Binary-Coded Decimal，用二进制编码的十进制&lt;/p&gt;
-&lt;p&gt;![Image 12](chap2_ 12.png)&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_12.png&#34;
+	width=&#34;889&#34;
+	height=&#34;339&#34;
+	srcset=&#34;https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_12_hue6085323e6b4a64862afb0414f102c5c_102616_480x0_resize_box_3.png 480w, https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_12_hue6085323e6b4a64862afb0414f102c5c_102616_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Image 12&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;262&#34;
+		data-flex-basis=&#34;629px&#34;
+	
+&gt;&lt;/p&gt;
 &lt;h4 id=&#34;8421码&#34;&gt;8421码&lt;/h4&gt;
 &lt;p&gt;考虑用四个二进制位表示十进制中的0～9&lt;/p&gt;
 &lt;p&gt;四个二进制位一共能表示16种状态，十进制0～9表示10种状态，因此这种表示会产生6种冗余状态，需要舍弃&lt;/p&gt;
-&lt;p&gt;![Image 8](chap2_ 8.png)&lt;/p&gt;
-&lt;p&gt;![Image 9](chap2_ 9.png)&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_8.png&#34;
+	width=&#34;781&#34;
+	height=&#34;123&#34;
+	srcset=&#34;https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_8_hud46e6c46b15f7b9b9c927d5c176fc607_41573_480x0_resize_box_3.png 480w, https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_8_hud46e6c46b15f7b9b9c927d5c176fc607_41573_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Image 8&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;634&#34;
+		data-flex-basis=&#34;1523px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_9.png&#34;
+	width=&#34;781&#34;
+	height=&#34;131&#34;
+	srcset=&#34;https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_9_hubde0e465ac53a477f0d449e19a425af6_47730_480x0_resize_box_3.png 480w, https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_9_hubde0e465ac53a477f0d449e19a425af6_47730_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Image 9&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;596&#34;
+		data-flex-basis=&#34;1430px&#34;
+	
+&gt;&lt;/p&gt;
 &lt;p&gt;上述计算结果 13 (1101) 恰好处在8421码需要舍弃的6种状态中，因此通过加 6 (0110) 来剔除这六种冗余，从而得到十进制数13的正确8421码表示&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;由于四个二进制码可以表示16种不同的状态，因此在表示十进制中的0～9时，可以产生不同的映射方案&lt;/strong&gt;&lt;/p&gt;
 &lt;h4 id=&#34;余3码8421码--0011sub2sub&#34;&gt;余3码：8421码 + (0011)&lt;!-- raw HTML omitted --&gt;2&lt;!-- raw HTML omitted --&gt;&lt;/h4&gt;
-&lt;p&gt;![Image 10](chap2_ 10.png)&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_10.png&#34;
+	width=&#34;781&#34;
+	height=&#34;79&#34;
+	srcset=&#34;https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_10_hu155fcf5eff2b00145e43c16130068e20_32567_480x0_resize_box_3.png 480w, https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_10_hu155fcf5eff2b00145e43c16130068e20_32567_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Image 10&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;988&#34;
+		data-flex-basis=&#34;2372px&#34;
+	
+&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;特点&lt;/strong&gt;：8421码中，四个二进制位都有其固定的权值，分别为 8 - 4 - 2 - 1，但在余3码中，四个二进制位没有其固定的权值&lt;/p&gt;
 &lt;h4 id=&#34;2421码将四个二进制位的权值变为-2---4---2---1&#34;&gt;2421码：将四个二进制位的权值变为 2 - 4 - 2 - 1&lt;/h4&gt;
-&lt;p&gt;![Image 11](chap2_ 11.png)&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_11.png&#34;
+	width=&#34;781&#34;
+	height=&#34;79&#34;
+	srcset=&#34;https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_11_hu5c214a11f190c529eb3ebc74c4538dd6_35301_480x0_resize_box_3.png 480w, https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_11_hu5c214a11f190c529eb3ebc74c4538dd6_35301_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Image 11&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;988&#34;
+		data-flex-basis=&#34;2372px&#34;
+	
+&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;特点&lt;/strong&gt;：十进制中的4～9在2421码中会有多种编码方式，因此规定在表示5～9时，第一个二进制位即最高位必须是1&lt;/p&gt;
 &lt;h3 id=&#34;无符号整数的表示和运算&#34;&gt;无符号整数的表示和运算&lt;/h3&gt;
+&lt;h4 id=&#34;无符号整数的表示&#34;&gt;无符号整数的表示&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&#34;https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_13.png&#34;
+	width=&#34;1012&#34;
+	height=&#34;569&#34;
+	srcset=&#34;https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_13_huc7a3b5f21838d75d9ef9363e0e0c2bd7_259993_480x0_resize_box_3.png 480w, https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_13_huc7a3b5f21838d75d9ef9363e0e0c2bd7_259993_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Image 13&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h4 id=&#34;无符号整数的加法运算&#34;&gt;无符号整数的加法运算&lt;/h4&gt;
+&lt;p&gt;从最低位开始，按位相加，并往更高位进位&lt;/p&gt;
+&lt;h4 id=&#34;无符号整数的减法-运算&#34;&gt;无符号整数的减法 运算&lt;/h4&gt;
+&lt;p&gt;被减数不变，减数全部按位取反、末位+1，减法变加法&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_14.png&#34;
+	width=&#34;1009&#34;
+	height=&#34;565&#34;
+	srcset=&#34;https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_14_hu7874eac9dbaf2192743805bac0b4e193_197798_480x0_resize_box_3.png 480w, https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_14_hu7874eac9dbaf2192743805bac0b4e193_197798_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Image 14&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;178&#34;
+		data-flex-basis=&#34;428px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;带符号整数的表示和运算&#34;&gt;带符号整数的表示和运算&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_21.png&#34;
+	width=&#34;1009&#34;
+	height=&#34;479&#34;
+	srcset=&#34;https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_21_hu3e1b445f65435a07c23711ce8c41956b_219490_480x0_resize_box_3.png 480w, https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_21_hu3e1b445f65435a07c23711ce8c41956b_219490_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Image 21&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;210&#34;
+		data-flex-basis=&#34;505px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h4 id=&#34;带符号整数的原码表示&#34;&gt;带符号整数的原码表示&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&#34;https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_15.png&#34;
+	width=&#34;1009&#34;
+	height=&#34;565&#34;
+	srcset=&#34;https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_15_hu82c73e8c5b5edbb921c7bb2c8fb27552_254147_480x0_resize_box_3.png 480w, https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_15_hu82c73e8c5b5edbb921c7bb2c8fb27552_254147_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Image 15&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;178&#34;
+		data-flex-basis=&#34;428px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h4 id=&#34;带符号整数的运算&#34;&gt;带符号整数的运算&lt;/h4&gt;
+&lt;p&gt;原码的缺点：由于符号位不能直接参与运算，无法通过两个数的原码直接相加得到正确结果，需要用复杂的电路才能处理&lt;/p&gt;
+&lt;p&gt;使用补码可以解决上述问题&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_16.png&#34;
+	width=&#34;1009&#34;
+	height=&#34;565&#34;
+	srcset=&#34;https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_16_hu3cc48a145c6d4d90330587f0409ce286_119746_480x0_resize_box_3.png 480w, https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_16_hu3cc48a145c6d4d90330587f0409ce286_119746_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Image 16&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;178&#34;
+		data-flex-basis=&#34;428px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_17.png&#34;
+	width=&#34;1009&#34;
+	height=&#34;565&#34;
+	srcset=&#34;https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_17_hu6cf7528a72fc34edcd242bd471957f85_213131_480x0_resize_box_3.png 480w, https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_17_hu6cf7528a72fc34edcd242bd471957f85_213131_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Image 17&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;178&#34;
+		data-flex-basis=&#34;428px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;对于计算机，通过将补码的数值位取反，然后末位+1，得到原码（负数）&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_18.png&#34;
+	width=&#34;1009&#34;
+	height=&#34;565&#34;
+	srcset=&#34;https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_18_huaf52b54d9df3f17b1786376a0de49291_169311_480x0_resize_box_3.png 480w, https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_18_huaf52b54d9df3f17b1786376a0de49291_169311_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Image 18&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;178&#34;
+		data-flex-basis=&#34;428px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_19.png&#34;
+	width=&#34;1009&#34;
+	height=&#34;565&#34;
+	srcset=&#34;https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_19_hua1c99aea6c5ac286deb69f85056f420b_246086_480x0_resize_box_3.png 480w, https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_19_hua1c99aea6c5ac286deb69f85056f420b_246086_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Image 19&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;178&#34;
+		data-flex-basis=&#34;428px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_20.png&#34;
+	width=&#34;1009&#34;
+	height=&#34;115&#34;
+	srcset=&#34;https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_20_hu24cc14be73c0a2b80db77dab4c84e374_80697_480x0_resize_box_3.png 480w, https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_20_hu24cc14be73c0a2b80db77dab4c84e374_80697_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Image 20&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;877&#34;
+		data-flex-basis=&#34;2105px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;原码反码补码的特性&#34;&gt;原码/反码/补码的特性&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_22.png&#34;
+	width=&#34;1009&#34;
+	height=&#34;555&#34;
+	srcset=&#34;https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_22_huc9e1e99438540ef6435119ffcd1f4621_251284_480x0_resize_box_3.png 480w, https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_22_huc9e1e99438540ef6435119ffcd1f4621_251284_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Image 22&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;181&#34;
+		data-flex-basis=&#34;436px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;带符号整数的移码表示&#34;&gt;带符号整数的移码表示&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_23.png&#34;
+	width=&#34;1009&#34;
+	height=&#34;555&#34;
+	srcset=&#34;https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_23_hu208fb65fdf259968eb008f42e58fdd37_179684_480x0_resize_box_3.png 480w, https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_23_hu208fb65fdf259968eb008f42e58fdd37_179684_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Image 23&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;181&#34;
+		data-flex-basis=&#34;436px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_24.png&#34;
+	width=&#34;1009&#34;
+	height=&#34;555&#34;
+	srcset=&#34;https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_24_hu13b29509a65073ad4fb8d70b9dd32824_286907_480x0_resize_box_3.png 480w, https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_24_hu13b29509a65073ad4fb8d70b9dd32824_286907_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Image 24&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;181&#34;
+		data-flex-basis=&#34;436px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_25.png&#34;
+	width=&#34;1009&#34;
+	height=&#34;555&#34;
+	srcset=&#34;https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_25_huc4341b84819c7b5e9192ed2aa8348723_217381_480x0_resize_box_3.png 480w, https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_25_huc4341b84819c7b5e9192ed2aa8348723_217381_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Image 25&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;181&#34;
+		data-flex-basis=&#34;436px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;定点小数&#34;&gt;定点小数&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_26.png&#34;
+	width=&#34;1009&#34;
+	height=&#34;555&#34;
+	srcset=&#34;https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_26_hu13a207ab4a761649554e5f74d7d0f122_132550_480x0_resize_box_3.png 480w, https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_26_hu13a207ab4a761649554e5f74d7d0f122_132550_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Image 26&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;181&#34;
+		data-flex-basis=&#34;436px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h4 id=&#34;原码表示&#34;&gt;原码表示&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&#34;https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_27.png&#34;
+	width=&#34;1009&#34;
+	height=&#34;555&#34;
+	srcset=&#34;https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_27_hu05f0725f8c25748a8ac252a09a080463_142973_480x0_resize_box_3.png 480w, https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_27_hu05f0725f8c25748a8ac252a09a080463_142973_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Image 27&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;181&#34;
+		data-flex-basis=&#34;436px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h4 id=&#34;定点小数的原反补码的转换&#34;&gt;定点小数的原/反/补码的转换&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&#34;https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_28.png&#34;
+	width=&#34;1009&#34;
+	height=&#34;555&#34;
+	srcset=&#34;https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_28_hu02f022f4d223c0367524e34185f16ffe_177674_480x0_resize_box_3.png 480w, https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_28_hu02f022f4d223c0367524e34185f16ffe_177674_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Image 28&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;181&#34;
+		data-flex-basis=&#34;436px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h4 id=&#34;定点小数的加减运算&#34;&gt;定点小数的加/减运算&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;对定点小数做加/减运算时，需要先转换为补码&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;加法：从最低位开始，按位相加（符号位参与运算），并往更高位进位&lt;/li&gt;
+&lt;li&gt;减法：被减数不变，减数全部按位取反、末位+1，减法变加法&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_29.png&#34;
+	width=&#34;1009&#34;
+	height=&#34;555&#34;
+	srcset=&#34;https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_29_hue01cf48212e9d21be430576ce988a7b4_323546_480x0_resize_box_3.png 480w, https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_29_hue01cf48212e9d21be430576ce988a7b4_323546_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Image 29&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;181&#34;
+		data-flex-basis=&#34;436px&#34;
+	
+&gt;&lt;/p&gt;
 </description>
         </item>
         <item>
@@ -394,7 +810,7 @@
 &lt;p&gt;代码区是共享的，共享的目的是对于频繁被执行的程序，只需要在内存中有一份代码即可&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;代码区是只读的，使其只读的原因是防止程序意外的修改了它的指令&lt;/p&gt;
+&lt;p&gt;代码区是只读 的，使其只读的原因是防止程序意外的修改了它的指令&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;strong&gt;全局区&lt;/strong&gt;&lt;/p&gt;
@@ -2126,6 +2542,479 @@
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;友元&#34;&gt;友元&lt;/h3&gt;
+&lt;p&gt;在程序里，有些私有属性需要能够让类外一些特定函数或者类进行访问&lt;/p&gt;
+&lt;p&gt;关键字：friend&lt;/p&gt;
+&lt;h4 id=&#34;全局函数做友元&#34;&gt;全局函数做友元&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-c++&#34; data-lang=&#34;c++&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt; 1&lt;/span&gt;&lt;span&gt;&lt;span style=&#34;color:#ca9ee6&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#e5c890&#34;&gt;Student&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt; 2&lt;/span&gt;&lt;span&gt;{   &lt;span style=&#34;color:#737994;font-style:italic&#34;&gt;//通过friend关键字 声明全局函数getScore是Student类的一个友元
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt; 3&lt;/span&gt;&lt;span&gt;&lt;span style=&#34;color:#737994;font-style:italic&#34;&gt;&lt;/span&gt;  &lt;span style=&#34;color:#ca9ee6&#34;&gt;friend&lt;/span&gt; &lt;span style=&#34;color:#e78284&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#8caaee&#34;&gt;getScore&lt;/span&gt;(Student &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;*&lt;/span&gt;student);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt; 4&lt;/span&gt;&lt;span&gt;  &lt;span style=&#34;color:#ca9ee6&#34;&gt;public&lt;/span&gt;&lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt; 5&lt;/span&gt;&lt;span&gt;  string Name;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt; 6&lt;/span&gt;&lt;span&gt;  &lt;span style=&#34;color:#e78284&#34;&gt;int&lt;/span&gt; Age;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt; 7&lt;/span&gt;&lt;span&gt;  Student(string n, &lt;span style=&#34;color:#e78284&#34;&gt;int&lt;/span&gt; a)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt; 8&lt;/span&gt;&lt;span&gt;  {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt; 9&lt;/span&gt;&lt;span&gt;    Name &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;=&lt;/span&gt; n;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;10&lt;/span&gt;&lt;span&gt;    Age &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;=&lt;/span&gt; a;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;11&lt;/span&gt;&lt;span&gt;    Score &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ef9f76&#34;&gt;99&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;12&lt;/span&gt;&lt;span&gt;  };
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;13&lt;/span&gt;&lt;span&gt;  &lt;span style=&#34;color:#ca9ee6&#34;&gt;private&lt;/span&gt;&lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;14&lt;/span&gt;&lt;span&gt;  &lt;span style=&#34;color:#e78284&#34;&gt;int&lt;/span&gt; Score;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;15&lt;/span&gt;&lt;span&gt;};
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;16&lt;/span&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;17&lt;/span&gt;&lt;span&gt;&lt;span style=&#34;color:#e78284&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#8caaee&#34;&gt;getScore&lt;/span&gt;(Student &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;*&lt;/span&gt;student)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;18&lt;/span&gt;&lt;span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;19&lt;/span&gt;&lt;span&gt;  cout &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; student&lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;-&amp;gt;&lt;/span&gt;Score &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; endl;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;20&lt;/span&gt;&lt;span&gt;};
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;21&lt;/span&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;22&lt;/span&gt;&lt;span&gt;&lt;span style=&#34;color:#e78284&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#8caaee&#34;&gt;test01&lt;/span&gt;()
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;23&lt;/span&gt;&lt;span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;24&lt;/span&gt;&lt;span&gt;  Student p0(&lt;span style=&#34;color:#a6d189&#34;&gt;&amp;#34;tom&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#ef9f76&#34;&gt;18&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;25&lt;/span&gt;&lt;span&gt;  getScore(&lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;amp;&lt;/span&gt;p0);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;26&lt;/span&gt;&lt;span&gt;};
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;27&lt;/span&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;28&lt;/span&gt;&lt;span&gt;&lt;span style=&#34;color:#e78284&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color:#8caaee&#34;&gt;main&lt;/span&gt;()
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;29&lt;/span&gt;&lt;span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;30&lt;/span&gt;&lt;span&gt;  test01();
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;31&lt;/span&gt;&lt;span&gt;  &lt;span style=&#34;color:#ca9ee6&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#ef9f76&#34;&gt;0&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;32&lt;/span&gt;&lt;span&gt;};
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://chaihaojian.github.io/post/c_plus_note/chapter2_%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/chap2_34.png&#34;
+	width=&#34;796&#34;
+	height=&#34;31&#34;
+	srcset=&#34;https://chaihaojian.github.io/post/c_plus_note/chapter2_%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/chap2_34_hu1fbbdb3961c964db635def55b98235d5_1807_480x0_resize_box_3.png 480w, https://chaihaojian.github.io/post/c_plus_note/chapter2_%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/chap2_34_hu1fbbdb3961c964db635def55b98235d5_1807_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Image 34&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;2567&#34;
+		data-flex-basis=&#34;6162px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h4 id=&#34;类做友元&#34;&gt;类做友元&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-c++&#34; data-lang=&#34;c++&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt; 1&lt;/span&gt;&lt;span&gt;&lt;span style=&#34;color:#ca9ee6&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#e5c890&#34;&gt;Student&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt; 2&lt;/span&gt;&lt;span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt; 3&lt;/span&gt;&lt;span&gt;  &lt;span style=&#34;color:#737994;font-style:italic&#34;&gt;//通过friend关键字 声明Teacher类是Student类的一个友元
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt; 4&lt;/span&gt;&lt;span&gt;&lt;span style=&#34;color:#737994;font-style:italic&#34;&gt;&lt;/span&gt;  &lt;span style=&#34;color:#ca9ee6&#34;&gt;friend&lt;/span&gt; &lt;span style=&#34;color:#ca9ee6&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#e5c890&#34;&gt;Teacher&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt; 5&lt;/span&gt;&lt;span&gt;  &lt;span style=&#34;color:#ca9ee6&#34;&gt;public&lt;/span&gt;&lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt; 6&lt;/span&gt;&lt;span&gt;  Student(string name, &lt;span style=&#34;color:#e78284&#34;&gt;int&lt;/span&gt; age, &lt;span style=&#34;color:#e78284&#34;&gt;int&lt;/span&gt; score)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt; 7&lt;/span&gt;&lt;span&gt;  {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt; 8&lt;/span&gt;&lt;span&gt;    Name &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;=&lt;/span&gt; name;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt; 9&lt;/span&gt;&lt;span&gt;    Age &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;=&lt;/span&gt; age;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;10&lt;/span&gt;&lt;span&gt;    Score &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;=&lt;/span&gt; score;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;11&lt;/span&gt;&lt;span&gt;  };
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;12&lt;/span&gt;&lt;span&gt;  string Name;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;13&lt;/span&gt;&lt;span&gt;  &lt;span style=&#34;color:#e78284&#34;&gt;int&lt;/span&gt; Age;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;14&lt;/span&gt;&lt;span&gt;  &lt;span style=&#34;color:#ca9ee6&#34;&gt;private&lt;/span&gt;&lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;15&lt;/span&gt;&lt;span&gt;  &lt;span style=&#34;color:#e78284&#34;&gt;int&lt;/span&gt; Score;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;16&lt;/span&gt;&lt;span&gt;};
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;17&lt;/span&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;18&lt;/span&gt;&lt;span&gt;&lt;span style=&#34;color:#ca9ee6&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#e5c890&#34;&gt;Teacher&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;19&lt;/span&gt;&lt;span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;20&lt;/span&gt;&lt;span&gt;  &lt;span style=&#34;color:#ca9ee6&#34;&gt;public&lt;/span&gt;&lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;21&lt;/span&gt;&lt;span&gt;  Teacher(string name, &lt;span style=&#34;color:#e78284&#34;&gt;int&lt;/span&gt; age)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;22&lt;/span&gt;&lt;span&gt;  {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;23&lt;/span&gt;&lt;span&gt;    Name &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;=&lt;/span&gt; name;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;24&lt;/span&gt;&lt;span&gt;    Age &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;=&lt;/span&gt; age;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;25&lt;/span&gt;&lt;span&gt;  };
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;26&lt;/span&gt;&lt;span&gt;  string Name;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;27&lt;/span&gt;&lt;span&gt;  &lt;span style=&#34;color:#e78284&#34;&gt;int&lt;/span&gt; Age;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;28&lt;/span&gt;&lt;span&gt;  &lt;span style=&#34;color:#e78284&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color:#8caaee&#34;&gt;getScore&lt;/span&gt;(Student &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;*&lt;/span&gt; student)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;29&lt;/span&gt;&lt;span&gt;  {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;30&lt;/span&gt;&lt;span&gt;    &lt;span style=&#34;color:#ca9ee6&#34;&gt;return&lt;/span&gt; student&lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;-&amp;gt;&lt;/span&gt;Score;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;31&lt;/span&gt;&lt;span&gt;  };
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;32&lt;/span&gt;&lt;span&gt;};
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;33&lt;/span&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;34&lt;/span&gt;&lt;span&gt;&lt;span style=&#34;color:#e78284&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color:#8caaee&#34;&gt;main&lt;/span&gt;()
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;35&lt;/span&gt;&lt;span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;36&lt;/span&gt;&lt;span&gt;  Student s1(&lt;span style=&#34;color:#a6d189&#34;&gt;&amp;#34;tom&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#ef9f76&#34;&gt;19&lt;/span&gt;, &lt;span style=&#34;color:#ef9f76&#34;&gt;80&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;37&lt;/span&gt;&lt;span&gt;  Teacher t1(&lt;span style=&#34;color:#a6d189&#34;&gt;&amp;#34;jim&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#ef9f76&#34;&gt;33&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;38&lt;/span&gt;&lt;span&gt;  cout &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; t1.getScore(&lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;amp;&lt;/span&gt;s1) &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; endl;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;39&lt;/span&gt;&lt;span&gt;  &lt;span style=&#34;color:#ca9ee6&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#ef9f76&#34;&gt;0&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;40&lt;/span&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://chaihaojian.github.io/post/c_plus_note/chapter2_%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/chap2_35.png&#34;
+	width=&#34;796&#34;
+	height=&#34;31&#34;
+	srcset=&#34;https://chaihaojian.github.io/post/c_plus_note/chapter2_%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/chap2_35_hue21dd26c077e3051646d698cb2ffdf13_2157_480x0_resize_box_3.png 480w, https://chaihaojian.github.io/post/c_plus_note/chapter2_%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/chap2_35_hue21dd26c077e3051646d698cb2ffdf13_2157_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Image 35&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;2567&#34;
+		data-flex-basis=&#34;6162px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h4 id=&#34;成员函数做友元&#34;&gt;成员函数做友元&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-c++&#34; data-lang=&#34;c++&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt; 1&lt;/span&gt;&lt;span&gt;&lt;span style=&#34;color:#ca9ee6&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#e5c890&#34;&gt;Student&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt; 2&lt;/span&gt;&lt;span&gt;&lt;span style=&#34;color:#ca9ee6&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#e5c890&#34;&gt;Teacher&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt; 3&lt;/span&gt;&lt;span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt; 4&lt;/span&gt;&lt;span&gt;  &lt;span style=&#34;color:#ca9ee6&#34;&gt;public&lt;/span&gt;&lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt; 5&lt;/span&gt;&lt;span&gt;  string Name;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt; 6&lt;/span&gt;&lt;span&gt;  &lt;span style=&#34;color:#e78284&#34;&gt;int&lt;/span&gt; Age;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt; 7&lt;/span&gt;&lt;span&gt;  Teacher(string name, &lt;span style=&#34;color:#e78284&#34;&gt;int&lt;/span&gt; age)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt; 8&lt;/span&gt;&lt;span&gt;  {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt; 9&lt;/span&gt;&lt;span&gt;    Name &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;=&lt;/span&gt; name;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;10&lt;/span&gt;&lt;span&gt;    Age &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;=&lt;/span&gt; age;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;11&lt;/span&gt;&lt;span&gt;  };
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;12&lt;/span&gt;&lt;span&gt;  &lt;span style=&#34;color:#737994;font-style:italic&#34;&gt;//！！！！！需要在Teacher类之前先声明Student类
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;13&lt;/span&gt;&lt;span&gt;&lt;span style=&#34;color:#737994;font-style:italic&#34;&gt;&lt;/span&gt;  &lt;span style=&#34;color:#e78284&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color:#8caaee&#34;&gt;getScore&lt;/span&gt;(Student &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;*&lt;/span&gt; stu);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;14&lt;/span&gt;&lt;span&gt;  &lt;span style=&#34;color:#737994;font-style:italic&#34;&gt;//！！！！！如果现在直接定义getScore函数会报错 因为当前声明的Student类中没有Score这个属性
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;15&lt;/span&gt;&lt;span&gt;&lt;span style=&#34;color:#737994;font-style:italic&#34;&gt;&lt;/span&gt;  &lt;span style=&#34;color:#737994;font-style:italic&#34;&gt;//！！！！！需要在Student定义之后再定义getScore函数
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;16&lt;/span&gt;&lt;span&gt;&lt;span style=&#34;color:#737994;font-style:italic&#34;&gt;&lt;/span&gt;  &lt;span style=&#34;color:#737994;font-style:italic&#34;&gt;// int getScore(Student * stu)
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;17&lt;/span&gt;&lt;span&gt;&lt;span style=&#34;color:#737994;font-style:italic&#34;&gt;&lt;/span&gt;  &lt;span style=&#34;color:#737994;font-style:italic&#34;&gt;// {
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;18&lt;/span&gt;&lt;span&gt;&lt;span style=&#34;color:#737994;font-style:italic&#34;&gt;&lt;/span&gt;  &lt;span style=&#34;color:#737994;font-style:italic&#34;&gt;//     return stu-&amp;gt;Score;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;19&lt;/span&gt;&lt;span&gt;&lt;span style=&#34;color:#737994;font-style:italic&#34;&gt;&lt;/span&gt;  &lt;span style=&#34;color:#737994;font-style:italic&#34;&gt;// };
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;20&lt;/span&gt;&lt;span&gt;&lt;span style=&#34;color:#737994;font-style:italic&#34;&gt;&lt;/span&gt;};
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;21&lt;/span&gt;&lt;span&gt;&lt;span style=&#34;color:#ca9ee6&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#e5c890&#34;&gt;Student&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;22&lt;/span&gt;&lt;span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;23&lt;/span&gt;&lt;span&gt;  &lt;span style=&#34;color:#737994;font-style:italic&#34;&gt;//通过friend关键字 声明Teacher类下的getScore函数是Student类的一个友元
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;24&lt;/span&gt;&lt;span&gt;&lt;span style=&#34;color:#737994;font-style:italic&#34;&gt;&lt;/span&gt;  &lt;span style=&#34;color:#ca9ee6&#34;&gt;friend&lt;/span&gt; &lt;span style=&#34;color:#e78284&#34;&gt;int&lt;/span&gt; Teacher&lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;::&lt;/span&gt;getScore(Student &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;*&lt;/span&gt; stu);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;25&lt;/span&gt;&lt;span&gt;  &lt;span style=&#34;color:#ca9ee6&#34;&gt;public&lt;/span&gt;&lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;26&lt;/span&gt;&lt;span&gt;  Student(string name, &lt;span style=&#34;color:#e78284&#34;&gt;int&lt;/span&gt; age, &lt;span style=&#34;color:#e78284&#34;&gt;int&lt;/span&gt; score)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;27&lt;/span&gt;&lt;span&gt;  {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;28&lt;/span&gt;&lt;span&gt;    Name &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;=&lt;/span&gt; name;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;29&lt;/span&gt;&lt;span&gt;    Age &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;=&lt;/span&gt; age;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;30&lt;/span&gt;&lt;span&gt;    Score&lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;=&lt;/span&gt; score;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;31&lt;/span&gt;&lt;span&gt;  };
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;32&lt;/span&gt;&lt;span&gt;  string Name;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;33&lt;/span&gt;&lt;span&gt;  &lt;span style=&#34;color:#e78284&#34;&gt;int&lt;/span&gt; Age;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;34&lt;/span&gt;&lt;span&gt;  &lt;span style=&#34;color:#ca9ee6&#34;&gt;private&lt;/span&gt;&lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;35&lt;/span&gt;&lt;span&gt;  &lt;span style=&#34;color:#e78284&#34;&gt;int&lt;/span&gt; Score;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;36&lt;/span&gt;&lt;span&gt;};
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;37&lt;/span&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;38&lt;/span&gt;&lt;span&gt;&lt;span style=&#34;color:#e78284&#34;&gt;int&lt;/span&gt; Teacher&lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;::&lt;/span&gt;getScore(Student &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;*&lt;/span&gt; stu)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;39&lt;/span&gt;&lt;span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;40&lt;/span&gt;&lt;span&gt;  &lt;span style=&#34;color:#ca9ee6&#34;&gt;return&lt;/span&gt; stu&lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;-&amp;gt;&lt;/span&gt;Score;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;41&lt;/span&gt;&lt;span&gt;};
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;42&lt;/span&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;43&lt;/span&gt;&lt;span&gt;&lt;span style=&#34;color:#e78284&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color:#8caaee&#34;&gt;main&lt;/span&gt;()
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;44&lt;/span&gt;&lt;span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;45&lt;/span&gt;&lt;span&gt;  Student s1(&lt;span style=&#34;color:#a6d189&#34;&gt;&amp;#34;tom&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#ef9f76&#34;&gt;21&lt;/span&gt;, &lt;span style=&#34;color:#ef9f76&#34;&gt;87&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;46&lt;/span&gt;&lt;span&gt;  Teacher t1(&lt;span style=&#34;color:#a6d189&#34;&gt;&amp;#34;jim&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#ef9f76&#34;&gt;33&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;47&lt;/span&gt;&lt;span&gt;  cout &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; t1.getScore(&lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;amp;&lt;/span&gt;s1) &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; endl;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;48&lt;/span&gt;&lt;span&gt;  &lt;span style=&#34;color:#ca9ee6&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#ef9f76&#34;&gt;0&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;49&lt;/span&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://chaihaojian.github.io/post/c_plus_note/chapter2_%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/chap2_36.png&#34;
+	width=&#34;796&#34;
+	height=&#34;31&#34;
+	srcset=&#34;https://chaihaojian.github.io/post/c_plus_note/chapter2_%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/chap2_36_hu1fbbdb3961c964db635def55b98235d5_1987_480x0_resize_box_3.png 480w, https://chaihaojian.github.io/post/c_plus_note/chapter2_%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/chap2_36_hu1fbbdb3961c964db635def55b98235d5_1987_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Image 36&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;2567&#34;
+		data-flex-basis=&#34;6162px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;！！！！！特别注意类和成员函数的声明与定义的时机&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;运算符重载&#34;&gt;运算符重载&lt;/h3&gt;
+&lt;p&gt;概念：对已有的运算符进行重新定义，赋予其另一种功能，以适应不同的数据类型&lt;/p&gt;
+&lt;h4 id=&#34;加号运算符重载&#34;&gt;加号运算符重载（+）&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-C++&#34; data-lang=&#34;C++&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt; 1&lt;/span&gt;&lt;span&gt;&lt;span style=&#34;color:#737994;font-style:italic&#34;&gt;//运算符重载
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt; 2&lt;/span&gt;&lt;span&gt;&lt;span style=&#34;color:#737994;font-style:italic&#34;&gt;//加法运算符重载
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt; 3&lt;/span&gt;&lt;span&gt;&lt;span style=&#34;color:#737994;font-style:italic&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#ca9ee6&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#e5c890&#34;&gt;CountNum&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt; 4&lt;/span&gt;&lt;span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt; 5&lt;/span&gt;&lt;span&gt;    &lt;span style=&#34;color:#ca9ee6&#34;&gt;public&lt;/span&gt;&lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt; 6&lt;/span&gt;&lt;span&gt;    &lt;span style=&#34;color:#e78284&#34;&gt;int&lt;/span&gt; Cnt1;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt; 7&lt;/span&gt;&lt;span&gt;    &lt;span style=&#34;color:#e78284&#34;&gt;int&lt;/span&gt; Cnt2;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt; 8&lt;/span&gt;&lt;span&gt;    &lt;span style=&#34;color:#737994;font-style:italic&#34;&gt;//通过成员函数的方式定义CountNum的加法运算
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt; 9&lt;/span&gt;&lt;span&gt;&lt;span style=&#34;color:#737994;font-style:italic&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#737994;font-style:italic&#34;&gt;// CountNum AddCountNum(CountNum &amp;amp;c)
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;10&lt;/span&gt;&lt;span&gt;&lt;span style=&#34;color:#737994;font-style:italic&#34;&gt;&lt;/span&gt;    CountNum &lt;span style=&#34;color:#ca9ee6&#34;&gt;operator&lt;/span&gt;&lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;+&lt;/span&gt;(CountNum &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;amp;&lt;/span&gt;c)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;11&lt;/span&gt;&lt;span&gt;    {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;12&lt;/span&gt;&lt;span&gt;        CountNum res;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;13&lt;/span&gt;&lt;span&gt;        res.Cnt1 &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ca9ee6&#34;&gt;this&lt;/span&gt;&lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;-&amp;gt;&lt;/span&gt;Cnt1 &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;+&lt;/span&gt; c.Cnt1;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;14&lt;/span&gt;&lt;span&gt;        res.Cnt2 &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ca9ee6&#34;&gt;this&lt;/span&gt;&lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;-&amp;gt;&lt;/span&gt;Cnt2 &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;+&lt;/span&gt; c.Cnt2;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;15&lt;/span&gt;&lt;span&gt;        &lt;span style=&#34;color:#ca9ee6&#34;&gt;return&lt;/span&gt; res;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;16&lt;/span&gt;&lt;span&gt;    };
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;17&lt;/span&gt;&lt;span&gt;    &lt;span style=&#34;color:#737994;font-style:italic&#34;&gt;//运算符重载 可以发生函数重载
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;18&lt;/span&gt;&lt;span&gt;&lt;span style=&#34;color:#737994;font-style:italic&#34;&gt;&lt;/span&gt;    CountNum &lt;span style=&#34;color:#ca9ee6&#34;&gt;operator&lt;/span&gt;&lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;+&lt;/span&gt;(&lt;span style=&#34;color:#e78284&#34;&gt;int&lt;/span&gt; num)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;19&lt;/span&gt;&lt;span&gt;    {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;20&lt;/span&gt;&lt;span&gt;        CountNum res;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;21&lt;/span&gt;&lt;span&gt;        res.Cnt1 &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ca9ee6&#34;&gt;this&lt;/span&gt;&lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;-&amp;gt;&lt;/span&gt;Cnt1 &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;+&lt;/span&gt; num;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;22&lt;/span&gt;&lt;span&gt;        res.Cnt2 &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ca9ee6&#34;&gt;this&lt;/span&gt;&lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;-&amp;gt;&lt;/span&gt;Cnt2;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;23&lt;/span&gt;&lt;span&gt;        &lt;span style=&#34;color:#ca9ee6&#34;&gt;return&lt;/span&gt; res;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;24&lt;/span&gt;&lt;span&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;25&lt;/span&gt;&lt;span&gt;};
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;26&lt;/span&gt;&lt;span&gt;&lt;span style=&#34;color:#737994;font-style:italic&#34;&gt;//通过全局函数定义CountNum的加法运算
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;27&lt;/span&gt;&lt;span&gt;&lt;span style=&#34;color:#737994;font-style:italic&#34;&gt;//CountNum AddCountNum(CountNum &amp;amp;c1, CountNum &amp;amp;c2)
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;28&lt;/span&gt;&lt;span&gt;&lt;span style=&#34;color:#737994;font-style:italic&#34;&gt;// CountNum operator+(CountNum &amp;amp;c1, CountNum &amp;amp;c2)
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;29&lt;/span&gt;&lt;span&gt;&lt;span style=&#34;color:#737994;font-style:italic&#34;&gt;// {
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;30&lt;/span&gt;&lt;span&gt;&lt;span style=&#34;color:#737994;font-style:italic&#34;&gt;//     CountNum res;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;31&lt;/span&gt;&lt;span&gt;&lt;span style=&#34;color:#737994;font-style:italic&#34;&gt;//     res.Cnt1 = c1.Cnt1 + c2.Cnt1;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;32&lt;/span&gt;&lt;span&gt;&lt;span style=&#34;color:#737994;font-style:italic&#34;&gt;//     res.Cnt2 = c1.Cnt2 + c2.Cnt2;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;33&lt;/span&gt;&lt;span&gt;&lt;span style=&#34;color:#737994;font-style:italic&#34;&gt;//     return res;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;34&lt;/span&gt;&lt;span&gt;&lt;span style=&#34;color:#737994;font-style:italic&#34;&gt;// };
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;35&lt;/span&gt;&lt;span&gt;&lt;span style=&#34;color:#737994;font-style:italic&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e78284&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#8caaee&#34;&gt;test&lt;/span&gt;()
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;36&lt;/span&gt;&lt;span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;37&lt;/span&gt;&lt;span&gt;    CountNum c1;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;38&lt;/span&gt;&lt;span&gt;    c1.Cnt1 &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ef9f76&#34;&gt;10&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;39&lt;/span&gt;&lt;span&gt;    c1.Cnt2 &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ef9f76&#34;&gt;20&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;40&lt;/span&gt;&lt;span&gt;    CountNum c2;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;41&lt;/span&gt;&lt;span&gt;    c2.Cnt1 &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ef9f76&#34;&gt;20&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;42&lt;/span&gt;&lt;span&gt;    c2.Cnt2 &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ef9f76&#34;&gt;10&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;43&lt;/span&gt;&lt;span&gt;    &lt;span style=&#34;color:#737994;font-style:italic&#34;&gt;//CountNum c3 = c1.operator(c2);
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;44&lt;/span&gt;&lt;span&gt;&lt;span style=&#34;color:#737994;font-style:italic&#34;&gt;&lt;/span&gt;    CountNum c3 &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;=&lt;/span&gt; c1 &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;+&lt;/span&gt; c2;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;45&lt;/span&gt;&lt;span&gt;    cout &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; c3.Cnt1 &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; endl;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;46&lt;/span&gt;&lt;span&gt;    cout &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; c3.Cnt2 &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; endl;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;47&lt;/span&gt;&lt;span&gt;    &lt;span style=&#34;color:#737994;font-style:italic&#34;&gt;//CountNum c3 = operator(c1, c2);
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;48&lt;/span&gt;&lt;span&gt;&lt;span style=&#34;color:#737994;font-style:italic&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#737994;font-style:italic&#34;&gt;// CountNum c4 = c1 + c2;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;49&lt;/span&gt;&lt;span&gt;&lt;span style=&#34;color:#737994;font-style:italic&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#737994;font-style:italic&#34;&gt;// cout &amp;lt;&amp;lt; c4.Cnt1 &amp;lt;&amp;lt; endl;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;50&lt;/span&gt;&lt;span&gt;&lt;span style=&#34;color:#737994;font-style:italic&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#737994;font-style:italic&#34;&gt;// cout &amp;lt;&amp;lt; c4.Cnt2 &amp;lt;&amp;lt; endl;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;51&lt;/span&gt;&lt;span&gt;&lt;span style=&#34;color:#737994;font-style:italic&#34;&gt;&lt;/span&gt;    CountNum c5 &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;=&lt;/span&gt; c1 &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#ef9f76&#34;&gt;30&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;52&lt;/span&gt;&lt;span&gt;    cout &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; c5.Cnt1 &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; endl;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;53&lt;/span&gt;&lt;span&gt;    cout &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; c5.Cnt2 &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; endl;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;54&lt;/span&gt;&lt;span&gt;};
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;55&lt;/span&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;56&lt;/span&gt;&lt;span&gt;&lt;span style=&#34;color:#e78284&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color:#8caaee&#34;&gt;main&lt;/span&gt;()
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;57&lt;/span&gt;&lt;span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;58&lt;/span&gt;&lt;span&gt;    test();
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;59&lt;/span&gt;&lt;span&gt;    &lt;span style=&#34;color:#ca9ee6&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#ef9f76&#34;&gt;0&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;60&lt;/span&gt;&lt;span&gt;};
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://chaihaojian.github.io/post/c_plus_note/chapter2_%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/chap2_37.png&#34;
+	width=&#34;783&#34;
+	height=&#34;119&#34;
+	srcset=&#34;https://chaihaojian.github.io/post/c_plus_note/chapter2_%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/chap2_37_hu0de3ebc866d595586f8c45bb2c630de5_5998_480x0_resize_box_3.png 480w, https://chaihaojian.github.io/post/c_plus_note/chapter2_%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/chap2_37_hu0de3ebc866d595586f8c45bb2c630de5_5998_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Image 37&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;657&#34;
+		data-flex-basis=&#34;1579px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;注意&lt;/strong&gt;：对于内置的数据类型，不能进行运算符重载&lt;/p&gt;
+&lt;h4 id=&#34;左移运算符重载&#34;&gt;左移运算符重载（&amp;laquo;）&lt;/h4&gt;
+&lt;p&gt;作用：可以输出自定义数据类型&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-C++&#34; data-lang=&#34;C++&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt; 1&lt;/span&gt;&lt;span&gt;&lt;span style=&#34;color:#737994;font-style:italic&#34;&gt;//左移运算符重载
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt; 2&lt;/span&gt;&lt;span&gt;&lt;span style=&#34;color:#737994;font-style:italic&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#ca9ee6&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#e5c890&#34;&gt;CountNum&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt; 3&lt;/span&gt;&lt;span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt; 4&lt;/span&gt;&lt;span&gt;    &lt;span style=&#34;color:#737994;font-style:italic&#34;&gt;//可以通过友元加左移运算符重载的方式输出类中的私有属性
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt; 5&lt;/span&gt;&lt;span&gt;&lt;span style=&#34;color:#737994;font-style:italic&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#ca9ee6&#34;&gt;friend&lt;/span&gt; ostream &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;amp;&lt;/span&gt; &lt;span style=&#34;color:#ca9ee6&#34;&gt;operator&lt;/span&gt;&lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt;(ostream &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;amp;&lt;/span&gt;cout, CountNum &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;amp;&lt;/span&gt;c);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt; 6&lt;/span&gt;&lt;span&gt;&lt;span style=&#34;color:#ca9ee6&#34;&gt;private&lt;/span&gt;&lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt; 7&lt;/span&gt;&lt;span&gt;    &lt;span style=&#34;color:#e78284&#34;&gt;int&lt;/span&gt; Cnt &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ef9f76&#34;&gt;100&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt; 8&lt;/span&gt;&lt;span&gt;&lt;span style=&#34;color:#ca9ee6&#34;&gt;public&lt;/span&gt;&lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt; 9&lt;/span&gt;&lt;span&gt;    &lt;span style=&#34;color:#e78284&#34;&gt;int&lt;/span&gt; Cnt1;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;10&lt;/span&gt;&lt;span&gt;    &lt;span style=&#34;color:#e78284&#34;&gt;int&lt;/span&gt; Cnt2;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;11&lt;/span&gt;&lt;span&gt;    &lt;span style=&#34;color:#737994;font-style:italic&#34;&gt;//通过成员函数的方式定义CountNum的左移运算
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;12&lt;/span&gt;&lt;span&gt;&lt;span style=&#34;color:#737994;font-style:italic&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#737994;font-style:italic&#34;&gt;//期望达成的效果 cout &amp;lt;&amp;lt; p
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;13&lt;/span&gt;&lt;span&gt;&lt;span style=&#34;color:#737994;font-style:italic&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#737994;font-style:italic&#34;&gt;//通过成员函数可实现的效果 p.operator&amp;lt;&amp;lt;(cout) 即 p &amp;lt;&amp;lt; cout
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;14&lt;/span&gt;&lt;span&gt;&lt;span style=&#34;color:#737994;font-style:italic&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#737994;font-style:italic&#34;&gt;//因此左移运算符不可以通过成员函数重载
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;15&lt;/span&gt;&lt;span&gt;&lt;span style=&#34;color:#737994;font-style:italic&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#737994;font-style:italic&#34;&gt;//    void operator&amp;lt;&amp;lt;(cout)
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;16&lt;/span&gt;&lt;span&gt;&lt;span style=&#34;color:#737994;font-style:italic&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#737994;font-style:italic&#34;&gt;//    {
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;17&lt;/span&gt;&lt;span&gt;&lt;span style=&#34;color:#737994;font-style:italic&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#737994;font-style:italic&#34;&gt;//    };
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;18&lt;/span&gt;&lt;span&gt;&lt;span style=&#34;color:#737994;font-style:italic&#34;&gt;&lt;/span&gt;};
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;19&lt;/span&gt;&lt;span&gt;&lt;span style=&#34;color:#737994;font-style:italic&#34;&gt;//通过全局函数重载左移运算符
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;20&lt;/span&gt;&lt;span&gt;&lt;span style=&#34;color:#737994;font-style:italic&#34;&gt;&lt;/span&gt;ostream &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;amp;&lt;/span&gt; &lt;span style=&#34;color:#ca9ee6&#34;&gt;operator&lt;/span&gt;&lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt;(ostream &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;amp;&lt;/span&gt;cout, CountNum &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;amp;&lt;/span&gt;c)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;21&lt;/span&gt;&lt;span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;22&lt;/span&gt;&lt;span&gt;    cout &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#ca9ee6&#34;&gt;typeid&lt;/span&gt;(c).name() &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#a6d189&#34;&gt;&amp;#34;{&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; endl;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;23&lt;/span&gt;&lt;span&gt;    cout &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#a6d189&#34;&gt;&amp;#34;   Cnt = &amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; c.Cnt &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; endl;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;24&lt;/span&gt;&lt;span&gt;    cout &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#a6d189&#34;&gt;&amp;#34;   Cnt1 = &amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; c.Cnt1 &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; endl;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;25&lt;/span&gt;&lt;span&gt;    cout &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#a6d189&#34;&gt;&amp;#34;   Cnt2 = &amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; c.Cnt2 &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; endl;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;26&lt;/span&gt;&lt;span&gt;    cout &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#a6d189&#34;&gt;&amp;#34;};&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; endl;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;27&lt;/span&gt;&lt;span&gt;    &lt;span style=&#34;color:#ca9ee6&#34;&gt;return&lt;/span&gt; cout;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;28&lt;/span&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;29&lt;/span&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;30&lt;/span&gt;&lt;span&gt;&lt;span style=&#34;color:#e78284&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color:#8caaee&#34;&gt;main&lt;/span&gt;()
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;31&lt;/span&gt;&lt;span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;32&lt;/span&gt;&lt;span&gt;    CountNum c1;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;33&lt;/span&gt;&lt;span&gt;    c1.Cnt1 &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ef9f76&#34;&gt;10&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;34&lt;/span&gt;&lt;span&gt;    c1.Cnt2 &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ef9f76&#34;&gt;20&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;35&lt;/span&gt;&lt;span&gt;    cout &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; c1 &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; endl;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;36&lt;/span&gt;&lt;span&gt;    &lt;span style=&#34;color:#ca9ee6&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#ef9f76&#34;&gt;0&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;37&lt;/span&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://chaihaojian.github.io/post/c_plus_note/chapter2_%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/chap2_38.png&#34;
+	width=&#34;783&#34;
+	height=&#34;150&#34;
+	srcset=&#34;https://chaihaojian.github.io/post/c_plus_note/chapter2_%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/chap2_38_hufdf0b44ab616c5d8dae3890dadb7291d_10495_480x0_resize_box_3.png 480w, https://chaihaojian.github.io/post/c_plus_note/chapter2_%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/chap2_38_hufdf0b44ab616c5d8dae3890dadb7291d_10495_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Image 38&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;522&#34;
+		data-flex-basis=&#34;1252px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h4 id=&#34;递增运算符重载&#34;&gt;递增运算符重载（++）&lt;/h4&gt;
+&lt;p&gt;作用：通过重载递增运算符，实现自己的整型数据&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-C++&#34; data-lang=&#34;C++&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt; 1&lt;/span&gt;&lt;span&gt;&lt;span style=&#34;color:#737994;font-style:italic&#34;&gt;//递增运算符重载
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt; 2&lt;/span&gt;&lt;span&gt;&lt;span style=&#34;color:#737994;font-style:italic&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#ca9ee6&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#e5c890&#34;&gt;MyInteger&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt; 3&lt;/span&gt;&lt;span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt; 4&lt;/span&gt;&lt;span&gt;    &lt;span style=&#34;color:#ca9ee6&#34;&gt;friend&lt;/span&gt; ostream&lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;amp;&lt;/span&gt; &lt;span style=&#34;color:#ca9ee6&#34;&gt;operator&lt;/span&gt;&lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt;(ostream&lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;amp;&lt;/span&gt; cout, MyInteger myInt);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt; 5&lt;/span&gt;&lt;span&gt;    &lt;span style=&#34;color:#ca9ee6&#34;&gt;public&lt;/span&gt;&lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt; 6&lt;/span&gt;&lt;span&gt;    MyInteger()
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt; 7&lt;/span&gt;&lt;span&gt;    {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt; 8&lt;/span&gt;&lt;span&gt;        m_Num &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ef9f76&#34;&gt;0&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt; 9&lt;/span&gt;&lt;span&gt;    };
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;10&lt;/span&gt;&lt;span&gt;    &lt;span style=&#34;color:#737994;font-style:italic&#34;&gt;//在这个自定义的整型中重载前置递增
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;11&lt;/span&gt;&lt;span&gt;&lt;span style=&#34;color:#737994;font-style:italic&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#737994;font-style:italic&#34;&gt;//注意这里要返回该类型的引用 以保证连续的递增 ++(++myInt) 能够得到预期的结果
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;12&lt;/span&gt;&lt;span&gt;&lt;span style=&#34;color:#737994;font-style:italic&#34;&gt;&lt;/span&gt;    MyInteger&lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;amp;&lt;/span&gt; &lt;span style=&#34;color:#ca9ee6&#34;&gt;operator&lt;/span&gt;&lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;++&lt;/span&gt;()
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;13&lt;/span&gt;&lt;span&gt;    {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;14&lt;/span&gt;&lt;span&gt;        m_Num&lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;++&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;15&lt;/span&gt;&lt;span&gt;        &lt;span style=&#34;color:#ca9ee6&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;*&lt;/span&gt;&lt;span style=&#34;color:#ca9ee6&#34;&gt;this&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;16&lt;/span&gt;&lt;span&gt;    };
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;17&lt;/span&gt;&lt;span&gt;    &lt;span style=&#34;color:#737994;font-style:italic&#34;&gt;//在这个自定义的整型中重载后置递增
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;18&lt;/span&gt;&lt;span&gt;&lt;span style=&#34;color:#737994;font-style:italic&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#737994;font-style:italic&#34;&gt;//通过添加一个int类型的占位参数 使编译器能够区分前置与后置递增
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;19&lt;/span&gt;&lt;span&gt;&lt;span style=&#34;color:#737994;font-style:italic&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#737994;font-style:italic&#34;&gt;//注意后置递增时返回值类型
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;20&lt;/span&gt;&lt;span&gt;&lt;span style=&#34;color:#737994;font-style:italic&#34;&gt;&lt;/span&gt;    MyInteger &lt;span style=&#34;color:#ca9ee6&#34;&gt;operator&lt;/span&gt;&lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;++&lt;/span&gt;(&lt;span style=&#34;color:#e78284&#34;&gt;int&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;21&lt;/span&gt;&lt;span&gt;    {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;22&lt;/span&gt;&lt;span&gt;        MyInteger temp &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;*&lt;/span&gt;&lt;span style=&#34;color:#ca9ee6&#34;&gt;this&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;23&lt;/span&gt;&lt;span&gt;        m_Num&lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;++&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;24&lt;/span&gt;&lt;span&gt;        &lt;span style=&#34;color:#ca9ee6&#34;&gt;return&lt;/span&gt; temp;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;25&lt;/span&gt;&lt;span&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;26&lt;/span&gt;&lt;span&gt;    &lt;span style=&#34;color:#ca9ee6&#34;&gt;private&lt;/span&gt;&lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;27&lt;/span&gt;&lt;span&gt;    &lt;span style=&#34;color:#e78284&#34;&gt;int&lt;/span&gt; m_Num;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;28&lt;/span&gt;&lt;span&gt;};
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;29&lt;/span&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;30&lt;/span&gt;&lt;span&gt;ostream&lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;amp;&lt;/span&gt; &lt;span style=&#34;color:#ca9ee6&#34;&gt;operator&lt;/span&gt;&lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt;(ostream&lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;amp;&lt;/span&gt; cout, MyInteger myInt)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;31&lt;/span&gt;&lt;span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;32&lt;/span&gt;&lt;span&gt;    cout &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; myInt.m_Num;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;33&lt;/span&gt;&lt;span&gt;    &lt;span style=&#34;color:#ca9ee6&#34;&gt;return&lt;/span&gt; cout;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;34&lt;/span&gt;&lt;span&gt;};
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;35&lt;/span&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;36&lt;/span&gt;&lt;span&gt;&lt;span style=&#34;color:#e78284&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color:#8caaee&#34;&gt;main&lt;/span&gt;()
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;37&lt;/span&gt;&lt;span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;38&lt;/span&gt;&lt;span&gt;    MyInteger myInt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;39&lt;/span&gt;&lt;span&gt;    cout &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; myInt &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; endl;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;40&lt;/span&gt;&lt;span&gt;    cout &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;++&lt;/span&gt;(&lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;++&lt;/span&gt;myInt) &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; endl;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;41&lt;/span&gt;&lt;span&gt;    cout &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; myInt &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; endl;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;42&lt;/span&gt;&lt;span&gt;    cout &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; myInt&lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;++&amp;lt;&amp;lt;&lt;/span&gt; endl;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;43&lt;/span&gt;&lt;span&gt;    cout &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; myInt&lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;++&amp;lt;&amp;lt;&lt;/span&gt; endl;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;44&lt;/span&gt;&lt;span&gt;    cout &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; myInt &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; endl;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;45&lt;/span&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://chaihaojian.github.io/post/c_plus_note/chapter2_%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/chap2_39.png&#34;
+	width=&#34;783&#34;
+	height=&#34;185&#34;
+	srcset=&#34;https://chaihaojian.github.io/post/c_plus_note/chapter2_%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/chap2_39_hu820acf67fe45926ba7c906ae183c0e16_6333_480x0_resize_box_3.png 480w, https://chaihaojian.github.io/post/c_plus_note/chapter2_%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/chap2_39_hu820acf67fe45926ba7c906ae183c0e16_6333_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Image 39&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;423&#34;
+		data-flex-basis=&#34;1015px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h4 id=&#34;赋值运算符重载&#34;&gt;赋值运算符重载（=）&lt;/h4&gt;
+&lt;p&gt;C++编译器至少给一个类添加4个函数：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;默认构造函数&lt;/li&gt;
+&lt;li&gt;默认析构函数&lt;/li&gt;
+&lt;li&gt;默认拷贝构造函数&lt;/li&gt;
+&lt;li&gt;赋值运算符&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;由于编译器提供的赋值运算只进行浅拷贝，因此当类中存在存储在堆区的属性时，在执行析构函数时，会产生堆区内存重复释放的错误&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-C++&#34; data-lang=&#34;C++&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt; 1&lt;/span&gt;&lt;span&gt;&lt;span style=&#34;color:#737994;font-style:italic&#34;&gt;//使用默认赋值运算时 如果有存储在堆区的属性 在执行析构函数时 会产生堆区内存重复释放的错误
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt; 2&lt;/span&gt;&lt;span&gt;&lt;span style=&#34;color:#737994;font-style:italic&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#ca9ee6&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#e5c890&#34;&gt;Person&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt; 3&lt;/span&gt;&lt;span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt; 4&lt;/span&gt;&lt;span&gt;    &lt;span style=&#34;color:#ca9ee6&#34;&gt;public&lt;/span&gt;&lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt; 5&lt;/span&gt;&lt;span&gt;    &lt;span style=&#34;color:#e78284&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;*&lt;/span&gt;age;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt; 6&lt;/span&gt;&lt;span&gt;    Person(&lt;span style=&#34;color:#e78284&#34;&gt;int&lt;/span&gt; a)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt; 7&lt;/span&gt;&lt;span&gt;    {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt; 8&lt;/span&gt;&lt;span&gt;        age &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ca9ee6&#34;&gt;new&lt;/span&gt; &lt;span style=&#34;color:#e78284&#34;&gt;int&lt;/span&gt;(a);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt; 9&lt;/span&gt;&lt;span&gt;    };
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;10&lt;/span&gt;&lt;span&gt;    &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;~&lt;/span&gt;Person()
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;11&lt;/span&gt;&lt;span&gt;    {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;12&lt;/span&gt;&lt;span&gt;        &lt;span style=&#34;color:#ca9ee6&#34;&gt;if&lt;/span&gt; (age &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;!=&lt;/span&gt; &lt;span style=&#34;color:#99d1db&#34;&gt;NULL&lt;/span&gt;) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;13&lt;/span&gt;&lt;span&gt;            &lt;span style=&#34;color:#ca9ee6&#34;&gt;delete&lt;/span&gt; age;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;14&lt;/span&gt;&lt;span&gt;            age &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#99d1db&#34;&gt;NULL&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;15&lt;/span&gt;&lt;span&gt;        };
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;16&lt;/span&gt;&lt;span&gt;    };
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;17&lt;/span&gt;&lt;span&gt;};
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;18&lt;/span&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;19&lt;/span&gt;&lt;span&gt;&lt;span style=&#34;color:#e78284&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color:#8caaee&#34;&gt;main&lt;/span&gt;()
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;20&lt;/span&gt;&lt;span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;21&lt;/span&gt;&lt;span&gt;    Person p1(&lt;span style=&#34;color:#ef9f76&#34;&gt;18&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;22&lt;/span&gt;&lt;span&gt;    cout &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#a6d189&#34;&gt;&amp;#34;p1.age = &amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; p1.age &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#a6d189&#34;&gt;&amp;#34;; *p1.age = &amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;*&lt;/span&gt;p1.age &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt;endl;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;23&lt;/span&gt;&lt;span&gt;    Person p2(&lt;span style=&#34;color:#ef9f76&#34;&gt;20&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;24&lt;/span&gt;&lt;span&gt;    cout &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#a6d189&#34;&gt;&amp;#34;p2.age = &amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; p2.age &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#a6d189&#34;&gt;&amp;#34;; *p2.age = &amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;*&lt;/span&gt;p2.age &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt;endl;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;25&lt;/span&gt;&lt;span&gt;    p2 &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;=&lt;/span&gt; p1;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;26&lt;/span&gt;&lt;span&gt;    cout &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#a6d189&#34;&gt;&amp;#34;p2.age = &amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; p2.age &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#a6d189&#34;&gt;&amp;#34;; *p2.age = &amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;*&lt;/span&gt;p2.age &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt;endl;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;27&lt;/span&gt;&lt;span&gt;    &lt;span style=&#34;color:#ca9ee6&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#ef9f76&#34;&gt;0&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;28&lt;/span&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://chaihaojian.github.io/post/c_plus_note/chapter2_%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/chap2_40.png&#34;
+	width=&#34;1027&#34;
+	height=&#34;185&#34;
+	srcset=&#34;https://chaihaojian.github.io/post/c_plus_note/chapter2_%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/chap2_40_hufb2f6a01399fdf6529bfb3febdd28118_34983_480x0_resize_box_3.png 480w, https://chaihaojian.github.io/post/c_plus_note/chapter2_%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/chap2_40_hufb2f6a01399fdf6529bfb3febdd28118_34983_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Image 40&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;555&#34;
+		data-flex-basis=&#34;1332px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;在上面的代码中，p2 = p1 只发生了浅拷贝，即将 p1.age 的值（堆区的一个地址）赋值给了 p2.age，这导致 p1.age 与 p2.age 指向了同一块堆区地址，因此在执行析构的时候，会发生堆区内存重复释放&lt;/p&gt;
+&lt;p&gt;解决上述问题，需要对赋值运算符进行重载，进行深拷贝&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-c++&#34; data-lang=&#34;c++&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt; 1&lt;/span&gt;&lt;span&gt;&lt;span style=&#34;color:#737994;font-style:italic&#34;&gt;//赋值运算符重载
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt; 2&lt;/span&gt;&lt;span&gt;&lt;span style=&#34;color:#737994;font-style:italic&#34;&gt;//使用默认赋值运算时 如果有存储在堆区的属性 在执行析构函数时 会产生堆区内存重复释放的错误
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt; 3&lt;/span&gt;&lt;span&gt;&lt;span style=&#34;color:#737994;font-style:italic&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#ca9ee6&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#e5c890&#34;&gt;Person&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt; 4&lt;/span&gt;&lt;span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt; 5&lt;/span&gt;&lt;span&gt;    &lt;span style=&#34;color:#ca9ee6&#34;&gt;public&lt;/span&gt;&lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt; 6&lt;/span&gt;&lt;span&gt;    &lt;span style=&#34;color:#e78284&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;*&lt;/span&gt;age;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt; 7&lt;/span&gt;&lt;span&gt;    Person(&lt;span style=&#34;color:#e78284&#34;&gt;int&lt;/span&gt; a)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt; 8&lt;/span&gt;&lt;span&gt;    {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt; 9&lt;/span&gt;&lt;span&gt;        age &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ca9ee6&#34;&gt;new&lt;/span&gt; &lt;span style=&#34;color:#e78284&#34;&gt;int&lt;/span&gt;(a);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;10&lt;/span&gt;&lt;span&gt;    };
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;11&lt;/span&gt;&lt;span&gt;    &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;~&lt;/span&gt;Person()
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;12&lt;/span&gt;&lt;span&gt;    {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;13&lt;/span&gt;&lt;span&gt;        &lt;span style=&#34;color:#ca9ee6&#34;&gt;if&lt;/span&gt; (age &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;!=&lt;/span&gt; &lt;span style=&#34;color:#99d1db&#34;&gt;NULL&lt;/span&gt;) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;14&lt;/span&gt;&lt;span&gt;            &lt;span style=&#34;color:#ca9ee6&#34;&gt;delete&lt;/span&gt; age;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;15&lt;/span&gt;&lt;span&gt;            age &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#99d1db&#34;&gt;NULL&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;16&lt;/span&gt;&lt;span&gt;        };
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;17&lt;/span&gt;&lt;span&gt;    };
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;18&lt;/span&gt;&lt;span&gt;    &lt;span style=&#34;color:#737994;font-style:italic&#34;&gt;//返回引用类型 以保证能够进行连续赋值
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;19&lt;/span&gt;&lt;span&gt;&lt;span style=&#34;color:#737994;font-style:italic&#34;&gt;&lt;/span&gt;    Person&lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;amp;&lt;/span&gt; &lt;span style=&#34;color:#ca9ee6&#34;&gt;operator&lt;/span&gt;&lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;=&lt;/span&gt;(Person &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;amp;&lt;/span&gt;p)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;20&lt;/span&gt;&lt;span&gt;    {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;21&lt;/span&gt;&lt;span&gt;        &lt;span style=&#34;color:#737994;font-style:italic&#34;&gt;//注意 如果赋值前已有堆区数据，要先释放堆区的数据
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;22&lt;/span&gt;&lt;span&gt;&lt;span style=&#34;color:#737994;font-style:italic&#34;&gt;&lt;/span&gt;        &lt;span style=&#34;color:#ca9ee6&#34;&gt;if&lt;/span&gt; (age &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;!=&lt;/span&gt; &lt;span style=&#34;color:#99d1db&#34;&gt;NULL&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;23&lt;/span&gt;&lt;span&gt;        {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;24&lt;/span&gt;&lt;span&gt;            &lt;span style=&#34;color:#ca9ee6&#34;&gt;delete&lt;/span&gt; age;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;25&lt;/span&gt;&lt;span&gt;            age &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#99d1db&#34;&gt;NULL&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;26&lt;/span&gt;&lt;span&gt;        };
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;27&lt;/span&gt;&lt;span&gt;        age &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ca9ee6&#34;&gt;new&lt;/span&gt; &lt;span style=&#34;color:#e78284&#34;&gt;int&lt;/span&gt;(&lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;*&lt;/span&gt;p.age);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;28&lt;/span&gt;&lt;span&gt;        &lt;span style=&#34;color:#ca9ee6&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;*&lt;/span&gt;&lt;span style=&#34;color:#ca9ee6&#34;&gt;this&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;29&lt;/span&gt;&lt;span&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;30&lt;/span&gt;&lt;span&gt;};
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;31&lt;/span&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;32&lt;/span&gt;&lt;span&gt;&lt;span style=&#34;color:#e78284&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color:#8caaee&#34;&gt;main&lt;/span&gt;()
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;33&lt;/span&gt;&lt;span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;34&lt;/span&gt;&lt;span&gt;    Person p1(&lt;span style=&#34;color:#ef9f76&#34;&gt;18&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;35&lt;/span&gt;&lt;span&gt;    cout &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#a6d189&#34;&gt;&amp;#34;p1.age = &amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; p1.age &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#a6d189&#34;&gt;&amp;#34;; *p1.age = &amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;*&lt;/span&gt;p1.age &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt;endl;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;36&lt;/span&gt;&lt;span&gt;    Person p2(&lt;span style=&#34;color:#ef9f76&#34;&gt;20&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;37&lt;/span&gt;&lt;span&gt;    cout &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#a6d189&#34;&gt;&amp;#34;p2.age = &amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; p2.age &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#a6d189&#34;&gt;&amp;#34;; *p2.age = &amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;*&lt;/span&gt;p2.age &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt;endl;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;38&lt;/span&gt;&lt;span&gt;    Person p3(&lt;span style=&#34;color:#ef9f76&#34;&gt;22&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;39&lt;/span&gt;&lt;span&gt;    cout &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#a6d189&#34;&gt;&amp;#34;p3.age = &amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; p3.age &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#a6d189&#34;&gt;&amp;#34;; *p3.age = &amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;*&lt;/span&gt;p3.age &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt;endl;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;40&lt;/span&gt;&lt;span&gt;    p3 &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;=&lt;/span&gt; p2 &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;=&lt;/span&gt; p1;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;41&lt;/span&gt;&lt;span&gt;    cout &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#a6d189&#34;&gt;&amp;#34;p1.age = &amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; p1.age &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#a6d189&#34;&gt;&amp;#34;; *p1.age = &amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;*&lt;/span&gt;p1.age &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt;endl;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;42&lt;/span&gt;&lt;span&gt;    cout &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#a6d189&#34;&gt;&amp;#34;p2.age = &amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; p2.age &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#a6d189&#34;&gt;&amp;#34;; *p2.age = &amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;*&lt;/span&gt;p2.age &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt;endl;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;43&lt;/span&gt;&lt;span&gt;    cout &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#a6d189&#34;&gt;&amp;#34;p3.age = &amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; p3.age &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#a6d189&#34;&gt;&amp;#34;; *p3.age = &amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;*&lt;/span&gt;p3.age &lt;span style=&#34;color:#99d1db;font-weight:bold&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt;endl;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;44&lt;/span&gt;&lt;span&gt;    &lt;span style=&#34;color:#ca9ee6&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#ef9f76&#34;&gt;0&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7&#34;&gt;45&lt;/span&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://chaihaojian.github.io/post/c_plus_note/chapter2_%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/chap2_41.png&#34;
+	width=&#34;1027&#34;
+	height=&#34;185&#34;
+	srcset=&#34;https://chaihaojian.github.io/post/c_plus_note/chapter2_%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/chap2_41_hu8a5fe4a3d63733bedded8289e28c7ad0_29721_480x0_resize_box_3.png 480w, https://chaihaojian.github.io/post/c_plus_note/chapter2_%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/chap2_41_hu8a5fe4a3d63733bedded8289e28c7ad0_29721_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Image 41&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;555&#34;
+		data-flex-basis=&#34;1332px&#34;
+	
+&gt;&lt;/p&gt;
 </description>
         </item>
         <item>

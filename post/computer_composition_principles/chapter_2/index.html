@@ -1,84 +1,72 @@
 <!DOCTYPE html>
 <html lang="en-us" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='数据的表示和运算 数制与编码 进位计数制 ![Image 7](chap2_ 7.png)
-r进制计数法 二进制 &amp;lt;&amp;ndash;&amp;gt; 八进制 二进制中的三位数正好可以表示八进制中的一位数
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='数据的表示和运算 数制与编码 进位计数制 r进制计数法 二进制 &amp;lt;&amp;ndash;&amp;gt; 八进制 二进制中的三位数正好可以表示八进制中的一位数
 3位一组，每组转换成对应的8进制符号；首尾如果不足3位，则用0补全
-![Image 1](chap2_ 1.png)
 同理，八进制中的一位数对应二进制中的3位数
-![Image 3](chap2_ 3.png)
 二进制 &amp;lt;&amp;ndash;&amp;gt; 十六进制 二进制中的四位数正好可以表示十六进制中的一位数
 4位一组，每组转换成对应的十六进制符号，首尾如果不足3位，则用0补全
-![Image 2](chap2_ 2.png)
 同理，十六进制中的一位数对应二进制中的4位数
-![Image 4](chap2_ 4.png)
-十进制 &amp;ndash;&amp;gt; 任意进制 ![Image 5](chap2_ 5.png)
-![Image 6](chap2_ 6.png)
-上述小数部分的0.3在转换成二进制时会无限循环下去，表明十进制中的0.3无法在二进制中精确表示
+十进制 &amp;ndash;&amp;gt; 任意进制 上述小数部分的0.3在转换成二进制时会无限循环下去，表明十进制中的0.3无法在二进制中精确表示
 真值和机器数 真值：符合人类习惯的数字，如：2，5，-3，-11
 机器数：数字实际存储到机器里的形式，正负号需要被数字化，在数字开头加 ‘0‘ 或 ’1’ 来表示正负
 BCD码 BCD：Binary-Coded Decimal，用二进制编码的十进制
-![Image 12](chap2_ 12.png)
 8421码 考虑用四个二进制位表示十进制中的0～9
 四个二进制位一共能表示16种状态，十进制0～9表示10种状态，因此这种表示会产生6种冗余状态，需要舍弃
-![Image 8](chap2_ 8.png)
-![Image 9](chap2_ 9.png)
-上述计算结果 13 (1101) 恰好处在8421码需要舍弃的6种状态中，因此通过加 6 (0110) 来剔除这六种冗余，从而得到十进制数13的正确8421码表示'>
+上述计算结果 13 (1101) 恰好处在8421码需要舍弃的6种状态中，因此通过加 6 (0110) 来剔除这六种冗余，从而得到十进制数13的正确8421码表示
+由于四个二进制码可以表示16种不同的状态，因此在表示十进制中的0～9时，可以产生不同的映射方案
+余3码：8421码 &#43; (0011)2 特点：8421码中，四个二进制位都有其固定的权值，分别为 8 - 4 - 2 - 1，但在余3码中，四个二进制位没有其固定的权值
+2421码：将四个二进制位的权值变为 2 - 4 - 2 - 1 特点：十进制中的4～9在2421码中会有多种编码方式，因此规定在表示5～9时，第一个二进制位即最高位必须是1
+无符号整数的表示和运算 无符号整数的表示 无符号整数的加法运算 从最低位开始，按位相加，并往更高位进位
+无符号整数的减法 运算 被减数不变，减数全部按位取反、末位&#43;1，减法变加法
+带符号整数的表示和运算 带符号整数的原码表示 带符号整数的运算 原码的缺点：由于符号位不能直接参与运算，无法通过两个数的原码直接相加得到正确结果，需要用复杂的电路才能处理'>
 <title>数据的表示和运算</title>
 
 <link rel='canonical' href='https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/'>
 
 <link rel="stylesheet" href="/scss/style.min.ce58f57aefa2ff1a44f9e70654d364b95befb02df9468c937fa9dd8e09a64041.css"><meta property='og:title' content='数据的表示和运算'>
-<meta property='og:description' content='数据的表示和运算 数制与编码 进位计数制 ![Image 7](chap2_ 7.png)
-r进制计数法 二进制 &amp;lt;&amp;ndash;&amp;gt; 八进制 二进制中的三位数正好可以表示八进制中的一位数
+<meta property='og:description' content='数据的表示和运算 数制与编码 进位计数制 r进制计数法 二进制 &amp;lt;&amp;ndash;&amp;gt; 八进制 二进制中的三位数正好可以表示八进制中的一位数
 3位一组，每组转换成对应的8进制符号；首尾如果不足3位，则用0补全
-![Image 1](chap2_ 1.png)
 同理，八进制中的一位数对应二进制中的3位数
-![Image 3](chap2_ 3.png)
 二进制 &amp;lt;&amp;ndash;&amp;gt; 十六进制 二进制中的四位数正好可以表示十六进制中的一位数
 4位一组，每组转换成对应的十六进制符号，首尾如果不足3位，则用0补全
-![Image 2](chap2_ 2.png)
 同理，十六进制中的一位数对应二进制中的4位数
-![Image 4](chap2_ 4.png)
-十进制 &amp;ndash;&amp;gt; 任意进制 ![Image 5](chap2_ 5.png)
-![Image 6](chap2_ 6.png)
-上述小数部分的0.3在转换成二进制时会无限循环下去，表明十进制中的0.3无法在二进制中精确表示
+十进制 &amp;ndash;&amp;gt; 任意进制 上述小数部分的0.3在转换成二进制时会无限循环下去，表明十进制中的0.3无法在二进制中精确表示
 真值和机器数 真值：符合人类习惯的数字，如：2，5，-3，-11
 机器数：数字实际存储到机器里的形式，正负号需要被数字化，在数字开头加 ‘0‘ 或 ’1’ 来表示正负
 BCD码 BCD：Binary-Coded Decimal，用二进制编码的十进制
-![Image 12](chap2_ 12.png)
 8421码 考虑用四个二进制位表示十进制中的0～9
 四个二进制位一共能表示16种状态，十进制0～9表示10种状态，因此这种表示会产生6种冗余状态，需要舍弃
-![Image 8](chap2_ 8.png)
-![Image 9](chap2_ 9.png)
-上述计算结果 13 (1101) 恰好处在8421码需要舍弃的6种状态中，因此通过加 6 (0110) 来剔除这六种冗余，从而得到十进制数13的正确8421码表示'>
+上述计算结果 13 (1101) 恰好处在8421码需要舍弃的6种状态中，因此通过加 6 (0110) 来剔除这六种冗余，从而得到十进制数13的正确8421码表示
+由于四个二进制码可以表示16种不同的状态，因此在表示十进制中的0～9时，可以产生不同的映射方案
+余3码：8421码 &#43; (0011)2 特点：8421码中，四个二进制位都有其固定的权值，分别为 8 - 4 - 2 - 1，但在余3码中，四个二进制位没有其固定的权值
+2421码：将四个二进制位的权值变为 2 - 4 - 2 - 1 特点：十进制中的4～9在2421码中会有多种编码方式，因此规定在表示5～9时，第一个二进制位即最高位必须是1
+无符号整数的表示和运算 无符号整数的表示 无符号整数的加法运算 从最低位开始，按位相加，并往更高位进位
+无符号整数的减法 运算 被减数不变，减数全部按位取反、末位&#43;1，减法变加法
+带符号整数的表示和运算 带符号整数的原码表示 带符号整数的运算 原码的缺点：由于符号位不能直接参与运算，无法通过两个数的原码直接相加得到正确结果，需要用复杂的电路才能处理'>
 <meta property='og:url' content='https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/'>
 <meta property='og:site_name' content='EachannJ&#39;s blog'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2024-07-18T10:08:09&#43;08:00'/><meta property='article:modified_time' content='2024-07-18T10:08:09&#43;08:00'/><meta property='og:image' content='https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/cover.JPG' />
 <meta name="twitter:title" content="数据的表示和运算">
-<meta name="twitter:description" content="数据的表示和运算 数制与编码 进位计数制 ![Image 7](chap2_ 7.png)
-r进制计数法 二进制 &amp;lt;&amp;ndash;&amp;gt; 八进制 二进制中的三位数正好可以表示八进制中的一位数
+<meta name="twitter:description" content="数据的表示和运算 数制与编码 进位计数制 r进制计数法 二进制 &amp;lt;&amp;ndash;&amp;gt; 八进制 二进制中的三位数正好可以表示八进制中的一位数
 3位一组，每组转换成对应的8进制符号；首尾如果不足3位，则用0补全
-![Image 1](chap2_ 1.png)
 同理，八进制中的一位数对应二进制中的3位数
-![Image 3](chap2_ 3.png)
 二进制 &amp;lt;&amp;ndash;&amp;gt; 十六进制 二进制中的四位数正好可以表示十六进制中的一位数
 4位一组，每组转换成对应的十六进制符号，首尾如果不足3位，则用0补全
-![Image 2](chap2_ 2.png)
 同理，十六进制中的一位数对应二进制中的4位数
-![Image 4](chap2_ 4.png)
-十进制 &amp;ndash;&amp;gt; 任意进制 ![Image 5](chap2_ 5.png)
-![Image 6](chap2_ 6.png)
-上述小数部分的0.3在转换成二进制时会无限循环下去，表明十进制中的0.3无法在二进制中精确表示
+十进制 &amp;ndash;&amp;gt; 任意进制 上述小数部分的0.3在转换成二进制时会无限循环下去，表明十进制中的0.3无法在二进制中精确表示
 真值和机器数 真值：符合人类习惯的数字，如：2，5，-3，-11
 机器数：数字实际存储到机器里的形式，正负号需要被数字化，在数字开头加 ‘0‘ 或 ’1’ 来表示正负
 BCD码 BCD：Binary-Coded Decimal，用二进制编码的十进制
-![Image 12](chap2_ 12.png)
 8421码 考虑用四个二进制位表示十进制中的0～9
 四个二进制位一共能表示16种状态，十进制0～9表示10种状态，因此这种表示会产生6种冗余状态，需要舍弃
-![Image 8](chap2_ 8.png)
-![Image 9](chap2_ 9.png)
-上述计算结果 13 (1101) 恰好处在8421码需要舍弃的6种状态中，因此通过加 6 (0110) 来剔除这六种冗余，从而得到十进制数13的正确8421码表示"><meta name="twitter:card" content="summary_large_image">
+上述计算结果 13 (1101) 恰好处在8421码需要舍弃的6种状态中，因此通过加 6 (0110) 来剔除这六种冗余，从而得到十进制数13的正确8421码表示
+由于四个二进制码可以表示16种不同的状态，因此在表示十进制中的0～9时，可以产生不同的映射方案
+余3码：8421码 &#43; (0011)2 特点：8421码中，四个二进制位都有其固定的权值，分别为 8 - 4 - 2 - 1，但在余3码中，四个二进制位没有其固定的权值
+2421码：将四个二进制位的权值变为 2 - 4 - 2 - 1 特点：十进制中的4～9在2421码中会有多种编码方式，因此规定在表示5～9时，第一个二进制位即最高位必须是1
+无符号整数的表示和运算 无符号整数的表示 无符号整数的加法运算 从最低位开始，按位相加，并往更高位进位
+无符号整数的减法 运算 被减数不变，减数全部按位取反、末位&#43;1，减法变加法
+带符号整数的表示和运算 带符号整数的原码表示 带符号整数的运算 原码的缺点：由于符号位不能直接参与运算，无法通过两个数的原码直接相加得到正确结果，需要用复杂的电路才能处理"><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/cover.JPG' />
     <link rel="shortcut icon" href="/icons/favicon.ico" />
 <style>
@@ -292,6 +280,10 @@ BCD码 BCD：Binary-Coded Decimal，用二进制编码的十进制
         <li><a href="#进位计数制">进位计数制</a></li>
         <li><a href="#bcd码">BCD码</a></li>
         <li><a href="#无符号整数的表示和运算">无符号整数的表示和运算</a></li>
+        <li><a href="#带符号整数的表示和运算">带符号整数的表示和运算</a></li>
+        <li><a href="#原码反码补码的特性">原码/反码/补码的特性</a></li>
+        <li><a href="#带符号整数的移码表示">带符号整数的移码表示</a></li>
+        <li><a href="#定点小数">定点小数</a></li>
       </ul>
     </li>
   </ul>
@@ -388,7 +380,20 @@ BCD码 BCD：Binary-Coded Decimal，用二进制编码的十进制
     <h1 id="数据的表示和运算">数据的表示和运算</h1>
 <h2 id="数制与编码">数制与编码</h2>
 <h3 id="进位计数制">进位计数制</h3>
-<p>![Image 7](chap2_ 7.png)</p>
+<p><img src="/post/computer_composition_principles/chapter_2/chap2_7.png"
+	width="934"
+	height="413"
+	srcset="/post/computer_composition_principles/chapter_2/chap2_7_huea7057a76ca43e0249f49d34bc0ef5dc_147560_480x0_resize_box_3.png 480w, /post/computer_composition_principles/chapter_2/chap2_7_huea7057a76ca43e0249f49d34bc0ef5dc_147560_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="Image 7"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="226"
+		data-flex-basis="542px"
+	
+></p>
 <h4 id="r进制计数法">r进制计数法</h4>
 <p><img src="/post/computer_composition_principles/chapter_2/chap2_.png"
 	width="599"
@@ -407,39 +412,442 @@ BCD码 BCD：Binary-Coded Decimal，用二进制编码的十进制
 <h4 id="二进制----八进制">二进制 &lt;&ndash;&gt; 八进制</h4>
 <p>二进制中的三位数正好可以表示八进制中的一位数</p>
 <p>3位一组，每组转换成对应的8进制符号；首尾如果不足3位，则用0补全</p>
-<p>![Image 1](chap2_ 1.png)</p>
+<p><img src="/post/computer_composition_principles/chapter_2/chap2_1.png"
+	width="599"
+	height="73"
+	srcset="/post/computer_composition_principles/chapter_2/chap2_1_hufd7e2be4af988ac4ced16cf2dd85ba8b_13108_480x0_resize_box_3.png 480w, /post/computer_composition_principles/chapter_2/chap2_1_hufd7e2be4af988ac4ced16cf2dd85ba8b_13108_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="Image 1"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="820"
+		data-flex-basis="1969px"
+	
+></p>
 <p>同理，八进制中的一位数对应二进制中的3位数</p>
-<p>![Image 3](chap2_ 3.png)</p>
+<p><img src="/post/computer_composition_principles/chapter_2/chap2_3.png"
+	width="365"
+	height="73"
+	srcset="/post/computer_composition_principles/chapter_2/chap2_3_hu259b1614c78f159a6adfd3fdcab8d1ac_6494_480x0_resize_box_3.png 480w, /post/computer_composition_principles/chapter_2/chap2_3_hu259b1614c78f159a6adfd3fdcab8d1ac_6494_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="Image 3"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="500"
+		data-flex-basis="1200px"
+	
+></p>
 <h4 id="二进制----十六进制">二进制 &lt;&ndash;&gt; 十六进制</h4>
 <p>二进制中的四位数正好可以表示十六进制中的一位数</p>
 <p>4位一组，每组转换成对应的十六进制符号，首尾如果不足3位，则用0补全</p>
-<p>![Image 2](chap2_ 2.png)</p>
+<p><img src="/post/computer_composition_principles/chapter_2/chap2_2.png"
+	width="599"
+	height="73"
+	srcset="/post/computer_composition_principles/chapter_2/chap2_2_hu36f0f2e0a4c55ce1004ca9b38dab3973_12122_480x0_resize_box_3.png 480w, /post/computer_composition_principles/chapter_2/chap2_2_hu36f0f2e0a4c55ce1004ca9b38dab3973_12122_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="Image 2"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="820"
+		data-flex-basis="1969px"
+	
+></p>
 <p>同理，十六进制中的一位数对应二进制中的4位数</p>
-<p>![Image 4](chap2_ 4.png)</p>
+<p><img src="/post/computer_composition_principles/chapter_2/chap2_4.png"
+	width="365"
+	height="62"
+	srcset="/post/computer_composition_principles/chapter_2/chap2_4_hu77da6551f2879d8c49c72e0dd435d10a_8016_480x0_resize_box_3.png 480w, /post/computer_composition_principles/chapter_2/chap2_4_hu77da6551f2879d8c49c72e0dd435d10a_8016_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="Image 4"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="588"
+		data-flex-basis="1412px"
+	
+></p>
 <h4 id="十进制----任意进制">十进制 &ndash;&gt; 任意进制</h4>
-<p>![Image 5](chap2_ 5.png)</p>
-<p>![Image 6](chap2_ 6.png)</p>
+<p><img src="/post/computer_composition_principles/chapter_2/chap2_5.png"
+	width="1005"
+	height="257"
+	srcset="/post/computer_composition_principles/chapter_2/chap2_5_hu28668f8e553d4a4682d92dec18010aa6_72207_480x0_resize_box_3.png 480w, /post/computer_composition_principles/chapter_2/chap2_5_hu28668f8e553d4a4682d92dec18010aa6_72207_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="Image 5"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="391"
+		data-flex-basis="938px"
+	
+></p>
+<p><img src="/post/computer_composition_principles/chapter_2/chap2_6.png"
+	width="901"
+	height="342"
+	srcset="/post/computer_composition_principles/chapter_2/chap2_6_hud8627d2f25b1a17659d8525555930826_101301_480x0_resize_box_3.png 480w, /post/computer_composition_principles/chapter_2/chap2_6_hud8627d2f25b1a17659d8525555930826_101301_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="Image 6"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="263"
+		data-flex-basis="632px"
+	
+></p>
 <p>上述小数部分的0.3在转换成二进制时会无限循环下去，表明十进制中的0.3无法在二进制中精确表示</p>
 <h4 id="真值和机器数">真值和机器数</h4>
 <p><strong>真值</strong>：符合人类习惯的数字，如：2，5，-3，-11</p>
 <p><strong>机器数</strong>：数字实际存储到机器里的形式，正负号需要被数字化，在数字开头加 ‘0‘ 或 ’1’ 来表示正负</p>
 <h3 id="bcd码">BCD码</h3>
 <p><strong>BCD</strong>：Binary-Coded Decimal，用二进制编码的十进制</p>
-<p>![Image 12](chap2_ 12.png)</p>
+<p><img src="/post/computer_composition_principles/chapter_2/chap2_12.png"
+	width="889"
+	height="339"
+	srcset="/post/computer_composition_principles/chapter_2/chap2_12_hue6085323e6b4a64862afb0414f102c5c_102616_480x0_resize_box_3.png 480w, /post/computer_composition_principles/chapter_2/chap2_12_hue6085323e6b4a64862afb0414f102c5c_102616_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="Image 12"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="262"
+		data-flex-basis="629px"
+	
+></p>
 <h4 id="8421码">8421码</h4>
 <p>考虑用四个二进制位表示十进制中的0～9</p>
 <p>四个二进制位一共能表示16种状态，十进制0～9表示10种状态，因此这种表示会产生6种冗余状态，需要舍弃</p>
-<p>![Image 8](chap2_ 8.png)</p>
-<p>![Image 9](chap2_ 9.png)</p>
+<p><img src="/post/computer_composition_principles/chapter_2/chap2_8.png"
+	width="781"
+	height="123"
+	srcset="/post/computer_composition_principles/chapter_2/chap2_8_hud46e6c46b15f7b9b9c927d5c176fc607_41573_480x0_resize_box_3.png 480w, /post/computer_composition_principles/chapter_2/chap2_8_hud46e6c46b15f7b9b9c927d5c176fc607_41573_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="Image 8"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="634"
+		data-flex-basis="1523px"
+	
+></p>
+<p><img src="/post/computer_composition_principles/chapter_2/chap2_9.png"
+	width="781"
+	height="131"
+	srcset="/post/computer_composition_principles/chapter_2/chap2_9_hubde0e465ac53a477f0d449e19a425af6_47730_480x0_resize_box_3.png 480w, /post/computer_composition_principles/chapter_2/chap2_9_hubde0e465ac53a477f0d449e19a425af6_47730_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="Image 9"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="596"
+		data-flex-basis="1430px"
+	
+></p>
 <p>上述计算结果 13 (1101) 恰好处在8421码需要舍弃的6种状态中，因此通过加 6 (0110) 来剔除这六种冗余，从而得到十进制数13的正确8421码表示</p>
 <p><strong>由于四个二进制码可以表示16种不同的状态，因此在表示十进制中的0～9时，可以产生不同的映射方案</strong></p>
 <h4 id="余3码8421码--0011sub2sub">余3码：8421码 + (0011)<!-- raw HTML omitted -->2<!-- raw HTML omitted --></h4>
-<p>![Image 10](chap2_ 10.png)</p>
+<p><img src="/post/computer_composition_principles/chapter_2/chap2_10.png"
+	width="781"
+	height="79"
+	srcset="/post/computer_composition_principles/chapter_2/chap2_10_hu155fcf5eff2b00145e43c16130068e20_32567_480x0_resize_box_3.png 480w, /post/computer_composition_principles/chapter_2/chap2_10_hu155fcf5eff2b00145e43c16130068e20_32567_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="Image 10"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="988"
+		data-flex-basis="2372px"
+	
+></p>
 <p><strong>特点</strong>：8421码中，四个二进制位都有其固定的权值，分别为 8 - 4 - 2 - 1，但在余3码中，四个二进制位没有其固定的权值</p>
 <h4 id="2421码将四个二进制位的权值变为-2---4---2---1">2421码：将四个二进制位的权值变为 2 - 4 - 2 - 1</h4>
-<p>![Image 11](chap2_ 11.png)</p>
+<p><img src="/post/computer_composition_principles/chapter_2/chap2_11.png"
+	width="781"
+	height="79"
+	srcset="/post/computer_composition_principles/chapter_2/chap2_11_hu5c214a11f190c529eb3ebc74c4538dd6_35301_480x0_resize_box_3.png 480w, /post/computer_composition_principles/chapter_2/chap2_11_hu5c214a11f190c529eb3ebc74c4538dd6_35301_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="Image 11"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="988"
+		data-flex-basis="2372px"
+	
+></p>
 <p><strong>特点</strong>：十进制中的4～9在2421码中会有多种编码方式，因此规定在表示5～9时，第一个二进制位即最高位必须是1</p>
 <h3 id="无符号整数的表示和运算">无符号整数的表示和运算</h3>
+<h4 id="无符号整数的表示">无符号整数的表示</h4>
+<p><img src="/post/computer_composition_principles/chapter_2/chap2_13.png"
+	width="1012"
+	height="569"
+	srcset="/post/computer_composition_principles/chapter_2/chap2_13_huc7a3b5f21838d75d9ef9363e0e0c2bd7_259993_480x0_resize_box_3.png 480w, /post/computer_composition_principles/chapter_2/chap2_13_huc7a3b5f21838d75d9ef9363e0e0c2bd7_259993_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="Image 13"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="177"
+		data-flex-basis="426px"
+	
+></p>
+<h4 id="无符号整数的加法运算">无符号整数的加法运算</h4>
+<p>从最低位开始，按位相加，并往更高位进位</p>
+<h4 id="无符号整数的减法-运算">无符号整数的减法 运算</h4>
+<p>被减数不变，减数全部按位取反、末位+1，减法变加法</p>
+<p><img src="/post/computer_composition_principles/chapter_2/chap2_14.png"
+	width="1009"
+	height="565"
+	srcset="/post/computer_composition_principles/chapter_2/chap2_14_hu7874eac9dbaf2192743805bac0b4e193_197798_480x0_resize_box_3.png 480w, /post/computer_composition_principles/chapter_2/chap2_14_hu7874eac9dbaf2192743805bac0b4e193_197798_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="Image 14"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="178"
+		data-flex-basis="428px"
+	
+></p>
+<h3 id="带符号整数的表示和运算">带符号整数的表示和运算</h3>
+<p><img src="/post/computer_composition_principles/chapter_2/chap2_21.png"
+	width="1009"
+	height="479"
+	srcset="/post/computer_composition_principles/chapter_2/chap2_21_hu3e1b445f65435a07c23711ce8c41956b_219490_480x0_resize_box_3.png 480w, /post/computer_composition_principles/chapter_2/chap2_21_hu3e1b445f65435a07c23711ce8c41956b_219490_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="Image 21"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="210"
+		data-flex-basis="505px"
+	
+></p>
+<h4 id="带符号整数的原码表示">带符号整数的原码表示</h4>
+<p><img src="/post/computer_composition_principles/chapter_2/chap2_15.png"
+	width="1009"
+	height="565"
+	srcset="/post/computer_composition_principles/chapter_2/chap2_15_hu82c73e8c5b5edbb921c7bb2c8fb27552_254147_480x0_resize_box_3.png 480w, /post/computer_composition_principles/chapter_2/chap2_15_hu82c73e8c5b5edbb921c7bb2c8fb27552_254147_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="Image 15"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="178"
+		data-flex-basis="428px"
+	
+></p>
+<h4 id="带符号整数的运算">带符号整数的运算</h4>
+<p>原码的缺点：由于符号位不能直接参与运算，无法通过两个数的原码直接相加得到正确结果，需要用复杂的电路才能处理</p>
+<p>使用补码可以解决上述问题</p>
+<p><img src="/post/computer_composition_principles/chapter_2/chap2_16.png"
+	width="1009"
+	height="565"
+	srcset="/post/computer_composition_principles/chapter_2/chap2_16_hu3cc48a145c6d4d90330587f0409ce286_119746_480x0_resize_box_3.png 480w, /post/computer_composition_principles/chapter_2/chap2_16_hu3cc48a145c6d4d90330587f0409ce286_119746_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="Image 16"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="178"
+		data-flex-basis="428px"
+	
+></p>
+<p><img src="/post/computer_composition_principles/chapter_2/chap2_17.png"
+	width="1009"
+	height="565"
+	srcset="/post/computer_composition_principles/chapter_2/chap2_17_hu6cf7528a72fc34edcd242bd471957f85_213131_480x0_resize_box_3.png 480w, /post/computer_composition_principles/chapter_2/chap2_17_hu6cf7528a72fc34edcd242bd471957f85_213131_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="Image 17"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="178"
+		data-flex-basis="428px"
+	
+></p>
+<p>对于计算机，通过将补码的数值位取反，然后末位+1，得到原码（负数）</p>
+<p><img src="/post/computer_composition_principles/chapter_2/chap2_18.png"
+	width="1009"
+	height="565"
+	srcset="/post/computer_composition_principles/chapter_2/chap2_18_huaf52b54d9df3f17b1786376a0de49291_169311_480x0_resize_box_3.png 480w, /post/computer_composition_principles/chapter_2/chap2_18_huaf52b54d9df3f17b1786376a0de49291_169311_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="Image 18"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="178"
+		data-flex-basis="428px"
+	
+></p>
+<p><img src="/post/computer_composition_principles/chapter_2/chap2_19.png"
+	width="1009"
+	height="565"
+	srcset="/post/computer_composition_principles/chapter_2/chap2_19_hua1c99aea6c5ac286deb69f85056f420b_246086_480x0_resize_box_3.png 480w, /post/computer_composition_principles/chapter_2/chap2_19_hua1c99aea6c5ac286deb69f85056f420b_246086_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="Image 19"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="178"
+		data-flex-basis="428px"
+	
+></p>
+<p><img src="/post/computer_composition_principles/chapter_2/chap2_20.png"
+	width="1009"
+	height="115"
+	srcset="/post/computer_composition_principles/chapter_2/chap2_20_hu24cc14be73c0a2b80db77dab4c84e374_80697_480x0_resize_box_3.png 480w, /post/computer_composition_principles/chapter_2/chap2_20_hu24cc14be73c0a2b80db77dab4c84e374_80697_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="Image 20"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="877"
+		data-flex-basis="2105px"
+	
+></p>
+<h3 id="原码反码补码的特性">原码/反码/补码的特性</h3>
+<p><img src="/post/computer_composition_principles/chapter_2/chap2_22.png"
+	width="1009"
+	height="555"
+	srcset="/post/computer_composition_principles/chapter_2/chap2_22_huc9e1e99438540ef6435119ffcd1f4621_251284_480x0_resize_box_3.png 480w, /post/computer_composition_principles/chapter_2/chap2_22_huc9e1e99438540ef6435119ffcd1f4621_251284_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="Image 22"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="181"
+		data-flex-basis="436px"
+	
+></p>
+<h3 id="带符号整数的移码表示">带符号整数的移码表示</h3>
+<p><img src="/post/computer_composition_principles/chapter_2/chap2_23.png"
+	width="1009"
+	height="555"
+	srcset="/post/computer_composition_principles/chapter_2/chap2_23_hu208fb65fdf259968eb008f42e58fdd37_179684_480x0_resize_box_3.png 480w, /post/computer_composition_principles/chapter_2/chap2_23_hu208fb65fdf259968eb008f42e58fdd37_179684_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="Image 23"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="181"
+		data-flex-basis="436px"
+	
+></p>
+<p><img src="/post/computer_composition_principles/chapter_2/chap2_24.png"
+	width="1009"
+	height="555"
+	srcset="/post/computer_composition_principles/chapter_2/chap2_24_hu13b29509a65073ad4fb8d70b9dd32824_286907_480x0_resize_box_3.png 480w, /post/computer_composition_principles/chapter_2/chap2_24_hu13b29509a65073ad4fb8d70b9dd32824_286907_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="Image 24"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="181"
+		data-flex-basis="436px"
+	
+></p>
+<p><img src="/post/computer_composition_principles/chapter_2/chap2_25.png"
+	width="1009"
+	height="555"
+	srcset="/post/computer_composition_principles/chapter_2/chap2_25_huc4341b84819c7b5e9192ed2aa8348723_217381_480x0_resize_box_3.png 480w, /post/computer_composition_principles/chapter_2/chap2_25_huc4341b84819c7b5e9192ed2aa8348723_217381_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="Image 25"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="181"
+		data-flex-basis="436px"
+	
+></p>
+<h3 id="定点小数">定点小数</h3>
+<p><img src="/post/computer_composition_principles/chapter_2/chap2_26.png"
+	width="1009"
+	height="555"
+	srcset="/post/computer_composition_principles/chapter_2/chap2_26_hu13a207ab4a761649554e5f74d7d0f122_132550_480x0_resize_box_3.png 480w, /post/computer_composition_principles/chapter_2/chap2_26_hu13a207ab4a761649554e5f74d7d0f122_132550_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="Image 26"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="181"
+		data-flex-basis="436px"
+	
+></p>
+<h4 id="原码表示">原码表示</h4>
+<p><img src="/post/computer_composition_principles/chapter_2/chap2_27.png"
+	width="1009"
+	height="555"
+	srcset="/post/computer_composition_principles/chapter_2/chap2_27_hu05f0725f8c25748a8ac252a09a080463_142973_480x0_resize_box_3.png 480w, /post/computer_composition_principles/chapter_2/chap2_27_hu05f0725f8c25748a8ac252a09a080463_142973_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="Image 27"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="181"
+		data-flex-basis="436px"
+	
+></p>
+<h4 id="定点小数的原反补码的转换">定点小数的原/反/补码的转换</h4>
+<p><img src="/post/computer_composition_principles/chapter_2/chap2_28.png"
+	width="1009"
+	height="555"
+	srcset="/post/computer_composition_principles/chapter_2/chap2_28_hu02f022f4d223c0367524e34185f16ffe_177674_480x0_resize_box_3.png 480w, /post/computer_composition_principles/chapter_2/chap2_28_hu02f022f4d223c0367524e34185f16ffe_177674_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="Image 28"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="181"
+		data-flex-basis="436px"
+	
+></p>
+<h4 id="定点小数的加减运算">定点小数的加/减运算</h4>
+<p><strong>对定点小数做加/减运算时，需要先转换为补码</strong></p>
+<ul>
+<li>加法：从最低位开始，按位相加（符号位参与运算），并往更高位进位</li>
+<li>减法：被减数不变，减数全部按位取反、末位+1，减法变加法</li>
+</ul>
+<p><img src="/post/computer_composition_principles/chapter_2/chap2_29.png"
+	width="1009"
+	height="555"
+	srcset="/post/computer_composition_principles/chapter_2/chap2_29_hue01cf48212e9d21be430576ce988a7b4_323546_480x0_resize_box_3.png 480w, /post/computer_composition_principles/chapter_2/chap2_29_hue01cf48212e9d21be430576ce988a7b4_323546_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="Image 29"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="181"
+		data-flex-basis="436px"
+	
+></p>
 
 </section>
 

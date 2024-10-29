@@ -15,7 +15,20 @@
         <description>&lt;img src="https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/cover.JPG" alt="Featured image of post 数据的表示和运算" /&gt;&lt;h1 id=&#34;数据的表示和运算&#34;&gt;数据的表示和运算&lt;/h1&gt;
 &lt;h2 id=&#34;数制与编码&#34;&gt;数制与编码&lt;/h2&gt;
 &lt;h3 id=&#34;进位计数制&#34;&gt;进位计数制&lt;/h3&gt;
-&lt;p&gt;![Image 7](chap2_ 7.png)&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_7.png&#34;
+	width=&#34;934&#34;
+	height=&#34;413&#34;
+	srcset=&#34;https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_7_huea7057a76ca43e0249f49d34bc0ef5dc_147560_480x0_resize_box_3.png 480w, https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_7_huea7057a76ca43e0249f49d34bc0ef5dc_147560_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Image 7&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;226&#34;
+		data-flex-basis=&#34;542px&#34;
+	
+&gt;&lt;/p&gt;
 &lt;h4 id=&#34;r进制计数法&#34;&gt;r进制计数法&lt;/h4&gt;
 &lt;p&gt;&lt;img src=&#34;https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_.png&#34;
 	width=&#34;599&#34;
@@ -34,39 +47,442 @@
 &lt;h4 id=&#34;二进制----八进制&#34;&gt;二进制 &amp;lt;&amp;ndash;&amp;gt; 八进制&lt;/h4&gt;
 &lt;p&gt;二进制中的三位数正好可以表示八进制中的一位数&lt;/p&gt;
 &lt;p&gt;3位一组，每组转换成对应的8进制符号；首尾如果不足3位，则用0补全&lt;/p&gt;
-&lt;p&gt;![Image 1](chap2_ 1.png)&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_1.png&#34;
+	width=&#34;599&#34;
+	height=&#34;73&#34;
+	srcset=&#34;https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_1_hufd7e2be4af988ac4ced16cf2dd85ba8b_13108_480x0_resize_box_3.png 480w, https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_1_hufd7e2be4af988ac4ced16cf2dd85ba8b_13108_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Image 1&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;820&#34;
+		data-flex-basis=&#34;1969px&#34;
+	
+&gt;&lt;/p&gt;
 &lt;p&gt;同理，八进制中的一位数对应二进制中的3位数&lt;/p&gt;
-&lt;p&gt;![Image 3](chap2_ 3.png)&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_3.png&#34;
+	width=&#34;365&#34;
+	height=&#34;73&#34;
+	srcset=&#34;https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_3_hu259b1614c78f159a6adfd3fdcab8d1ac_6494_480x0_resize_box_3.png 480w, https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_3_hu259b1614c78f159a6adfd3fdcab8d1ac_6494_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Image 3&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;500&#34;
+		data-flex-basis=&#34;1200px&#34;
+	
+&gt;&lt;/p&gt;
 &lt;h4 id=&#34;二进制----十六进制&#34;&gt;二进制 &amp;lt;&amp;ndash;&amp;gt; 十六进制&lt;/h4&gt;
 &lt;p&gt;二进制中的四位数正好可以表示十六进制中的一位数&lt;/p&gt;
 &lt;p&gt;4位一组，每组转换成对应的十六进制符号，首尾如果不足3位，则用0补全&lt;/p&gt;
-&lt;p&gt;![Image 2](chap2_ 2.png)&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_2.png&#34;
+	width=&#34;599&#34;
+	height=&#34;73&#34;
+	srcset=&#34;https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_2_hu36f0f2e0a4c55ce1004ca9b38dab3973_12122_480x0_resize_box_3.png 480w, https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_2_hu36f0f2e0a4c55ce1004ca9b38dab3973_12122_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Image 2&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;820&#34;
+		data-flex-basis=&#34;1969px&#34;
+	
+&gt;&lt;/p&gt;
 &lt;p&gt;同理，十六进制中的一位数对应二进制中的4位数&lt;/p&gt;
-&lt;p&gt;![Image 4](chap2_ 4.png)&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_4.png&#34;
+	width=&#34;365&#34;
+	height=&#34;62&#34;
+	srcset=&#34;https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_4_hu77da6551f2879d8c49c72e0dd435d10a_8016_480x0_resize_box_3.png 480w, https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_4_hu77da6551f2879d8c49c72e0dd435d10a_8016_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Image 4&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;588&#34;
+		data-flex-basis=&#34;1412px&#34;
+	
+&gt;&lt;/p&gt;
 &lt;h4 id=&#34;十进制----任意进制&#34;&gt;十进制 &amp;ndash;&amp;gt; 任意进制&lt;/h4&gt;
-&lt;p&gt;![Image 5](chap2_ 5.png)&lt;/p&gt;
-&lt;p&gt;![Image 6](chap2_ 6.png)&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_5.png&#34;
+	width=&#34;1005&#34;
+	height=&#34;257&#34;
+	srcset=&#34;https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_5_hu28668f8e553d4a4682d92dec18010aa6_72207_480x0_resize_box_3.png 480w, https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_5_hu28668f8e553d4a4682d92dec18010aa6_72207_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Image 5&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;391&#34;
+		data-flex-basis=&#34;938px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_6.png&#34;
+	width=&#34;901&#34;
+	height=&#34;342&#34;
+	srcset=&#34;https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_6_hud8627d2f25b1a17659d8525555930826_101301_480x0_resize_box_3.png 480w, https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_6_hud8627d2f25b1a17659d8525555930826_101301_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Image 6&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;263&#34;
+		data-flex-basis=&#34;632px&#34;
+	
+&gt;&lt;/p&gt;
 &lt;p&gt;上述小数部分的0.3在转换成二进制时会无限循环下去，表明十进制中的0.3无法在二进制中精确表示&lt;/p&gt;
 &lt;h4 id=&#34;真值和机器数&#34;&gt;真值和机器数&lt;/h4&gt;
 &lt;p&gt;&lt;strong&gt;真值&lt;/strong&gt;：符合人类习惯的数字，如：2，5，-3，-11&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;机器数&lt;/strong&gt;：数字实际存储到机器里的形式，正负号需要被数字化，在数字开头加 ‘0‘ 或 ’1’ 来表示正负&lt;/p&gt;
 &lt;h3 id=&#34;bcd码&#34;&gt;BCD码&lt;/h3&gt;
 &lt;p&gt;&lt;strong&gt;BCD&lt;/strong&gt;：Binary-Coded Decimal，用二进制编码的十进制&lt;/p&gt;
-&lt;p&gt;![Image 12](chap2_ 12.png)&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_12.png&#34;
+	width=&#34;889&#34;
+	height=&#34;339&#34;
+	srcset=&#34;https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_12_hue6085323e6b4a64862afb0414f102c5c_102616_480x0_resize_box_3.png 480w, https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_12_hue6085323e6b4a64862afb0414f102c5c_102616_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Image 12&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;262&#34;
+		data-flex-basis=&#34;629px&#34;
+	
+&gt;&lt;/p&gt;
 &lt;h4 id=&#34;8421码&#34;&gt;8421码&lt;/h4&gt;
 &lt;p&gt;考虑用四个二进制位表示十进制中的0～9&lt;/p&gt;
 &lt;p&gt;四个二进制位一共能表示16种状态，十进制0～9表示10种状态，因此这种表示会产生6种冗余状态，需要舍弃&lt;/p&gt;
-&lt;p&gt;![Image 8](chap2_ 8.png)&lt;/p&gt;
-&lt;p&gt;![Image 9](chap2_ 9.png)&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_8.png&#34;
+	width=&#34;781&#34;
+	height=&#34;123&#34;
+	srcset=&#34;https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_8_hud46e6c46b15f7b9b9c927d5c176fc607_41573_480x0_resize_box_3.png 480w, https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_8_hud46e6c46b15f7b9b9c927d5c176fc607_41573_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Image 8&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;634&#34;
+		data-flex-basis=&#34;1523px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_9.png&#34;
+	width=&#34;781&#34;
+	height=&#34;131&#34;
+	srcset=&#34;https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_9_hubde0e465ac53a477f0d449e19a425af6_47730_480x0_resize_box_3.png 480w, https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_9_hubde0e465ac53a477f0d449e19a425af6_47730_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Image 9&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;596&#34;
+		data-flex-basis=&#34;1430px&#34;
+	
+&gt;&lt;/p&gt;
 &lt;p&gt;上述计算结果 13 (1101) 恰好处在8421码需要舍弃的6种状态中，因此通过加 6 (0110) 来剔除这六种冗余，从而得到十进制数13的正确8421码表示&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;由于四个二进制码可以表示16种不同的状态，因此在表示十进制中的0～9时，可以产生不同的映射方案&lt;/strong&gt;&lt;/p&gt;
 &lt;h4 id=&#34;余3码8421码--0011sub2sub&#34;&gt;余3码：8421码 + (0011)&lt;!-- raw HTML omitted --&gt;2&lt;!-- raw HTML omitted --&gt;&lt;/h4&gt;
-&lt;p&gt;![Image 10](chap2_ 10.png)&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_10.png&#34;
+	width=&#34;781&#34;
+	height=&#34;79&#34;
+	srcset=&#34;https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_10_hu155fcf5eff2b00145e43c16130068e20_32567_480x0_resize_box_3.png 480w, https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_10_hu155fcf5eff2b00145e43c16130068e20_32567_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Image 10&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;988&#34;
+		data-flex-basis=&#34;2372px&#34;
+	
+&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;特点&lt;/strong&gt;：8421码中，四个二进制位都有其固定的权值，分别为 8 - 4 - 2 - 1，但在余3码中，四个二进制位没有其固定的权值&lt;/p&gt;
 &lt;h4 id=&#34;2421码将四个二进制位的权值变为-2---4---2---1&#34;&gt;2421码：将四个二进制位的权值变为 2 - 4 - 2 - 1&lt;/h4&gt;
-&lt;p&gt;![Image 11](chap2_ 11.png)&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_11.png&#34;
+	width=&#34;781&#34;
+	height=&#34;79&#34;
+	srcset=&#34;https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_11_hu5c214a11f190c529eb3ebc74c4538dd6_35301_480x0_resize_box_3.png 480w, https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_11_hu5c214a11f190c529eb3ebc74c4538dd6_35301_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Image 11&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;988&#34;
+		data-flex-basis=&#34;2372px&#34;
+	
+&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;特点&lt;/strong&gt;：十进制中的4～9在2421码中会有多种编码方式，因此规定在表示5～9时，第一个二进制位即最高位必须是1&lt;/p&gt;
 &lt;h3 id=&#34;无符号整数的表示和运算&#34;&gt;无符号整数的表示和运算&lt;/h3&gt;
+&lt;h4 id=&#34;无符号整数的表示&#34;&gt;无符号整数的表示&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&#34;https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_13.png&#34;
+	width=&#34;1012&#34;
+	height=&#34;569&#34;
+	srcset=&#34;https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_13_huc7a3b5f21838d75d9ef9363e0e0c2bd7_259993_480x0_resize_box_3.png 480w, https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_13_huc7a3b5f21838d75d9ef9363e0e0c2bd7_259993_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Image 13&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h4 id=&#34;无符号整数的加法运算&#34;&gt;无符号整数的加法运算&lt;/h4&gt;
+&lt;p&gt;从最低位开始，按位相加，并往更高位进位&lt;/p&gt;
+&lt;h4 id=&#34;无符号整数的减法-运算&#34;&gt;无符号整数的减法 运算&lt;/h4&gt;
+&lt;p&gt;被减数不变，减数全部按位取反、末位+1，减法变加法&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_14.png&#34;
+	width=&#34;1009&#34;
+	height=&#34;565&#34;
+	srcset=&#34;https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_14_hu7874eac9dbaf2192743805bac0b4e193_197798_480x0_resize_box_3.png 480w, https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_14_hu7874eac9dbaf2192743805bac0b4e193_197798_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Image 14&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;178&#34;
+		data-flex-basis=&#34;428px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;带符号整数的表示和运算&#34;&gt;带符号整数的表示和运算&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_21.png&#34;
+	width=&#34;1009&#34;
+	height=&#34;479&#34;
+	srcset=&#34;https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_21_hu3e1b445f65435a07c23711ce8c41956b_219490_480x0_resize_box_3.png 480w, https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_21_hu3e1b445f65435a07c23711ce8c41956b_219490_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Image 21&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;210&#34;
+		data-flex-basis=&#34;505px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h4 id=&#34;带符号整数的原码表示&#34;&gt;带符号整数的原码表示&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&#34;https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_15.png&#34;
+	width=&#34;1009&#34;
+	height=&#34;565&#34;
+	srcset=&#34;https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_15_hu82c73e8c5b5edbb921c7bb2c8fb27552_254147_480x0_resize_box_3.png 480w, https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_15_hu82c73e8c5b5edbb921c7bb2c8fb27552_254147_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Image 15&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;178&#34;
+		data-flex-basis=&#34;428px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h4 id=&#34;带符号整数的运算&#34;&gt;带符号整数的运算&lt;/h4&gt;
+&lt;p&gt;原码的缺点：由于符号位不能直接参与运算，无法通过两个数的原码直接相加得到正确结果，需要用复杂的电路才能处理&lt;/p&gt;
+&lt;p&gt;使用补码可以解决上述问题&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_16.png&#34;
+	width=&#34;1009&#34;
+	height=&#34;565&#34;
+	srcset=&#34;https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_16_hu3cc48a145c6d4d90330587f0409ce286_119746_480x0_resize_box_3.png 480w, https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_16_hu3cc48a145c6d4d90330587f0409ce286_119746_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Image 16&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;178&#34;
+		data-flex-basis=&#34;428px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_17.png&#34;
+	width=&#34;1009&#34;
+	height=&#34;565&#34;
+	srcset=&#34;https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_17_hu6cf7528a72fc34edcd242bd471957f85_213131_480x0_resize_box_3.png 480w, https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_17_hu6cf7528a72fc34edcd242bd471957f85_213131_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Image 17&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;178&#34;
+		data-flex-basis=&#34;428px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;对于计算机，通过将补码的数值位取反，然后末位+1，得到原码（负数）&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_18.png&#34;
+	width=&#34;1009&#34;
+	height=&#34;565&#34;
+	srcset=&#34;https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_18_huaf52b54d9df3f17b1786376a0de49291_169311_480x0_resize_box_3.png 480w, https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_18_huaf52b54d9df3f17b1786376a0de49291_169311_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Image 18&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;178&#34;
+		data-flex-basis=&#34;428px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_19.png&#34;
+	width=&#34;1009&#34;
+	height=&#34;565&#34;
+	srcset=&#34;https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_19_hua1c99aea6c5ac286deb69f85056f420b_246086_480x0_resize_box_3.png 480w, https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_19_hua1c99aea6c5ac286deb69f85056f420b_246086_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Image 19&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;178&#34;
+		data-flex-basis=&#34;428px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_20.png&#34;
+	width=&#34;1009&#34;
+	height=&#34;115&#34;
+	srcset=&#34;https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_20_hu24cc14be73c0a2b80db77dab4c84e374_80697_480x0_resize_box_3.png 480w, https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_20_hu24cc14be73c0a2b80db77dab4c84e374_80697_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Image 20&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;877&#34;
+		data-flex-basis=&#34;2105px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;原码反码补码的特性&#34;&gt;原码/反码/补码的特性&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_22.png&#34;
+	width=&#34;1009&#34;
+	height=&#34;555&#34;
+	srcset=&#34;https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_22_huc9e1e99438540ef6435119ffcd1f4621_251284_480x0_resize_box_3.png 480w, https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_22_huc9e1e99438540ef6435119ffcd1f4621_251284_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Image 22&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;181&#34;
+		data-flex-basis=&#34;436px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;带符号整数的移码表示&#34;&gt;带符号整数的移码表示&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_23.png&#34;
+	width=&#34;1009&#34;
+	height=&#34;555&#34;
+	srcset=&#34;https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_23_hu208fb65fdf259968eb008f42e58fdd37_179684_480x0_resize_box_3.png 480w, https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_23_hu208fb65fdf259968eb008f42e58fdd37_179684_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Image 23&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;181&#34;
+		data-flex-basis=&#34;436px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_24.png&#34;
+	width=&#34;1009&#34;
+	height=&#34;555&#34;
+	srcset=&#34;https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_24_hu13b29509a65073ad4fb8d70b9dd32824_286907_480x0_resize_box_3.png 480w, https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_24_hu13b29509a65073ad4fb8d70b9dd32824_286907_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Image 24&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;181&#34;
+		data-flex-basis=&#34;436px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_25.png&#34;
+	width=&#34;1009&#34;
+	height=&#34;555&#34;
+	srcset=&#34;https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_25_huc4341b84819c7b5e9192ed2aa8348723_217381_480x0_resize_box_3.png 480w, https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_25_huc4341b84819c7b5e9192ed2aa8348723_217381_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Image 25&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;181&#34;
+		data-flex-basis=&#34;436px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;定点小数&#34;&gt;定点小数&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_26.png&#34;
+	width=&#34;1009&#34;
+	height=&#34;555&#34;
+	srcset=&#34;https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_26_hu13a207ab4a761649554e5f74d7d0f122_132550_480x0_resize_box_3.png 480w, https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_26_hu13a207ab4a761649554e5f74d7d0f122_132550_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Image 26&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;181&#34;
+		data-flex-basis=&#34;436px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h4 id=&#34;原码表示&#34;&gt;原码表示&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&#34;https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_27.png&#34;
+	width=&#34;1009&#34;
+	height=&#34;555&#34;
+	srcset=&#34;https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_27_hu05f0725f8c25748a8ac252a09a080463_142973_480x0_resize_box_3.png 480w, https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_27_hu05f0725f8c25748a8ac252a09a080463_142973_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Image 27&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;181&#34;
+		data-flex-basis=&#34;436px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h4 id=&#34;定点小数的原反补码的转换&#34;&gt;定点小数的原/反/补码的转换&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&#34;https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_28.png&#34;
+	width=&#34;1009&#34;
+	height=&#34;555&#34;
+	srcset=&#34;https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_28_hu02f022f4d223c0367524e34185f16ffe_177674_480x0_resize_box_3.png 480w, https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_28_hu02f022f4d223c0367524e34185f16ffe_177674_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Image 28&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;181&#34;
+		data-flex-basis=&#34;436px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h4 id=&#34;定点小数的加减运算&#34;&gt;定点小数的加/减运算&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;对定点小数做加/减运算时，需要先转换为补码&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;加法：从最低位开始，按位相加（符号位参与运算），并往更高位进位&lt;/li&gt;
+&lt;li&gt;减法：被减数不变，减数全部按位取反、末位+1，减法变加法&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_29.png&#34;
+	width=&#34;1009&#34;
+	height=&#34;555&#34;
+	srcset=&#34;https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_29_hue01cf48212e9d21be430576ce988a7b4_323546_480x0_resize_box_3.png 480w, https://chaihaojian.github.io/post/computer_composition_principles/chapter_2/chap2_29_hue01cf48212e9d21be430576ce988a7b4_323546_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Image 29&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;181&#34;
+		data-flex-basis=&#34;436px&#34;
+	
+&gt;&lt;/p&gt;
 </description>
         </item>
         <item>
