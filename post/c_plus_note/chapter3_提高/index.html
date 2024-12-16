@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='C&#43;&#43;提高 模板 C&#43;&#43;的另一种编程思想称为范型编程，主要利用的技术就是模板 C&#43;&#43;提供两种模板机制：函数模板与类模板 概念 函数模板 基本用法 函数模板的作用：
+建立一个通用函数，其函数返回值类型和形参类型可以不具体指定，用一个虚拟的类型来代表
+语法：
+1template&amp;lt;typename T&amp;gt;//!!!不加分号 2函数声明或定义 1//函数模板 2//考虑写一个两数交换的函数 3//两个函数的区别只在于参数的类型 逻辑则是相同的 4// void swapInt(int &amp;amp;a, int &amp;amp;b) 5// { 6// int temp = a; 7// a = b; 8// b = temp; 9// }; 10// void swapDouble(double &amp;amp;a, double &amp;amp;b) 11// { 12// double temp = a; 13// a = b; 14// b = temp; 15// }; 16 17//通过声明一个模版函数 让一个函数满足多种参数类型 18template&amp;lt;typename T&amp;gt; //表明T是一个未确定的数据类型 19void mySwap(T &amp;amp;a, T &amp;amp;b) 20{ 21 T temp = a; 22 a = b; 23 b = temp; 24}; 25 26int main() 27{ 28 int a = 10; 29 int b = 20; 30 double c = 1.'>
+<title>C&#43;&#43;提高</title>
+
+<link rel='canonical' href='https://chaihaojian.github.io/post/c_plus_note/chapter3_%E6%8F%90%E9%AB%98/'>
+
+<link rel="stylesheet" href="/scss/style.min.939c17643eefe0454c958417e61fd3b79283c73dc89925dd60fa03ace4c6c833.css"><meta property='og:title' content='C&#43;&#43;提高'>
+<meta property='og:description' content='C&#43;&#43;提高 模板 C&#43;&#43;的另一种编程思想称为范型编程，主要利用的技术就是模板 C&#43;&#43;提供两种模板机制：函数模板与类模板 概念 函数模板 基本用法 函数模板的作用：
+建立一个通用函数，其函数返回值类型和形参类型可以不具体指定，用一个虚拟的类型来代表
+语法：
+1template&amp;lt;typename T&amp;gt;//!!!不加分号 2函数声明或定义 1//函数模板 2//考虑写一个两数交换的函数 3//两个函数的区别只在于参数的类型 逻辑则是相同的 4// void swapInt(int &amp;amp;a, int &amp;amp;b) 5// { 6// int temp = a; 7// a = b; 8// b = temp; 9// }; 10// void swapDouble(double &amp;amp;a, double &amp;amp;b) 11// { 12// double temp = a; 13// a = b; 14// b = temp; 15// }; 16 17//通过声明一个模版函数 让一个函数满足多种参数类型 18template&amp;lt;typename T&amp;gt; //表明T是一个未确定的数据类型 19void mySwap(T &amp;amp;a, T &amp;amp;b) 20{ 21 T temp = a; 22 a = b; 23 b = temp; 24}; 25 26int main() 27{ 28 int a = 10; 29 int b = 20; 30 double c = 1.'>
+<meta property='og:url' content='https://chaihaojian.github.io/post/c_plus_note/chapter3_%E6%8F%90%E9%AB%98/'>
+<meta property='og:site_name' content='EachannJ&#39;s blog'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2024-12-14T22:59:41&#43;08:00'/><meta property='article:modified_time' content='2024-12-14T22:59:41&#43;08:00'/><meta property='og:image' content='https://chaihaojian.github.io/post/c_plus_note/chapter3_%E6%8F%90%E9%AB%98/cover.JPG' />
+<meta name="twitter:title" content="C&#43;&#43;提高">
+<meta name="twitter:description" content="C&#43;&#43;提高 模板 C&#43;&#43;的另一种编程思想称为范型编程，主要利用的技术就是模板 C&#43;&#43;提供两种模板机制：函数模板与类模板 概念 函数模板 基本用法 函数模板的作用：
+建立一个通用函数，其函数返回值类型和形参类型可以不具体指定，用一个虚拟的类型来代表
+语法：
+1template&amp;lt;typename T&amp;gt;//!!!不加分号 2函数声明或定义 1//函数模板 2//考虑写一个两数交换的函数 3//两个函数的区别只在于参数的类型 逻辑则是相同的 4// void swapInt(int &amp;amp;a, int &amp;amp;b) 5// { 6// int temp = a; 7// a = b; 8// b = temp; 9// }; 10// void swapDouble(double &amp;amp;a, double &amp;amp;b) 11// { 12// double temp = a; 13// a = b; 14// b = temp; 15// }; 16 17//通过声明一个模版函数 让一个函数满足多种参数类型 18template&amp;lt;typename T&amp;gt; //表明T是一个未确定的数据类型 19void mySwap(T &amp;amp;a, T &amp;amp;b) 20{ 21 T temp = a; 22 a = b; 23 b = temp; 24}; 25 26int main() 27{ 28 int a = 10; 29 int b = 20; 30 double c = 1."><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://chaihaojian.github.io/post/c_plus_note/chapter3_%E6%8F%90%E9%AB%98/cover.JPG' />
+    <link rel="shortcut icon" href="/icons/favicon.ico" />
+<style>
+     
+    :root {
+        --article-font-family: "Merriweather", var(--base-font-family);
+    }
+</style>
+
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap";
+    
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+    
+        document.head.appendChild(customFont);
+    }());
+</script>
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hue4f07e790eed2791acf38272f719476f_100513_300x0_resize_box_3.png" width="300"
+                            height="254" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">EachannJ&#39;s blog</a></h1>
+            <h2 class="site-description"></h2>
+        </div>
+    </header><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/page/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/page/about/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>About</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/page/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+
+        <div class="menu-bottom-section">
+            
+            
+                <li id="dark-mode-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <span>Dark Mode</span>
+                </li>
+            
+        </div>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">Table of contents</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ul>
+    <li><a href="#模板">模板</a>
+      <ul>
+        <li><a href="#概念">概念</a></li>
+        <li><a href="#函数模板">函数模板</a></li>
+        <li><a href="#类模板">类模板</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/post/c_plus_note/chapter3_%E6%8F%90%E9%AB%98/">
+                <img src="/post/c_plus_note/chapter3_%E6%8F%90%E9%AB%98/cover_huae254b8ee1ab91911036d94a912fa4f7_868221_800x0_resize_q75_box.JPG"
+                        srcset="/post/c_plus_note/chapter3_%E6%8F%90%E9%AB%98/cover_huae254b8ee1ab91911036d94a912fa4f7_868221_800x0_resize_q75_box.JPG 800w, /post/c_plus_note/chapter3_%E6%8F%90%E9%AB%98/cover_huae254b8ee1ab91911036d94a912fa4f7_868221_1600x0_resize_q75_box.JPG 1600w"
+                        width="800" 
+                        height="1735" 
+                        loading="lazy"
+                        alt="Featured image of post C&#43;&#43;提高" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/post/c_plus_note/chapter3_%E6%8F%90%E9%AB%98/">C&#43;&#43;提高</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Dec 14, 2024</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    5 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h1 id="c提高">C++提高</h1>
+<h2 id="模板">模板</h2>
+<ul>
+<li>C++的另一种编程思想称为范型编程，主要利用的技术就是模板</li>
+<li>C++提供两种模板机制：<strong>函数模板</strong>与<strong>类模板</strong></li>
+</ul>
+<h3 id="概念">概念</h3>
+<h3 id="函数模板">函数模板</h3>
+<h4 id="基本用法">基本用法</h4>
+<p>函数模板的作用：</p>
+<p>建立一个通用函数，其函数返回值类型和形参类型可以不具体指定，用一个虚拟的类型来代表</p>
+<p>语法：</p>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-C++" data-lang="C++"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">1</span><span><span style="color:#ca9ee6">template</span><span style="color:#99d1db;font-weight:bold">&lt;</span><span style="color:#ca9ee6">typename</span> T<span style="color:#99d1db;font-weight:bold">&gt;</span><span style="color:#737994;font-style:italic">//!!!不加分号
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">2</span><span><span style="color:#737994;font-style:italic"></span><span style="color:#e78284">函数声明或定义</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-C++" data-lang="C++"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 1</span><span><span style="color:#737994;font-style:italic">//函数模板
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 2</span><span><span style="color:#737994;font-style:italic">//考虑写一个两数交换的函数
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 3</span><span><span style="color:#737994;font-style:italic">//两个函数的区别只在于参数的类型 逻辑则是相同的
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 4</span><span><span style="color:#737994;font-style:italic">// void swapInt(int &amp;a, int &amp;b)
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 5</span><span><span style="color:#737994;font-style:italic">// {
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 6</span><span><span style="color:#737994;font-style:italic">//     int temp = a;
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 7</span><span><span style="color:#737994;font-style:italic">//     a = b;
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 8</span><span><span style="color:#737994;font-style:italic">//     b = temp;
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 9</span><span><span style="color:#737994;font-style:italic">// };
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">10</span><span><span style="color:#737994;font-style:italic">// void swapDouble(double &amp;a, double &amp;b)
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">11</span><span><span style="color:#737994;font-style:italic">// {
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">12</span><span><span style="color:#737994;font-style:italic">//     double temp = a;
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">13</span><span><span style="color:#737994;font-style:italic">//     a = b;
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">14</span><span><span style="color:#737994;font-style:italic">//     b = temp;
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">15</span><span><span style="color:#737994;font-style:italic">// };
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">16</span><span><span style="color:#737994;font-style:italic"></span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">17</span><span><span style="color:#737994;font-style:italic">//通过声明一个模版函数 让一个函数满足多种参数类型
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">18</span><span><span style="color:#737994;font-style:italic"></span><span style="color:#ca9ee6">template</span><span style="color:#99d1db;font-weight:bold">&lt;</span><span style="color:#ca9ee6">typename</span> T<span style="color:#99d1db;font-weight:bold">&gt;</span> <span style="color:#737994;font-style:italic">//表明T是一个未确定的数据类型
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">19</span><span><span style="color:#737994;font-style:italic"></span><span style="color:#e78284">void</span> mySwap(T <span style="color:#99d1db;font-weight:bold">&amp;</span>a, T <span style="color:#99d1db;font-weight:bold">&amp;</span>b)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">20</span><span>{
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">21</span><span>    T temp <span style="color:#99d1db;font-weight:bold">=</span> a;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">22</span><span>    a <span style="color:#99d1db;font-weight:bold">=</span> b;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">23</span><span>    b <span style="color:#99d1db;font-weight:bold">=</span> temp;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">24</span><span>};
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">25</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">26</span><span><span style="color:#e78284">int</span> <span style="color:#8caaee">main</span>()
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">27</span><span>{
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">28</span><span>    <span style="color:#e78284">int</span> a <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#ef9f76">10</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">29</span><span>    <span style="color:#e78284">int</span> b <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#ef9f76">20</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">30</span><span>    <span style="color:#e78284">double</span> c <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#ef9f76">1.1</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">31</span><span>    <span style="color:#e78284">double</span> d <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#ef9f76">2.2</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">32</span><span>    
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">33</span><span>    <span style="color:#737994;font-style:italic">//通过自动类型推导的方式使用模版函数
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">34</span><span><span style="color:#737994;font-style:italic"></span>    mySwap(a, b);
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">35</span><span>    cout <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#a6d189">&#34;a = &#34;</span> <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> a <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">36</span><span>    cout <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#a6d189">&#34;b = &#34;</span> <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> b <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">37</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">38</span><span>    <span style="color:#737994;font-style:italic">//通过显式声明参数类型使用模版函数
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">39</span><span><span style="color:#737994;font-style:italic"></span>    mySwap<span style="color:#99d1db;font-weight:bold">&lt;</span><span style="color:#e78284">double</span><span style="color:#99d1db;font-weight:bold">&gt;</span>(c, d);
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">40</span><span>    cout <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#a6d189">&#34;c = &#34;</span> <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> c <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">41</span><span>    cout <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#a6d189">&#34;d = &#34;</span> <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> d <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">42</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">43</span><span>    <span style="color:#ca9ee6">return</span> <span style="color:#ef9f76">0</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">44</span><span>};
+</span></span></code></pre></div><p><img src="/post/c_plus_note/chapter3_%E6%8F%90%E9%AB%98/chap3_.png"
+	width="1040"
+	height="119"
+	srcset="/post/c_plus_note/chapter3_%E6%8F%90%E9%AB%98/chap3__hu99b95a2390d5bbe38b850f03911d6957_7452_480x0_resize_box_3.png 480w, /post/c_plus_note/chapter3_%E6%8F%90%E9%AB%98/chap3__hu99b95a2390d5bbe38b850f03911d6957_7452_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="Image 0"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="873"
+		data-flex-basis="2097px"
+	
+></p>
+<p>注意：</p>
+<ul>
+<li>自动类型推导，必须推导出一致的数据类型T，才可以使用</li>
+<li>模版必须要确定出T的数据类型，才可以使用</li>
+</ul>
+<h4 id="函数模版案例">函数模版案例</h4>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c++" data-lang="c++"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 1</span><span><span style="color:#737994;font-style:italic">//函数模版的案例 
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 2</span><span><span style="color:#737994;font-style:italic">//一个通用的选择排序模版
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 3</span><span><span style="color:#737994;font-style:italic"></span><span style="color:#ca9ee6">template</span><span style="color:#99d1db;font-weight:bold">&lt;</span><span style="color:#ca9ee6">typename</span> T<span style="color:#99d1db;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 4</span><span><span style="color:#e78284">void</span> mySwap(T <span style="color:#99d1db;font-weight:bold">&amp;</span>a, T <span style="color:#99d1db;font-weight:bold">&amp;</span>b)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 5</span><span>{
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 6</span><span>    T temp <span style="color:#99d1db;font-weight:bold">=</span> a;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 7</span><span>    a <span style="color:#99d1db;font-weight:bold">=</span> b; 
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 8</span><span>    b <span style="color:#99d1db;font-weight:bold">=</span> temp;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 9</span><span>};
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">10</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">11</span><span><span style="color:#ca9ee6">template</span><span style="color:#99d1db;font-weight:bold">&lt;</span><span style="color:#ca9ee6">typename</span> T<span style="color:#99d1db;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">12</span><span><span style="color:#e78284">void</span> myPrint(T arr[], <span style="color:#e78284">int</span> len)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">13</span><span>{
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">14</span><span>    <span style="color:#ca9ee6">for</span> (<span style="color:#e78284">int</span> i <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#ef9f76">0</span>; i <span style="color:#99d1db;font-weight:bold">&lt;</span> len; i<span style="color:#99d1db;font-weight:bold">++</span>)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">15</span><span>    {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">16</span><span>        cout <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> arr[i] <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#a6d189">&#34; &#34;</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">17</span><span>    };
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">18</span><span>    cout <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">19</span><span>};
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">20</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">21</span><span><span style="color:#ca9ee6">template</span><span style="color:#99d1db;font-weight:bold">&lt;</span><span style="color:#ca9ee6">typename</span> T<span style="color:#99d1db;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">22</span><span><span style="color:#e78284">void</span> mySort(T arr[], <span style="color:#e78284">int</span> len)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">23</span><span>{
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">24</span><span>    <span style="color:#ca9ee6">for</span> (<span style="color:#e78284">int</span> i <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#ef9f76">0</span>; i <span style="color:#99d1db;font-weight:bold">&lt;</span> len; i<span style="color:#99d1db;font-weight:bold">++</span>)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">25</span><span>    {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">26</span><span>        <span style="color:#e78284">int</span> maxIdx <span style="color:#99d1db;font-weight:bold">=</span> i;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">27</span><span>        <span style="color:#ca9ee6">for</span> (<span style="color:#e78284">int</span> j <span style="color:#99d1db;font-weight:bold">=</span> i <span style="color:#99d1db;font-weight:bold">+</span> <span style="color:#ef9f76">1</span>; j <span style="color:#99d1db;font-weight:bold">&lt;</span> len; j<span style="color:#99d1db;font-weight:bold">++</span>)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">28</span><span>        {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">29</span><span>            <span style="color:#ca9ee6">if</span> (arr[maxIdx] <span style="color:#99d1db;font-weight:bold">&lt;</span> arr[j])
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">30</span><span>            {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">31</span><span>                maxIdx <span style="color:#99d1db;font-weight:bold">=</span> j;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">32</span><span>            };
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">33</span><span>        };
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">34</span><span>        <span style="color:#ca9ee6">if</span> (maxIdx <span style="color:#99d1db;font-weight:bold">!=</span> i)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">35</span><span>        {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">36</span><span>            mySwap(arr[i], arr[maxIdx]);
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">37</span><span>        };
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">38</span><span>    };
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">39</span><span>};
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">40</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">41</span><span><span style="color:#e78284">int</span> <span style="color:#8caaee">main</span>()
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">42</span><span>{
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">43</span><span>    <span style="color:#e78284">int</span> arr1[] <span style="color:#99d1db;font-weight:bold">=</span> {<span style="color:#ef9f76">2</span>, <span style="color:#ef9f76">5</span>, <span style="color:#ef9f76">1</span>, <span style="color:#ef9f76">4</span>, <span style="color:#ef9f76">9</span>};
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">44</span><span>    mySort(arr1, <span style="color:#ca9ee6">sizeof</span>(arr1) <span style="color:#99d1db;font-weight:bold">/</span> <span style="color:#ca9ee6">sizeof</span>(<span style="color:#e78284">int</span>));
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">45</span><span>    myPrint(arr1, <span style="color:#ca9ee6">sizeof</span>(arr1) <span style="color:#99d1db;font-weight:bold">/</span> <span style="color:#ca9ee6">sizeof</span>(<span style="color:#e78284">int</span>));
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">46</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">47</span><span>    <span style="color:#e78284">char</span> arr2[] <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#a6d189">&#34;bhgksa&#34;</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">48</span><span>    mySort(arr2, <span style="color:#ca9ee6">sizeof</span>(arr2) <span style="color:#99d1db;font-weight:bold">/</span> <span style="color:#ca9ee6">sizeof</span>(<span style="color:#e78284">char</span>));
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">49</span><span>    myPrint(arr2, <span style="color:#ca9ee6">sizeof</span>(arr2) <span style="color:#99d1db;font-weight:bold">/</span> <span style="color:#ca9ee6">sizeof</span>(<span style="color:#e78284">char</span>));
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">50</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">51</span><span>    <span style="color:#ca9ee6">return</span> <span style="color:#ef9f76">0</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">52</span><span>};
+</span></span></code></pre></div><p><img src="/post/c_plus_note/chapter3_%E6%8F%90%E9%AB%98/chap3_1.png"
+	width="1040"
+	height="62"
+	srcset="/post/c_plus_note/chapter3_%E6%8F%90%E9%AB%98/chap3_1_hufaaa5fc523e505a990a62659198a2c2c_5471_480x0_resize_box_3.png 480w, /post/c_plus_note/chapter3_%E6%8F%90%E9%AB%98/chap3_1_hufaaa5fc523e505a990a62659198a2c2c_5471_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="Image 1"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="1677"
+		data-flex-basis="4025px"
+	
+></p>
+<h4 id="普通函数与模版函数的区别">普通函数与模版函数的区别</h4>
+<ul>
+<li>普通函数调用时可以发生自动类型转换（隐式类型转换）</li>
+<li>函数模版调用时，如果利用自动类型推导，不会发生隐式类型转换</li>
+<li>如果模版函数调用时显式指定了参数类型，则可以发生类型转换</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-C++" data-lang="C++"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 1</span><span><span style="color:#737994;font-style:italic">//普通函数与模版函数的区别
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 2</span><span><span style="color:#737994;font-style:italic"></span><span style="color:#e78284">int</span> <span style="color:#8caaee">myAdd01</span>(<span style="color:#e78284">int</span> a, <span style="color:#e78284">int</span> b)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 3</span><span>{
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 4</span><span>    <span style="color:#ca9ee6">return</span> a <span style="color:#99d1db;font-weight:bold">+</span> b;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 5</span><span>};
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 6</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 7</span><span><span style="color:#ca9ee6">template</span><span style="color:#99d1db;font-weight:bold">&lt;</span><span style="color:#ca9ee6">typename</span> T<span style="color:#99d1db;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 8</span><span>T myAdd02(T a, T b)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 9</span><span>{
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">10</span><span>    <span style="color:#ca9ee6">return</span> a <span style="color:#99d1db;font-weight:bold">+</span> b;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">11</span><span>};
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">12</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">13</span><span><span style="color:#e78284">int</span> <span style="color:#8caaee">main</span>()
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">14</span><span>{
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">15</span><span>    <span style="color:#e78284">int</span> a <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#ef9f76">10</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">16</span><span>    <span style="color:#e78284">int</span> b <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#ef9f76">20</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">17</span><span>    <span style="color:#e78284">char</span> c <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#a6d189">&#39;c&#39;</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">18</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">19</span><span>    cout <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#a6d189">&#34;myAdd01(a + b) = &#34;</span> <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> myAdd01(a, b) <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">20</span><span>    cout <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#a6d189">&#34;myAdd01(a + c) = &#34;</span> <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> myAdd01(a, c) <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">21</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">22</span><span>    cout <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#a6d189">&#34;myAdd02(a + b) = &#34;</span> <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> myAdd02(a, b) <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">23</span><span>    <span style="color:#737994;font-style:italic">//发生自动类型推导时 无法进行类型转换
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">24</span><span><span style="color:#737994;font-style:italic"></span>    <span style="color:#737994;font-style:italic">//cout &lt;&lt; &#34;myAdd02(a + c) = &#34; &lt;&lt; myAdd02(a, c) &lt;&lt; endl;
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">25</span><span><span style="color:#737994;font-style:italic"></span>    cout <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#a6d189">&#34;myAdd02(a + c) = &#34;</span> <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> myAdd02<span style="color:#99d1db;font-weight:bold">&lt;</span><span style="color:#e78284">int</span><span style="color:#99d1db;font-weight:bold">&gt;</span>(a, c) <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">26</span><span>    <span style="color:#ca9ee6">return</span> <span style="color:#ef9f76">0</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">27</span><span>};
+</span></span></code></pre></div><p><img src="/post/c_plus_note/chapter3_%E6%8F%90%E9%AB%98/chap3_2.png"
+	width="1200"
+	height="121"
+	srcset="/post/c_plus_note/chapter3_%E6%8F%90%E9%AB%98/chap3_2_hu30a7140c7e361be61c7bab74dd2f5b8d_17200_480x0_resize_box_3.png 480w, /post/c_plus_note/chapter3_%E6%8F%90%E9%AB%98/chap3_2_hu30a7140c7e361be61c7bab74dd2f5b8d_17200_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="Image 2"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="991"
+		data-flex-basis="2380px"
+	
+></p>
+<h4 id="普通函数与函数模版的调用规则">普通函数与函数模版的调用规则</h4>
+<p>调用规则：</p>
+<ol>
+<li>如果函数模版和普通函数都可以调用，优先调用普通函数</li>
+<li>可以通过空模版参数列表来强制调用函数模版</li>
+<li>函数模版可以发生重载</li>
+<li>如果函数模版可以产生更好的匹配，则优先调用函数模版</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c++" data-lang="c++"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 1</span><span><span style="color:#737994;font-style:italic">//普通函数与函数模版的调用规则
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 2</span><span><span style="color:#737994;font-style:italic"></span><span style="color:#e78284">void</span> <span style="color:#8caaee">myPrint</span>(<span style="color:#e78284">int</span> a, <span style="color:#e78284">int</span> b);
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 3</span><span><span style="color:#e78284">void</span> <span style="color:#8caaee">myPrint</span>(<span style="color:#e78284">int</span> a, <span style="color:#e78284">int</span> b)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 4</span><span>{
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 5</span><span>    cout <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#a6d189">&#34;普通函数调用&#34;</span> <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 6</span><span>};
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 7</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 8</span><span><span style="color:#ca9ee6">template</span><span style="color:#99d1db;font-weight:bold">&lt;</span><span style="color:#ca9ee6">typename</span> T<span style="color:#99d1db;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 9</span><span><span style="color:#e78284">void</span> myPrint(T a, T b)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">10</span><span>{
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">11</span><span>    cout <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#a6d189">&#34;函数模版调用&#34;</span> <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">12</span><span>};
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">13</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">14</span><span><span style="color:#737994;font-style:italic">//函数模版可以发生重载
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">15</span><span><span style="color:#737994;font-style:italic"></span><span style="color:#ca9ee6">template</span><span style="color:#99d1db;font-weight:bold">&lt;</span><span style="color:#ca9ee6">typename</span> T<span style="color:#99d1db;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">16</span><span><span style="color:#e78284">void</span> myPrint(T a, T b, T c)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">17</span><span>{
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">18</span><span>    cout <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#a6d189">&#34;重载的函数模版调用&#34;</span> <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">19</span><span>};
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">20</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">21</span><span><span style="color:#e78284">int</span> <span style="color:#8caaee">main</span>()
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">22</span><span>{
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">23</span><span>    <span style="color:#e78284">int</span> a <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#ef9f76">10</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">24</span><span>    <span style="color:#e78284">int</span> b <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#ef9f76">20</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">25</span><span>    <span style="color:#e78284">char</span> c <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#a6d189">&#39;c&#39;</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">26</span><span>    <span style="color:#e78284">char</span> d <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#a6d189">&#39;d&#39;</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">27</span><span>    <span style="color:#737994;font-style:italic">//此时调用的是普通函数
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">28</span><span><span style="color:#737994;font-style:italic"></span>    <span style="color:#737994;font-style:italic">//但是当普通函数只是声明没有具体实现时，会报错
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">29</span><span><span style="color:#737994;font-style:italic"></span>    myPrint(a, b);
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">30</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">31</span><span>    <span style="color:#737994;font-style:italic">//通过空模版参数列表强制调用函数模版
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">32</span><span><span style="color:#737994;font-style:italic"></span>    myPrint<span style="color:#99d1db;font-weight:bold">&lt;&gt;</span>(a, b);
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">33</span><span>    <span style="color:#737994;font-style:italic">//调用重载的函数模版
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">34</span><span><span style="color:#737994;font-style:italic"></span>    myPrint(a, b, <span style="color:#ef9f76">100</span>);
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">35</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">36</span><span>    <span style="color:#737994;font-style:italic">//此时函数模版可以进行自动类型推导 推导出T为char类型
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">37</span><span><span style="color:#737994;font-style:italic"></span>    <span style="color:#737994;font-style:italic">//而如果调用普通函数 则需要发生类型转换
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">38</span><span><span style="color:#737994;font-style:italic"></span>    <span style="color:#737994;font-style:italic">//因此编译器认为函数模版产生了更好的匹配
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">39</span><span><span style="color:#737994;font-style:italic"></span>    myPrint(c, d);
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">40</span><span>    <span style="color:#ca9ee6">return</span> <span style="color:#ef9f76">0</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">41</span><span>}
+</span></span></code></pre></div><p><img src="/post/c_plus_note/chapter3_%E6%8F%90%E9%AB%98/chap3_3.png"
+	width="1200"
+	height="121"
+	srcset="/post/c_plus_note/chapter3_%E6%8F%90%E9%AB%98/chap3_3_hu090b3ee8b34a2a12d3297a3d37f2877a_19000_480x0_resize_box_3.png 480w, /post/c_plus_note/chapter3_%E6%8F%90%E9%AB%98/chap3_3_hu090b3ee8b34a2a12d3297a3d37f2877a_19000_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="Image 3"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="991"
+		data-flex-basis="2380px"
+	
+></p>
+<h4 id="模版的局限性">模版的局限性</h4>
+<p>模版在一些特定的情况下无法正常使用：</p>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c++" data-lang="c++"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">1</span><span><span style="color:#ca9ee6">template</span><span style="color:#99d1db;font-weight:bold">&lt;</span><span style="color:#ca9ee6">typename</span> T<span style="color:#99d1db;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">2</span><span><span style="color:#e78284">void</span> func(T a, Tb)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">3</span><span>{
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">4</span><span>    a <span style="color:#99d1db;font-weight:bold">=</span> b;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">5</span><span>    <span style="color:#ca9ee6">if</span> (a <span style="color:#99d1db;font-weight:bold">&gt;</span> b)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">6</span><span>    {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">7</span><span>        ...
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">8</span><span>    };
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">9</span><span>};
+</span></span></code></pre></div><p>当 a 与 b 是数组时，无法进行赋值，或者当 a 与 b 是自定义数据类型时，无法进行比较</p>
+<p>因此，C++为了解决这种问题，提供模版的重载，可以**为这些特定的类型提供具体化的模版 **</p>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c++" data-lang="c++"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 1</span><span><span style="color:#737994;font-style:italic">//模版的局限性
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 2</span><span><span style="color:#737994;font-style:italic"></span><span style="color:#ca9ee6">class</span> <span style="color:#e5c890">Person</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 3</span><span>{
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 4</span><span><span style="color:#ca9ee6">public</span><span style="color:#99d1db;font-weight:bold">:</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 5</span><span>    string Name;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 6</span><span>    <span style="color:#e78284">int</span> Age;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 7</span><span>    Person(string n, <span style="color:#e78284">int</span> a)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 8</span><span>    {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 9</span><span>        Name <span style="color:#99d1db;font-weight:bold">=</span> n;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">10</span><span>        Age <span style="color:#99d1db;font-weight:bold">=</span> a;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">11</span><span>    };
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">12</span><span>};
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">13</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">14</span><span><span style="color:#ca9ee6">template</span><span style="color:#99d1db;font-weight:bold">&lt;</span><span style="color:#ca9ee6">typename</span> T<span style="color:#99d1db;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">15</span><span><span style="color:#e78284">bool</span> isEqual(T a, T b)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">16</span><span>{
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">17</span><span>    <span style="color:#ca9ee6">if</span> (a <span style="color:#99d1db;font-weight:bold">==</span> b)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">18</span><span>    {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">19</span><span>        <span style="color:#ca9ee6">return</span> <span style="color:#99d1db">true</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">20</span><span>    };
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">21</span><span>    <span style="color:#ca9ee6">return</span> <span style="color:#99d1db">false</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">22</span><span>};
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">23</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">24</span><span><span style="color:#737994;font-style:italic">//重载一个特定的能够比较Person类的isEqual函数
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">25</span><span><span style="color:#737994;font-style:italic"></span><span style="color:#e78284">bool</span> <span style="color:#8caaee">isEqual</span>(Person <span style="color:#99d1db;font-weight:bold">&amp;</span>p1, Person <span style="color:#99d1db;font-weight:bold">&amp;</span>p2)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">26</span><span>{
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">27</span><span>    <span style="color:#ca9ee6">if</span> (p1.Name <span style="color:#99d1db;font-weight:bold">==</span> p2.Name <span style="color:#99d1db;font-weight:bold">&amp;&amp;</span> p1.Age <span style="color:#99d1db;font-weight:bold">==</span> p2.Age)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">28</span><span>    {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">29</span><span>        <span style="color:#ca9ee6">return</span> <span style="color:#99d1db">true</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">30</span><span>    };
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">31</span><span>    <span style="color:#ca9ee6">return</span> <span style="color:#99d1db">false</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">32</span><span>};
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">33</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">34</span><span><span style="color:#e78284">int</span> <span style="color:#8caaee">main</span>()
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">35</span><span>{
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">36</span><span>    <span style="color:#e78284">int</span> a <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#ef9f76">10</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">37</span><span>    <span style="color:#e78284">int</span> b <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#ef9f76">20</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">38</span><span>    Person p1(<span style="color:#a6d189">&#34;Tom&#34;</span>, <span style="color:#ef9f76">18</span>);
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">39</span><span>    Person p2(<span style="color:#a6d189">&#34;Jim&#34;</span>, <span style="color:#ef9f76">18</span>);
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">40</span><span>    cout <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> isEqual(a, b) <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">41</span><span>    cout <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> isEqual(p1, p2) <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">42</span><span>    <span style="color:#ca9ee6">return</span> <span style="color:#ef9f76">0</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">43</span><span>};
+</span></span></code></pre></div><p><img src="/post/c_plus_note/chapter3_%E6%8F%90%E9%AB%98/chap3_4.png"
+	width="1200"
+	height="62"
+	srcset="/post/c_plus_note/chapter3_%E6%8F%90%E9%AB%98/chap3_4_huac474f49674ebaf4ac739f0e482e6990_3275_480x0_resize_box_3.png 480w, /post/c_plus_note/chapter3_%E6%8F%90%E9%AB%98/chap3_4_huac474f49674ebaf4ac739f0e482e6990_3275_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="Image 4"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="1935"
+		data-flex-basis="4645px"
+	
+></p>
+<h3 id="类模板">类模板</h3>
+<h4 id="基本语法">基本语法</h4>
+<p>类模板的作用：</p>
+<ul>
+<li>建立一个通用类，类中的成员数据类型可以不具体指定，用一个<strong>虚拟的类型</strong>来代表</li>
+</ul>
+<p>语法：</p>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-C++" data-lang="C++"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">1</span><span><span style="color:#ca9ee6">template</span><span style="color:#99d1db;font-weight:bold">&lt;</span><span style="color:#ca9ee6">class</span> <span style="color:#e5c890">T</span><span style="color:#99d1db;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">2</span><span><span style="color:#e78284">类</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c++" data-lang="c++"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 1</span><span><span style="color:#737994;font-style:italic">//类模版基本用法
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 2</span><span><span style="color:#737994;font-style:italic"></span><span style="color:#ca9ee6">template</span><span style="color:#99d1db;font-weight:bold">&lt;</span><span style="color:#ca9ee6">class</span> <span style="color:#e5c890">NameType</span>, <span style="color:#ca9ee6">class</span> <span style="color:#e5c890">AgeType</span><span style="color:#99d1db;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 3</span><span><span style="color:#ca9ee6">class</span> <span style="color:#e5c890">Person</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 4</span><span>{
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 5</span><span><span style="color:#ca9ee6">public</span><span style="color:#99d1db;font-weight:bold">:</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 6</span><span>    NameType Name;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 7</span><span>    AgeType Age;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 8</span><span>    Person(NameType n, AgeType a)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 9</span><span>    {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">10</span><span>        <span style="color:#ca9ee6">this</span><span style="color:#99d1db;font-weight:bold">-&gt;</span>Name <span style="color:#99d1db;font-weight:bold">=</span> n;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">11</span><span>        <span style="color:#ca9ee6">this</span><span style="color:#99d1db;font-weight:bold">-&gt;</span>Age <span style="color:#99d1db;font-weight:bold">=</span> a;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">12</span><span>    };
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">13</span><span>    <span style="color:#e78284">void</span> <span style="color:#8caaee">Show</span>()
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">14</span><span>    {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">15</span><span>        cout <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#a6d189">&#34;Name: &#34;</span> <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#ca9ee6">this</span><span style="color:#99d1db;font-weight:bold">-&gt;</span>Name <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> endl <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#a6d189">&#34;Age: &#34;</span> <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#ca9ee6">this</span><span style="color:#99d1db;font-weight:bold">-&gt;</span>Age <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">16</span><span>    };
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">17</span><span>};
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">18</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">19</span><span><span style="color:#e78284">int</span> <span style="color:#8caaee">main</span>()
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">20</span><span>{
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">21</span><span>    Person<span style="color:#99d1db;font-weight:bold">&lt;</span>string, <span style="color:#e78284">int</span><span style="color:#99d1db;font-weight:bold">&gt;</span> p(<span style="color:#a6d189">&#34;Tom&#34;</span>, <span style="color:#ef9f76">18</span>);
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">22</span><span>    p.Show();
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">23</span><span>    <span style="color:#ca9ee6">return</span> <span style="color:#ef9f76">0</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">24</span><span>};
+</span></span></code></pre></div><p><img src="/post/c_plus_note/chapter3_%E6%8F%90%E9%AB%98/chap3_5.png"
+	width="1200"
+	height="62"
+	srcset="/post/c_plus_note/chapter3_%E6%8F%90%E9%AB%98/chap3_5_hud4faafbd79af4b2f08450231ee624612_5721_480x0_resize_box_3.png 480w, /post/c_plus_note/chapter3_%E6%8F%90%E9%AB%98/chap3_5_hud4faafbd79af4b2f08450231ee624612_5721_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="Image 5"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="1935"
+		data-flex-basis="4645px"
+	
+></p>
+<h4 id="类模板与函数模板的区别">类模板与函数模板的区别</h4>
+<p>类模板与函数模板的区别主要有两点：</p>
+<ol>
+<li>类模板没有自动类型推导的使用方式，因此必须要显式指定参数类型</li>
+<li>类模板在模板参数列表中可以有默认参数</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c++" data-lang="c++"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 1</span><span><span style="color:#737994;font-style:italic">//类模板与函数模板的区别
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 2</span><span><span style="color:#737994;font-style:italic">//template&lt;class NameType, class AgeType&gt;
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 3</span><span><span style="color:#737994;font-style:italic">//类模板在声明时可以在参数列表中指定默认的参数类型
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 4</span><span><span style="color:#737994;font-style:italic"></span><span style="color:#ca9ee6">template</span><span style="color:#99d1db;font-weight:bold">&lt;</span><span style="color:#ca9ee6">class</span> <span style="color:#e5c890">NameType</span> <span style="color:#99d1db;font-weight:bold">=</span> string, <span style="color:#ca9ee6">class</span> <span style="color:#e5c890">AgeType</span> <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#e78284">int</span><span style="color:#99d1db;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 5</span><span><span style="color:#ca9ee6">class</span> <span style="color:#e5c890">Person</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 6</span><span>{
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 7</span><span><span style="color:#ca9ee6">public</span><span style="color:#99d1db;font-weight:bold">:</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 8</span><span>    NameType Name;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 9</span><span>    AgeType Age;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">10</span><span>    Person(NameType n, AgeType a)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">11</span><span>    {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">12</span><span>        <span style="color:#ca9ee6">this</span><span style="color:#99d1db;font-weight:bold">-&gt;</span>Name <span style="color:#99d1db;font-weight:bold">=</span> n;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">13</span><span>        <span style="color:#ca9ee6">this</span><span style="color:#99d1db;font-weight:bold">-&gt;</span>Age <span style="color:#99d1db;font-weight:bold">=</span> a;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">14</span><span>    };
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">15</span><span>    <span style="color:#e78284">void</span> <span style="color:#8caaee">Show</span>()
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">16</span><span>    {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">17</span><span>        cout <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#a6d189">&#34;Name: &#34;</span> <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#ca9ee6">this</span><span style="color:#99d1db;font-weight:bold">-&gt;</span>Name <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> endl <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#a6d189">&#34;Age: &#34;</span> <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#ca9ee6">this</span><span style="color:#99d1db;font-weight:bold">-&gt;</span>Age <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">18</span><span>    };
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">19</span><span>};
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">20</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">21</span><span><span style="color:#e78284">int</span> <span style="color:#8caaee">main</span>()
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">22</span><span>{
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">23</span><span>    <span style="color:#737994;font-style:italic">//如果有默认参数类型 则可以不指定参数类型
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">24</span><span><span style="color:#737994;font-style:italic"></span>    <span style="color:#737994;font-style:italic">//如果没有默认参数类型 由于类模板无法进行类型推导 因此会报错
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">25</span><span><span style="color:#737994;font-style:italic"></span>    Person<span style="color:#99d1db;font-weight:bold">&lt;&gt;</span> p(<span style="color:#a6d189">&#34;Tom&#34;</span>, <span style="color:#ef9f76">18</span>);
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">26</span><span>    p.Show();
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">27</span><span>    <span style="color:#ca9ee6">return</span> <span style="color:#ef9f76">0</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">28</span><span>};
+</span></span></code></pre></div><p><img src="/post/c_plus_note/chapter3_%E6%8F%90%E9%AB%98/chap3_6.png"
+	width="1200"
+	height="62"
+	srcset="/post/c_plus_note/chapter3_%E6%8F%90%E9%AB%98/chap3_6_hud4faafbd79af4b2f08450231ee624612_5721_480x0_resize_box_3.png 480w, /post/c_plus_note/chapter3_%E6%8F%90%E9%AB%98/chap3_6_hud4faafbd79af4b2f08450231ee624612_5721_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="Image 6"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="1935"
+		data-flex-basis="4645px"
+	
+></p>
+<h4 id="类模板中成员函数的创建时机">类模板中成员函数的创建时机</h4>
+<p>类模板中成员函数和普通类中成员函数的创建时机是有区别的：</p>
+<ul>
+<li>普通类中的成员函数一开始就可以创建</li>
+<li>类模板中的成员函数在调用时才创建</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c++" data-lang="c++"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 1</span><span><span style="color:#737994;font-style:italic">//类模板中成员函数的创建时机
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 2</span><span><span style="color:#737994;font-style:italic"></span><span style="color:#ca9ee6">class</span> <span style="color:#e5c890">Person</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 3</span><span>{
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 4</span><span><span style="color:#ca9ee6">public</span><span style="color:#99d1db;font-weight:bold">:</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 5</span><span>    <span style="color:#e78284">void</span> show()
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 6</span><span>    {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 7</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 8</span><span>    };
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 9</span><span>};
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">10</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">11</span><span><span style="color:#ca9ee6">template</span><span style="color:#99d1db;font-weight:bold">&lt;</span><span style="color:#ca9ee6">class</span> <span style="color:#e5c890">P</span><span style="color:#99d1db;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">12</span><span><span style="color:#ca9ee6">class</span> <span style="color:#e5c890">myPerson</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">13</span><span>{
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">14</span><span><span style="color:#ca9ee6">public</span><span style="color:#99d1db;font-weight:bold">:</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">15</span><span>    P obj;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">16</span><span>    <span style="color:#e78284">void</span> <span style="color:#8caaee">func</span>()
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">17</span><span>    {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">18</span><span>        obj.show();
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">19</span><span>    };
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">20</span><span>};
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">21</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">22</span><span><span style="color:#e78284">int</span> <span style="color:#8caaee">main</span>()
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">23</span><span>{
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">24</span><span>    <span style="color:#737994;font-style:italic">//myPerson&lt;Person&gt; p;
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">25</span><span><span style="color:#737994;font-style:italic"></span>    
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">26</span><span>    <span style="color:#ca9ee6">return</span> <span style="color:#ef9f76">0</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">27</span><span>};
+</span></span></code></pre></div><p>上述代码可以编译成功，obj为未知类型P，上述代码中没有调用obj.show()，且编译成功，因此证明类模板中的成员函数时在调用时才创建</p>
+<h4 id="类模板对象做函数参数">类模板对象做函数参数</h4>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2024 EachannJ&#39;s blog
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.21.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+<style>
+     
+    :root {
+        --article-font-family: "Merriweather", var(--base-font-family);
+    }
+</style>
+
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap";
+    
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+    
+        document.head.appendChild(customFont);
+    }());
+</script>
+    </body>
+</html>
