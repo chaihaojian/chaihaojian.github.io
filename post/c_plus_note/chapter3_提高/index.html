@@ -265,6 +265,14 @@
 
     <div class="article-details">
     
+    <header class="article-category">
+        
+            <a href="/categories/c_plus_note/" style="background-color: ; color: #fff;">
+                C&#43;&#43;
+            </a>
+        
+    </header>
+    
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
@@ -305,7 +313,7 @@
 
 
                 <time class="article-time--reading">
-                    5 minute read
+                    9 minute read
                 </time>
             </div>
         
@@ -397,6 +405,7 @@
 <li>自动类型推导，必须推导出一致的数据类型T，才可以使用</li>
 <li>模版必须要确定出T的数据类型，才可以使用</li>
 </ul>
+<hr>
 <h4 id="函数模版案例">函数模版案例</h4>
 <div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c++" data-lang="c++"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 1</span><span><span style="color:#737994;font-style:italic">//函数模版的案例 
 </span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 2</span><span><span style="color:#737994;font-style:italic">//一个通用的选择排序模版
@@ -464,6 +473,7 @@
 		data-flex-basis="4025px"
 	
 ></p>
+<hr>
 <h4 id="普通函数与模版函数的区别">普通函数与模版函数的区别</h4>
 <ul>
 <li>普通函数调用时可以发生自动类型转换（隐式类型转换）</li>
@@ -511,6 +521,7 @@
 		data-flex-basis="2380px"
 	
 ></p>
+<hr>
 <h4 id="普通函数与函数模版的调用规则">普通函数与函数模版的调用规则</h4>
 <p>调用规则：</p>
 <ol>
@@ -574,6 +585,7 @@
 		data-flex-basis="2380px"
 	
 ></p>
+<hr>
 <h4 id="模版的局限性">模版的局限性</h4>
 <p>模版在一些特定的情况下无法正常使用：</p>
 <div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c++" data-lang="c++"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">1</span><span><span style="color:#ca9ee6">template</span><span style="color:#99d1db;font-weight:bold">&lt;</span><span style="color:#ca9ee6">typename</span> T<span style="color:#99d1db;font-weight:bold">&gt;</span>
@@ -644,6 +656,7 @@
 		data-flex-basis="4645px"
 	
 ></p>
+<hr>
 <h3 id="类模板">类模板</h3>
 <h4 id="基本语法">基本语法</h4>
 <p>类模板的作用：</p>
@@ -691,6 +704,7 @@
 		data-flex-basis="4645px"
 	
 ></p>
+<hr>
 <h4 id="类模板与函数模板的区别">类模板与函数模板的区别</h4>
 <p>类模板与函数模板的区别主要有两点：</p>
 <ol>
@@ -739,6 +753,7 @@
 		data-flex-basis="4645px"
 	
 ></p>
+<hr>
 <h4 id="类模板中成员函数的创建时机">类模板中成员函数的创建时机</h4>
 <p>类模板中成员函数和普通类中成员函数的创建时机是有区别的：</p>
 <ul>
@@ -773,7 +788,378 @@
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">26</span><span>    <span style="color:#ca9ee6">return</span> <span style="color:#ef9f76">0</span>;
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">27</span><span>};
 </span></span></code></pre></div><p>上述代码可以编译成功，obj为未知类型P，上述代码中没有调用obj.show()，且编译成功，因此证明类模板中的成员函数时在调用时才创建</p>
+<hr>
 <h4 id="类模板对象做函数参数">类模板对象做函数参数</h4>
+<p>当类模板实例作为参数向函数传递时，一共有三种方法：</p>
+<ol>
+<li>指定传入的类型（最常用）</li>
+<li>参数模板化</li>
+<li>整个类模板化</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c++" data-lang="c++"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 1</span><span><span style="color:#737994;font-style:italic">//类模板对象做函数参数
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 2</span><span><span style="color:#737994;font-style:italic"></span><span style="color:#ca9ee6">template</span><span style="color:#99d1db;font-weight:bold">&lt;</span><span style="color:#ca9ee6">class</span> <span style="color:#e5c890">NameType</span>, <span style="color:#ca9ee6">class</span> <span style="color:#e5c890">AgeType</span><span style="color:#99d1db;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 3</span><span><span style="color:#ca9ee6">class</span> <span style="color:#e5c890">Person</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 4</span><span>{
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 5</span><span><span style="color:#ca9ee6">public</span><span style="color:#99d1db;font-weight:bold">:</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 6</span><span>    NameType Name;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 7</span><span>    AgeType Age;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 8</span><span>    Person(NameType n, AgeType a)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 9</span><span>    {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">10</span><span>        <span style="color:#ca9ee6">this</span><span style="color:#99d1db;font-weight:bold">-&gt;</span>Name <span style="color:#99d1db;font-weight:bold">=</span> n;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">11</span><span>        <span style="color:#ca9ee6">this</span><span style="color:#99d1db;font-weight:bold">-&gt;</span>Age <span style="color:#99d1db;font-weight:bold">=</span> a;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">12</span><span>    };
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">13</span><span>    <span style="color:#e78284">void</span> <span style="color:#8caaee">Show</span>()
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">14</span><span>    {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">15</span><span>        cout <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#a6d189">&#34;Name: &#34;</span> <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#ca9ee6">this</span><span style="color:#99d1db;font-weight:bold">-&gt;</span>Name <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#a6d189">&#34; Age: &#34;</span> <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#ca9ee6">this</span><span style="color:#99d1db;font-weight:bold">-&gt;</span>Age <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span>endl;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">16</span><span>    };
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">17</span><span>};
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">18</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">19</span><span><span style="color:#737994;font-style:italic">//方式一：指定传入的类型（最常用）
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">20</span><span><span style="color:#737994;font-style:italic"></span><span style="color:#e78284">void</span> <span style="color:#8caaee">ShowPerson1</span>(Person<span style="color:#99d1db;font-weight:bold">&lt;</span>string, <span style="color:#e78284">int</span><span style="color:#99d1db;font-weight:bold">&gt;</span> <span style="color:#99d1db;font-weight:bold">&amp;</span>p)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">21</span><span>{
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">22</span><span>    p.Show();
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">23</span><span>};
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">24</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">25</span><span><span style="color:#737994;font-style:italic">//方式二：参数模板化（类模板与函数模板配合使用）
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">26</span><span><span style="color:#737994;font-style:italic"></span><span style="color:#ca9ee6">template</span><span style="color:#99d1db;font-weight:bold">&lt;</span><span style="color:#ca9ee6">typename</span> NameType, <span style="color:#ca9ee6">typename</span> AgeType<span style="color:#99d1db;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">27</span><span><span style="color:#e78284">void</span> ShowPerson2(Person<span style="color:#99d1db;font-weight:bold">&lt;</span>NameType, AgeType<span style="color:#99d1db;font-weight:bold">&gt;</span> <span style="color:#99d1db;font-weight:bold">&amp;</span>p)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">28</span><span>{
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">29</span><span>    p.Show();
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">30</span><span>};
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">31</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">32</span><span><span style="color:#737994;font-style:italic">//方式三：将整个类模板化（类模板与函数模板配合使用）
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">33</span><span><span style="color:#737994;font-style:italic"></span><span style="color:#ca9ee6">template</span><span style="color:#99d1db;font-weight:bold">&lt;</span><span style="color:#ca9ee6">typename</span> PersonType<span style="color:#99d1db;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">34</span><span><span style="color:#e78284">void</span> ShowPerson3(PersonType <span style="color:#99d1db;font-weight:bold">&amp;</span>p)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">35</span><span>{
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">36</span><span>    p.Show();
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">37</span><span>};
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">38</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">39</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">40</span><span><span style="color:#e78284">int</span> <span style="color:#8caaee">main</span>()
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">41</span><span>{
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">42</span><span>    Person<span style="color:#99d1db;font-weight:bold">&lt;</span>string, <span style="color:#e78284">int</span><span style="color:#99d1db;font-weight:bold">&gt;</span> p(<span style="color:#a6d189">&#34;Tom&#34;</span>, <span style="color:#ef9f76">18</span>);
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">43</span><span>    ShowPerson1(p);
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">44</span><span>    ShowPerson2(p);
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">45</span><span>    ShowPerson3(p);
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">46</span><span>    <span style="color:#ca9ee6">return</span> <span style="color:#ef9f76">0</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">47</span><span>};
+</span></span></code></pre></div><p><img src="/post/c_plus_note/chapter3_%E6%8F%90%E9%AB%98/chap3_7.png"
+	width="1200"
+	height="91"
+	srcset="/post/c_plus_note/chapter3_%E6%8F%90%E9%AB%98/chap3_7_hu3f5584c259ac94e2dd4e2d5651a0643e_11230_480x0_resize_box_3.png 480w, /post/c_plus_note/chapter3_%E6%8F%90%E9%AB%98/chap3_7_hu3f5584c259ac94e2dd4e2d5651a0643e_11230_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="Image 7"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="1318"
+		data-flex-basis="3164px"
+	
+></p>
+<hr>
+<h4 id="类模板与继承">类模板与继承</h4>
+<p>当类模板碰到继承时，需要注意以下几点：</p>
+<ul>
+<li>当子类继承的父类是一个类模板时，子类在声明的时候，要指定父类中T的类型</li>
+<li>如果不指定，编译器无法给子类分配内存</li>
+<li>如果想要灵活的指定父类中T的类型，则需要将子类也声明成类模板</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c++" data-lang="c++"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 1</span><span><span style="color:#737994;font-style:italic">//类模板与继承
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 2</span><span><span style="color:#737994;font-style:italic"></span><span style="color:#ca9ee6">template</span><span style="color:#99d1db;font-weight:bold">&lt;</span><span style="color:#ca9ee6">class</span> <span style="color:#e5c890">T</span><span style="color:#99d1db;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 3</span><span><span style="color:#ca9ee6">class</span> <span style="color:#e5c890">Base</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 4</span><span>{
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 5</span><span><span style="color:#ca9ee6">public</span><span style="color:#99d1db;font-weight:bold">:</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 6</span><span>    T arg1;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 7</span><span>};
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 8</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 9</span><span><span style="color:#737994;font-style:italic">//子类在继承一个类模板时，需要指定父类中T的类型
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">10</span><span><span style="color:#737994;font-style:italic"></span><span style="color:#ca9ee6">class</span> <span style="color:#e5c890">Son1</span> <span style="color:#99d1db;font-weight:bold">:</span> <span style="color:#ca9ee6">public</span> Base<span style="color:#99d1db;font-weight:bold">&lt;</span><span style="color:#e78284">int</span><span style="color:#99d1db;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">11</span><span>{
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">12</span><span><span style="color:#ca9ee6">public</span><span style="color:#99d1db;font-weight:bold">:</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">13</span><span>    <span style="color:#e78284">int</span> arg2;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">14</span><span>};
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">15</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">16</span><span><span style="color:#737994;font-style:italic">//或者可以将子类也声明为一个类模板
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">17</span><span><span style="color:#737994;font-style:italic">//但仍需要指定将哪个类型参数作为父类中T的类型参数
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">18</span><span><span style="color:#737994;font-style:italic"></span><span style="color:#ca9ee6">template</span><span style="color:#99d1db;font-weight:bold">&lt;</span><span style="color:#ca9ee6">class</span> <span style="color:#e5c890">T1</span>, <span style="color:#ca9ee6">class</span> <span style="color:#e5c890">T2</span><span style="color:#99d1db;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">19</span><span><span style="color:#ca9ee6">class</span> <span style="color:#e5c890">Son2</span> <span style="color:#99d1db;font-weight:bold">:</span> <span style="color:#ca9ee6">public</span> Base<span style="color:#99d1db;font-weight:bold">&lt;</span>T2<span style="color:#99d1db;font-weight:bold">&gt;</span> <span style="color:#737994;font-style:italic">//声明中的T2将作为父类中T的类型
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">20</span><span><span style="color:#737994;font-style:italic"></span>{
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">21</span><span><span style="color:#ca9ee6">public</span><span style="color:#99d1db;font-weight:bold">:</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">22</span><span>    T1 arg3;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">23</span><span>};
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">24</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">25</span><span><span style="color:#e78284">int</span> <span style="color:#8caaee">main</span>()
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">26</span><span>{
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">27</span><span>    Son1 s1;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">28</span><span>    Son2<span style="color:#99d1db;font-weight:bold">&lt;</span><span style="color:#e78284">int</span>, <span style="color:#e78284">char</span><span style="color:#99d1db;font-weight:bold">&gt;</span> s2;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">29</span><span>    <span style="color:#ca9ee6">return</span> <span style="color:#ef9f76">0</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">30</span><span>};
+</span></span></code></pre></div><hr>
+<h4 id="类模板中成员函数的类外实现">类模板中成员函数的类外实现</h4>
+<p>类模板中成员函数在类外实现时，需要加上模板参数列表</p>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-C++" data-lang="C++"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 1</span><span><span style="color:#737994;font-style:italic">//类模板中的成员函数的类外实现
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 2</span><span><span style="color:#737994;font-style:italic"></span><span style="color:#ca9ee6">template</span><span style="color:#99d1db;font-weight:bold">&lt;</span><span style="color:#ca9ee6">class</span> <span style="color:#e5c890">NameType</span>, <span style="color:#ca9ee6">class</span> <span style="color:#e5c890">AgeType</span><span style="color:#99d1db;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 3</span><span><span style="color:#ca9ee6">class</span> <span style="color:#e5c890">Person</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 4</span><span>{
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 5</span><span><span style="color:#ca9ee6">public</span><span style="color:#99d1db;font-weight:bold">:</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 6</span><span>    NameType Name;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 7</span><span>    AgeType Age;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 8</span><span>    <span style="color:#737994;font-style:italic">//类内声明 类外实现
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 9</span><span><span style="color:#737994;font-style:italic"></span>    Person(NameType n, AgeType a);
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">10</span><span>    <span style="color:#737994;font-style:italic">// {
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">11</span><span><span style="color:#737994;font-style:italic"></span>    <span style="color:#737994;font-style:italic">//     this-&gt;Name = n;
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">12</span><span><span style="color:#737994;font-style:italic"></span>    <span style="color:#737994;font-style:italic">//     this-&gt;Age = a;
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">13</span><span><span style="color:#737994;font-style:italic"></span>    <span style="color:#737994;font-style:italic">// };
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">14</span><span><span style="color:#737994;font-style:italic"></span>    <span style="color:#e78284">void</span> <span style="color:#8caaee">Show</span>();
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">15</span><span>    <span style="color:#737994;font-style:italic">// {
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">16</span><span><span style="color:#737994;font-style:italic"></span>    <span style="color:#737994;font-style:italic">//     cout &lt;&lt; &#34;Name: &#34; &lt;&lt; this-&gt;Name &lt;&lt; &#34; Age: &#34; &lt;&lt; this-&gt;Age &lt;&lt; endl;
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">17</span><span><span style="color:#737994;font-style:italic"></span>    <span style="color:#737994;font-style:italic">// };
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">18</span><span><span style="color:#737994;font-style:italic"></span>};
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">19</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">20</span><span><span style="color:#737994;font-style:italic">//构造函数的类外实现
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">21</span><span><span style="color:#737994;font-style:italic"></span><span style="color:#ca9ee6">template</span><span style="color:#99d1db;font-weight:bold">&lt;</span><span style="color:#ca9ee6">typename</span> NameType, <span style="color:#ca9ee6">typename</span> AgeType<span style="color:#99d1db;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">22</span><span>Person<span style="color:#99d1db;font-weight:bold">&lt;</span>NameType, AgeType<span style="color:#99d1db;font-weight:bold">&gt;::</span>Person(NameType n, AgeType a)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">23</span><span>{
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">24</span><span>    <span style="color:#ca9ee6">this</span><span style="color:#99d1db;font-weight:bold">-&gt;</span>Name <span style="color:#99d1db;font-weight:bold">=</span> n;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">25</span><span>    <span style="color:#ca9ee6">this</span><span style="color:#99d1db;font-weight:bold">-&gt;</span>Age <span style="color:#99d1db;font-weight:bold">=</span> a;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">26</span><span>};
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">27</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">28</span><span><span style="color:#737994;font-style:italic">//普通成员函数的类外实现
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">29</span><span><span style="color:#737994;font-style:italic"></span><span style="color:#ca9ee6">template</span><span style="color:#99d1db;font-weight:bold">&lt;</span><span style="color:#ca9ee6">typename</span> NameType, <span style="color:#ca9ee6">typename</span> AgeType<span style="color:#99d1db;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">30</span><span><span style="color:#e78284">void</span> Person<span style="color:#99d1db;font-weight:bold">&lt;</span>NameType, AgeType<span style="color:#99d1db;font-weight:bold">&gt;::</span>Show()
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">31</span><span>{
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">32</span><span>    cout <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#a6d189">&#34;Name: &#34;</span> <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#ca9ee6">this</span><span style="color:#99d1db;font-weight:bold">-&gt;</span>Name <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#a6d189">&#34; Age: &#34;</span> <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#ca9ee6">this</span><span style="color:#99d1db;font-weight:bold">-&gt;</span>Age <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">33</span><span>};
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">34</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">35</span><span><span style="color:#e78284">int</span> <span style="color:#8caaee">main</span>()
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">36</span><span>{
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">37</span><span>    Person<span style="color:#99d1db;font-weight:bold">&lt;</span>string, <span style="color:#e78284">int</span><span style="color:#99d1db;font-weight:bold">&gt;</span> p(<span style="color:#a6d189">&#34;Tom&#34;</span>, <span style="color:#ef9f76">18</span>);
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">38</span><span>    p.Show();
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">39</span><span>    <span style="color:#ca9ee6">return</span> <span style="color:#ef9f76">0</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">40</span><span>};
+</span></span></code></pre></div><p><img src="/post/c_plus_note/chapter3_%E6%8F%90%E9%AB%98/chap3_8.png"
+	width="1200"
+	height="29"
+	srcset="/post/c_plus_note/chapter3_%E6%8F%90%E9%AB%98/chap3_8_hua1579f7a9b3d5fe7038c82b6983b0403_4219_480x0_resize_box_3.png 480w, /post/c_plus_note/chapter3_%E6%8F%90%E9%AB%98/chap3_8_hua1579f7a9b3d5fe7038c82b6983b0403_4219_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="Image 8"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="4137"
+		data-flex-basis="9931px"
+	
+></p>
+<hr>
+<h4 id="类模板分文件编写">类模板分文件编写</h4>
+<p>问题：</p>
+<ul>
+<li>类模板中的成员函数是在调用阶段再创建的，因此会导致分文件编写时链接不到</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-C++" data-lang="C++"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 1</span><span><span style="color:#737994;font-style:italic">#include</span> <span style="color:#737994;font-weight:bold;font-style:italic">&lt;iostream&gt;</span><span style="color:#737994;font-style:italic">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 2</span><span><span style="color:#737994;font-style:italic">#include</span> <span style="color:#737994;font-weight:bold;font-style:italic">&lt;string&gt;</span><span style="color:#737994;font-style:italic">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 3</span><span><span style="color:#737994;font-style:italic">#include</span> <span style="color:#737994;font-weight:bold;font-style:italic">&lt;unistd.h&gt;</span><span style="color:#737994;font-style:italic">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 4</span><span><span style="color:#737994;font-style:italic"></span><span style="color:#ca9ee6">using</span> <span style="color:#ca9ee6">namespace</span> std;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 5</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 6</span><span><span style="color:#ca9ee6">template</span><span style="color:#99d1db;font-weight:bold">&lt;</span><span style="color:#ca9ee6">class</span> <span style="color:#e5c890">NameType</span>, <span style="color:#ca9ee6">class</span> <span style="color:#e5c890">AgeType</span><span style="color:#99d1db;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 7</span><span><span style="color:#ca9ee6">class</span> <span style="color:#e5c890">Person</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 8</span><span>{
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 9</span><span><span style="color:#ca9ee6">public</span><span style="color:#99d1db;font-weight:bold">:</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">10</span><span>    NameType Name;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">11</span><span>    AgeType Age;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">12</span><span>    Person(NameType n, AgeType a);
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">13</span><span>    <span style="color:#e78284">void</span> <span style="color:#8caaee">Show</span>();
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">14</span><span>};
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">15</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">16</span><span><span style="color:#ca9ee6">template</span><span style="color:#99d1db;font-weight:bold">&lt;</span><span style="color:#ca9ee6">typename</span> NameType, <span style="color:#ca9ee6">typename</span> AgeType<span style="color:#99d1db;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">17</span><span>Person<span style="color:#99d1db;font-weight:bold">&lt;</span>NameType, AgeType<span style="color:#99d1db;font-weight:bold">&gt;::</span>Person(NameType n, AgeType a)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">18</span><span>{
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">19</span><span>    <span style="color:#ca9ee6">this</span><span style="color:#99d1db;font-weight:bold">-&gt;</span>Name <span style="color:#99d1db;font-weight:bold">=</span> n;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">20</span><span>    <span style="color:#ca9ee6">this</span><span style="color:#99d1db;font-weight:bold">-&gt;</span>Age <span style="color:#99d1db;font-weight:bold">=</span> a;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">21</span><span>};
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">22</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">23</span><span><span style="color:#ca9ee6">template</span><span style="color:#99d1db;font-weight:bold">&lt;</span><span style="color:#ca9ee6">typename</span> NameType, <span style="color:#ca9ee6">typename</span> AgeType<span style="color:#99d1db;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">24</span><span><span style="color:#e78284">void</span> Person<span style="color:#99d1db;font-weight:bold">&lt;</span>NameType, AgeType<span style="color:#99d1db;font-weight:bold">&gt;::</span>Show()
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">25</span><span>{
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">26</span><span>    cout <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#a6d189">&#34;Name: &#34;</span> <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#ca9ee6">this</span><span style="color:#99d1db;font-weight:bold">-&gt;</span>Name <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#a6d189">&#34; Age: &#34;</span> <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#ca9ee6">this</span><span style="color:#99d1db;font-weight:bold">-&gt;</span>Age <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">27</span><span>};
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">28</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">29</span><span><span style="color:#e78284">int</span> <span style="color:#8caaee">main</span>()
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">30</span><span>{
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">31</span><span>    Person<span style="color:#99d1db;font-weight:bold">&lt;</span>string, <span style="color:#e78284">int</span><span style="color:#99d1db;font-weight:bold">&gt;</span> p(<span style="color:#a6d189">&#34;Tom&#34;</span>, <span style="color:#ef9f76">18</span>);
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">32</span><span>    p.Show();
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">33</span><span>    <span style="color:#ca9ee6">return</span> <span style="color:#ef9f76">0</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">34</span><span>};
+</span></span></code></pre></div><p>上述代码可以分文件编写为：</p>
+<p><code>./inc/person.h</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c++" data-lang="c++"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 1</span><span><span style="color:#737994;font-style:italic">#pragma once
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 2</span><span><span style="color:#737994;font-style:italic">#include</span> <span style="color:#737994;font-weight:bold;font-style:italic">&lt;iostream&gt;</span><span style="color:#737994;font-style:italic">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 3</span><span><span style="color:#737994;font-style:italic">#include</span> <span style="color:#737994;font-weight:bold;font-style:italic">&lt;string&gt;</span><span style="color:#737994;font-style:italic">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 4</span><span><span style="color:#737994;font-style:italic"></span><span style="color:#ca9ee6">using</span> <span style="color:#ca9ee6">namespace</span> std;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 5</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 6</span><span><span style="color:#ca9ee6">template</span><span style="color:#99d1db;font-weight:bold">&lt;</span><span style="color:#ca9ee6">class</span> <span style="color:#e5c890">NameType</span>, <span style="color:#ca9ee6">class</span> <span style="color:#e5c890">AgeType</span><span style="color:#99d1db;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 7</span><span><span style="color:#ca9ee6">class</span> <span style="color:#e5c890">Person</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 8</span><span>{
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 9</span><span><span style="color:#ca9ee6">public</span><span style="color:#99d1db;font-weight:bold">:</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">10</span><span>    NameType Name;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">11</span><span>    AgeType Age;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">12</span><span>    Person(NameType n, AgeType a);
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">13</span><span>    <span style="color:#e78284">void</span> <span style="color:#8caaee">Show</span>();
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">14</span><span>};
+</span></span></code></pre></div><p><code>./src/chap3/person.cpp</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c++" data-lang="c++"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 1</span><span><span style="color:#737994;font-style:italic">#include</span> <span style="color:#737994;font-weight:bold;font-style:italic">&#34;../../inc/person.h&#34;</span><span style="color:#737994;font-style:italic">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 2</span><span><span style="color:#737994;font-style:italic"></span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 3</span><span><span style="color:#ca9ee6">template</span><span style="color:#99d1db;font-weight:bold">&lt;</span><span style="color:#ca9ee6">typename</span> NameType, <span style="color:#ca9ee6">typename</span> AgeType<span style="color:#99d1db;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 4</span><span>Person<span style="color:#99d1db;font-weight:bold">&lt;</span>NameType, AgeType<span style="color:#99d1db;font-weight:bold">&gt;::</span>Person(NameType n, AgeType a)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 5</span><span>{
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 6</span><span>    <span style="color:#ca9ee6">this</span><span style="color:#99d1db;font-weight:bold">-&gt;</span>Name <span style="color:#99d1db;font-weight:bold">=</span> n;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 7</span><span>    <span style="color:#ca9ee6">this</span><span style="color:#99d1db;font-weight:bold">-&gt;</span>Age <span style="color:#99d1db;font-weight:bold">=</span> a;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 8</span><span>};
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 9</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">10</span><span><span style="color:#ca9ee6">template</span><span style="color:#99d1db;font-weight:bold">&lt;</span><span style="color:#ca9ee6">typename</span> NameType, <span style="color:#ca9ee6">typename</span> AgeType<span style="color:#99d1db;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">11</span><span><span style="color:#e78284">void</span> Person<span style="color:#99d1db;font-weight:bold">&lt;</span>NameType, AgeType<span style="color:#99d1db;font-weight:bold">&gt;::</span>Show()
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">12</span><span>{
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">13</span><span>    cout <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#a6d189">&#34;Name: &#34;</span> <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#ca9ee6">this</span><span style="color:#99d1db;font-weight:bold">-&gt;</span>Name <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#a6d189">&#34; Age: &#34;</span> <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#ca9ee6">this</span><span style="color:#99d1db;font-weight:bold">-&gt;</span>Age <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">14</span><span>};
+</span></span></code></pre></div><p><code>./src/chap3/main.cpp</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c++" data-lang="c++"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 1</span><span><span style="color:#737994;font-style:italic">#include</span> <span style="color:#737994;font-weight:bold;font-style:italic">&lt;iostream&gt;</span><span style="color:#737994;font-style:italic">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 2</span><span><span style="color:#737994;font-style:italic">#include</span> <span style="color:#737994;font-weight:bold;font-style:italic">&lt;string&gt;</span><span style="color:#737994;font-style:italic">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 3</span><span><span style="color:#737994;font-style:italic">#include</span> <span style="color:#737994;font-weight:bold;font-style:italic">&lt;unistd.h&gt;</span><span style="color:#737994;font-style:italic">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 4</span><span><span style="color:#737994;font-style:italic">#include</span> <span style="color:#737994;font-weight:bold;font-style:italic">&#34;../../inc/person.h&#34;</span><span style="color:#737994;font-style:italic">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 5</span><span><span style="color:#737994;font-style:italic"></span><span style="color:#ca9ee6">using</span> <span style="color:#ca9ee6">namespace</span> std;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 6</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 7</span><span><span style="color:#e78284">int</span> <span style="color:#8caaee">main</span>()
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 8</span><span>{
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 9</span><span>    <span style="color:#737994;font-style:italic">//将下面两行代码注释掉 会成功完成编译
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">10</span><span><span style="color:#737994;font-style:italic"></span>    <span style="color:#737994;font-style:italic">//因为类模板成员函数只在调用时才创建
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">11</span><span><span style="color:#737994;font-style:italic"></span>    Person<span style="color:#99d1db;font-weight:bold">&lt;</span>string, <span style="color:#e78284">int</span><span style="color:#99d1db;font-weight:bold">&gt;</span> p(<span style="color:#a6d189">&#34;Tom&#34;</span>, <span style="color:#ef9f76">18</span>);
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">12</span><span>    p.Show();
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">13</span><span>    <span style="color:#ca9ee6">return</span> <span style="color:#ef9f76">0</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">14</span><span>};
+</span></span></code></pre></div><p>编译上述3个文件：</p>
+<p><code>clang++ main.cpp person.cpp -o ../../target/main</code></p>
+<p>会产生如下报错：</p>
+<p><img src="/post/c_plus_note/chapter3_%E6%8F%90%E9%AB%98/chap3_9.png"
+	width="1172"
+	height="344"
+	srcset="/post/c_plus_note/chapter3_%E6%8F%90%E9%AB%98/chap3_9_hu48ac5afebef992e0b5b21c69205aea5d_66590_480x0_resize_box_3.png 480w, /post/c_plus_note/chapter3_%E6%8F%90%E9%AB%98/chap3_9_hu48ac5afebef992e0b5b21c69205aea5d_66590_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="Image 9"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="340"
+		data-flex-basis="817px"
+	
+></p>
+<p>产生错误的原因分析：</p>
+<ol>
+<li>
+<p>预处理阶段，<code>main.cpp</code> 中的 <code>#include &quot;../../inc/person.h&quot;</code>会被对应的 <code>person.h</code>文件替换，</p>
+<p>同时<code>person.cpp</code> 中的 <code>#include &quot;../../inc/person.h&quot;</code>也会被 <code>person.h</code>文件替换，</p>
+<p>生成<code>main.i</code>和<code>person.i</code>文件</p>
+</li>
+<li>
+<p>编译阶段，将<code>main.cpp</code>和<code>person.cpp</code>分别编译成汇编代码文件，</p>
+<p>生成<code>main.s</code>和<code>person.s</code>文件</p>
+</li>
+<li>
+<p>汇编阶段，将<code>main.cpp</code>和<code>person.cpp</code>对应的汇编代码文件转化为二进制文件，</p>
+<p>生成<code>main.o</code>和<code>person.o</code>文件</p>
+</li>
+<li>
+<p>链接阶段，将汇编阶段产生的两个二进制文件合并，找到各个目标文件中定义的函数或变量的地址，</p>
+<p>具体到上述案例中则为：<strong>链接器需要在<code>person.o</code>中找到<code>main.o</code>中<code>Person&lt;string, int&gt; p(&quot;Tom&quot;, 18)</code>的具体实现，即在<code>person.o</code>中找到<code>Person&lt;string, int&gt;</code>这一具体的类所对应的构造函数，而事实上，由于在<code>person.cpp</code>文件中，并没有实例化<code>Person&lt;string, int&gt;</code>这一个具体的类，因此也不会实例化该类对应的构造函数，因此链接器在<code>person.o</code>中无法找到<code>main.o</code>中<code>Person&lt;string, int&gt; p(&quot;Tom&quot;, 18)</code>的具体实现，<code>void Person&lt;string, int&gt;::show()</code>也是同理。</strong></p>
+</li>
+</ol>
+<p><strong>总结：类模板的分文件编写，导致具体声明的模板类没有完成实例化，从而导致链接错误。</strong></p>
+<hr>
+<p>解决方式：</p>
+<ul>
+<li>
+<p>方式一：直接包含.cpp源文件</p>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c++" data-lang="c++"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 1</span><span><span style="color:#737994;font-style:italic">#include</span> <span style="color:#737994;font-weight:bold;font-style:italic">&lt;iostream&gt;</span><span style="color:#737994;font-style:italic">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 2</span><span><span style="color:#737994;font-style:italic">#include</span> <span style="color:#737994;font-weight:bold;font-style:italic">&lt;string&gt;</span><span style="color:#737994;font-style:italic">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 3</span><span><span style="color:#737994;font-style:italic">#include</span> <span style="color:#737994;font-weight:bold;font-style:italic">&#34;person.cpp&#34;</span><span style="color:#737994;font-style:italic">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 4</span><span><span style="color:#737994;font-style:italic"></span><span style="color:#ca9ee6">using</span> <span style="color:#ca9ee6">namespace</span> std;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 5</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 6</span><span><span style="color:#e78284">int</span> <span style="color:#8caaee">main</span>()
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 7</span><span>{
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 8</span><span>    Person<span style="color:#99d1db;font-weight:bold">&lt;</span>string, <span style="color:#e78284">int</span><span style="color:#99d1db;font-weight:bold">&gt;</span> p(<span style="color:#a6d189">&#34;Tom&#34;</span>, <span style="color:#ef9f76">18</span>);
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 9</span><span>    p.Show();
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">10</span><span>    <span style="color:#ca9ee6">return</span> <span style="color:#ef9f76">0</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">11</span><span>};
+</span></span></code></pre></div></li>
+<li>
+<p>方式二：将声明和实现写到同一个文件中，并更改后缀名为.hpp，.hpp是约定的名称，并不是强制</p>
+<p><code>person.hpp</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c++" data-lang="c++"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 1</span><span><span style="color:#737994;font-style:italic">#pragma once
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 2</span><span><span style="color:#737994;font-style:italic">#include</span> <span style="color:#737994;font-weight:bold;font-style:italic">&lt;iostream&gt;</span><span style="color:#737994;font-style:italic">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 3</span><span><span style="color:#737994;font-style:italic">#include</span> <span style="color:#737994;font-weight:bold;font-style:italic">&lt;string&gt;</span><span style="color:#737994;font-style:italic">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 4</span><span><span style="color:#737994;font-style:italic"></span><span style="color:#ca9ee6">using</span> <span style="color:#ca9ee6">namespace</span> std;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 5</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 6</span><span><span style="color:#ca9ee6">template</span><span style="color:#99d1db;font-weight:bold">&lt;</span><span style="color:#ca9ee6">class</span> <span style="color:#e5c890">NameType</span>, <span style="color:#ca9ee6">class</span> <span style="color:#e5c890">AgeType</span><span style="color:#99d1db;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 7</span><span><span style="color:#ca9ee6">class</span> <span style="color:#e5c890">Person</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 8</span><span>{
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 9</span><span><span style="color:#ca9ee6">public</span><span style="color:#99d1db;font-weight:bold">:</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">10</span><span>    NameType Name;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">11</span><span>    AgeType Age;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">12</span><span>    Person(NameType n, AgeType a);
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">13</span><span>    <span style="color:#e78284">void</span> <span style="color:#8caaee">Show</span>();
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">14</span><span>};
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">15</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">16</span><span><span style="color:#ca9ee6">template</span><span style="color:#99d1db;font-weight:bold">&lt;</span><span style="color:#ca9ee6">typename</span> NameType, <span style="color:#ca9ee6">typename</span> AgeType<span style="color:#99d1db;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">17</span><span>Person<span style="color:#99d1db;font-weight:bold">&lt;</span>NameType, AgeType<span style="color:#99d1db;font-weight:bold">&gt;::</span>Person(NameType n, AgeType a)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">18</span><span>{
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">19</span><span>    <span style="color:#ca9ee6">this</span><span style="color:#99d1db;font-weight:bold">-&gt;</span>Name <span style="color:#99d1db;font-weight:bold">=</span> n;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">20</span><span>    <span style="color:#ca9ee6">this</span><span style="color:#99d1db;font-weight:bold">-&gt;</span>Age <span style="color:#99d1db;font-weight:bold">=</span> a;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">21</span><span>};
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">22</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">23</span><span><span style="color:#ca9ee6">template</span><span style="color:#99d1db;font-weight:bold">&lt;</span><span style="color:#ca9ee6">typename</span> NameType, <span style="color:#ca9ee6">typename</span> AgeType<span style="color:#99d1db;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">24</span><span><span style="color:#e78284">void</span> Person<span style="color:#99d1db;font-weight:bold">&lt;</span>NameType, AgeType<span style="color:#99d1db;font-weight:bold">&gt;::</span>Show()
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">25</span><span>{
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">26</span><span>    cout <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#a6d189">&#34;Name: &#34;</span> <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#ca9ee6">this</span><span style="color:#99d1db;font-weight:bold">-&gt;</span>Name <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#a6d189">&#34; Age: &#34;</span> <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#ca9ee6">this</span><span style="color:#99d1db;font-weight:bold">-&gt;</span>Age <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">27</span><span>};
+</span></span></code></pre></div><p><code>main.cpp</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c++" data-lang="c++"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 1</span><span><span style="color:#737994;font-style:italic">#include</span> <span style="color:#737994;font-weight:bold;font-style:italic">&lt;iostream&gt;</span><span style="color:#737994;font-style:italic">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 2</span><span><span style="color:#737994;font-style:italic">#include</span> <span style="color:#737994;font-weight:bold;font-style:italic">&lt;string&gt;</span><span style="color:#737994;font-style:italic">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 3</span><span><span style="color:#737994;font-style:italic">#include</span> <span style="color:#737994;font-weight:bold;font-style:italic">&#34;person.hpp&#34;</span><span style="color:#737994;font-style:italic">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 4</span><span><span style="color:#737994;font-style:italic"></span><span style="color:#ca9ee6">using</span> <span style="color:#ca9ee6">namespace</span> std;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 5</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 6</span><span><span style="color:#e78284">int</span> <span style="color:#8caaee">main</span>()
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 7</span><span>{
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 8</span><span>    Person<span style="color:#99d1db;font-weight:bold">&lt;</span>string, <span style="color:#e78284">int</span><span style="color:#99d1db;font-weight:bold">&gt;</span> p(<span style="color:#a6d189">&#34;Tom&#34;</span>, <span style="color:#ef9f76">18</span>);
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 9</span><span>    p.Show();
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">10</span><span>    <span style="color:#ca9ee6">return</span> <span style="color:#ef9f76">0</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">11</span><span>};
+</span></span></code></pre></div></li>
+<li>
+<p>方式三：显示实例化模板，在类模板定义的<code>.cpp</code>文件中显式实例化所需的模板类型</p>
+<p><code>person.cpp</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c++" data-lang="c++"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 1</span><span><span style="color:#737994;font-style:italic">#include</span> <span style="color:#737994;font-weight:bold;font-style:italic">&#34;../../inc/person.h&#34;</span><span style="color:#737994;font-style:italic">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 2</span><span><span style="color:#737994;font-style:italic"></span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 3</span><span><span style="color:#ca9ee6">template</span><span style="color:#99d1db;font-weight:bold">&lt;</span><span style="color:#ca9ee6">typename</span> NameType, <span style="color:#ca9ee6">typename</span> AgeType<span style="color:#99d1db;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 4</span><span>Person<span style="color:#99d1db;font-weight:bold">&lt;</span>NameType, AgeType<span style="color:#99d1db;font-weight:bold">&gt;::</span>Person(NameType n, AgeType a)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 5</span><span>{
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 6</span><span>    <span style="color:#ca9ee6">this</span><span style="color:#99d1db;font-weight:bold">-&gt;</span>Name <span style="color:#99d1db;font-weight:bold">=</span> n;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 7</span><span>    <span style="color:#ca9ee6">this</span><span style="color:#99d1db;font-weight:bold">-&gt;</span>Age <span style="color:#99d1db;font-weight:bold">=</span> a;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 8</span><span>};
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7"> 9</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">10</span><span><span style="color:#ca9ee6">template</span><span style="color:#99d1db;font-weight:bold">&lt;</span><span style="color:#ca9ee6">typename</span> NameType, <span style="color:#ca9ee6">typename</span> AgeType<span style="color:#99d1db;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">11</span><span><span style="color:#e78284">void</span> Person<span style="color:#99d1db;font-weight:bold">&lt;</span>NameType, AgeType<span style="color:#99d1db;font-weight:bold">&gt;::</span>Show()
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">12</span><span>{
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">13</span><span>    cout <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#a6d189">&#34;Name: &#34;</span> <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#ca9ee6">this</span><span style="color:#99d1db;font-weight:bold">-&gt;</span>Name <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#a6d189">&#34; Age: &#34;</span> <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> <span style="color:#ca9ee6">this</span><span style="color:#99d1db;font-weight:bold">-&gt;</span>Age <span style="color:#99d1db;font-weight:bold">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">14</span><span>};
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">15</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">16</span><span><span style="color:#737994;font-style:italic">//显式实例化所需的模板类型
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#838ba7">17</span><span><span style="color:#737994;font-style:italic"></span><span style="color:#ca9ee6">template</span> <span style="color:#ca9ee6">class</span> <span style="color:#e5c890">Person</span><span style="color:#99d1db;font-weight:bold">&lt;</span>string, <span style="color:#e78284">int</span><span style="color:#99d1db;font-weight:bold">&gt;</span>;
+</span></span></code></pre></div><hr>
+<h4 id="类模板与友元">类模板与友元</h4>
+</li>
+</ul>
 
 </section>
 
